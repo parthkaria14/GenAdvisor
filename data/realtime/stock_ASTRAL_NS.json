@@ -1,0 +1,20 @@
+{
+  "symbol": "ASTRAL.NS",
+  "timestamp": "2025-09-20T20:09:01.342056",
+  "current_price": 1452.4,
+  "open": 1460.0,
+  "high": 1469.8,
+  "low": 1447.0,
+  "volume": 716946,
+  "market_cap": 390165069824,
+  "pe_ratio": 80.64409,
+  "pb_ratio": 10.786964,
+  "dividend_yield": 0.26,
+  "fifty_two_week_high": 2037.95,
+  "fifty_two_week_low": 1232.3,
+  "avg_volume": 848338,
+  "beta": 0.4,
+  "eps": 18.01,
+  "sector": "Industrials",
+  "industry": "Building Products & Equipment"
+}

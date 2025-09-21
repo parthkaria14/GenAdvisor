@@ -1,0 +1,20 @@
+{
+  "symbol": "TECHM.NS",
+  "timestamp": "2025-09-20T20:07:35.218673",
+  "current_price": 1553.8,
+  "open": 1551.0,
+  "high": 1557.4,
+  "low": 1541.6,
+  "volume": 2621194,
+  "market_cap": 1375797772288,
+  "pe_ratio": 30.395151,
+  "pb_ratio": 5.024349,
+  "dividend_yield": 2.9,
+  "fifty_two_week_high": 1807.7,
+  "fifty_two_week_low": 1209.4,
+  "avg_volume": 1818675,
+  "beta": 0.333,
+  "eps": 51.12,
+  "sector": "Technology",
+  "industry": "Information Technology Services"
+}

@@ -1,0 +1,20 @@
+{
+  "symbol": "M&M.NS",
+  "timestamp": "2025-09-20T20:08:58.809394",
+  "current_price": 3592.1,
+  "open": 3601.0,
+  "high": 3636.7,
+  "low": 3584.5,
+  "volume": 4018133,
+  "market_cap": 4371612172288,
+  "pe_ratio": 29.412104,
+  "pb_ratio": 5.2050443,
+  "dividend_yield": 0.7,
+  "fifty_two_week_high": 3723.8,
+  "fifty_two_week_low": 2425.0,
+  "avg_volume": 2532111,
+  "beta": 0.511,
+  "eps": 122.13,
+  "sector": "Consumer Cyclical",
+  "industry": "Auto Manufacturers"
+}

@@ -1,0 +1,20 @@
+{
+  "symbol": "ULTRACEMCO.NS",
+  "timestamp": "2025-09-20T20:06:38.008464",
+  "current_price": 12508.0,
+  "open": 12602.0,
+  "high": 12644.0,
+  "low": 12484.0,
+  "volume": 571647,
+  "market_cap": 3682570862592,
+  "pe_ratio": 54.347168,
+  "pb_ratio": 5.203506,
+  "dividend_yield": 0.62,
+  "fifty_two_week_high": 13097.0,
+  "fifty_two_week_low": 10047.85,
+  "avg_volume": 264222,
+  "beta": 0.442,
+  "eps": 230.15,
+  "sector": "Basic Materials",
+  "industry": "Building Materials"
+}

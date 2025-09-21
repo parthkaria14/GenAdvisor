@@ -1,0 +1,20 @@
+{
+  "symbol": "TCS.NS",
+  "timestamp": "2025-09-20T20:08:57.170710",
+  "current_price": 3169.2,
+  "open": 3170.0,
+  "high": 3180.5,
+  "low": 3144.0,
+  "volume": 4901294,
+  "market_cap": 11466442801152,
+  "pe_ratio": 23.255062,
+  "pb_ratio": 11.711188,
+  "dividend_yield": 1.92,
+  "fifty_two_week_high": 4494.9,
+  "fifty_two_week_low": 2991.6,
+  "avg_volume": 2738694,
+  "beta": 0.337,
+  "eps": 136.28,
+  "sector": "Technology",
+  "industry": "Information Technology Services"
+}

@@ -1,0 +1,20 @@
+{
+  "symbol": "ATUL.NS",
+  "timestamp": "2025-09-20T20:07:50.063295",
+  "current_price": 6341.0,
+  "open": 6549.0,
+  "high": 6569.5,
+  "low": 6291.0,
+  "volume": 34026,
+  "market_cap": 186690174976,
+  "pe_ratio": 37.313168,
+  "pb_ratio": 3.3346164,
+  "dividend_yield": 0.39,
+  "fifty_two_week_high": 8180.0,
+  "fifty_two_week_low": 4752.0,
+  "avg_volume": 37116,
+  "beta": 0.184,
+  "eps": 169.94,
+  "sector": "Basic Materials",
+  "industry": "Specialty Chemicals"
+}

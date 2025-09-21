@@ -1,0 +1,20 @@
+{
+  "symbol": "ADANIENT.NS",
+  "timestamp": "2025-09-20T20:07:41.394620",
+  "current_price": 2524.0,
+  "open": 2495.0,
+  "high": 2579.0,
+  "low": 2466.1,
+  "volume": 7963687,
+  "market_cap": 2913152270336,
+  "pe_ratio": 46.508198,
+  "pb_ratio": 6.1085258,
+  "dividend_yield": 0.05,
+  "fifty_two_week_high": 3211.0,
+  "fifty_two_week_low": 2025.0,
+  "avg_volume": 884933,
+  "beta": 0.624,
+  "eps": 54.27,
+  "sector": "Energy",
+  "industry": "Thermal Coal"
+}

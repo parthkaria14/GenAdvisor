@@ -1,0 +1,20 @@
+{
+  "symbol": "INDUSTOWER.NS",
+  "timestamp": "2025-09-20T20:08:55.123204",
+  "current_price": 356.85,
+  "open": 354.3,
+  "high": 361.7,
+  "low": 350.95,
+  "volume": 7420001,
+  "market_cap": 941101940736,
+  "pe_ratio": 9.707563,
+  "pb_ratio": 2.743333,
+  "dividend_yield": null,
+  "fifty_two_week_high": 430.0,
+  "fifty_two_week_low": 312.55,
+  "avg_volume": 7769047,
+  "beta": 0.114,
+  "eps": 36.76,
+  "sector": "Communication Services",
+  "industry": "Telecom Services"
+}

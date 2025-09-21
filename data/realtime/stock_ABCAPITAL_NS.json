@@ -1,0 +1,20 @@
+{
+  "symbol": "ABCAPITAL.NS",
+  "timestamp": "2025-09-20T20:08:53.689818",
+  "current_price": 289.15,
+  "open": 290.95,
+  "high": 292.3,
+  "low": 288.5,
+  "volume": 4507763,
+  "market_cap": 755385892864,
+  "pe_ratio": 22.328186,
+  "pb_ratio": 2.48059,
+  "dividend_yield": null,
+  "fifty_two_week_high": 295.0,
+  "fifty_two_week_low": 149.01,
+  "avg_volume": 5061097,
+  "beta": 0.819,
+  "eps": 12.95,
+  "sector": "Financial Services",
+  "industry": "Financial Conglomerates"
+}

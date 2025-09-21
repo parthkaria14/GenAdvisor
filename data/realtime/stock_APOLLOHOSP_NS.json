@@ -1,0 +1,20 @@
+{
+  "symbol": "APOLLOHOSP.NS",
+  "timestamp": "2025-09-20T20:08:25.324391",
+  "current_price": 7806.5,
+  "open": 7850.5,
+  "high": 7876.5,
+  "low": 7798.5,
+  "volume": 207117,
+  "market_cap": 1122454863872,
+  "pe_ratio": 71.42922,
+  "pb_ratio": 13.667966,
+  "dividend_yield": 0.26,
+  "fifty_two_week_high": 7980.0,
+  "fifty_two_week_low": 6001.0,
+  "avg_volume": 440574,
+  "beta": 0.168,
+  "eps": 109.29,
+  "sector": "Healthcare",
+  "industry": "Medical Care Facilities"
+}

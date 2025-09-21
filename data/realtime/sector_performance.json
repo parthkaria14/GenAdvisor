@@ -1,0 +1,34 @@
+{
+  "Banking": {
+    "change_percent": -3.1832015865420886,
+    "volume": 3726008
+  },
+  "IT": {
+    "change_percent": -1.0168647086193805,
+    "volume": 7172837
+  },
+  "Pharma": {
+    "change_percent": 0.0,
+    "volume": 3546455
+  },
+  "Auto": {
+    "change_percent": -0.3656678313684204,
+    "volume": 665900
+  },
+  "FMCG": {
+    "change_percent": -0.5680758934595418,
+    "volume": 41900
+  },
+  "Metal": {
+    "change_percent": -0.07301849062623296,
+    "volume": 1314300
+  },
+  "Realty": {
+    "change_percent": 0.3858892054854214,
+    "volume": 323400
+  },
+  "Energy": {
+    "change_percent": 0.4202745776349135,
+    "volume": 4527000
+  }
+}

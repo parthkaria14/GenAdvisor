@@ -1,0 +1,20 @@
+{
+  "symbol": "SIEMENS.NS",
+  "timestamp": "2025-09-20T20:07:01.048791",
+  "current_price": 3325.9,
+  "open": 3337.9,
+  "high": 3346.8,
+  "low": 3308.5,
+  "volume": 431586,
+  "market_cap": 1184421117952,
+  "pe_ratio": 49.01842,
+  "pb_ratio": 9.598861,
+  "dividend_yield": 0.36,
+  "fifty_two_week_high": 4772.247,
+  "fifty_two_week_low": 2450.0,
+  "avg_volume": 518533,
+  "beta": 0.48,
+  "eps": 67.85,
+  "sector": "Industrials",
+  "industry": "Specialty Industrial Machinery"
+}

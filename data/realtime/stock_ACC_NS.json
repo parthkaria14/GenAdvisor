@@ -1,0 +1,20 @@
+{
+  "symbol": "ACC.NS",
+  "timestamp": "2025-09-20T20:08:33.619526",
+  "current_price": 1879.1,
+  "open": 1875.5,
+  "high": 1888.0,
+  "low": 1860.0,
+  "volume": 483143,
+  "market_cap": 352871055360,
+  "pe_ratio": 14.641578,
+  "pb_ratio": 1.9017729,
+  "dividend_yield": 0.4,
+  "fifty_two_week_high": 2544.9,
+  "fifty_two_week_low": 1778.45,
+  "avg_volume": 353821,
+  "beta": 0.033,
+  "eps": 128.34,
+  "sector": "Basic Materials",
+  "industry": "Building Materials"
+}

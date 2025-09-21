@@ -1,0 +1,20 @@
+{
+  "symbol": "TORNTPOWER.NS",
+  "timestamp": "2025-09-20T20:07:46.105310",
+  "current_price": 1264.5,
+  "open": 1285.1,
+  "high": 1297.6,
+  "low": 1261.8,
+  "volume": 867795,
+  "market_cap": 638042636288,
+  "pe_ratio": 22.77968,
+  "pb_ratio": 3.6172287,
+  "dividend_yield": 1.5,
+  "fifty_two_week_high": 2037.0,
+  "fifty_two_week_low": 1207.25,
+  "avg_volume": 483129,
+  "beta": 0.391,
+  "eps": 55.51,
+  "sector": "Utilities",
+  "industry": "Utilities - Independent Power Producers"
+}

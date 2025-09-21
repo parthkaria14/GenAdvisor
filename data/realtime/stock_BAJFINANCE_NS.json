@@ -1,0 +1,20 @@
+{
+  "symbol": "BAJFINANCE.NS",
+  "timestamp": "2025-09-20T20:08:42.873462",
+  "current_price": 992.45,
+  "open": 991.0,
+  "high": 996.0,
+  "low": 988.6,
+  "volume": 6735215,
+  "market_cap": 6168902107136,
+  "pe_ratio": 35.331078,
+  "pb_ratio": 6.371989,
+  "dividend_yield": 0.44,
+  "fifty_two_week_high": 1025.7,
+  "fifty_two_week_low": 645.1,
+  "avg_volume": 7565638,
+  "beta": 0.468,
+  "eps": 28.09,
+  "sector": "Financial Services",
+  "industry": "Credit Services"
+}

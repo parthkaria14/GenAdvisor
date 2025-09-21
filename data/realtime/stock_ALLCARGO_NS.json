@@ -1,0 +1,20 @@
+{
+  "symbol": "ALLCARGO.NS",
+  "timestamp": "2025-09-20T20:07:24.600673",
+  "current_price": 32.84,
+  "open": 33.86,
+  "high": 34.1,
+  "low": 32.6,
+  "volume": 3588989,
+  "market_cap": 32294219776,
+  "pe_ratio": null,
+  "pb_ratio": 1.4086561,
+  "dividend_yield": 6.39,
+  "fifty_two_week_high": 69.4,
+  "fifty_two_week_low": 26.39,
+  "avg_volume": 2799662,
+  "beta": 0.186,
+  "eps": -0.71,
+  "sector": "Industrials",
+  "industry": "Integrated Freight & Logistics"
+}

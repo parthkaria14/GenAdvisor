@@ -1,0 +1,20 @@
+{
+  "symbol": "BRITANNIA.NS",
+  "timestamp": "2025-09-20T20:07:46.821422",
+  "current_price": 6069.5,
+  "open": 6105.5,
+  "high": 6110.0,
+  "low": 6048.0,
+  "volume": 345989,
+  "market_cap": 1461950087168,
+  "pe_ratio": 66.668495,
+  "pb_ratio": 33.56393,
+  "dividend_yield": 1.24,
+  "fifty_two_week_high": 6469.9,
+  "fifty_two_week_low": 4506.0,
+  "avg_volume": 353653,
+  "beta": 0.535,
+  "eps": 91.04,
+  "sector": "Consumer Defensive",
+  "industry": "Packaged Foods"
+}

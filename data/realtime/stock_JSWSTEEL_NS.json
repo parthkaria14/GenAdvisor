@@ -1,0 +1,20 @@
+{
+  "symbol": "JSWSTEEL.NS",
+  "timestamp": "2025-09-20T20:07:45.388358",
+  "current_price": 1122.8,
+  "open": 1121.1,
+  "high": 1126.0,
+  "low": 1113.7,
+  "volume": 1351079,
+  "market_cap": 2739938263040,
+  "pe_ratio": 56.821865,
+  "pb_ratio": 3.4469314,
+  "dividend_yield": 0.25,
+  "fifty_two_week_high": 1126.0,
+  "fifty_two_week_low": 880.0,
+  "avg_volume": 1552355,
+  "beta": 0.614,
+  "eps": 19.76,
+  "sector": "Basic Materials",
+  "industry": "Steel"
+}

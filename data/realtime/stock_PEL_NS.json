@@ -1,0 +1,20 @@
+{
+  "symbol": "PEL.NS",
+  "timestamp": "2025-09-20T20:07:37.402939",
+  "current_price": 1122.2,
+  "open": 1178.2,
+  "high": 1179.2,
+  "low": 1115.0,
+  "volume": 674537,
+  "market_cap": 252756672512,
+  "pe_ratio": 44.059677,
+  "pb_ratio": 0.93383354,
+  "dividend_yield": 0.98,
+  "fifty_two_week_high": 1355.3,
+  "fifty_two_week_low": 848.25,
+  "avg_volume": 751021,
+  "beta": 0.66,
+  "eps": 25.47,
+  "sector": "Financial Services",
+  "industry": "Financial Conglomerates"
+}

@@ -1,0 +1,20 @@
+{
+  "symbol": "ABB.NS",
+  "timestamp": "2025-09-20T20:06:29.817032",
+  "current_price": 5436.9,
+  "open": 5458.8,
+  "high": 5464.7,
+  "low": 5418.0,
+  "volume": 272033,
+  "market_cap": 1152283574272,
+  "pe_ratio": 64.099266,
+  "pb_ratio": 16.013065,
+  "dividend_yield": 0.8,
+  "fifty_two_week_high": 8940.6,
+  "fifty_two_week_low": 4684.45,
+  "avg_volume": 316475,
+  "beta": 0.668,
+  "eps": 84.82,
+  "sector": "Industrials",
+  "industry": "Specialty Industrial Machinery"
+}

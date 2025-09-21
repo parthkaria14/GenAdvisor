@@ -1,0 +1,20 @@
+{
+  "symbol": "AUBANK.NS",
+  "timestamp": "2025-09-20T20:08:26.246448",
+  "current_price": 718.7,
+  "open": 719.65,
+  "high": 724.0,
+  "low": 711.25,
+  "volume": 3207332,
+  "market_cap": 535570186240,
+  "pe_ratio": 24.57094,
+  "pb_ratio": 3.1171253,
+  "dividend_yield": 0.14,
+  "fifty_two_week_high": 841.0,
+  "fifty_two_week_low": 489.45,
+  "avg_volume": 2590964,
+  "beta": 0.337,
+  "eps": 29.25,
+  "sector": "Financial Services",
+  "industry": "Banks - Regional"
+}

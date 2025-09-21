@@ -1,0 +1,20 @@
+{
+  "symbol": "BAJAJFINSV.NS",
+  "timestamp": "2025-09-20T20:06:56.338740",
+  "current_price": 2067.3,
+  "open": 2069.0,
+  "high": 2077.2,
+  "low": 2053.7,
+  "volume": 1973786,
+  "market_cap": 3300639375360,
+  "pe_ratio": 35.08656,
+  "pb_ratio": 4.55751,
+  "dividend_yield": 0.05,
+  "fifty_two_week_high": 2135.0,
+  "fifty_two_week_low": 1551.65,
+  "avg_volume": 1210240,
+  "beta": 0.636,
+  "eps": 58.92,
+  "sector": "Financial Services",
+  "industry": "Financial Conglomerates"
+}

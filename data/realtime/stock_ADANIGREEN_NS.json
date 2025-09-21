@@ -1,0 +1,20 @@
+{
+  "symbol": "ADANIGREEN.NS",
+  "timestamp": "2025-09-20T20:07:04.428303",
+  "current_price": 1030.7,
+  "open": 1025.0,
+  "high": 1071.0,
+  "low": 1003.0,
+  "volume": 17648561,
+  "market_cap": 1698403319808,
+  "pe_ratio": 103.06999,
+  "pb_ratio": 15.240052,
+  "dividend_yield": null,
+  "fifty_two_week_high": 2091.0,
+  "fifty_two_week_low": 758.0,
+  "avg_volume": 1996148,
+  "beta": 0.823,
+  "eps": 10.0,
+  "sector": "Utilities",
+  "industry": "Utilities - Renewable"
+}

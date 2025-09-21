@@ -1,0 +1,20 @@
+{
+  "symbol": "POWERGRID.NS",
+  "timestamp": "2025-09-20T20:08:29.830702",
+  "current_price": 286.2,
+  "open": 290.0,
+  "high": 290.2,
+  "low": 284.9,
+  "volume": 14988790,
+  "market_cap": 2662762807296,
+  "pe_ratio": 17.8875,
+  "pb_ratio": 2.8690007,
+  "dividend_yield": 4.11,
+  "fifty_two_week_high": 366.25,
+  "fifty_two_week_low": 247.3,
+  "avg_volume": 9870525,
+  "beta": 0.264,
+  "eps": 16.0,
+  "sector": "Utilities",
+  "industry": "Utilities - Regulated Electric"
+}

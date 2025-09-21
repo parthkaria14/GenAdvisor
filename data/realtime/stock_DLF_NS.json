@@ -1,0 +1,20 @@
+{
+  "symbol": "DLF.NS",
+  "timestamp": "2025-09-20T20:08:56.249797",
+  "current_price": 777.7,
+  "open": 784.8,
+  "high": 790.25,
+  "low": 772.95,
+  "volume": 4131580,
+  "market_cap": 1925173739520,
+  "pe_ratio": 42.919426,
+  "pb_ratio": 4.5241947,
+  "dividend_yield": 0.77,
+  "fifty_two_week_high": 929.0,
+  "fifty_two_week_low": 601.2,
+  "avg_volume": 2445158,
+  "beta": 0.454,
+  "eps": 18.12,
+  "sector": "Real Estate",
+  "industry": "Real Estate - Development"
+}

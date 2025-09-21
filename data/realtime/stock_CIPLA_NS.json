@@ -1,0 +1,20 @@
+{
+  "symbol": "CIPLA.NS",
+  "timestamp": "2025-09-20T20:07:43.612897",
+  "current_price": 1575.8,
+  "open": 1581.0,
+  "high": 1584.9,
+  "low": 1557.5,
+  "volume": 1463985,
+  "market_cap": 1272877285376,
+  "pe_ratio": 23.639364,
+  "pb_ratio": 4.0798364,
+  "dividend_yield": 0.82,
+  "fifty_two_week_high": 1702.05,
+  "fifty_two_week_low": 1335.0,
+  "avg_volume": 1369673,
+  "beta": 0.102,
+  "eps": 66.66,
+  "sector": "Healthcare",
+  "industry": "Drug Manufacturers - Specialty & Generic"
+}

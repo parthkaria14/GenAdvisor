@@ -1,0 +1,20 @@
+{
+  "symbol": "ABSLAMC.NS",
+  "timestamp": "2025-09-20T20:06:40.465970",
+  "current_price": 824.9,
+  "open": 818.0,
+  "high": 827.7,
+  "low": 817.6,
+  "volume": 410173,
+  "market_cap": 238125465600,
+  "pe_ratio": 24.572536,
+  "pb_ratio": 6.385367,
+  "dividend_yield": 2.91,
+  "fifty_two_week_high": 911.85,
+  "fifty_two_week_low": 556.45,
+  "avg_volume": 341004,
+  "beta": 0.287,
+  "eps": 33.57,
+  "sector": "Financial Services",
+  "industry": "Asset Management"
+}

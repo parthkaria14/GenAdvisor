@@ -1,0 +1,20 @@
+{
+  "symbol": "BOSCHLTD.NS",
+  "timestamp": "2025-09-20T20:06:42.309613",
+  "current_price": 39790.0,
+  "open": 39985.0,
+  "high": 40130.0,
+  "low": 39400.0,
+  "volume": 31662,
+  "market_cap": 1173551972352,
+  "pe_ratio": 44.05301,
+  "pb_ratio": 8.495812,
+  "dividend_yield": 1.29,
+  "fifty_two_week_high": 41945.0,
+  "fifty_two_week_low": 25921.6,
+  "avg_volume": 43047,
+  "beta": 0.501,
+  "eps": 903.23,
+  "sector": "Consumer Cyclical",
+  "industry": "Auto Parts"
+}
