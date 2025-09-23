@@ -19,7 +19,8 @@ from enum import Enum
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma, Pinecone
 from langchain_community.document_loaders import PyPDFLoader, TextLoader, CSVLoader
-
+# Add this with the other imports at the top of the file
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 # from langchain.document_loaders import PyPDFLoader, TextLoader, CSVLoader
 from langchain.schema import Document
 from langchain.chains import RetrievalQA
@@ -39,6 +40,8 @@ import pinecone
 import torch
 from sentence_transformers import SentenceTransformer
 from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
+from dotenv import load_dotenv
+load_dotenv()
 
 # Redis for caching (optional)
 try:
@@ -81,10 +84,12 @@ class AdvancedRAGSystem:
         self,
         vector_db_type: str = "chroma",
         embedding_model: str = "sentence-transformers/all-mpnet-base-v2",
-        llm_model: str = "mixtral-8x7b-32768",
+        llm_model: str = "openai/gpt-oss-120b",  # Default Groq model
         redis_host: str = "localhost",
-        redis_port: int = 6379
-    ):
+        redis_port: int = 6379,
+        enable_redis: bool = False
+):
+        
         # Initialize embeddings
         self.embeddings = HuggingFaceEmbeddings(
             model_name=embedding_model,
@@ -98,10 +103,11 @@ class AdvancedRAGSystem:
         
         # Initialize LLM
         self.llm = ChatGroq(
-            model=llm_model,
+            model=llm_model,  # mixtral-8x7b-32768 or llama2-70b-4096
             temperature=0.1,
-            max_tokens=4096
-        )
+            max_tokens=4096,
+            api_key=os.getenv("GROQ_API_KEY")  # Make sure to set this environment variable
+    )
         
         # Initialize specialized models
         self.sentiment_model = self._initialize_sentiment_model()
@@ -124,9 +130,16 @@ class AdvancedRAGSystem:
                 self.enable_redis = False
                 self.redis_client = None
         else:
-            self.redis_client = None
-            logger.info("Using file-based storage (Redis not available)")
-        
+            self.enable_redis = bool(enable_redis) and REDIS_AVAILABLE
+            if self.enable_redis:
+                logger.info("Redis enabled for caching")
+                      # initialize redis client here if you want, e.g. redis.Redis(...)
+            else:
+                if enable_redis and not REDIS_AVAILABLE:
+                    logger.warning("enable_redis=True requested but Redis package not available; using file-based storage")
+                else:
+                    logger.info("Using file-based storage (Redis disabled)")
+            
         # File-based data paths
         self.data_dir = "data"
         self.realtime_dir = os.path.join(self.data_dir, "realtime")
@@ -231,26 +244,40 @@ class AdvancedRAGSystem:
     def _build_knowledge_graph(self):
         """Build a knowledge graph from the loaded data"""
         try:
-            # Add stock nodes
+            # Clear existing graph
+            self.knowledge_graph.clear()
+            
+            # Add market index nodes
+            self.knowledge_graph.add_node("NIFTY50", type="index", level="broad_market")
+            self.knowledge_graph.add_node("SENSEX", type="index", level="broad_market")
+            
+            # Add stock nodes with rich metadata
             for ticker, stock_data in self.file_data['stocks'].items():
                 self.knowledge_graph.add_node(
                     ticker,
                     type='stock',
                     name=stock_data.get('name', ticker),
                     sector=stock_data.get('sector', 'Unknown'),
-                    price=stock_data.get('price', 0),
+                    price=stock_data.get('current_price', 0),
                     change_percent=stock_data.get('change_percent', 0),
                     volume=stock_data.get('volume', 0),
-                    market_cap=stock_data.get('market_cap', 0)
+                    market_cap=stock_data.get('market_cap', 0),
+                    pe_ratio=stock_data.get('pe_ratio'),
+                    beta=stock_data.get('beta', 1.0)
                 )
                 
-                # Connect stocks to their sectors
+                # Connect stocks to sectors
                 sector = stock_data.get('sector', 'Unknown')
                 if sector != 'Unknown':
-                    self.knowledge_graph.add_node(sector, type='sector')
+                    if not self.knowledge_graph.has_node(sector):
+                        self.knowledge_graph.add_node(sector, type='sector')
                     self.knowledge_graph.add_edge(ticker, sector, relation='belongs_to')
+                    
+                    # Connect sector to market indices
+                    if not self.knowledge_graph.has_edge(sector, 'NIFTY50'):
+                        self.knowledge_graph.add_edge(sector, 'NIFTY50', relation='component_of')
             
-            # Add market breadth nodes
+            # Add market breadth relationships
             if self.file_data['market_breadth']:
                 breadth_data = self.file_data['market_breadth']
                 self.knowledge_graph.add_node(
@@ -258,56 +285,50 @@ class AdvancedRAGSystem:
                     type='market_indicator',
                     advances=breadth_data.get('advances', 0),
                     declines=breadth_data.get('declines', 0),
-                    sentiment=breadth_data.get('market_sentiment', 'neutral')
+                    sentiment=breadth_data.get('market_sentiment', 'neutral'),
+                    timestamp=breadth_data.get('timestamp', '')
                 )
-            
-            # Add sector performance nodes
-            for sector, performance in self.file_data['sector_performance'].items():
-                if not self.knowledge_graph.has_node(sector):
-                    self.knowledge_graph.add_node(sector, type='sector')
                 
-                self.knowledge_graph.nodes[sector].update({
-                    'performance': performance.get('change_percent', 0),
-                    'volume': performance.get('volume', 0)
-                })
-                
-                # Connect sector to market breadth
-                if self.knowledge_graph.has_node('market_breadth'):
-                    self.knowledge_graph.add_edge(sector, 'market_breadth', relation='contributes_to')
+                # Connect market breadth to indices
+                self.knowledge_graph.add_edge('market_breadth', 'NIFTY50', relation='indicates')
+                self.knowledge_graph.add_edge('market_breadth', 'SENSEX', relation='indicates')
             
-            # Add news entities and relationships
+            # Add technical indicators as node attributes
+            for ticker, indicators in self.file_data.get('technical_indicators', {}).items():
+                if self.knowledge_graph.has_node(ticker):
+                    nx.set_node_attributes(self.knowledge_graph, {
+                        ticker: {
+                            'rsi': indicators.get('rsi'),
+                            'macd': indicators.get('macd', {}).get('histogram'),
+                            'sma_20': indicators.get('sma_20'),
+                            'sma_50': indicators.get('sma_50')
+                        }
+                    })
+            
+            # Add news relationships
             for news_item in self.file_data['news_data']:
                 title = news_item.get('title', '')
-                content = news_item.get('content', '')
-                
-                # Extract entities from title and content
-                entities = self._extract_entities_from_text(f"{title} {content}")
-                
-                # Create news node
                 news_id = f"news_{hash(title)}"
+                
                 self.knowledge_graph.add_node(
                     news_id,
                     type='news',
                     title=title,
                     sentiment=news_item.get('sentiment', 'neutral'),
-                    date=news_item.get('date', '')
+                    date=news_item.get('date', ''),
+                    source=news_item.get('source', '')
                 )
                 
-                # Connect news to relevant stocks/sectors
+                # Extract and link entities
+                entities = self._extract_entities_from_text(f"{title} {news_item.get('content', '')}")
                 for entity in entities:
-                    if entity in self.file_data['stocks']:
+                    if self.knowledge_graph.has_node(entity):
                         self.knowledge_graph.add_edge(news_id, entity, relation='mentions')
-                    elif any(entity.lower() in sector.lower() for sector in self.file_data['sector_performance'].keys()):
-                        for sector in self.file_data['sector_performance'].keys():
-                            if entity.lower() in sector.lower():
-                                self.knowledge_graph.add_edge(news_id, sector, relation='mentions')
-                                break
             
             logger.info(f"Built knowledge graph with {self.knowledge_graph.number_of_nodes()} nodes and {self.knowledge_graph.number_of_edges()} edges")
             
         except Exception as e:
-            logger.error(f"Error building knowledge graph: {e}")
-    
+            logger.error(f"Error building knowledge graph: {e}")    
     def _extract_entities_from_text(self, text: str) -> List[str]:
         """Extract financial entities from text"""
         entities = []
@@ -500,10 +521,10 @@ class AdvancedRAGSystem:
             persist_directory = "data/chroma_db"
             os.makedirs(persist_directory, exist_ok=True)
             
-            client = chromadb.Client(Settings(
-                chroma_db_impl="duckdb+parquet",
-                persist_directory=persist_directory
-            ))
+            
+
+            client = chromadb.PersistentClient(path="data/chroma")
+
             
             return Chroma(
                 collection_name="indian_market_knowledge",
@@ -817,63 +838,112 @@ class AdvancedRAGSystem:
         
         return relevance_matrix.get(query_type, {}).get(doc_type, 0.5)
     
-    async def get_market_context(self, entities: Dict[str, List[str]]) -> Dict:
-        """Fetch real-time market context for entities"""
-        context = {}
-        
-        # Get stock data for mentioned companies
-        for company in entities.get('companies', []):
-            stock_data = self._get_stock_data(company)
-            if stock_data:
-                context[company] = stock_data
-        
-        # Get sector data
-        for sector in entities.get('sectors', []):
-            sector_data = self._get_sector_data(sector)
-            if sector_data:
-                context[f"{sector}_sector"] = sector_data
-        
-        # Get market breadth
-        market_breadth = self._get_market_breadth()
-        if market_breadth:
-            context['market_breadth'] = market_breadth
-        
-        return context
-    
-    def analyze_sentiment(self, texts: List[str]) -> Dict:
-        """Analyze sentiment of texts"""
-        if not texts:
-            return {'sentiment': 'neutral', 'score': 0.0}
-        
-        sentiments = self.sentiment_model(texts)
-        
-        # Aggregate sentiments
-        positive = sum(1 for s in sentiments if s['label'] == 'positive')
-        negative = sum(1 for s in sentiments if s['label'] == 'negative')
-        neutral = sum(1 for s in sentiments if s['label'] == 'neutral')
-        
-        total = len(sentiments)
-        
-        # Calculate weighted score
-        score = (positive - negative) / total if total > 0 else 0
-        
-        # Determine overall sentiment
-        if score > 0.3:
-            overall = 'positive'
-        elif score < -0.3:
-            overall = 'negative'
-        else:
-            overall = 'neutral'
-        
-        return {
-            'sentiment': overall,
-            'score': score,
-            'distribution': {
-                'positive': positive / total if total > 0 else 0,
-                'negative': negative / total if total > 0 else 0,
-                'neutral': neutral / total if total > 0 else 0
-            }
+    def _calculate_aggregate_sentiment(self, graph_results: List[Dict]) -> float:
+        """
+        Calculate aggregate sentiment from graph results
+        Returns a float between -1 (very negative) and 1 (very positive)
+        """
+        try:
+            sentiments = []
+            weights = []
+            
+            for result in graph_results:
+                # Get sentiment value based on result type
+                if result['type'] == 'news':
+                    sentiment = self._convert_sentiment_to_score(
+                        result['data'].get('sentiment', 'neutral')
+                    )
+                    sentiments.append(sentiment)
+                    weights.append(0.7)  # News sentiment weight
+                    
+                elif result['type'] == 'market_context':
+                    market_sentiment = self._convert_sentiment_to_score(
+                        result['data'].get('sentiment', 'neutral')
+                    )
+                    sentiments.append(market_sentiment)
+                    weights.append(1.0)  # Market sentiment weight
+                    
+                elif result['type'] == 'stock_info':
+                    # Calculate technical sentiment
+                    tech_data = result['data']
+                    if 'rsi' in tech_data:
+                        rsi = float(tech_data['rsi'])
+                        rsi_sentiment = -1.0 if rsi > 70 else 1.0 if rsi < 30 else 0.0
+                        sentiments.append(rsi_sentiment)
+                        weights.append(0.5)  # Technical indicator weight
+                    
+                    if 'macd' in tech_data:
+                        macd = float(tech_data['macd'])
+                        macd_sentiment = 1.0 if macd > 0 else -1.0 if macd < 0 else 0.0
+                        sentiments.append(macd_sentiment)
+                        weights.append(0.5)
+            
+            # Calculate weighted average if we have sentiments
+            if sentiments and weights:
+                return sum(s * w for s, w in zip(sentiments, weights)) / sum(weights)
+            
+            return 0.0  # Neutral if no sentiment data
+            
+        except Exception as e:
+            logger.error(f"Error calculating aggregate sentiment: {e}")
+            return 0.0
+
+    def _convert_sentiment_to_score(self, sentiment: str) -> float:
+        """Convert string sentiment to numeric score"""
+        sentiment_map = {
+            'very_positive': 1.0,
+            'positive': 0.5,
+            'neutral': 0.0,
+            'negative': -0.5,
+            'very_negative': -1.0
         }
+        return sentiment_map.get(sentiment.lower(), 0.0)
+
+    def _calculate_confidence_score(self, graph_results: List[Dict], vector_results: List[Document]) -> float:
+        """
+        Calculate overall confidence score for the response
+        Returns a float between 0 and 1
+        """
+        try:
+            factors = []
+            
+            # Graph coverage
+            if graph_results:
+                coverage = min(len(graph_results) / 5, 1.0)  # Normalize to max 1.0
+                factors.append(coverage * 0.4)  # Graph results weight
+            
+            # Vector results relevance
+            if vector_results:
+                # Use metadata scores if available
+                scores = [getattr(doc.metadata, 'score', 0.5) for doc in vector_results]
+                avg_score = sum(scores) / len(scores)
+                factors.append(avg_score * 0.3)  # Vector results weight
+            
+            # Data freshness
+            current_time = datetime.now()
+            timestamps = []
+            for result in graph_results:
+                if 'timestamp' in result['data']:
+                    try:
+                        ts = datetime.fromisoformat(result['data']['timestamp'])
+                        age_hours = (current_time - ts).total_seconds() / 3600
+                        freshness = max(0, 1 - (age_hours / 24))  # Decay over 24 hours
+                        timestamps.append(freshness)
+                    except (ValueError, TypeError):
+                        continue
+            
+            if timestamps:
+                avg_freshness = sum(timestamps) / len(timestamps)
+                factors.append(avg_freshness * 0.3)  # Freshness weight
+            
+            # Calculate final confidence
+            if factors:
+                return sum(factors)
+            return 0.5  # Default moderate confidence
+            
+        except Exception as e:
+            logger.error(f"Error calculating confidence score: {e}")
+            return 0.5
     
     async def generate_response(
         self,
@@ -963,49 +1033,49 @@ Response:"""
             yield chunk.content
     
     async def process_query(self, query: str, stream: bool = False) -> Dict:
-        """Main entry point for processing user queries"""
+        """Enhanced query processing with graph and vector integration"""
         
-        # Classify query
+        # Classify query and extract entities
         query_type = self.classify_query(query)
-        
-        # Extract entities
         entities = self.extract_entities(query)
         
-        # Retrieve relevant documents using hybrid approach
+        # Get graph-based results
+        graph_results = self._graph_query(query_type, entities)
+        
+        # Get vector-based results
         relevant_docs = await self.retrieve_context(
             query,
             query_type,
             k=5
         )
         
-        # Get Graph RAG results
-        graph_results = self._graph_retrieve(query, max_nodes=10)
+        # Get market context from graph
+        market_context = {}
+        for result in graph_results:
+            if result['type'] in ['market_context', 'sector_info']:
+                market_context[result['node']] = result['data']
         
-        # Get market context
-        market_context = await self.get_market_context(entities)
-        
-        # Get technical indicators for mentioned stocks
+        # Get technical data from graph nodes
         technical_data = {}
         for company in entities.get('companies', []):
-            indicators = self._get_technical_indicators(company)
-            if indicators:
-                technical_data[company] = indicators
+            if self.knowledge_graph.has_node(company):
+                node_data = self.knowledge_graph.nodes[company]
+                if 'rsi' in node_data or 'macd' in node_data:
+                    technical_data[company] = {
+                        k: v for k, v in node_data.items()
+                        if k in ['rsi', 'macd', 'sma_20', 'sma_50']
+                    }
         
-        # Analyze sentiment from retrieved documents
-        sentiment = self.analyze_sentiment(
-            [doc.page_content for doc in relevant_docs[:3]]
-        )
-        
-        # Create context with Graph RAG results
+        # Create enhanced context
         context = RAGContext(
             query=query,
             query_type=query_type,
             relevant_docs=relevant_docs,
             market_data=market_context,
             technical_indicators=technical_data,
-            sentiment_score=sentiment['score'],
-            confidence_score=0.85,  # Calculate based on retrieval scores
-            graph_results=graph_results  # Add Graph RAG results
+            sentiment_score=self._calculate_aggregate_sentiment(graph_results),
+            confidence_score=self._calculate_confidence_score(graph_results, relevant_docs),
+            graph_results=graph_results
         )
         
         # Generate response
@@ -1015,11 +1085,94 @@ Response:"""
             'query': query,
             'response': response,
             'entities': entities,
-            'sentiment': sentiment,
-            'context_sources': [doc.metadata.get('source') for doc in relevant_docs],
+            'graph_results': [r['node'] for r in graph_results],
+            'vector_results': [doc.metadata.get('source') for doc in relevant_docs],
             'confidence': context.confidence_score,
             'timestamp': datetime.now().isoformat()
         }
+    
+    def _graph_query(self, query_type: QueryType, entities: Dict[str, List[str]], max_depth: int = 2) -> List[Dict]:
+        """Execute graph-based queries based on query type and entities"""
+        results = []
+        
+        try:
+            # Get starting nodes based on entities
+            start_nodes = []
+            for company in entities.get('companies', []):
+                if self.knowledge_graph.has_node(company):
+                    start_nodes.append(company)
+            
+            for sector in entities.get('sectors', []):
+                matching_sectors = [
+                    node for node in self.knowledge_graph.nodes()
+                    if self.knowledge_graph.nodes[node].get('type') == 'sector'
+                    and sector.lower() in node.lower()
+                ]
+                start_nodes.extend(matching_sectors)
+            
+            # Different traversal strategies based on query type
+            if query_type == QueryType.STOCK_ANALYSIS:
+                for node in start_nodes:
+                    # Get direct stock info
+                    if self.knowledge_graph.nodes[node].get('type') == 'stock':
+                        results.append({
+                            'node': node,
+                            'data': self.knowledge_graph.nodes[node],
+                            'type': 'stock_info',
+                            'relevance_score': 1.0
+                        })
+                        
+                        # Get related news
+                        news_edges = [
+                            (n, data) for n, data in self.knowledge_graph[node].items()
+                            if self.knowledge_graph.nodes[n].get('type') == 'news'
+                        ]
+                        for news_node, edge_data in news_edges:
+                            results.append({
+                                'node': news_node,
+                                'data': self.knowledge_graph.nodes[news_node],
+                                'type': 'related_news',
+                                'relevance_score': 0.8
+                            })
+            
+            elif query_type == QueryType.SECTOR_ANALYSIS:
+                for node in start_nodes:
+                    if self.knowledge_graph.nodes[node].get('type') == 'sector':
+                        # Get sector info
+                        results.append({
+                            'node': node,
+                            'data': self.knowledge_graph.nodes[node],
+                            'type': 'sector_info',
+                            'relevance_score': 1.0
+                        })
+                        
+                        # Get stocks in sector
+                        sector_stocks = [
+                            n for n in self.knowledge_graph.neighbors(node)
+                            if self.knowledge_graph.nodes[n].get('type') == 'stock'
+                        ]
+                        for stock in sector_stocks[:5]:  # Top 5 stocks
+                            results.append({
+                                'node': stock,
+                                'data': self.knowledge_graph.nodes[stock],
+                                'type': 'sector_stock',
+                                'relevance_score': 0.9
+                            })
+            
+            # Add market context
+            if self.knowledge_graph.has_node('market_breadth'):
+                results.append({
+                    'node': 'market_breadth',
+                    'data': self.knowledge_graph.nodes['market_breadth'],
+                    'type': 'market_context',
+                    'relevance_score': 0.7
+                })
+            
+            return results
+            
+        except Exception as e:
+            logger.error(f"Error in graph query: {e}")
+            return []
 
 # Initialize the RAG system
 if __name__ == "__main__":

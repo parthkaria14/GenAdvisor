@@ -1,34 +1,34 @@
 {
   "Banking": {
-    "change_percent": -3.1832015865420886,
-    "volume": 3726008
+    "change_percent": -0.36441658486300826,
+    "volume": 4374621
   },
   "IT": {
-    "change_percent": -1.0168647086193805,
-    "volume": 7172837
+    "change_percent": -1.2066783350369703,
+    "volume": 13024400
   },
   "Pharma": {
-    "change_percent": 0.0,
-    "volume": 3546455
+    "change_percent": -2.6819887905712507,
+    "volume": 2835787
   },
   "Auto": {
-    "change_percent": -0.3656678313684204,
-    "volume": 665900
+    "change_percent": -0.12228361273214662,
+    "volume": 0
   },
   "FMCG": {
-    "change_percent": -0.5680758934595418,
-    "volume": 41900
+    "change_percent": -1.3277866538748608,
+    "volume": 0
   },
   "Metal": {
-    "change_percent": -0.07301849062623296,
-    "volume": 1314300
+    "change_percent": 0.837732688131357,
+    "volume": 0
   },
   "Realty": {
-    "change_percent": 0.3858892054854214,
-    "volume": 323400
+    "change_percent": -0.9757684434569,
+    "volume": 0
   },
   "Energy": {
-    "change_percent": 0.4202745776349135,
-    "volume": 4527000
+    "change_percent": -0.7794725797144346,
+    "volume": 0
   }
 }
