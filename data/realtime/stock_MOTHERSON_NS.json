@@ -1,20 +1,5 @@
 {
   "symbol": "MOTHERSON.NS",
-  "timestamp": "2025-09-30T14:40:22.833884",
-  "current_price": 106.0,
-  "open": 106.69,
-  "high": 107.16,
-  "low": 104.54,
-  "volume": 17084999,
-  "market_cap": 1118770954240,
-  "pe_ratio": 33.438484,
-  "pb_ratio": 3.2074559,
-  "dividend_yield": 1.04,
-  "fifty_two_week_high": 143.91333,
-  "fifty_two_week_low": 71.5,
-  "avg_volume": 18295964,
-  "beta": 1.15,
-  "eps": 3.17,
-  "sector": "Consumer Cyclical",
-  "industry": "Auto Parts"
+  "timestamp": "2025-09-30T16:08:43.893016",
+  "current_price": 105.65
 }

@@ -1,20 +1,5 @@
 {
   "symbol": "BAJAJ-AUTO.NS",
-  "timestamp": "2025-09-30T14:40:29.149433",
-  "current_price": 8649.5,
-  "open": 8721.0,
-  "high": 8769.0,
-  "low": 8640.0,
-  "volume": 190180,
-  "market_cap": 2416453877760,
-  "pe_ratio": 31.858194,
-  "pb_ratio": 6.864236,
-  "dividend_yield": 2.41,
-  "fifty_two_week_high": 12500.0,
-  "fifty_two_week_low": 7089.35,
-  "avg_volume": 372025,
-  "beta": 0.782,
-  "eps": 271.5,
-  "sector": "Consumer Cyclical",
-  "industry": "Auto Manufacturers"
+  "timestamp": "2025-09-30T16:14:33.970411",
+  "current_price": 8678.5
 }

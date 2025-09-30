@@ -1,20 +1,5 @@
 {
   "symbol": "ZYDUSLIFE.NS",
-  "timestamp": "2025-09-30T14:40:23.535859",
-  "current_price": 983.35,
-  "open": 995.0,
-  "high": 997.9,
-  "low": 981.2,
-  "volume": 629733,
-  "market_cap": 990545772544,
-  "pe_ratio": 21.640625,
-  "pb_ratio": 4.130907,
-  "dividend_yield": 1.13,
-  "fifty_two_week_high": 1087.25,
-  "fifty_two_week_low": 795.0,
-  "avg_volume": 970437,
-  "beta": 0.468,
-  "eps": 45.44,
-  "sector": "Healthcare",
-  "industry": "Drug Manufacturers - Specialty & Generic"
+  "timestamp": "2025-09-30T16:08:42.181696",
+  "current_price": 981.9
 }

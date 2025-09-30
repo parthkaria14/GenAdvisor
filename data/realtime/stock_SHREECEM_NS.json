@@ -1,20 +1,5 @@
 {
   "symbol": "SHREECEM.NS",
-  "timestamp": "2025-09-30T14:39:17.285174",
-  "current_price": 29295.0,
-  "open": 29600.0,
-  "high": 29705.0,
-  "low": 29130.0,
-  "volume": 19874,
-  "market_cap": 1057007403008,
-  "pe_ratio": 70.861855,
-  "pb_ratio": 4.907595,
-  "dividend_yield": 0.42,
-  "fifty_two_week_high": 32490.0,
-  "fifty_two_week_low": 23500.0,
-  "avg_volume": 29934,
-  "beta": 0.235,
-  "eps": 413.41,
-  "sector": "Basic Materials",
-  "industry": "Building Materials"
+  "timestamp": "2025-09-30T16:14:37.735954",
+  "current_price": 29265.0
 }

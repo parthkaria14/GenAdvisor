@@ -1,20 +1,5 @@
 {
   "symbol": "LT.NS",
-  "timestamp": "2025-09-30T14:39:30.200485",
-  "current_price": 3670.9,
-  "open": 3695.0,
-  "high": 3696.6,
-  "low": 3648.0,
-  "volume": 1190045,
-  "market_cap": 5104509386752,
-  "pe_ratio": 32.205845,
-  "pb_ratio": 5.168823,
-  "dividend_yield": 0.91,
-  "fifty_two_week_high": 3963.5,
-  "fifty_two_week_low": 2965.3,
-  "avg_volume": 1636510,
-  "beta": 0.494,
-  "eps": 113.97,
-  "sector": "Industrials",
-  "industry": "Engineering & Construction"
+  "timestamp": "2025-09-30T16:08:46.899298",
+  "current_price": 3659.0
 }

@@ -1,20 +1,5 @@
 {
   "symbol": "ICICIGI.NS",
-  "timestamp": "2025-09-30T14:40:16.478885",
-  "current_price": 1891.9,
-  "open": 1903.1,
-  "high": 1912.1,
-  "low": 1885.5,
-  "volume": 492249,
-  "market_cap": 940080300032,
-  "pe_ratio": 35.422207,
-  "pb_ratio": 5.8092904,
-  "dividend_yield": 0.66,
-  "fifty_two_week_high": 2214.25,
-  "fifty_two_week_low": 1613.7,
-  "avg_volume": 572985,
-  "beta": 0.598,
-  "eps": 53.41,
-  "sector": "Financial Services",
-  "industry": "Insurance - Diversified"
+  "timestamp": "2025-09-30T16:08:41.321491",
+  "current_price": 1889.8
 }

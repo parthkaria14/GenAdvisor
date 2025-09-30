@@ -25,13 +25,14 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from enhanced_data import IndianMarketDataIngestion
 from advanced_rag_system import AdvancedRAGSystem, QueryType
 from investment_advisor_engine import LocalInvestmentAdvisorEngine
+from logger_config import setup_logger
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
-logger = logging.getLogger(__name__)
+logger = setup_logger()
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -263,28 +264,37 @@ async def get_market_overview():
 @app.get("/api/v1/market/stock/{symbol}")
 async def get_stock_data(symbol: str):
     """Get real-time data for a specific stock"""
+    logger.info(f"Fetching stock data for {symbol}")
+    
     try:
-        # First check file storage
+        # Check file storage
+        logger.debug(f"Checking local file storage for {symbol}")
         stock_data = data_ingestion.get_stock_data_from_file(symbol)
         
         if not stock_data:
-            # Fetch fresh data
+            logger.info(f"No cached data found for {symbol}, fetching fresh data")
             stock_data = await data_ingestion.fetch_realtime_price(symbol)
+        else:
+            logger.info(f"Using cached data for {symbol}")
         
         if not stock_data:
+            logger.error(f"No data available for {symbol}")
             raise HTTPException(status_code=404, detail=f"Stock {symbol} not found")
         
         # Get technical indicators
+        logger.debug(f"Fetching technical indicators for {symbol}")
         indicators_file = os.path.join(data_ingestion.data_dir, "technical_indicators.json")
         if os.path.exists(indicators_file):
             with open(indicators_file, 'r') as f:
                 all_indicators = json.load(f)
                 stock_data['technical_indicators'] = all_indicators.get(symbol, {})
+                logger.info(f"Added {len(stock_data['technical_indicators'])} technical indicators")
         
+        logger.info(f"Successfully retrieved data for {symbol}")
         return stock_data
         
     except Exception as e:
-        logger.error(f"Error getting stock data: {e}")
+        logger.error(f"Error getting stock data for {symbol}: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/v1/market/sectors")
@@ -356,21 +366,30 @@ async def analyze_risk(request: RiskAnalysisRequest):
 @app.post("/api/v1/query")
 async def process_query(request: RAGQueryRequest):
     """Process natural language queries using RAG"""
+    query_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    logger.info(f"[QueryID: {query_id}] Processing query: {request.query}")
+    
     try:
         if request.stream:
-            # Return streaming response
+            logger.info(f"[QueryID: {query_id}] Streaming mode enabled")
             async def stream_generator():
+                logger.info(f"[QueryID: {query_id}] Starting stream generation")
                 result = await rag_system.process_query(request.query, stream=True)
                 async for chunk in result:
+                    logger.debug(f"[QueryID: {query_id}] Streaming chunk: {len(chunk)} chars")
                     yield json.dumps({"chunk": chunk}) + "\n"
+                logger.info(f"[QueryID: {query_id}] Stream completed")
             
             return StreamingResponse(stream_generator(), media_type="text/event-stream")
         else:
+            logger.info(f"[QueryID: {query_id}] Starting RAG processing")
             result = await rag_system.process_query(request.query)
+            logger.info(f"[QueryID: {query_id}] Query processed successfully")
+            logger.debug(f"[QueryID: {query_id}] Response length: {len(str(result))} chars")
             return result
             
     except Exception as e:
-        logger.error(f"Error processing query: {e}")
+        logger.error(f"[QueryID: {query_id}] Error processing query: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 # Screener Endpoint

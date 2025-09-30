@@ -1,20 +1,5 @@
 {
   "symbol": "UPL.NS",
-  "timestamp": "2025-09-30T14:40:27.961724",
-  "current_price": 654.6,
-  "open": 660.2,
-  "high": 661.0,
-  "low": 650.15,
-  "volume": 1249266,
-  "market_cap": 535293067264,
-  "pe_ratio": 47.88588,
-  "pb_ratio": 1.8921919,
-  "dividend_yield": 0.93,
-  "fifty_two_week_high": 741.0,
-  "fifty_two_week_low": 493.0,
-  "avg_volume": 2667812,
-  "beta": 0.644,
-  "eps": 13.67,
-  "sector": "Basic Materials",
-  "industry": "Agricultural Inputs"
+  "timestamp": "2025-09-30T16:14:39.710408",
+  "current_price": 655.8
 }

@@ -1,20 +1,5 @@
 {
   "symbol": "SRF.NS",
-  "timestamp": "2025-09-30T14:39:09.673498",
-  "current_price": 2810.9,
-  "open": 2800.0,
-  "high": 2827.1,
-  "low": 2794.5,
-  "volume": 106620,
-  "market_cap": 833220509696,
-  "pe_ratio": 58.220795,
-  "pb_ratio": 6.5991464,
-  "dividend_yield": 0.29,
-  "fifty_two_week_high": 3325.0,
-  "fifty_two_week_low": 2126.85,
-  "avg_volume": 384434,
-  "beta": 0.211,
-  "eps": 48.28,
-  "sector": "Industrials",
-  "industry": "Conglomerates"
+  "timestamp": "2025-09-30T16:08:40.987789",
+  "current_price": 2823.6
 }

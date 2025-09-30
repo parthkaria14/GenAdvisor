@@ -1,20 +1,5 @@
 {
   "symbol": "SBILIFE.NS",
-  "timestamp": "2025-09-30T14:38:54.909166",
-  "current_price": 1788.2,
-  "open": 1783.0,
-  "high": 1795.7,
-  "low": 1778.0,
-  "volume": 1092125,
-  "market_cap": 1792792068096,
-  "pe_ratio": 72.04674,
-  "pb_ratio": 10.047647,
-  "dividend_yield": 0.15,
-  "fifty_two_week_high": 1912.0,
-  "fifty_two_week_low": 1372.55,
-  "avg_volume": 875360,
-  "beta": 0.395,
-  "eps": 24.82,
-  "sector": "Financial Services",
-  "industry": "Insurance - Life"
+  "timestamp": "2025-09-30T16:08:45.057420",
+  "current_price": 1790.6
 }

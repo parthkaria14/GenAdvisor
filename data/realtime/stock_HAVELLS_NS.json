@@ -1,20 +1,5 @@
 {
   "symbol": "HAVELLS.NS",
-  "timestamp": "2025-09-30T14:39:21.154197",
-  "current_price": 1498.6,
-  "open": 1505.2,
-  "high": 1514.0,
-  "low": 1495.0,
-  "volume": 617678,
-  "market_cap": 940408766464,
-  "pe_ratio": 66.36847,
-  "pb_ratio": 11.287357,
-  "dividend_yield": 0.66,
-  "fifty_two_week_high": 2065.4,
-  "fifty_two_week_low": 1381.3,
-  "avg_volume": 942053,
-  "beta": 0.378,
-  "eps": 22.58,
-  "sector": "Industrials",
-  "industry": "Electrical Equipment & Parts"
+  "timestamp": "2025-09-30T16:14:40.538257",
+  "current_price": 1502.0
 }

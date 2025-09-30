@@ -1,20 +1,5 @@
 {
   "symbol": "AMBUJACEM.NS",
-  "timestamp": "2025-09-30T14:39:07.149652",
-  "current_price": 568.3,
-  "open": 562.75,
-  "high": 568.75,
-  "low": 562.75,
-  "volume": 1431971,
-  "market_cap": 1411858956288,
-  "pe_ratio": 32.604702,
-  "pb_ratio": 2.6192198,
-  "dividend_yield": 0.35,
-  "fifty_two_week_high": 634.75,
-  "fifty_two_week_low": 453.05,
-  "avg_volume": 2911537,
-  "beta": -0.134,
-  "eps": 17.43,
-  "sector": "Basic Materials",
-  "industry": "Building Materials"
+  "timestamp": "2025-09-30T16:08:41.874135",
+  "current_price": 569.95
 }

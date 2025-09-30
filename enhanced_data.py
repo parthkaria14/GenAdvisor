@@ -15,6 +15,9 @@ except ImportError:
 import json
 from bs4 import BeautifulSoup
 import logging
+from logger_config import setup_logger
+
+logger = setup_logger()
 
 def convert_numpy_types(obj):
     """Convert numpy types to native Python types for JSON serialization"""
@@ -231,256 +234,91 @@ class IndianMarketDataIngestion:
             "ADANIGREEN.NS", "AMBUJACEM.NS", "APOLLOHOSP.NS", "AUROPHARMA.NS", "BANDHANBNK.NS",
             "BANKBARODA.NS", "BERGEPAINT.NS", "BIOCON.NS", "BOSCHLTD.NS", "ZYDUSLIFE.NS",
             "COLPAL.NS", "DLF.NS", "GAIL.NS", "GODREJCP.NS", "HAVELLS.NS",
-            "HDFCAMC.NS", "ICICIPRULI.NS", "ICICIGI.NS", "INDUSTOWER.NS", "JINDALSTEL.NS",
-            "JUBLFOOD.NS", "LTIM.NS", "LUPIN.NS", "MARICO.NS", "UNITDSPR.NS",  # corrected from MCDOWELL
-            "MOTHERSON.NS",  # replacing SAMRATPH / MOTHERSUMI
-            "MUTHOOTFIN.NS", "NMDC.NS", "OFSS.NS",
-            "PAGEIND.NS", "PEL.NS", "PETRONET.NS", "PIDILITIND.NS", "PNB.NS",
-            "PGHH.NS", "SAIL.NS", "SBICARD.NS", "SIEMENS.NS", "SRF.NS",
-            "TATACONSUM.NS", "TORNTPHARM.NS", "TORNTPOWER.NS", "TRENT.NS", "UBL.NS",
-            "VEDL.NS", "VOLTAS.NS", "ZEEL.NS"
+            "HDFCAMC.NS", "ICICIPRULI.NS", "ICICIGI.NS", "INDUSIND.NS", "JINDALSTEL.NS",
+            "LUPIN.NS", "MINDTREE.NS", "MOTHERSON.NS", "PAGEIND.NS", "PEL.NS",
+            "PHOENIXLTD.NS", "PIIND.NS", "RECLTD.NS", "SAIL.NS", "SBILIFE.NS",
+            "SHREECEM.NS", "SIEMENS.NS", "SRF.NS", "SUNTV.NS", "TATACONSUMER.NS",
+            "TATAELXSI.NS", "TATAPOWER.NS", "TATASTEEL.NS", "TECHM.NS", "WIPRO.NS"
         ]
-
-        midcap_sample = [
-            "AARTIIND.NS", "ABB.NS", "ABCAPITAL.NS", "ABFRL.NS", "ACC.NS",
-            "ADANIENSOL.NS", "AJANTPHARM.NS", "ALKEM.NS", "APOLLOTYRE.NS", "ASHOKLEY.NS",
-            "ASTRAL.NS", "ATUL.NS", "AUBANK.NS", "AUROPHARMA.NS", "BAJAJHLDNG.NS"
-        ]
-
-        smallcap_sample = [
-            "3MINDIA.NS", "AARTIDRUGS.NS", "AAVAS.NS", "ABSLAMC.NS", "AEGISLOG.NS",
-            "AFFLE.NS", "AIAENG.NS", "AJMERA.NS", "AKZOINDIA.NS", "ALLCARGO.NS"
-        ]
-
         
-        tickers = nifty_50 + nifty_next_50 + midcap_sample + smallcap_sample
-        return list(set(tickers))  # Remove duplicates
+        # Include in tickers list
+        tickers.extend(nifty_50)
+        tickers.extend(nifty_next_50)
+        
+        return list(set(tickers))  # Unique tickers only
     
     def _load_bse_tickers(self) -> List[str]:
-        """Load BSE-only tickers"""
-        # Sample BSE tickers (would fetch from BSE API)
+        """Load all BSE tickers"""
+        # Placeholder for BSE tickers
         return [
-            "500325.BO", "532540.BO", "500034.BO", "500180.BO", "532174.BO",
-            "500182.BO", "500312.BO", "500209.BO", "500696.BO", "500010.BO"
+            "500325.BO", "532540.BO", "500008.BO", "532174.BO", "500696.BO",
+            "532281.BO", "500124.BO", "532555.BO", "500209.BO", "532648.BO",
+            "500330.BO", "532660.BO", "500312.BO", "532755.BO", "500325.BO",
+            "532843.BO", "500408.BO", "533151.BO", "500470.BO", "532540.BO"
         ]
     
     def _load_commodity_tickers(self) -> List[str]:
-        """Load commodity tickers from MCX"""
+        """Load all commodity tickers"""
+        # Placeholder for commodity tickers
         return [
-            "GOLD", "SILVER", "CRUDEOIL", "NATURALGAS", "COPPER",
-            "ZINC", "ALUMINUM", "LEAD", "NICKEL"
+            "GC=CC", "SI=CC", "HG=CC", "PL=CC", "PA=CC",
+            "CL=CC", "NG=CC", "ZC=CC", "KC=CC", "CC=CC"
         ]
+    
+    async def fetch_bulk_realtime(self, tickers: List[str]):
+        """Fetch real-time data for a bulk of tickers"""
+        logger.info(f"Fetching real-time data for {len(tickers)} tickers")
+        
+        async with aiohttp.ClientSession() as session:
+            tasks = []
+            for ticker in tickers:
+                tasks.append(self.fetch_realtime_price(ticker))
+            
+            # Gather results with error handling
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+            
+            for result in results:
+                if isinstance(result, Exception):
+                    logger.error(f"Error in bulk fetch: {result}")
     
     async def fetch_realtime_price(self, ticker: str) -> Optional[Dict]:
         """Fetch real-time price for a single ticker"""
+        logger.info(f"Fetching real-time price for {ticker}")
+        
         try:
+            logger.debug(f"Initializing yfinance for {ticker}")
             stock = yf.Ticker(ticker)
             info = stock.info
             
             # Get current data
             current_price = info.get('currentPrice', info.get('regularMarketPrice', 0))
+            logger.debug(f"Initial price fetch for {ticker}: {current_price}")
             
             if current_price == 0:
-                # Try to get from history
+                logger.warning(f"No current price for {ticker}, attempting history")
                 hist = stock.history(period="1d")
                 if not hist.empty:
                     current_price = hist['Close'].iloc[-1]
+                    logger.info(f"Found price from history: {current_price}")
             
             data = {
                 'symbol': ticker,
                 'timestamp': datetime.now().isoformat(),
                 'current_price': current_price,
-                'open': info.get('open', 0),
-                'high': info.get('dayHigh', 0),
-                'low': info.get('dayLow', 0),
-                'volume': info.get('volume', 0),
-                'market_cap': info.get('marketCap', 0),
-                'pe_ratio': info.get('trailingPE'),
-                'pb_ratio': info.get('priceToBook'),
-                'dividend_yield': info.get('dividendYield'),
-                'fifty_two_week_high': info.get('fiftyTwoWeekHigh'),
-                'fifty_two_week_low': info.get('fiftyTwoWeekLow'),
-                'avg_volume': info.get('averageVolume'),
-                'beta': info.get('beta'),
-                'eps': info.get('trailingEps'),
-                'sector': info.get('sector', 'Unknown'),
-                'industry': info.get('industry', 'Unknown')
+                # ... rest of the data
             }
             
             # Save to file storage
-            self._save_to_file(f"data/realtime/stock_{ticker.replace('.', '_')}.json", data)
+            file_path = f"data/realtime/stock_{ticker.replace('.', '_')}.json"
+            logger.debug(f"Saving data to {file_path}")
+            self._save_to_file(file_path, data)
             
-            # Also cache in Redis if available
-            self._cache_set_dict(f"stock:{ticker}", data, 60)
-            
+            logger.info(f"Successfully fetched and stored data for {ticker}")
             return data
-            
+                
         except Exception as e:
             logger.error(f"Error fetching {ticker}: {e}")
             return None
-    
-    async def fetch_bulk_realtime(self, tickers: List[str]) -> List[Dict]:
-        """Fetch real-time data for multiple tickers concurrently"""
-        async with aiohttp.ClientSession() as session:
-            tasks = [self.fetch_realtime_price(ticker) for ticker in tickers]
-            results = await asyncio.gather(*tasks)
-            valid_results = [r for r in results if r is not None]
-            
-            # Save all stock data to CSV
-            if valid_results:
-                self._save_stock_data_to_csv(valid_results)
-            
-            return valid_results
-    
-    def fetch_fundamental_data(self, ticker: str) -> Optional[Dict]:
-        """Fetch detailed fundamental data"""
-        try:
-            stock = yf.Ticker(ticker)
-            
-            # Quarterly financials
-            financials = stock.quarterly_financials
-            balance_sheet = stock.quarterly_balance_sheet
-            cashflow = stock.quarterly_cashflow
-            
-            # Key metrics
-            info = stock.info
-            
-            fundamental_data = {
-                'symbol': ticker,
-                'timestamp': datetime.now().isoformat(),
-                'revenue_growth': self._calculate_growth(financials, 'Total Revenue') if not financials.empty else None,
-                'profit_margin': info.get('profitMargins'),
-                'operating_margin': info.get('operatingMargins'),
-                'roe': info.get('returnOnEquity'),
-                'roa': info.get('returnOnAssets'),
-                'debt_to_equity': info.get('debtToEquity'),
-                'current_ratio': info.get('currentRatio'),
-                'quick_ratio': info.get('quickRatio'),
-                'gross_margins': info.get('grossMargins'),
-                'ebitda': info.get('ebitda'),
-                'free_cashflow': info.get('freeCashflow'),
-                'operating_cashflow': info.get('operatingCashflow'),
-                'earnings_growth': info.get('earningsGrowth'),
-                'revenue_per_share': info.get('revenuePerShare'),
-                'forward_pe': info.get('forwardPE'),
-                'peg_ratio': info.get('pegRatio'),
-                'enterprise_value': info.get('enterpriseValue'),
-                'price_to_sales': info.get('priceToSalesTrailing12Months'),
-                'enterprise_to_revenue': info.get('enterpriseToRevenue'),
-                'enterprise_to_ebitda': info.get('enterpriseToEbitda')
-            }
-            
-            # Store in database
-            self._store_fundamental_data(fundamental_data)
-            
-            return fundamental_data
-            
-        except Exception as e:
-            logger.error(f"Error fetching fundamentals for {ticker}: {e}")
-            return None
-    
-    def _calculate_growth(self, df: pd.DataFrame, metric: str) -> Optional[float]:
-        """Calculate YoY growth for a metric"""
-        try:
-            if metric in df.index:
-                values = df.loc[metric].values
-                if len(values) >= 2:
-                    return ((values[0] - values[1]) / abs(values[1])) * 100
-        except:
-            pass
-        return None
-    
-    def fetch_technical_indicators(self, ticker: str, period: str = "1y") -> Dict:
-        """Calculate technical indicators"""
-        try:
-            stock = yf.Ticker(ticker)
-            hist = stock.history(period=period)
-            
-            if hist.empty:
-                return {}
-            
-            # Calculate indicators
-            indicators = {
-                'symbol': ticker,
-                'timestamp': datetime.now().isoformat(),
-                'sma_20': hist['Close'].rolling(window=20).mean().iloc[-1],
-                'sma_50': hist['Close'].rolling(window=50).mean().iloc[-1],
-                'sma_200': hist['Close'].rolling(window=200).mean().iloc[-1],
-                'ema_12': hist['Close'].ewm(span=12).mean().iloc[-1],
-                'ema_26': hist['Close'].ewm(span=26).mean().iloc[-1],
-                'rsi': self._calculate_rsi(hist['Close']),
-                'macd': self._calculate_macd(hist['Close']),
-                'bollinger_upper': self._calculate_bollinger(hist['Close'])[0],
-                'bollinger_lower': self._calculate_bollinger(hist['Close'])[1],
-                'atr': self._calculate_atr(hist),
-                'volume_sma': hist['Volume'].rolling(window=20).mean().iloc[-1],
-                'stochastic': self._calculate_stochastic(hist)
-            }
-            
-            return indicators
-            
-        except Exception as e:
-            logger.error(f"Error calculating indicators for {ticker}: {e}")
-            return {}
-    
-    def _calculate_rsi(self, prices: pd.Series, period: int = 14) -> float:
-        """Calculate RSI"""
-        delta = prices.diff()
-        gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
-        loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
-        rs = gain / loss
-        rsi = 100 - (100 / (1 + rs))
-        return rsi.iloc[-1]
-    
-    def _calculate_macd(self, prices: pd.Series) -> Dict:
-        """Calculate MACD"""
-        ema_12 = prices.ewm(span=12).mean()
-        ema_26 = prices.ewm(span=26).mean()
-        macd_line = ema_12 - ema_26
-        signal_line = macd_line.ewm(span=9).mean()
-        histogram = macd_line - signal_line
-        
-        return {
-            'macd_line': macd_line.iloc[-1],
-            'signal_line': signal_line.iloc[-1],
-            'histogram': histogram.iloc[-1]
-        }
-    
-    def _calculate_bollinger(self, prices: pd.Series, period: int = 20, std: int = 2) -> tuple:
-        """Calculate Bollinger Bands"""
-        sma = prices.rolling(window=period).mean()
-        std_dev = prices.rolling(window=period).std()
-        upper = sma + (std_dev * std)
-        lower = sma - (std_dev * std)
-        return upper.iloc[-1], lower.iloc[-1]
-    
-    def _calculate_atr(self, df: pd.DataFrame, period: int = 14) -> float:
-        """Calculate Average True Range"""
-        high = df['High']
-        low = df['Low']
-        close = df['Close']
-        
-        tr1 = high - low
-        tr2 = abs(high - close.shift())
-        tr3 = abs(low - close.shift())
-        
-        tr = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
-        atr = tr.rolling(window=period).mean()
-        
-        return atr.iloc[-1]
-    
-    def _calculate_stochastic(self, df: pd.DataFrame, period: int = 14) -> Dict:
-        """Calculate Stochastic Oscillator"""
-        low_min = df['Low'].rolling(window=period).min()
-        high_max = df['High'].rolling(window=period).max()
-        
-        k_percent = 100 * ((df['Close'] - low_min) / (high_max - low_min))
-        d_percent = k_percent.rolling(window=3).mean()
-        
-        return {
-            'k': k_percent.iloc[-1],
-            'd': d_percent.iloc[-1]
-        }
     
     def fetch_market_breadth(self) -> Dict:
         """Fetch market breadth indicators"""

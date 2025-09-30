@@ -1,20 +1,5 @@
 {
   "symbol": "ONGC.NS",
-  "timestamp": "2025-09-30T14:39:30.505402",
-  "current_price": 239.13,
-  "open": 240.0,
-  "high": 240.89,
-  "low": 238.5,
-  "volume": 4774061,
-  "market_cap": 3008322338816,
-  "pe_ratio": 8.277259,
-  "pb_ratio": 0.87593734,
-  "dividend_yield": 6.2,
-  "fifty_two_week_high": 299.7,
-  "fifty_two_week_low": 205.0,
-  "avg_volume": 8321413,
-  "beta": 0.377,
-  "eps": 28.89,
-  "sector": "Energy",
-  "industry": "Oil & Gas Integrated"
+  "timestamp": "2025-09-30T16:14:37.260830",
+  "current_price": 239.5
 }

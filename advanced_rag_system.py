@@ -51,6 +51,9 @@ except ImportError:
     REDIS_AVAILABLE = False
     print("Redis not available - using file-based storage")
 
+from logger_config import setup_logger
+logger = setup_logger()
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -1034,53 +1037,53 @@ Response:"""
     
     async def process_query(self, query: str, stream: bool = False) -> Dict:
         """Enhanced query processing with graph and vector integration"""
+        query_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        logger.info(f"[RAG-{query_id}] Processing query: {query}")
         
         # Classify query and extract entities
         query_type = self.classify_query(query)
         entities = self.extract_entities(query)
+        logger.info(f"[RAG-{query_id}] Query type: {query_type}, Entities: {entities}")
         
         # Get graph-based results
+        logger.debug(f"[RAG-{query_id}] Querying knowledge graph")
         graph_results = self._graph_query(query_type, entities)
+        logger.info(f"[RAG-{query_id}] Found {len(graph_results)} graph nodes")
         
         # Get vector-based results
-        relevant_docs = await self.retrieve_context(
-            query,
-            query_type,
-            k=5
-        )
+        logger.debug(f"[RAG-{query_id}] Retrieving context from vector store")
+        relevant_docs = await self.retrieve_context(query, query_type, k=5)
+        logger.info(f"[RAG-{query_id}] Retrieved {len(relevant_docs)} relevant documents")
         
-        # Get market context from graph
+        # Get market context
+        logger.debug(f"[RAG-{query_id}] Extracting market context from graph")
         market_context = {}
         for result in graph_results:
             if result['type'] in ['market_context', 'sector_info']:
                 market_context[result['node']] = result['data']
         
-        # Get technical data from graph nodes
-        technical_data = {}
-        for company in entities.get('companies', []):
-            if self.knowledge_graph.has_node(company):
-                node_data = self.knowledge_graph.nodes[company]
-                if 'rsi' in node_data or 'macd' in node_data:
-                    technical_data[company] = {
-                        k: v for k, v in node_data.items()
-                        if k in ['rsi', 'macd', 'sma_20', 'sma_50']
-                    }
+        # Calculate scores
+        sentiment_score = self._calculate_aggregate_sentiment(graph_results)
+        confidence_score = self._calculate_confidence_score(graph_results, relevant_docs)
+        logger.info(f"[RAG-{query_id}] Sentiment: {sentiment_score:.2f}, Confidence: {confidence_score:.2f}")
         
-        # Create enhanced context
+        # Create context
         context = RAGContext(
             query=query,
             query_type=query_type,
             relevant_docs=relevant_docs,
             market_data=market_context,
-            technical_indicators=technical_data,
-            sentiment_score=self._calculate_aggregate_sentiment(graph_results),
-            confidence_score=self._calculate_confidence_score(graph_results, relevant_docs),
+            technical_indicators={},
+            sentiment_score=sentiment_score,
+            confidence_score=confidence_score,
             graph_results=graph_results
         )
         
         # Generate response
+        logger.info(f"[RAG-{query_id}] Generating response using LLM")
         response = await self.generate_response(query, context, stream)
         
+        logger.info(f"[RAG-{query_id}] Query processing completed")
         return {
             'query': query,
             'response': response,

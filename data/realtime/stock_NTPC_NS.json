@@ -1,20 +1,5 @@
 {
   "symbol": "NTPC.NS",
-  "timestamp": "2025-09-30T14:39:01.311531",
-  "current_price": 340.9,
-  "open": 341.1,
-  "high": 343.05,
-  "low": 339.15,
-  "volume": 4929703,
-  "market_cap": 3305593634816,
-  "pe_ratio": 18.720484,
-  "pb_ratio": 1.795666,
-  "dividend_yield": 3.43,
-  "fifty_two_week_high": 447.75,
-  "fifty_two_week_low": 292.8,
-  "avg_volume": 8870975,
-  "beta": 0.286,
-  "eps": 18.21,
-  "sector": "Utilities",
-  "industry": "Utilities - Regulated Electric"
+  "timestamp": "2025-09-30T16:14:31.580644",
+  "current_price": 340.45
 }

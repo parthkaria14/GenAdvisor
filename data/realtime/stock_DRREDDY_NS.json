@@ -1,20 +1,5 @@
 {
   "symbol": "DRREDDY.NS",
-  "timestamp": "2025-09-30T14:39:31.035445",
-  "current_price": 1223.1,
-  "open": 1235.1,
-  "high": 1240.3,
-  "low": 1217.5,
-  "volume": 1729013,
-  "market_cap": 1033039577088,
-  "pe_ratio": 18.211731,
-  "pb_ratio": 2.9082859,
-  "dividend_yield": 0.64,
-  "fifty_two_week_high": 1405.9,
-  "fifty_two_week_low": 1020.0,
-  "avg_volume": 1450706,
-  "beta": 0.32,
-  "eps": 67.16,
-  "sector": "Healthcare",
-  "industry": "Drug Manufacturers - Specialty & Generic"
+  "timestamp": "2025-09-30T16:14:38.589574",
+  "current_price": 1223.7
 }

@@ -1,20 +1,5 @@
 {
   "symbol": "WIPRO.NS",
-  "timestamp": "2025-09-30T14:38:51.623403",
-  "current_price": 240.33,
-  "open": 239.93,
-  "high": 241.5,
-  "low": 239.16,
-  "volume": 3003173,
-  "market_cap": 2516704034816,
-  "pe_ratio": 18.430216,
-  "pb_ratio": 2.8959959,
-  "dividend_yield": 4.67,
-  "fifty_two_week_high": 324.6,
-  "fifty_two_week_low": 228.0,
-  "avg_volume": 8803169,
-  "beta": 0.604,
-  "eps": 13.04,
-  "sector": "Technology",
-  "industry": "Information Technology Services"
+  "timestamp": "2025-09-30T16:14:31.964200",
+  "current_price": 239.37
 }

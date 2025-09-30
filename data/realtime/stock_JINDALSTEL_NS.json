@@ -1,20 +1,5 @@
 {
   "symbol": "JINDALSTEL.NS",
-  "timestamp": "2025-09-30T14:38:59.877581",
-  "current_price": 1066.95,
-  "open": 1043.35,
-  "high": 1068.9,
-  "low": 1043.2,
-  "volume": 1426248,
-  "market_cap": 1085714333696,
-  "pe_ratio": 36.489395,
-  "pb_ratio": 2.3066344,
-  "dividend_yield": 0.19,
-  "fifty_two_week_high": 1069.7,
-  "fifty_two_week_low": 723.35,
-  "avg_volume": 1523374,
-  "beta": 0.77,
-  "eps": 29.24,
-  "sector": "Basic Materials",
-  "industry": "Steel"
+  "timestamp": "2025-09-30T16:14:33.786513",
+  "current_price": 1063.75
 }
