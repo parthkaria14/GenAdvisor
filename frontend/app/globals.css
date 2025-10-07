@@ -1,0 +1,267 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.18 0.02 250); /* deep slate text */
+  --card: oklch(0.99 0 0);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  /* brand */
+  --primary: oklch(0.7 0.18 255); /* electric blue */
+  --primary-foreground: oklch(0.98 0 0);
+
+  /* neutrals and accents */
+  --secondary: oklch(0.96 0 0);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.95 0 0);
+  --muted-foreground: oklch(0.52 0.02 250);
+
+  --accent: oklch(0.82 0.18 145); /* neon green */
+  --accent-foreground: oklch(0.12 0.02 250);
+
+  /* reuse magenta as destructive to stay ≤5 total colors */
+  --destructive: oklch(0.72 0.22 330); /* magenta/pink */
+  --destructive-foreground: oklch(0.98 0 0);
+
+  /* charts reuse brand/accents to stay within 5 colors */
+  --chart-1: var(--primary);
+  --chart-2: var(--accent);
+  --chart-3: oklch(0.6 0.03 250); /* muted slate */
+  --chart-4: oklch(0.8 0.02 250); /* light slate */
+  --chart-5: oklch(0.45 0.02 250); /* dark slate */
+
+  --radius: 0.625rem;
+
+  /* sidebar */
+  --sidebar: oklch(0.98 0 0);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--secondary);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+
+  /* fonts */
+  --font-inter: "Inter", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+}
+
+.dark {
+  /* dark mode - deep slate */
+  --background: oklch(0.17 0.02 250);
+  --foreground: oklch(0.96 0 0);
+  --card: oklch(0.19 0.02 250);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(0.7 0.18 255); /* slightly brighter electric blue */
+  --primary-foreground: oklch(0.98 0 0);
+
+  --secondary: oklch(0.23 0.01 250);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.23 0.01 250);
+  --muted-foreground: oklch(0.7 0.02 250);
+
+  --accent: oklch(0.82 0.18 145); /* neon green stays readable on dark */
+  --accent-foreground: oklch(0.12 0.02 250);
+
+  --destructive: oklch(0.72 0.22 330);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.28 0.01 250);
+  --input: var(--border);
+  --ring: oklch(0.42 0.02 250);
+
+  --chart-1: var(--accent); /* neon green primary signal */
+  --chart-2: var(--primary); /* electric blue secondary */
+  --chart-3: oklch(0.6 0.03 250);
+  --chart-4: oklch(0.8 0.02 250);
+  --chart-5: oklch(0.45 0.02 250);
+
+  --sidebar: oklch(0.2 0.02 250);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--secondary);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+@theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-outfit);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply text-foreground min-h-screen;
+    /* Image as the primary page background everywhere */
+    background-image: url("/images/site-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Fallback color in case the image fails */
+    background-color: var(--background);
+  }
+  /* ensure all headings use the display font without touching every component */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .bg-brand-gradient {
+    background-image: linear-gradient(135deg, var(--primary), var(--destructive));
+  }
+  .text-brand-gradient {
+    background-image: linear-gradient(135deg, var(--primary), var(--destructive));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .card-glass {
+    background-color: color-mix(in oklab, var(--card) 70%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+  }
+
+  .glass {
+    background-color: color-mix(in oklab, var(--background) 60%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid color-mix(in oklab, var(--border) 70%, transparent);
+  }
+  .glass-hover {
+    transition: box-shadow 200ms, border-color 200ms, transform 200ms;
+  }
+  .glass-hover:hover {
+    box-shadow: 0 10px 30px color-mix(in oklab, var(--primary) 25%, transparent);
+    border-color: color-mix(in oklab, var(--primary) 40%, var(--border));
+    transform: translateY(-1px);
+  }
+  .topbar-glass {
+    @apply bg-background/60 border-b backdrop-blur supports-[backdrop-filter]:bg-background/45;
+  }
+  .container-fluid {
+    @apply w-full px-4 md:px-6;
+  }
+  .brand-gradient-text {
+    background-image: linear-gradient(135deg, var(--primary), var(--destructive));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .site-bg {
+    background-image: radial-gradient(80% 60% at 20% 0%, oklch(0.42 0.12 300 / 0.25), transparent 60%),
+      radial-gradient(80% 60% at 100% 0%, oklch(0.35 0.08 260 / 0.25), transparent 60%),
+      linear-gradient(180deg, var(--background), var(--background));
+  }
+
+  @keyframes orb-float {
+    0% {
+      transform: translateY(0) scale(1);
+      filter: blur(40px);
+    }
+    50% {
+      transform: translateY(-12px) scale(1.05);
+      filter: blur(44px);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      filter: blur(40px);
+    }
+  }
+
+  .orb {
+    position: absolute;
+    width: 38rem;
+    height: 38rem;
+    border-radius: 9999px;
+    opacity: 0.28;
+    animation: orb-float 10s ease-in-out infinite;
+  }
+  .orb-blue {
+    left: -8rem;
+    top: -6rem;
+    background: radial-gradient(circle at 30% 30%, oklch(0.78 0.2 255 / 0.9), transparent 60%);
+  }
+  .orb-pink {
+    right: -10rem;
+    top: -4rem;
+    animation-delay: 2.5s;
+    background: radial-gradient(circle at 60% 40%, oklch(0.75 0.23 330 / 0.9), transparent 60%);
+  }
+  .orb-orange {
+    right: -6rem;
+    bottom: -10rem;
+    animation-delay: 1.2s;
+    background: radial-gradient(circle at 40% 60%, oklch(0.8 0.18 60 / 0.85), transparent 60%);
+  }
+
+  /* ensure the app shell never paints white over the body background */
+  [data-slot="sidebar-inset"] {
+    background-color: transparent !important;
+  }
+  /* Landing root helper if needed */
+  [data-landing-root="true"] {
+    background-color: transparent !important;
+  }
+}

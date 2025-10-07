@@ -1,0 +1,81 @@
+2025-10-07 21:26:44,006 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-07 21:26:44,006 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-07 21:26:44,006 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-07 21:43:50,114 - INFO - [GenAdvisor] [QueryID: 20251007_214350] Processing query: hi
+2025-10-07 21:43:50,114 - INFO - [GenAdvisor] [QueryID: 20251007_214350] Processing query: hi
+2025-10-07 21:43:50,114 - INFO - [GenAdvisor] [QueryID: 20251007_214350] Processing query: hi
+2025-10-07 21:43:50,117 - INFO - [GenAdvisor] [QueryID: 20251007_214350] Starting RAG processing
+2025-10-07 21:43:50,117 - INFO - [GenAdvisor] [QueryID: 20251007_214350] Starting RAG processing
+2025-10-07 21:43:50,117 - INFO - [GenAdvisor] [QueryID: 20251007_214350] Starting RAG processing
+2025-10-07 21:43:55,541 - INFO - [GenAdvisor] [QueryID: 20251007_214350] Query processed successfully
+2025-10-07 21:43:55,541 - INFO - [GenAdvisor] [QueryID: 20251007_214350] Query processed successfully
+2025-10-07 21:43:55,541 - INFO - [GenAdvisor] [QueryID: 20251007_214350] Query processed successfully
+2025-10-07 21:43:55,545 - DEBUG - [GenAdvisor] [QueryID: 20251007_214350] Response length: 6411 chars
+2025-10-07 21:43:55,545 - DEBUG - [GenAdvisor] [QueryID: 20251007_214350] Response length: 6411 chars
+2025-10-07 21:43:55,545 - DEBUG - [GenAdvisor] [QueryID: 20251007_214350] Response length: 6411 chars
+2025-10-07 21:44:28,637 - INFO - [GenAdvisor] [QueryID: 20251007_214428] Processing query: which is the only one stock that i need to buy
+2025-10-07 21:44:28,637 - INFO - [GenAdvisor] [QueryID: 20251007_214428] Processing query: which is the only one stock that i need to buy
+2025-10-07 21:44:28,637 - INFO - [GenAdvisor] [QueryID: 20251007_214428] Processing query: which is the only one stock that i need to buy
+2025-10-07 21:44:28,641 - INFO - [GenAdvisor] [QueryID: 20251007_214428] Starting RAG processing
+2025-10-07 21:44:28,641 - INFO - [GenAdvisor] [QueryID: 20251007_214428] Starting RAG processing
+2025-10-07 21:44:28,641 - INFO - [GenAdvisor] [QueryID: 20251007_214428] Starting RAG processing
+2025-10-07 21:44:33,129 - INFO - [GenAdvisor] [QueryID: 20251007_214428] Query processed successfully
+2025-10-07 21:44:33,129 - INFO - [GenAdvisor] [QueryID: 20251007_214428] Query processed successfully
+2025-10-07 21:44:33,129 - INFO - [GenAdvisor] [QueryID: 20251007_214428] Query processed successfully
+2025-10-07 21:44:33,131 - DEBUG - [GenAdvisor] [QueryID: 20251007_214428] Response length: 7862 chars
+2025-10-07 21:44:33,131 - DEBUG - [GenAdvisor] [QueryID: 20251007_214428] Response length: 7862 chars
+2025-10-07 21:44:33,131 - DEBUG - [GenAdvisor] [QueryID: 20251007_214428] Response length: 7862 chars
+2025-10-07 21:45:45,652 - INFO - [GenAdvisor] [QueryID: 20251007_214545] Processing query: dont give any explanation, only 1 stock name. that's it
+2025-10-07 21:45:45,652 - INFO - [GenAdvisor] [QueryID: 20251007_214545] Processing query: dont give any explanation, only 1 stock name. that's it
+2025-10-07 21:45:45,652 - INFO - [GenAdvisor] [QueryID: 20251007_214545] Processing query: dont give any explanation, only 1 stock name. that's it
+2025-10-07 21:45:45,654 - INFO - [GenAdvisor] [QueryID: 20251007_214545] Starting RAG processing
+2025-10-07 21:45:45,654 - INFO - [GenAdvisor] [QueryID: 20251007_214545] Starting RAG processing
+2025-10-07 21:45:45,654 - INFO - [GenAdvisor] [QueryID: 20251007_214545] Starting RAG processing
+2025-10-07 21:45:48,661 - INFO - [GenAdvisor] [QueryID: 20251007_214545] Query processed successfully
+2025-10-07 21:45:48,661 - INFO - [GenAdvisor] [QueryID: 20251007_214545] Query processed successfully
+2025-10-07 21:45:48,661 - INFO - [GenAdvisor] [QueryID: 20251007_214545] Query processed successfully
+2025-10-07 21:45:48,663 - DEBUG - [GenAdvisor] [QueryID: 20251007_214545] Response length: 4231 chars
+2025-10-07 21:45:48,663 - DEBUG - [GenAdvisor] [QueryID: 20251007_214545] Response length: 4231 chars
+2025-10-07 21:45:48,663 - DEBUG - [GenAdvisor] [QueryID: 20251007_214545] Response length: 4231 chars
+2025-10-07 21:48:49,279 - INFO - [GenAdvisor] [QueryID: 20251007_214849] Processing query: which is the best small cap stock?
+2025-10-07 21:48:49,279 - INFO - [GenAdvisor] [QueryID: 20251007_214849] Processing query: which is the best small cap stock?
+2025-10-07 21:48:49,279 - INFO - [GenAdvisor] [QueryID: 20251007_214849] Processing query: which is the best small cap stock?
+2025-10-07 21:48:49,285 - INFO - [GenAdvisor] [QueryID: 20251007_214849] Starting RAG processing
+2025-10-07 21:48:49,285 - INFO - [GenAdvisor] [QueryID: 20251007_214849] Starting RAG processing
+2025-10-07 21:48:49,285 - INFO - [GenAdvisor] [QueryID: 20251007_214849] Starting RAG processing
+2025-10-07 21:48:55,178 - INFO - [GenAdvisor] [QueryID: 20251007_214849] Query processed successfully
+2025-10-07 21:48:55,178 - INFO - [GenAdvisor] [QueryID: 20251007_214849] Query processed successfully
+2025-10-07 21:48:55,178 - INFO - [GenAdvisor] [QueryID: 20251007_214849] Query processed successfully
+2025-10-07 21:48:55,186 - DEBUG - [GenAdvisor] [QueryID: 20251007_214849] Response length: 6305 chars
+2025-10-07 21:48:55,186 - DEBUG - [GenAdvisor] [QueryID: 20251007_214849] Response length: 6305 chars
+2025-10-07 21:48:55,186 - DEBUG - [GenAdvisor] [QueryID: 20251007_214849] Response length: 6305 chars
+2025-10-07 21:51:18,952 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-07 21:51:18,952 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-07 21:51:18,952 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-07 21:51:54,034 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-07 21:51:54,034 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-07 21:51:54,034 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-07 21:52:14,724 - INFO - [GenAdvisor] [QueryID: 20251007_215214] Processing query: which is the one best small cap stock right now?
+2025-10-07 21:52:14,724 - INFO - [GenAdvisor] [QueryID: 20251007_215214] Processing query: which is the one best small cap stock right now?
+2025-10-07 21:52:14,724 - INFO - [GenAdvisor] [QueryID: 20251007_215214] Processing query: which is the one best small cap stock right now?
+2025-10-07 21:52:14,725 - INFO - [GenAdvisor] [QueryID: 20251007_215214] Starting RAG processing
+2025-10-07 21:52:14,725 - INFO - [GenAdvisor] [QueryID: 20251007_215214] Starting RAG processing
+2025-10-07 21:52:14,725 - INFO - [GenAdvisor] [QueryID: 20251007_215214] Starting RAG processing
+2025-10-07 21:52:20,836 - INFO - [GenAdvisor] [QueryID: 20251007_215214] Query processed successfully
+2025-10-07 21:52:20,836 - INFO - [GenAdvisor] [QueryID: 20251007_215214] Query processed successfully
+2025-10-07 21:52:20,836 - INFO - [GenAdvisor] [QueryID: 20251007_215214] Query processed successfully
+2025-10-07 21:52:20,840 - DEBUG - [GenAdvisor] [QueryID: 20251007_215214] Formatted response length: 370 chars
+2025-10-07 21:52:20,840 - DEBUG - [GenAdvisor] [QueryID: 20251007_215214] Formatted response length: 370 chars
+2025-10-07 21:52:20,840 - DEBUG - [GenAdvisor] [QueryID: 20251007_215214] Formatted response length: 370 chars
+2025-10-07 21:52:52,656 - INFO - [GenAdvisor] [QueryID: 20251007_215252] Processing query: best 3 mid cap companies to invest in
+2025-10-07 21:52:52,656 - INFO - [GenAdvisor] [QueryID: 20251007_215252] Processing query: best 3 mid cap companies to invest in
+2025-10-07 21:52:52,656 - INFO - [GenAdvisor] [QueryID: 20251007_215252] Processing query: best 3 mid cap companies to invest in
+2025-10-07 21:52:52,658 - INFO - [GenAdvisor] [QueryID: 20251007_215252] Starting RAG processing
+2025-10-07 21:52:52,658 - INFO - [GenAdvisor] [QueryID: 20251007_215252] Starting RAG processing
+2025-10-07 21:52:52,658 - INFO - [GenAdvisor] [QueryID: 20251007_215252] Starting RAG processing
+2025-10-07 21:52:57,757 - INFO - [GenAdvisor] [QueryID: 20251007_215252] Query processed successfully
+2025-10-07 21:52:57,757 - INFO - [GenAdvisor] [QueryID: 20251007_215252] Query processed successfully
+2025-10-07 21:52:57,757 - INFO - [GenAdvisor] [QueryID: 20251007_215252] Query processed successfully
+2025-10-07 21:52:57,758 - DEBUG - [GenAdvisor] [QueryID: 20251007_215252] Formatted response length: 356 chars
+2025-10-07 21:52:57,758 - DEBUG - [GenAdvisor] [QueryID: 20251007_215252] Formatted response length: 356 chars
+2025-10-07 21:52:57,758 - DEBUG - [GenAdvisor] [QueryID: 20251007_215252] Formatted response length: 356 chars
