@@ -1,16 +1,16 @@
 {
   "symbol": "HDFCBANK.NS",
-  "timestamp": "2025-10-28T12:09:43.584992",
-  "current_price": 996.55,
+  "timestamp": "2025-10-28T14:31:22.110000",
+  "current_price": 998.4,
   "name": "HDFC Bank Limited",
   "sector": "Financial Services",
-  "market_cap": 15310659780608,
-  "pe_ratio": 22.788704,
-  "pb_ratio": 2.8144848,
+  "market_cap": 15339083530240,
+  "pe_ratio": 22.831009,
+  "pb_ratio": 2.8197098,
   "dividend_yield": 1.1,
   "beta": 0.577,
-  "volume": 11356795,
+  "volume": 21287763,
   "fifty_two_week_high": 1020.5,
   "fifty_two_week_low": 812.15,
-  "change_percent": -0.63812
+  "change_percent": -0.45361525
 }

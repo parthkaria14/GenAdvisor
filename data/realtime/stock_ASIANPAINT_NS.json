@@ -1,16 +1,16 @@
 {
   "symbol": "ASIANPAINT.NS",
-  "timestamp": "2025-10-28T12:09:46.707842",
-  "current_price": 2501.5,
+  "timestamp": "2025-10-28T14:27:57.450668",
+  "current_price": 2495.2,
   "name": "Asian Paints Limited",
   "sector": "Basic Materials",
-  "market_cap": 2398266851328,
-  "pe_ratio": 66.664,
-  "pb_ratio": 12.370334,
+  "market_cap": 2391844323328,
+  "pe_ratio": 66.48548,
+  "pb_ratio": 12.337206,
   "dividend_yield": 0.98,
   "beta": 0.337,
-  "volume": 571331,
+  "volume": 770781,
   "fifty_two_week_high": 3028.0,
   "fifty_two_week_low": 2124.75,
-  "change_percent": -0.67106676
+  "change_percent": -0.9368091
 }

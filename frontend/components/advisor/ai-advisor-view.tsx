@@ -9,7 +9,18 @@ import { useChatStore } from "@/stores/chat-store"
 import { getAdvisorMockResponse, postQuery } from "@/lib/api"
 import { AI3DAdvisor } from "@/components/advisor/ai-3d-advisor"
 
+// --- 1. Import the Markdown renderer ---
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm" // This plugin adds support for tables
+
 type Msg = { role: "user" | "assistant"; content: string }
+
+// --- 2. Define the expected API response shape ---
+type ApiResponse = {
+  answer: string
+  confidence: number
+  timestamp: string
+}
 
 export default function AIAdvisorView() {
   const { messages, append } = useChatStore()
@@ -27,13 +38,26 @@ export default function AIAdvisorView() {
     append(userMsg)
     setInput("")
     setLoading(true)
+    
     try {
-      // Prefer real endpoint
-      const res = await postQuery(userMsg.content, false)
-      const text = typeof res === "string" ? res : JSON.stringify(res)
-      append({ role: "assistant", content: text })
-    } catch {
-      // Fallback to mock
+      // --- 3. Correctly parse the JSON response ---
+      const res: ApiResponse = await postQuery(userMsg.content, false)
+
+      let assistantContent = ""
+
+      // Check if we got the expected object with an 'answer' property
+      if (res && typeof res.answer === "string") {
+        assistantContent = res.answer
+      } else {
+        // Fallback for any unexpected response
+        assistantContent = "Sorry, I received an invalid response."
+      }
+      append({ role: "assistant", content: assistantContent })
+      // --- END FIX ---
+
+    } catch (err) {
+      // Fallback to mock on error
+      console.error("API Error:", err)
       const assistant = await getAdvisorMockResponse(userMsg.content)
       append({ role: "assistant", content: assistant })
     } finally {
@@ -56,7 +80,18 @@ export default function AIAdvisorView() {
             {messages.map((m, i) => (
               <div key={i} className="text-sm leading-relaxed" aria-live="polite">
                 <span className="font-medium">{m.role === "user" ? "You" : "Advisor"}: </span>
-                <span className="text-pretty">{m.content}</span>
+                
+                {/* --- 4. Render user text normally, but assistant text with Markdown --- */}
+                {m.role === "user" ? (
+                  <span className="text-pretty">{m.content}</span>
+                ) : (
+                  <div className="prose prose-sm prose-p:inline prose-headings:my-2 dark:prose-invert max-w-none">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {m.content}
+                    </ReactMarkdown>
+                  </div>
+                )}
+                {/* --- END FIX --- */}
               </div>
             ))}
             {loading && (

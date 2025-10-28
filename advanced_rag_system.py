@@ -30,7 +30,8 @@ from langchain_groq import ChatGroq
 # Graph RAG imports
 import networkx as nx
 from collections import defaultdict
-
+from investment_advisor_engine import LocalInvestmentAdvisorEngine # <-- Import the engine class
+from typing import List, Dict, Any, Optional, Tuple
 # Vector database
 import chromadb
 from chromadb.config import Settings
@@ -76,6 +77,7 @@ class RAGContext:
     technical_indicators: Dict
     sentiment_score: float
     confidence_score: float
+    quantitative_analysis: Optional[Dict] = None
     graph_results: List[Dict] = None  # Graph RAG results
 
 class AdvancedRAGSystem:
@@ -90,7 +92,8 @@ class AdvancedRAGSystem:
         llm_model: str = "openai/gpt-oss-120b",  # Default Groq model
         redis_host: str = "localhost",
         redis_port: int = 6379,
-        enable_redis: bool = False
+        enable_redis: bool = False,
+        advisor_engine: Optional[LocalInvestmentAdvisorEngine] = None
 ):
         
         # Initialize embeddings
@@ -111,7 +114,11 @@ class AdvancedRAGSystem:
             max_tokens=4096,
             api_key=os.getenv("GROQ_API_KEY")  # Make sure to set this environment variable
     )
-        
+        self.advisor_engine = advisor_engine
+        if self.advisor_engine:
+            logger.info("Advisor Engine successfully linked to RAG system.")
+        else:
+            logger.warning("Advisor Engine not provided to RAG system. Quantitative analysis will be disabled.")
         # Initialize specialized models
         self.sentiment_model = self._initialize_sentiment_model()
         self.ner_model = self._initialize_ner_model()
@@ -1091,8 +1098,7 @@ Response:"""
         # Classify query and extract entities
         query_type = self.classify_query(query)
         entities = self.extract_entities(query)
-        logger.info(f"[RAG-{query_id}] Query type: {query_type}, Entities: {entities}")
-        
+        logger.info(f"[RAG-{query_id}] Classified as {query_type.value} with entities: {entities}")        
         # Get graph-based results
         logger.debug(f"[RAG-{query_id}] Querying knowledge graph")
         graph_results = self._graph_query(query_type, entities)
@@ -1105,6 +1111,31 @@ Response:"""
         
         # Get market context and technical indicators
         logger.debug(f"[RAG-{query_id}] Extracting market context and indicators from graph")
+        quantitative_analysis = None
+        technical_indicators_from_engine = {}
+        
+        # Check if this is a stock query, we have a company, and the engine is linked
+        if (query_type == QueryType.STOCK_ANALYSIS and 
+            entities.get('companies') and 
+            self.advisor_engine):
+            
+            stock_symbol = entities['companies'][0] # Analyze the first stock found
+            logger.info(f"[RAG-{query_id}] Running advisor engine for {stock_symbol}...")
+            try:
+                # Run the full analysis from the engine
+                # This is where your ARIMA-LSTM model is executed!
+                analysis_result = await self.advisor_engine.analyze_stock(stock_symbol)
+                
+                if analysis_result.get('success'):
+                    quantitative_analysis = analysis_result
+                    # Also extract the technical indicators for the context
+                    tech = analysis_result.get('technical_indicators', {})
+                    if tech:
+                        technical_indicators_from_engine = tech
+                    logger.info(f"[RAG-{query_id}] Engine Success. Target Price: {analysis_result.get('target_price')}")
+            except Exception as e:
+                logger.error(f"[RAG-{query_id}] Advisor engine analysis failed: {e}")
+        # --- END OF FIX ---
         market_context = {}
         technical_indicators = {} # <-- Initialize as empty dict
         
@@ -1140,9 +1171,10 @@ Response:"""
             query_type=query_type,
             relevant_docs=relevant_docs,
             market_data=market_context,
-            technical_indicators=technical_indicators, # <-- Pass the populated dict
+            technical_indicators=technical_indicators_from_engine, # <-- Use engine's data
             sentiment_score=sentiment_score,
             confidence_score=confidence_score,
+            quantitative_analysis=quantitative_analysis, # <-- Pass the full analysis
             graph_results=graph_results
         )
         

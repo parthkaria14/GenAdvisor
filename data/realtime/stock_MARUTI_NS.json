@@ -1,16 +1,16 @@
 {
   "symbol": "MARUTI.NS",
-  "timestamp": "2025-10-28T12:08:21.050807",
-  "current_price": 16352.0,
+  "timestamp": "2025-10-28T14:42:13.595469",
+  "current_price": 16295.0,
   "name": "Maruti Suzuki India Limited",
   "sector": "Consumer Cyclical",
-  "market_cap": 5141110456320,
-  "pe_ratio": 35.383217,
-  "pb_ratio": 5.3418813,
+  "market_cap": 5123189768192,
+  "pe_ratio": 35.259876,
+  "pb_ratio": 5.3232603,
   "dividend_yield": 0.82,
   "beta": 0.214,
-  "volume": 139448,
+  "volume": 266691,
   "fifty_two_week_high": 16660.0,
   "fifty_two_week_low": 10725.0,
-  "change_percent": -0.21968633
+  "change_percent": -0.5674538
 }

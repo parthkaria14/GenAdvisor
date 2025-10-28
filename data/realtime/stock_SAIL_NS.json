@@ -1,16 +1,16 @@
 {
   "symbol": "SAIL.NS",
-  "timestamp": "2025-10-28T12:09:47.095777",
-  "current_price": 132.49,
+  "timestamp": "2025-10-28T14:32:08.802689",
+  "current_price": 131.54,
   "name": "Steel Authority of India Limited",
   "sector": "Basic Materials",
-  "market_cap": 547463954432,
-  "pe_ratio": 18.05041,
-  "pb_ratio": 0.928627,
+  "market_cap": 543538413568,
+  "pe_ratio": 17.92098,
+  "pb_ratio": 0.92196834,
   "dividend_yield": 1.23,
   "beta": 1.37,
-  "volume": 23793601,
+  "volume": 39160708,
   "fifty_two_week_high": 139.98,
   "fifty_two_week_low": 99.15,
-  "change_percent": 1.9938505
+  "change_percent": 1.2622175
 }

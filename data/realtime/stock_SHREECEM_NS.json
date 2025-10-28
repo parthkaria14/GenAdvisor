@@ -1,16 +1,16 @@
 {
   "symbol": "SHREECEM.NS",
-  "timestamp": "2025-10-28T12:09:53.800403",
-  "current_price": 28450.0,
+  "timestamp": "2025-10-28T14:42:12.116226",
+  "current_price": 28325.0,
   "name": "Shree Cement Limited",
   "sector": "Basic Materials",
-  "market_cap": 1026906587136,
-  "pe_ratio": 69.103714,
-  "pb_ratio": 4.766038,
+  "market_cap": 1022394695680,
+  "pe_ratio": 68.800095,
+  "pb_ratio": 4.7450976,
   "dividend_yield": 0.42,
   "beta": 0.221,
-  "volume": 12998,
+  "volume": 26921,
   "fifty_two_week_high": 32490.0,
   "fifty_two_week_low": 23500.0,
-  "change_percent": -0.48968172
+  "change_percent": -0.9249564
 }

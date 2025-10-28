@@ -1,16 +1,16 @@
 {
   "symbol": "TATAELXSI.NS",
-  "timestamp": "2025-10-28T12:08:45.344274",
-  "current_price": 5527.0,
+  "timestamp": "2025-10-28T14:42:15.983409",
+  "current_price": 5530.5,
   "name": "Tata Elxsi Limited",
   "sector": "Technology",
-  "market_cap": 344343838720,
-  "pe_ratio": 51.27087,
-  "pb_ratio": 12.740865,
+  "market_cap": 344561909760,
+  "pe_ratio": 51.303337,
+  "pb_ratio": 12.748934,
   "dividend_yield": 1.34,
   "beta": 0.499,
-  "volume": 59325,
+  "volume": 103090,
   "fifty_two_week_high": 7474.0,
   "fifty_two_week_low": 4700.0,
-  "change_percent": -1.0473548
+  "change_percent": -0.9844281
 }

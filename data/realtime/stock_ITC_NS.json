@@ -1,16 +1,16 @@
 {
   "symbol": "ITC.NS",
-  "timestamp": "2025-10-28T12:08:42.402888",
-  "current_price": 416.4,
+  "timestamp": "2025-10-28T14:31:09.430282",
+  "current_price": 416.5,
   "name": "ITC Limited",
   "sector": "Consumer Defensive",
-  "market_cap": 5216591151104,
-  "pe_ratio": 26.122961,
-  "pb_ratio": 7.4408965,
+  "market_cap": 5217844199424,
+  "pe_ratio": 26.129236,
+  "pb_ratio": 7.4426837,
   "dividend_yield": 3.73,
   "beta": 0.021,
-  "volume": 5568843,
+  "volume": 10666155,
   "fifty_two_week_high": 493.45,
   "fifty_two_week_low": 390.15,
-  "change_percent": -1.0103412
+  "change_percent": -0.98656696
 }

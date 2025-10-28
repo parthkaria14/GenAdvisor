@@ -1,16 +1,16 @@
 {
   "symbol": "ONGC.NS",
-  "timestamp": "2025-10-28T12:09:51.657946",
-  "current_price": 251.3,
+  "timestamp": "2025-10-28T14:32:12.775193",
+  "current_price": 250.42,
   "name": "Oil and Natural Gas Corporation Limited",
   "sector": "Energy",
-  "market_cap": 3161424134144,
-  "pe_ratio": 8.76526,
-  "pb_ratio": 0.92051625,
+  "market_cap": 3150353530880,
+  "pe_ratio": 8.734566,
+  "pb_ratio": 0.9172928,
   "dividend_yield": 5.82,
   "beta": 0.336,
-  "volume": 2511626,
+  "volume": 4700838,
   "fifty_two_week_high": 274.35,
   "fifty_two_week_low": 205.0,
-  "change_percent": -0.77791864
+  "change_percent": -1.1255504
 }

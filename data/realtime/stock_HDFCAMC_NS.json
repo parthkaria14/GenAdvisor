@@ -1,16 +1,16 @@
 {
   "symbol": "HDFCAMC.NS",
-  "timestamp": "2025-10-28T12:09:33.277671",
-  "current_price": 5609.0,
+  "timestamp": "2025-10-28T14:07:04.140327",
+  "current_price": 5618.0,
   "name": "HDFC Asset Management Company Limited",
   "sector": "Financial Services",
-  "market_cap": 1200347021312,
-  "pe_ratio": 43.868294,
-  "pb_ratio": 15.5108,
+  "market_cap": 1202792169472,
+  "pe_ratio": 43.938683,
+  "pb_ratio": 15.535688,
   "dividend_yield": 1.62,
   "beta": 0.507,
-  "volume": 165807,
+  "volume": 259112,
   "fifty_two_week_high": 5934.5,
   "fifty_two_week_low": 3563.05,
-  "change_percent": 0.8996042
+  "change_percent": 1.0610557
 }

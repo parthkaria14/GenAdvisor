@@ -1,16 +1,16 @@
 {
   "symbol": "ICICIBANK.NS",
-  "timestamp": "2025-10-28T12:08:23.453851",
-  "current_price": 1357.0,
+  "timestamp": "2025-10-28T14:16:58.341617",
+  "current_price": 1361.3,
   "name": "ICICI Bank Limited",
   "sector": "Financial Services",
-  "market_cap": 9695669518336,
-  "pe_ratio": 18.342794,
-  "pb_ratio": 2.8893857,
+  "market_cap": 9726392795136,
+  "pe_ratio": 18.400919,
+  "pb_ratio": 2.8985417,
   "dividend_yield": 0.8,
   "beta": 0.407,
-  "volume": 8933856,
+  "volume": 16727807,
   "fifty_two_week_high": 1500.0,
   "fifty_two_week_low": 1186.0,
-  "change_percent": -1.4953525
+  "change_percent": -1.1837275
 }

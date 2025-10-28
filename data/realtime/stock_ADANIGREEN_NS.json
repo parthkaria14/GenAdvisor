@@ -1,16 +1,16 @@
 {
   "symbol": "ADANIGREEN.NS",
-  "timestamp": "2025-10-28T12:08:36.642710",
-  "current_price": 1009.0,
+  "timestamp": "2025-10-28T14:31:15.447192",
+  "current_price": 1001.5,
   "name": "Adani Green Energy Limited",
   "sector": "Utilities",
-  "market_cap": 1681936351232,
-  "pe_ratio": 101.203606,
-  "pb_ratio": 14.919194,
+  "market_cap": 1649646895104,
+  "pe_ratio": 100.451355,
+  "pb_ratio": 14.808299,
   "dividend_yield": null,
   "beta": 0.948,
-  "volume": 989157,
+  "volume": 1516001,
   "fifty_two_week_high": 1733.95,
   "fifty_two_week_low": 758.0,
-  "change_percent": -0.79645777
+  "change_percent": -1.5331671
 }

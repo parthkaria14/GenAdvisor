@@ -1,16 +1,16 @@
 {
   "symbol": "UPL.NS",
-  "timestamp": "2025-10-28T12:08:44.557040",
-  "current_price": 685.05,
+  "timestamp": "2025-10-28T14:08:14.484738",
+  "current_price": 697.95,
   "name": "UPL Limited",
   "sector": "Basic Materials",
-  "market_cap": 557268533248,
-  "pe_ratio": 50.631927,
-  "pb_ratio": 1.9802109,
+  "market_cap": 573779673088,
+  "pe_ratio": 51.58537,
+  "pb_ratio": 2.0174997,
   "dividend_yield": 0.88,
   "beta": 0.574,
-  "volume": 2197055,
+  "volume": 3546261,
   "fifty_two_week_high": 741.0,
   "fifty_two_week_low": 493.0,
-  "change_percent": 0.7646515
+  "change_percent": 2.6621618
 }

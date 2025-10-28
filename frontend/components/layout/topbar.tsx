@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { Search, Sun, Moon } from "lucide-react"
 import { Input } from "@/components/ui/input"
@@ -10,7 +10,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function Topbar() {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
   const [query, setQuery] = useState("")
+  
+  // Only show theme toggle after mounting to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <header className="sticky top-0 z-40 w-full topbar-glass">
@@ -20,7 +26,7 @@ export default function Topbar() {
         </Link>
 
         {/* Mobile search trigger */}
-        <Button variant="ghost" size="icon" className="sm:hidden" aria-label="Open search">
+        <Button variant="secondary" size="sm" className="sm:hidden w-8 h-8 px-0" aria-label="Open search">
           <Search className="h-5 w-5" />
         </Button>
 
@@ -47,12 +53,21 @@ export default function Topbar() {
         </form>
 
         <Button
-          variant="ghost"
-          size="icon"
+          variant="secondary"
+          size="sm"
           aria-label="Toggle theme"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="w-8 h-8 px-0"
         >
-          {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          {mounted ? (
+            theme === "dark" ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )
+          ) : (
+            <div className="h-5 w-5" /> // Placeholder of same size while loading
+          )}
         </Button>
 
         <Avatar className="h-8 w-8">

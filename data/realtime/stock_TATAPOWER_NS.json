@@ -1,16 +1,16 @@
 {
   "symbol": "TATAPOWER.NS",
-  "timestamp": "2025-10-28T12:09:40.672745",
-  "current_price": 399.45,
+  "timestamp": "2025-10-28T14:02:17.319015",
+  "current_price": 397.75,
   "name": "Tata Power Company Limited",
   "sector": "Utilities",
-  "market_cap": 1276378349568,
-  "pe_ratio": 31.477543,
-  "pb_ratio": 3.5475135,
+  "market_cap": 1270946332672,
+  "pe_ratio": 31.343578,
+  "pb_ratio": 3.5324156,
   "dividend_yield": 0.56,
   "beta": 0.519,
-  "volume": 1588658,
+  "volume": 2530741,
   "fifty_two_week_high": 454.75,
   "fifty_two_week_low": 326.35,
-  "change_percent": -0.19987203
+  "change_percent": -0.6246096
 }

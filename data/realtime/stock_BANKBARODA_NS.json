@@ -1,16 +1,16 @@
 {
   "symbol": "BANKBARODA.NS",
-  "timestamp": "2025-10-28T12:08:28.559154",
-  "current_price": 274.85,
+  "timestamp": "2025-10-28T14:42:13.771972",
+  "current_price": 276.3,
   "name": "Bank of Baroda Limited",
   "sector": "Financial Services",
-  "market_cap": 1421348962304,
-  "pe_ratio": 7.304013,
-  "pb_ratio": 0.9246613,
+  "market_cap": 1430674735104,
+  "pe_ratio": 7.3425455,
+  "pb_ratio": 0.9295394,
   "dividend_yield": 3.05,
   "beta": 0.516,
-  "volume": 5080001,
+  "volume": 8789254,
   "fifty_two_week_high": 279.9,
   "fifty_two_week_low": 190.7,
-  "change_percent": 0.43868116
+  "change_percent": 0.9676808
 }

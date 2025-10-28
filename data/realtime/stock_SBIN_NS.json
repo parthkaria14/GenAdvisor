@@ -1,16 +1,16 @@
 {
   "symbol": "SBIN.NS",
-  "timestamp": "2025-10-28T12:09:43.224150",
-  "current_price": 922.7,
+  "timestamp": "2025-10-28T14:31:00.726359",
+  "current_price": 927.0,
   "name": "State Bank of India",
   "sector": "Financial Services",
-  "market_cap": 8517552439296,
-  "pe_ratio": 10.362156,
-  "pb_ratio": 1.5822405,
+  "market_cap": 8556782288896,
+  "pe_ratio": 10.409882,
+  "pb_ratio": 1.589528,
   "dividend_yield": 1.72,
   "beta": 0.471,
-  "volume": 10010334,
+  "volume": 15719351,
   "fifty_two_week_high": 935.85,
   "fifty_two_week_low": 680.0,
-  "change_percent": 0.0
+  "change_percent": 0.4606297
 }

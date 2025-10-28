@@ -1,16 +1,16 @@
 {
   "symbol": "BAJAJ-AUTO.NS",
-  "timestamp": "2025-10-28T12:08:22.728435",
-  "current_price": 9055.5,
+  "timestamp": "2025-10-28T14:05:47.368691",
+  "current_price": 9055.0,
   "name": "Bajaj Auto Limited",
   "sector": "Consumer Cyclical",
-  "market_cap": 2528497631232,
-  "pe_ratio": 33.297176,
-  "pb_ratio": 7.186437,
+  "market_cap": 2528608256000,
+  "pe_ratio": 33.295338,
+  "pb_ratio": 7.18604,
   "dividend_yield": 2.31,
   "beta": 0.741,
-  "volume": 190500,
+  "volume": 294278,
   "fifty_two_week_high": 10079.8,
   "fifty_two_week_low": 7089.35,
-  "change_percent": -0.4397779
+  "change_percent": -0.44512832
 }

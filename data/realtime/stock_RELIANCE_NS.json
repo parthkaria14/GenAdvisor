@@ -1,16 +1,16 @@
 {
   "symbol": "RELIANCE.NS",
-  "timestamp": "2025-10-28T12:09:50.890116",
-  "current_price": 1482.2,
+  "timestamp": "2025-10-28T14:27:56.245602",
+  "current_price": 1480.3,
   "name": "Reliance Industries Limited",
   "sector": "Energy",
-  "market_cap": 20057830719488,
-  "pe_ratio": 24.12435,
-  "pb_ratio": 2.2869222,
+  "market_cap": 20033472299008,
+  "pe_ratio": 24.095053,
+  "pb_ratio": 2.2841449,
   "dividend_yield": 0.37,
   "beta": 0.221,
-  "volume": 5977929,
+  "volume": 11314170,
   "fifty_two_week_high": 1551.0,
   "fifty_two_week_low": 1114.85,
-  "change_percent": -0.12802537
+  "change_percent": -0.24932286
 }

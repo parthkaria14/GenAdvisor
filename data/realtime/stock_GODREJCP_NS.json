@@ -1,16 +1,16 @@
 {
   "symbol": "GODREJCP.NS",
-  "timestamp": "2025-10-28T12:09:28.823458",
-  "current_price": 1121.6,
+  "timestamp": "2025-10-28T14:30:57.033749",
+  "current_price": 1111.4,
   "name": "Godrej Consumer Products Limited",
   "sector": "Consumer Defensive",
-  "market_cap": 1153633484800,
-  "pe_ratio": 61.93263,
-  "pb_ratio": 9.562378,
+  "market_cap": 1137581752320,
+  "pe_ratio": 61.369408,
+  "pb_ratio": 9.475416,
   "dividend_yield": 1.78,
   "beta": 0.252,
-  "volume": 575898,
+  "volume": 1350166,
   "fifty_two_week_high": 1319.75,
   "fifty_two_week_low": 979.5,
-  "change_percent": -0.27570042
+  "change_percent": -1.182321
 }

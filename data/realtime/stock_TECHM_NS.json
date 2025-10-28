@@ -1,16 +1,16 @@
 {
   "symbol": "TECHM.NS",
-  "timestamp": "2025-10-28T12:08:44.249029",
-  "current_price": 1443.3,
+  "timestamp": "2025-10-28T14:42:16.170973",
+  "current_price": 1439.6,
   "name": "Tech Mahindra Limited",
   "sector": "Technology",
-  "market_cap": 1277868900352,
-  "pe_ratio": 28.51808,
-  "pb_ratio": 4.650077,
+  "market_cap": 1274723565568,
+  "pe_ratio": 28.444971,
+  "pb_ratio": 4.6381555,
   "dividend_yield": 3.08,
   "beta": 0.296,
-  "volume": 443518,
+  "volume": 962278,
   "fifty_two_week_high": 1807.7,
   "fifty_two_week_low": 1209.4,
-  "change_percent": -1.3329687
+  "change_percent": -1.585896
 }

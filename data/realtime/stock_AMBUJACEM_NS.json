@@ -1,16 +1,16 @@
 {
   "symbol": "AMBUJACEM.NS",
-  "timestamp": "2025-10-28T12:08:24.833380",
-  "current_price": 556.8,
+  "timestamp": "2025-10-28T14:27:54.249112",
+  "current_price": 553.75,
   "name": "Ambuja Cements Limited",
   "sector": "Basic Materials",
-  "market_cap": 1376311181312,
-  "pe_ratio": 31.744581,
-  "pb_ratio": 2.5662177,
+  "market_cap": 1368772182016,
+  "pe_ratio": 31.570694,
+  "pb_ratio": 2.5521607,
   "dividend_yield": 0.36,
   "beta": -0.131,
-  "volume": 616547,
+  "volume": 1043599,
   "fifty_two_week_high": 624.95,
   "fifty_two_week_low": 453.05,
-  "change_percent": -0.61568874
+  "change_percent": -1.1601963
 }

@@ -1,16 +1,16 @@
 {
   "symbol": "ZYDUSLIFE.NS",
-  "timestamp": "2025-10-28T12:08:32.573526",
-  "current_price": 1002.5,
+  "timestamp": "2025-10-28T14:16:55.390858",
+  "current_price": 998.0,
   "name": "Zydus Lifesciences Limited",
   "sector": "Healthcare",
-  "market_cap": 1008749576192,
-  "pe_ratio": 22.071775,
-  "pb_ratio": 4.2113533,
+  "market_cap": 1004221497344,
+  "pe_ratio": 21.9727,
+  "pb_ratio": 4.1924496,
   "dividend_yield": 1.08,
   "beta": 0.452,
-  "volume": 166552,
+  "volume": 248110,
   "fifty_two_week_high": 1059.05,
   "fifty_two_week_low": 795.0,
-  "change_percent": -1.1194927
+  "change_percent": -1.5633453
 }

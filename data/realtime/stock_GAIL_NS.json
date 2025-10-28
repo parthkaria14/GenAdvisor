@@ -1,16 +1,16 @@
 {
   "symbol": "GAIL.NS",
-  "timestamp": "2025-10-28T12:09:47.792602",
-  "current_price": 179.56,
+  "timestamp": "2025-10-28T14:32:10.607893",
+  "current_price": 177.65,
   "name": "GAIL (India) Limited",
   "sector": "Utilities",
-  "market_cap": 1181473177600,
-  "pe_ratio": 10.150367,
-  "pb_ratio": 1.3889018,
+  "market_cap": 1168905601024,
+  "pe_ratio": 10.042397,
+  "pb_ratio": 1.3741279,
   "dividend_yield": 4.16,
   "beta": 0.629,
-  "volume": 1637306,
+  "volume": 2897419,
   "fifty_two_week_high": 216.47,
   "fifty_two_week_low": 150.52,
-  "change_percent": -0.33858827
+  "change_percent": -1.398759
 }

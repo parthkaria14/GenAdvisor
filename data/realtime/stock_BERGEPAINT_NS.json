@@ -1,16 +1,16 @@
 {
   "symbol": "BERGEPAINT.NS",
-  "timestamp": "2025-10-28T12:09:43.986262",
-  "current_price": 544.5,
+  "timestamp": "2025-10-28T14:42:15.097230",
+  "current_price": 543.05,
   "name": "Berger Paints India Limited",
   "sector": "Basic Materials",
-  "market_cap": 639580372992,
-  "pe_ratio": 55.561222,
-  "pb_ratio": 10.315626,
+  "market_cap": 633139167232,
+  "pe_ratio": 55.41326,
+  "pb_ratio": 10.288156,
   "dividend_yield": 0.7,
   "beta": 0.446,
-  "volume": 99068,
+  "volume": 156518,
   "fifty_two_week_high": 605.0,
   "fifty_two_week_low": 437.75,
-  "change_percent": 0.60975385
+  "change_percent": 0.34173372
 }

@@ -1,16 +1,16 @@
 {
   "symbol": "SRF.NS",
-  "timestamp": "2025-10-28T12:08:41.209473",
-  "current_price": 3010.4,
+  "timestamp": "2025-10-28T14:31:15.056268",
+  "current_price": 3030.0,
   "name": "SRF Limited",
   "sector": "Industrials",
-  "market_cap": 892357312512,
-  "pe_ratio": 55.085083,
-  "pb_ratio": 6.7254977,
+  "market_cap": 898167209984,
+  "pe_ratio": 55.44373,
+  "pb_ratio": 6.769286,
   "dividend_yield": 0.26,
   "beta": 0.187,
-  "volume": 387360,
+  "volume": 614136,
   "fifty_two_week_high": 3325.0,
   "fifty_two_week_low": 2126.85,
-  "change_percent": -0.2980725
+  "change_percent": 0.35106638
 }

@@ -1,16 +1,16 @@
 {
   "symbol": "AUROPHARMA.NS",
-  "timestamp": "2025-10-28T12:09:52.478436",
-  "current_price": 1083.5,
+  "timestamp": "2025-10-28T14:32:03.184557",
+  "current_price": 1089.2,
   "name": "Aurobindo Pharma Limited",
   "sector": "Healthcare",
-  "market_cap": 629298561024,
-  "pe_ratio": 18.568981,
-  "pb_ratio": 1.9266641,
+  "market_cap": 632609046528,
+  "pe_ratio": 18.666666,
+  "pb_ratio": 1.9367998,
   "dividend_yield": 0.37,
   "beta": 0.153,
-  "volume": 539088,
+  "volume": 813051,
   "fifty_two_week_high": 1442.0,
   "fifty_two_week_low": 1010.0,
-  "change_percent": -1.0232939
+  "change_percent": -0.5024667
 }

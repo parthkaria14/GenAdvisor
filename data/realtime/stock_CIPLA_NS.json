@@ -1,16 +1,16 @@
 {
   "symbol": "CIPLA.NS",
-  "timestamp": "2025-10-28T12:08:27.841352",
-  "current_price": 1575.1,
+  "timestamp": "2025-10-28T14:27:56.709755",
+  "current_price": 1566.6,
   "name": "Cipla Limited",
   "sector": "Healthcare",
-  "market_cap": 1272311709696,
-  "pe_ratio": 23.618233,
-  "pb_ratio": 4.078024,
+  "market_cap": 1265526505472,
+  "pe_ratio": 23.492275,
+  "pb_ratio": 4.056276,
   "dividend_yield": 0.82,
   "beta": 0.076,
-  "volume": 531863,
+  "volume": 956022,
   "fifty_two_week_high": 1673.0,
   "fifty_two_week_low": 1335.0,
-  "change_percent": -0.5618702
+  "change_percent": -1.0922438
 }
