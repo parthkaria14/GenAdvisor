@@ -1,20 +1,5 @@
 {
   "symbol": "ADANIPORTS.NS",
-  "timestamp": "2025-09-30T14:43:10.728003",
-  "current_price": 1403.5,
-  "open": 1389.7,
-  "high": 1404.0,
-  "low": 1387.2,
-  "volume": 1441556,
-  "market_cap": 3050276126720,
-  "pe_ratio": 26.985195,
-  "pb_ratio": 4.868818,
-  "dividend_yield": 0.5,
-  "fifty_two_week_high": 1494.0,
-  "fifty_two_week_low": 995.65,
-  "avg_volume": 1835344,
-  "beta": 0.424,
-  "eps": 52.01,
-  "sector": "Industrials",
-  "industry": "Marine Shipping"
+  "timestamp": "2025-10-28T10:38:24.698803",
+  "current_price": 1420.1
 }

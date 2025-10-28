@@ -1,20 +1,5 @@
 {
   "symbol": "ITC.NS",
-  "timestamp": "2025-09-30T14:43:26.193531",
-  "current_price": 401.55,
-  "open": 406.75,
-  "high": 406.75,
-  "low": 400.4,
-  "volume": 6456410,
-  "market_cap": 5030269157376,
-  "pe_ratio": 25.096874,
-  "pb_ratio": 7.175533,
-  "dividend_yield": 3.88,
-  "fifty_two_week_high": 519.75,
-  "fifty_two_week_low": 390.15,
-  "avg_volume": 12255051,
-  "beta": 0.061,
-  "eps": 16.0,
-  "sector": "Consumer Defensive",
-  "industry": "Tobacco"
+  "timestamp": "2025-10-28T09:24:30.613110",
+  "current_price": 421.2
 }

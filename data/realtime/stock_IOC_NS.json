@@ -1,20 +1,5 @@
 {
   "symbol": "IOC.NS",
-  "timestamp": "2025-09-30T16:02:23.976466",
-  "current_price": 149.79,
-  "open": 150.04,
-  "high": 151.25,
-  "low": 149.0,
-  "volume": 13199444,
-  "market_cap": 2062842068992,
-  "pe_ratio": 11.869255,
-  "pb_ratio": 1.1061552,
-  "dividend_yield": 2.07,
-  "fifty_two_week_high": 181.34,
-  "fifty_two_week_low": 110.72,
-  "avg_volume": 9167481,
-  "beta": 0.781,
-  "eps": 12.62,
-  "sector": "Energy",
-  "industry": "Oil & Gas Refining & Marketing"
+  "timestamp": "2025-10-28T10:39:23.269751",
+  "current_price": 154.75
 }

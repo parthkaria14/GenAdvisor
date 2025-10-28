@@ -1,20 +1,5 @@
 {
   "symbol": "BPCL.NS",
-  "timestamp": "2025-09-30T14:43:05.048655",
-  "current_price": 338.95,
-  "open": 339.75,
-  "high": 342.3,
-  "low": 337.15,
-  "volume": 4995150,
-  "market_cap": 1470536613888,
-  "pe_ratio": 8.013002,
-  "pb_ratio": 1.8069047,
-  "dividend_yield": 3.08,
-  "fifty_two_week_high": 373.35,
-  "fifty_two_week_low": 234.01,
-  "avg_volume": 6106508,
-  "beta": 0.915,
-  "eps": 42.3,
-  "sector": "Energy",
-  "industry": "Oil & Gas Refining & Marketing"
+  "timestamp": "2025-10-28T10:38:16.681893",
+  "current_price": 341.8
 }

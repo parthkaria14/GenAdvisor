@@ -1,20 +1,5 @@
 {
   "symbol": "BANKBARODA.NS",
-  "timestamp": "2025-09-30T15:57:55.127523",
-  "current_price": 258.54,
-  "open": 254.0,
-  "high": 260.1,
-  "low": 253.76,
-  "volume": 16035816,
-  "market_cap": 1337003999232,
-  "pe_ratio": 6.7188153,
-  "pb_ratio": 0.86979055,
-  "dividend_yield": 3.36,
-  "fifty_two_week_high": 266.95,
-  "fifty_two_week_low": 190.7,
-  "avg_volume": 7718421,
-  "beta": 0.525,
-  "eps": 38.48,
-  "sector": "Financial Services",
-  "industry": "Banks - Regional"
+  "timestamp": "2025-10-28T10:39:28.150795",
+  "current_price": 274.0
 }

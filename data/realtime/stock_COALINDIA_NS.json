@@ -1,20 +1,5 @@
 {
   "symbol": "COALINDIA.NS",
-  "timestamp": "2025-09-30T14:44:58.936196",
-  "current_price": 389.85,
-  "open": 389.7,
-  "high": 391.4,
-  "low": 387.1,
-  "volume": 3501760,
-  "market_cap": 2407798931456,
-  "pe_ratio": 7.265188,
-  "pb_ratio": 2.4248626,
-  "dividend_yield": 8.22,
-  "fifty_two_week_high": 516.0,
-  "fifty_two_week_low": 349.25,
-  "avg_volume": 5236324,
-  "beta": 0.039,
-  "eps": 53.66,
-  "sector": "Energy",
-  "industry": "Thermal Coal"
+  "timestamp": "2025-10-28T10:39:28.691376",
+  "current_price": 394.0
 }

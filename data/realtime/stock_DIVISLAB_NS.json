@@ -1,20 +1,5 @@
 {
   "symbol": "DIVISLAB.NS",
-  "timestamp": "2025-09-30T14:43:20.365039",
-  "current_price": 5697.0,
-  "open": 5713.5,
-  "high": 5736.5,
-  "low": 5665.0,
-  "volume": 187178,
-  "market_cap": 1511843561472,
-  "pe_ratio": 65.42217,
-  "pb_ratio": 10.099829,
-  "dividend_yield": 0.53,
-  "fifty_two_week_high": 7071.5,
-  "fifty_two_week_low": 4955.0,
-  "avg_volume": 375610,
-  "beta": 0.234,
-  "eps": 87.05,
-  "sector": "Healthcare",
-  "industry": "Drug Manufacturers - Specialty & Generic"
+  "timestamp": "2025-10-28T10:39:30.781211",
+  "current_price": 6446.5
 }

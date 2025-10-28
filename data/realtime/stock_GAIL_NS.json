@@ -1,20 +1,5 @@
 {
   "symbol": "GAIL.NS",
-  "timestamp": "2025-09-30T14:43:06.260566",
-  "current_price": 176.47,
-  "open": 176.5,
-  "high": 177.32,
-  "low": 175.5,
-  "volume": 7590100,
-  "market_cap": 1160304263168,
-  "pe_ratio": 9.981335,
-  "pb_ratio": 1.3650006,
-  "dividend_yield": 4.36,
-  "fifty_two_week_high": 244.5,
-  "fifty_two_week_low": 150.52,
-  "avg_volume": 9638393,
-  "beta": 0.67,
-  "eps": 17.68,
-  "sector": "Utilities",
-  "industry": "Utilities - Regulated Gas"
+  "timestamp": "2025-10-28T09:24:28.942297",
+  "current_price": 180.55
 }

@@ -1,20 +1,5 @@
 {
   "symbol": "HINDUNILVR.NS",
-  "timestamp": "2025-09-30T14:44:50.505355",
-  "current_price": 2508.2,
-  "open": 2497.9,
-  "high": 2526.3,
-  "low": 2491.6,
-  "volume": 950743,
-  "market_cap": 5923796942848,
-  "pe_ratio": 54.87202,
-  "pb_ratio": 11.929153,
-  "dividend_yield": 1.91,
-  "fifty_two_week_high": 2962.7,
-  "fifty_two_week_low": 2136.0,
-  "avg_volume": 1625936,
-  "beta": 0.381,
-  "eps": 45.71,
-  "sector": "Consumer Defensive",
-  "industry": "Household & Personal Products"
+  "timestamp": "2025-10-28T10:38:23.432594",
+  "current_price": 2503.2
 }

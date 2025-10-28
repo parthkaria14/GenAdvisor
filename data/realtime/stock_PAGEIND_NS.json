@@ -1,20 +1,5 @@
 {
   "symbol": "PAGEIND.NS",
-  "timestamp": "2025-09-30T16:02:25.189311",
-  "current_price": 40685.0,
-  "open": 41465.0,
-  "high": 41500.0,
-  "low": 40575.0,
-  "volume": 35437,
-  "market_cap": 453795348480,
-  "pe_ratio": 59.4306,
-  "pb_ratio": 32.248196,
-  "dividend_yield": 1.45,
-  "fifty_two_week_high": 50590.0,
-  "fifty_two_week_low": 38850.0,
-  "avg_volume": 21488,
-  "beta": 0.102,
-  "eps": 684.58,
-  "sector": "Consumer Cyclical",
-  "industry": "Apparel Manufacturing"
+  "timestamp": "2025-10-28T10:37:44.768620",
+  "current_price": 40610.0
 }

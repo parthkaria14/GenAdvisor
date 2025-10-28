@@ -1,20 +1,5 @@
 {
   "symbol": "HCLTECH.NS",
-  "timestamp": "2025-09-30T14:43:10.405479",
-  "current_price": 1389.0,
-  "open": 1392.1,
-  "high": 1405.0,
-  "low": 1387.1,
-  "volume": 1546924,
-  "market_cap": 3784653406208,
-  "pe_ratio": 22.34556,
-  "pb_ratio": 461.4618,
-  "dividend_yield": 3.87,
-  "fifty_two_week_high": 2012.2,
-  "fifty_two_week_low": 1302.75,
-  "avg_volume": 3153139,
-  "beta": 0.233,
-  "eps": 62.16,
-  "sector": "Technology",
-  "industry": "Information Technology Services"
+  "timestamp": "2025-10-28T10:38:18.109992",
+  "current_price": 1527.9
 }

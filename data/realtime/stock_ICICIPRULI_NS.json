@@ -1,20 +1,5 @@
 {
   "symbol": "ICICIPRULI.NS",
-  "timestamp": "2025-09-30T16:02:27.354907",
-  "current_price": 595.2,
-  "open": 592.0,
-  "high": 603.45,
-  "low": 589.7,
-  "volume": 1346218,
-  "market_cap": 860758933504,
-  "pe_ratio": 68.65052,
-  "pb_ratio": 6.861728,
-  "dividend_yield": 0.15,
-  "fifty_two_week_high": 796.8,
-  "fifty_two_week_low": 525.8,
-  "avg_volume": 1105940,
-  "beta": 0.589,
-  "eps": 8.67,
-  "sector": "Financial Services",
-  "industry": "Insurance - Life"
+  "timestamp": "2025-10-28T10:36:27.816802",
+  "current_price": 601.35
 }

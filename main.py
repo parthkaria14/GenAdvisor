@@ -632,32 +632,42 @@ async def get_stock_news(symbol: str):
         raise HTTPException(status_code=500, detail=str(e))
 
 # Admin Endpoints
+# In main.py
+
 @app.post("/api/v1/admin/refresh-data")
 async def refresh_market_data(background_tasks: BackgroundTasks):
     """Manually trigger market data refresh"""
     try:
         async def refresh_task():
-            # Fetch data for top stocks
+            # Step 1: Fetch new data
+            logger.info("Admin Refresh: Fetching new market data...")
             top_stocks = data_ingestion.nse_tickers[:50]
             await data_ingestion.fetch_bulk_realtime(top_stocks)
             
-            # Update indicators
+            # Step 2: Update indicators
+            logger.info("Admin Refresh: Updating technical indicators...")
             data_ingestion.update_technical_indicators()
             
-            logger.info("Market data refresh completed")
+            # --- START OF FIX ---
+            # Step 3: Refresh the RAG system's graph
+            logger.info("Admin Refresh: Rebuilding RAG knowledge graph...")
+            if rag_system:
+                rag_system.refresh_knowledge_graph()
+            # --- END OF FIX ---
+            
+            logger.info("Market data and RAG refresh completed")
         
         background_tasks.add_task(refresh_task)
         
         return {
             "status": "refresh_initiated",
-            "message": "Market data refresh started in background",
+            "message": "Market data and RAG refresh started in background",
             "timestamp": datetime.now().isoformat()
         }
         
     except Exception as e:
         logger.error(f"Error refreshing data: {e}")
         raise HTTPException(status_code=500, detail=str(e))
-
 @app.get("/api/v1/admin/stats")
 async def get_system_stats():
     """Get system statistics"""

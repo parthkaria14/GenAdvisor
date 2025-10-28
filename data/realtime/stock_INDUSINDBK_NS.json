@@ -1,20 +1,5 @@
 {
   "symbol": "INDUSINDBK.NS",
-  "timestamp": "2025-09-30T15:57:50.501887",
-  "current_price": 735.55,
-  "open": 730.0,
-  "high": 737.7,
-  "low": 722.55,
-  "volume": 3963937,
-  "market_cap": 573049339904,
-  "pe_ratio": 56.19175,
-  "pb_ratio": 0.8836338,
-  "dividend_yield": 1.92,
-  "fifty_two_week_high": 1450.3,
-  "fifty_two_week_low": 606.0,
-  "avg_volume": 4301633,
-  "beta": 0.613,
-  "eps": 13.09,
-  "sector": "Financial Services",
-  "industry": "Banks - Regional"
+  "timestamp": "2025-10-28T10:37:41.271116",
+  "current_price": 788.4
 }

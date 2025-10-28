@@ -1,20 +1,5 @@
 {
   "symbol": "COLPAL.NS",
-  "timestamp": "2025-09-30T14:44:31.120929",
-  "current_price": 2221.7,
-  "open": 2235.0,
-  "high": 2235.0,
-  "low": 2201.5,
-  "volume": 327459,
-  "market_cap": 605564305408,
-  "pe_ratio": 43.545666,
-  "pb_ratio": 36.304066,
-  "dividend_yield": 2.43,
-  "fifty_two_week_high": 3873.25,
-  "fifty_two_week_low": 2151.0,
-  "avg_volume": 637343,
-  "beta": 0.325,
-  "eps": 51.02,
-  "sector": "Consumer Defensive",
-  "industry": "Household & Personal Products"
+  "timestamp": "2025-10-28T10:38:25.203816",
+  "current_price": 2208.0
 }

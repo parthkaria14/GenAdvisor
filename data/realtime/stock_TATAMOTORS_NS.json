@@ -1,20 +1,5 @@
 {
   "symbol": "TATAMOTORS.NS",
-  "timestamp": "2025-09-30T14:44:32.616507",
-  "current_price": 680.95,
-  "open": 672.0,
-  "high": 680.95,
-  "low": 666.65,
-  "volume": 10869336,
-  "market_cap": 2508936445952,
-  "pe_ratio": 11.188794,
-  "pb_ratio": 2.1583679,
-  "dividend_yield": 0.89,
-  "fifty_two_week_high": 984.5,
-  "fifty_two_week_low": 535.75,
-  "avg_volume": 9942384,
-  "beta": 1.071,
-  "eps": 60.86,
-  "sector": "Consumer Cyclical",
-  "industry": "Auto Manufacturers"
+  "timestamp": "2025-10-28T10:39:29.751780",
+  "current_price": 405.85
 }

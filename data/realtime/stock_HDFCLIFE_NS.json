@@ -1,20 +1,5 @@
 {
   "symbol": "HDFCLIFE.NS",
-  "timestamp": "2025-09-30T14:43:14.065386",
-  "current_price": 755.6,
-  "open": 757.0,
-  "high": 761.65,
-  "low": 750.6,
-  "volume": 2099351,
-  "market_cap": 1628730949632,
-  "pe_ratio": 86.750854,
-  "pb_ratio": 9.569886,
-  "dividend_yield": 0.27,
-  "fifty_two_week_high": 820.75,
-  "fifty_two_week_low": 584.3,
-  "avg_volume": 2589649,
-  "beta": 0.664,
-  "eps": 8.71,
-  "sector": "Financial Services",
-  "industry": "Insurance - Life"
+  "timestamp": "2025-10-28T10:37:02.568979",
+  "current_price": 741.1
 }

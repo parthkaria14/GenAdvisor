@@ -1,20 +1,5 @@
 {
   "symbol": "EICHERMOT.NS",
-  "timestamp": "2025-09-30T14:44:15.345082",
-  "current_price": 7014.0,
-  "open": 6984.5,
-  "high": 7032.5,
-  "low": 6951.5,
-  "volume": 202866,
-  "market_cap": 1923785818112,
-  "pe_ratio": 39.811558,
-  "pb_ratio": 9.029595,
-  "dividend_yield": 0.99,
-  "fifty_two_week_high": 7122.5,
-  "fifty_two_week_low": 4508.75,
-  "avg_volume": 511061,
-  "beta": 0.135,
-  "eps": 176.18,
-  "sector": "Consumer Cyclical",
-  "industry": "Auto Manufacturers"
+  "timestamp": "2025-10-28T10:31:23.669032",
+  "current_price": 6996.0
 }

@@ -1,20 +1,5 @@
 {
   "symbol": "MARUTI.NS",
-  "timestamp": "2025-09-30T16:02:22.696635",
-  "current_price": 16029.0,
-  "open": 15985.0,
-  "high": 16054.0,
-  "low": 15921.0,
-  "volume": 389925,
-  "market_cap": 5039558492160,
-  "pe_ratio": 34.6558,
-  "pb_ratio": 5.2363634,
-  "dividend_yield": 0.83,
-  "fifty_two_week_high": 16435.0,
-  "fifty_two_week_low": 10725.0,
-  "avg_volume": 435924,
-  "beta": 0.189,
-  "eps": 462.52,
-  "sector": "Consumer Cyclical",
-  "industry": "Auto Manufacturers"
+  "timestamp": "2025-10-28T10:39:25.088202",
+  "current_price": 16432.0
 }

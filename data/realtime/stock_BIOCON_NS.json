@@ -1,20 +1,5 @@
 {
   "symbol": "BIOCON.NS",
-  "timestamp": "2025-09-30T14:44:22.957707",
-  "current_price": 339.8,
-  "open": 341.0,
-  "high": 342.8,
-  "low": 337.05,
-  "volume": 555051,
-  "market_cap": 453485297664,
-  "pe_ratio": 105.20123,
-  "pb_ratio": 1.8809019,
-  "dividend_yield": 0.15,
-  "fifty_two_week_high": 406.0,
-  "fifty_two_week_low": 291.0,
-  "avg_volume": 3742697,
-  "beta": 0.234,
-  "eps": 3.23,
-  "sector": "Healthcare",
-  "industry": "Biotechnology"
+  "timestamp": "2025-10-28T10:38:26.661791",
+  "current_price": 361.15
 }

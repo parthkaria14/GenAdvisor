@@ -166,7 +166,23 @@ class AdvancedRAGSystem:
         # Initialize Graph RAG
         self.knowledge_graph = nx.Graph()
         self._build_knowledge_graph()
-    
+    def refresh_knowledge_graph(self):
+        """
+        Reloads all file-based data and rebuilds the knowledge graph.
+        """
+        logger.info("Refreshing knowledge graph...")
+        try:
+            # Step 1: Reload all data from files
+            self._load_file_data()
+            logger.info("File data reloaded.")
+            
+            # Step 2: Rebuild the graph with the new data
+            self._build_knowledge_graph()
+            logger.info("Knowledge graph rebuilt successfully.")
+            return True
+        except Exception as e:
+            logger.error(f"Failed to refresh knowledge graph: {e}")
+            return False
     def _load_file_data(self):
         """Load data from JSON and CSV files"""
         self.file_data = {
@@ -323,40 +339,19 @@ class AdvancedRAGSystem:
                 )
                 
                 # Extract and link entities
-                entities = self._extract_entities_from_text(f"{title} {news_item.get('content', '')}")
-                for entity in entities:
-                    if self.knowledge_graph.has_node(entity):
-                        self.knowledge_graph.add_edge(news_id, entity, relation='mentions')
+                # Extract and link entities
+                # Use the *better* NER-based extractor
+                extracted = self.extract_entities(f"{title} {news_item.get('content', '')}")
+                entities_to_link = extracted.get('companies', []) + extracted.get('sectors', [])
+                
+                for entity_symbol in entities_to_link:
+                    if self.knowledge_graph.has_node(entity_symbol):
+                        self.knowledge_graph.add_edge(news_id, entity_symbol, relation='mentions')
             
             logger.info(f"Built knowledge graph with {self.knowledge_graph.number_of_nodes()} nodes and {self.knowledge_graph.number_of_edges()} edges")
             
         except Exception as e:
             logger.error(f"Error building knowledge graph: {e}")    
-    def _extract_entities_from_text(self, text: str) -> List[str]:
-        """Extract financial entities from text"""
-        entities = []
-        
-        # Simple entity extraction - look for known tickers and company names
-        text_lower = text.lower()
-        
-        # Check for stock tickers
-        for ticker in self.file_data['stocks'].keys():
-            ticker_clean = ticker.replace('.NS', '').lower()
-            if ticker_clean in text_lower:
-                entities.append(ticker)
-        
-        # Check for common financial terms
-        financial_terms = [
-            'rbi', 'reserve bank', 'nifty', 'sensex', 'bse', 'nse',
-            'inflation', 'gdp', 'interest rate', 'policy rate',
-            'banking', 'it', 'pharma', 'auto', 'fmcg', 'metal'
-        ]
-        
-        for term in financial_terms:
-            if term in text_lower:
-                entities.append(term.title())
-        
-        return entities
     
     def _graph_retrieve(self, query: str, max_nodes: int = 10) -> List[Dict]:
         """Retrieve relevant information using graph traversal"""
@@ -656,7 +651,6 @@ class AdvancedRAGSystem:
     
     def extract_entities(self, query: str) -> Dict[str, List[str]]:
         """Extract entities from query (companies, sectors, etc.)"""
-        entities = self.ner_model(query)
         
         extracted = {
             'companies': [],
@@ -665,40 +659,56 @@ class AdvancedRAGSystem:
             'time_periods': []
         }
         
-        # Map common Indian company names
-        company_mapping = {
-            'reliance': 'RELIANCE.NS',
-            'tcs': 'TCS.NS',
-            'infosys': 'INFY.NS',
-            'hdfc': 'HDFCBANK.NS',
-            'icici': 'ICICIBANK.NS',
-            'sbi': 'SBIN.NS',
-            'wipro': 'WIPRO.NS',
-            'bharti': 'BHARTIARTL.NS',
-            'adani': 'ADANIENT.NS',
-            'tata': ['TATAMOTORS.NS', 'TATASTEEL.NS', 'TATAPOWER.NS']
-        }
+        # --- START OF IMPROVED LOGIC ---
         
-        # Process NER results
-        for entity in entities:
-            if entity['entity_group'] == 'ORG':
-                company_name = entity['word'].lower()
-                if company_name in company_mapping:
-                    if isinstance(company_mapping[company_name], list):
-                        extracted['companies'].extend(company_mapping[company_name])
-                    else:
-                        extracted['companies'].append(company_mapping[company_name])
+        # 1. Extract NER Entities
+        try:
+            entities = self.ner_model(query)
+            org_names = [e['word'] for e in entities if e['entity_group'] == 'ORG']
+        except Exception as e:
+            logger.warning(f"NER model failed: {e}")
+            org_names = []
+
+        # 2. Find matching company nodes in graph
+        # We search both tickers and company names
+        all_stock_nodes = self.file_data['stocks'].keys()
         
-        # Extract sectors
-        sectors = ['banking', 'it', 'pharma', 'auto', 'fmcg', 'metal', 'energy', 'realty']
-        for sector in sectors:
-            if sector in query.lower():
+        for name in org_names:
+            name_lower = name.lower()
+            for ticker in all_stock_nodes:
+                stock_data = self.file_data['stocks'][ticker]
+                stock_name = stock_data.get('name', '').lower()
+                ticker_clean = ticker.replace('.NS', '').replace('.BO', '').lower()
+                
+                # Match on ticker or partial name
+                if (name_lower == ticker_clean or 
+                    name_lower in stock_name or 
+                    (len(name_lower) > 3 and name_lower in ticker_clean)):
+                    
+                    if ticker not in extracted['companies']:
+                        extracted['companies'].append(ticker)
+
+        # 3. Handle queries that just use the ticker
+        for word in query.upper().split():
+            if word in all_stock_nodes and word not in extracted['companies']:
+                 extracted['companies'].append(word)
+        
+        # --- END OF IMPROVED LOGIC ---
+
+        # 4. Extract sectors (your existing logic is good)
+        all_sectors = [
+            node for node, data in self.knowledge_graph.nodes(data=True) 
+            if data.get('type') == 'sector'
+        ]
+        query_lower = query.lower()
+        for sector in all_sectors:
+            if sector.lower() in query_lower and sector not in extracted['sectors']:
                 extracted['sectors'].append(sector)
         
-        # Extract metrics
-        metrics = ['pe', 'pb', 'roe', 'debt', 'margin', 'growth', 'dividend']
+        # 5. Extract metrics
+        metrics = ['pe', 'pb', 'roe', 'debt', 'margin', 'growth', 'dividend', 'rsi', 'macd']
         for metric in metrics:
-            if metric in query.lower():
+            if metric in query_lower:
                 extracted['metrics'].append(metric)
         
         return extracted
@@ -1055,13 +1065,32 @@ Response:"""
         relevant_docs = await self.retrieve_context(query, query_type, k=5)
         logger.info(f"[RAG-{query_id}] Retrieved {len(relevant_docs)} relevant documents")
         
-        # Get market context
-        logger.debug(f"[RAG-{query_id}] Extracting market context from graph")
+        # Get market context and technical indicators
+        logger.debug(f"[RAG-{query_id}] Extracting market context and indicators from graph")
         market_context = {}
+        technical_indicators = {} # <-- Initialize as empty dict
+        
         for result in graph_results:
             if result['type'] in ['market_context', 'sector_info']:
                 market_context[result['node']] = result['data']
-        
+            
+            # --- START OF FIX ---
+            # Check if this is a stock node and extract its indicators
+            if result['type'] == 'stock_info' and 'data' in result:
+                stock_data = result['data']
+                stock_symbol = result['node']
+                
+                # Extract indicators stored as attributes
+                indicators = {
+                    'rsi': stock_data.get('rsi'),
+                    'macd': stock_data.get('macd'),
+                    'sma_20': stock_data.get('sma_20'),
+                    'sma_50': stock_data.get('sma_50')
+                }
+                # Add to the main dict, filtering out None values
+                technical_indicators[stock_symbol] = {k: v for k, v in indicators.items() if v is not None}
+            # --- END OF FIX ---
+
         # Calculate scores
         sentiment_score = self._calculate_aggregate_sentiment(graph_results)
         confidence_score = self._calculate_confidence_score(graph_results, relevant_docs)
@@ -1073,7 +1102,7 @@ Response:"""
             query_type=query_type,
             relevant_docs=relevant_docs,
             market_data=market_context,
-            technical_indicators={},
+            technical_indicators=technical_indicators, # <-- Pass the populated dict
             sentiment_score=sentiment_score,
             confidence_score=confidence_score,
             graph_results=graph_results
@@ -1092,12 +1121,12 @@ Response:"""
             'vector_results': [doc.metadata.get('source') for doc in relevant_docs],
             'confidence': context.confidence_score,
             'timestamp': datetime.now().isoformat()
-        }
-    
+        }    
     def _graph_query(self, query_type: QueryType, entities: Dict[str, List[str]], max_depth: int = 2) -> List[Dict]:
         """Execute graph-based queries based on query type and entities"""
         results = []
-        
+        seen_nodes = set()
+
         try:
             # Get starting nodes based on entities
             start_nodes = []
@@ -1105,78 +1134,115 @@ Response:"""
                 if self.knowledge_graph.has_node(company):
                     start_nodes.append(company)
             
-            for sector in entities.get('sectors', []):
+            for sector_name in entities.get('sectors', []):
                 matching_sectors = [
                     node for node in self.knowledge_graph.nodes()
                     if self.knowledge_graph.nodes[node].get('type') == 'sector'
-                    and sector.lower() in node.lower()
+                    and sector_name.lower() in node.lower()
                 ]
                 start_nodes.extend(matching_sectors)
             
-            # Different traversal strategies based on query type
-            if query_type == QueryType.STOCK_ANALYSIS:
-                for node in start_nodes:
-                    # Get direct stock info
-                    if self.knowledge_graph.nodes[node].get('type') == 'stock':
-                        results.append({
-                            'node': node,
-                            'data': self.knowledge_graph.nodes[node],
-                            'type': 'stock_info',
-                            'relevance_score': 1.0
-                        })
-                        
-                        # Get related news
-                        news_edges = [
-                            (n, data) for n, data in self.knowledge_graph[node].items()
-                            if self.knowledge_graph.nodes[n].get('type') == 'news'
-                        ]
-                        for news_node, edge_data in news_edges:
-                            results.append({
-                                'node': news_node,
-                                'data': self.knowledge_graph.nodes[news_node],
-                                'type': 'related_news',
-                                'relevance_score': 0.8
-                            })
-            
-            elif query_type == QueryType.SECTOR_ANALYSIS:
-                for node in start_nodes:
-                    if self.knowledge_graph.nodes[node].get('type') == 'sector':
-                        # Get sector info
-                        results.append({
-                            'node': node,
-                            'data': self.knowledge_graph.nodes[node],
-                            'type': 'sector_info',
-                            'relevance_score': 1.0
-                        })
-                        
-                        # Get stocks in sector
-                        sector_stocks = [
-                            n for n in self.knowledge_graph.neighbors(node)
-                            if self.knowledge_graph.nodes[n].get('type') == 'stock'
-                        ]
-                        for stock in sector_stocks[:5]:  # Top 5 stocks
-                            results.append({
-                                'node': stock,
-                                'data': self.knowledge_graph.nodes[stock],
-                                'type': 'sector_stock',
-                                'relevance_score': 0.9
-                            })
-            
-            # Add market context
-            if self.knowledge_graph.has_node('market_breadth'):
+            # Add general market context
+            if self.knowledge_graph.has_node('market_breadth') and 'market_breadth' not in seen_nodes:
                 results.append({
                     'node': 'market_breadth',
                     'data': self.knowledge_graph.nodes['market_breadth'],
                     'type': 'market_context',
                     'relevance_score': 0.7
                 })
+                seen_nodes.add('market_breadth')
+
+            # Perform graph traversal
+            for node in start_nodes:
+                if node in seen_nodes:
+                    continue
+                
+                node_data = self.knowledge_graph.nodes[node]
+                node_type = node_data.get('type')
+                
+                # Add the starting node
+                results.append({
+                    'node': node,
+                    'data': node_data,
+                    'type': f"{node_type}_info",
+                    'relevance_score': 1.0
+                })
+                seen_nodes.add(node)
+                
+                # --- START OF IMPROVED 2-HOP TRAVERSAL ---
+                
+                # Get direct neighbors (1-hop)
+                for neighbor in self.knowledge_graph.neighbors(node):
+                    if neighbor in seen_nodes:
+                        continue
+                        
+                    neighbor_data = self.knowledge_graph.nodes[neighbor]
+                    neighbor_type = neighbor_data.get('type')
+
+                    # 1. If Stock -> Get related News and its Sector
+                    if node_type == 'stock':
+                        if neighbor_type == 'news':
+                            results.append({
+                                'node': neighbor,
+                                'data': neighbor_data,
+                                'type': 'related_news',
+                                'relevance_score': 0.8
+                            })
+                            seen_nodes.add(neighbor)
+                        
+                        elif neighbor_type == 'sector':
+                            # This is the 2-hop link. Add the sector.
+                            if neighbor not in seen_nodes:
+                                results.append({
+                                    'node': neighbor,
+                                    'data': neighbor_data,
+                                    'type': 'sector_info',
+                                    'relevance_score': 0.9
+                                })
+                                seen_nodes.add(neighbor)
+                            
+                            # 2. (2-HOP) From Sector -> Get other stocks
+                            for sector_neighbor in self.knowledge_graph.neighbors(neighbor):
+                                if sector_neighbor in seen_nodes or sector_neighbor == node:
+                                    continue
+                                
+                                sector_neighbor_data = self.knowledge_graph.nodes[sector_neighbor]
+                                if sector_neighbor_data.get('type') == 'stock':
+                                    results.append({
+                                        'node': sector_neighbor,
+                                        'data': sector_neighbor_data,
+                                        'type': 'peer_stock', # Peer comparison
+                                        'relevance_score': 0.6
+                                    })
+                                    seen_nodes.add(sector_neighbor)
             
-            return results
+                    # 1. If Sector -> Get Stocks in sector
+                    elif node_type == 'sector':
+                        if neighbor_type == 'stock':
+                            if neighbor not in seen_nodes:
+                                results.append({
+                                    'node': neighbor,
+                                    'data': neighbor_data,
+                                    'type': 'sector_stock',
+                                    'relevance_score': 0.9
+                                })
+                                seen_nodes.add(neighbor)
+                # --- END OF IMPROVED 2-HOP TRAVERSAL ---
+
+            # Deduplicate and sort results
+            final_results = []
+            final_seen = set()
+            for res in results:
+                if res['node'] not in final_seen:
+                    final_results.append(res)
+                    final_seen.add(res['node'])
+            
+            final_results.sort(key=lambda x: x['relevance_score'], reverse=True)
+            return final_results[:20] # Limit to top 20 relevant nodes
             
         except Exception as e:
             logger.error(f"Error in graph query: {e}")
             return []
-
 # Initialize the RAG system
 if __name__ == "__main__":
     print("Initializing Advanced RAG System with Graph RAG and File-based Storage...")

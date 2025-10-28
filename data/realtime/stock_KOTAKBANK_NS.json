@@ -1,20 +1,5 @@
 {
   "symbol": "KOTAKBANK.NS",
-  "timestamp": "2025-09-30T14:43:04.303669",
-  "current_price": 1995.2,
-  "open": 2004.0,
-  "high": 2015.0,
-  "low": 1990.5,
-  "volume": 3616835,
-  "market_cap": 3973470748672,
-  "pe_ratio": 20.74228,
-  "pb_ratio": 2.518839,
-  "dividend_yield": 0.13,
-  "fifty_two_week_high": 2301.9,
-  "fifty_two_week_low": 1679.05,
-  "avg_volume": 3457405,
-  "beta": 0.375,
-  "eps": 96.19,
-  "sector": "Financial Services",
-  "industry": "Banks - Regional"
+  "timestamp": "2025-10-28T10:27:42.976429",
+  "current_price": 2154.9
 }

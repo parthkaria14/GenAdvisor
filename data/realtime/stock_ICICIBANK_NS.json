@@ -1,20 +1,5 @@
 {
   "symbol": "ICICIBANK.NS",
-  "timestamp": "2025-09-30T14:44:25.174702",
-  "current_price": 1353.3,
-  "open": 1353.7,
-  "high": 1356.6,
-  "low": 1342.6,
-  "volume": 13218621,
-  "market_cap": 9750046572544,
-  "pe_ratio": 18.55615,
-  "pb_ratio": 2.9300706,
-  "dividend_yield": 0.81,
-  "fifty_two_week_high": 1500.0,
-  "fifty_two_week_low": 1186.0,
-  "avg_volume": 8852876,
-  "beta": 0.474,
-  "eps": 72.93,
-  "sector": "Financial Services",
-  "industry": "Banks - Regional"
+  "timestamp": "2025-10-28T10:38:15.411526",
+  "current_price": 1360.0
 }

@@ -1,20 +1,5 @@
 {
   "symbol": "SBIN.NS",
-  "timestamp": "2025-09-30T14:43:19.121357",
-  "current_price": 874.6,
-  "open": 869.95,
-  "high": 877.6,
-  "low": 867.6,
-  "volume": 8887074,
-  "market_cap": 8073097773056,
-  "pe_ratio": 9.667293,
-  "pb_ratio": 1.4996775,
-  "dividend_yield": 1.86,
-  "fifty_two_week_high": 880.5,
-  "fifty_two_week_low": 680.0,
-  "avg_volume": 8719106,
-  "beta": 0.481,
-  "eps": 90.47,
-  "sector": "Financial Services",
-  "industry": "Banks - Regional"
+  "timestamp": "2025-10-28T10:39:33.200004",
+  "current_price": 919.65
 }

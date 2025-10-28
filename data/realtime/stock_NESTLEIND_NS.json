@@ -1,20 +1,5 @@
 {
   "symbol": "NESTLEIND.NS",
-  "timestamp": "2025-09-30T16:03:01.377390",
-  "current_price": 1152.9,
-  "open": 1155.6,
-  "high": 1159.6,
-  "low": 1146.4,
-  "volume": 1409292,
-  "market_cap": 2223153610752,
-  "pe_ratio": 71.34283,
-  "pb_ratio": 55.43855,
-  "dividend_yield": 1.72,
-  "fifty_two_week_high": 1355.0,
-  "fifty_two_week_low": 1055.0,
-  "avg_volume": 1356278,
-  "beta": 0.246,
-  "eps": 16.16,
-  "sector": "Consumer Defensive",
-  "industry": "Packaged Foods"
+  "timestamp": "2025-10-28T10:37:07.636525",
+  "current_price": 1271.0
 }

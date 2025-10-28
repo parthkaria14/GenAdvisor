@@ -1,20 +1,5 @@
 {
   "symbol": "BHARTIARTL.NS",
-  "timestamp": "2025-09-30T15:57:51.117289",
-  "current_price": 1878.4,
-  "open": 1896.0,
-  "high": 1907.6,
-  "low": 1875.2,
-  "volume": 5937783,
-  "market_cap": 11343893626880,
-  "pe_ratio": 32.060078,
-  "pb_ratio": 9.554959,
-  "dividend_yield": 0.83,
-  "fifty_two_week_high": 2045.8,
-  "fifty_two_week_low": 1511.0,
-  "avg_volume": 6212156,
-  "beta": 0.166,
-  "eps": 58.59,
-  "sector": "Communication Services",
-  "industry": "Telecom Services"
+  "timestamp": "2025-10-28T10:39:29.304694",
+  "current_price": 2082.0
 }

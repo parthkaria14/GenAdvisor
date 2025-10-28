@@ -1,20 +1,5 @@
 {
   "symbol": "AXISBANK.NS",
-  "timestamp": "2025-09-30T14:43:06.549243",
-  "current_price": 1134.1,
-  "open": 1130.0,
-  "high": 1137.0,
-  "low": 1125.4,
-  "volume": 4666068,
-  "market_cap": 3518852235264,
-  "pe_ratio": 12.664433,
-  "pb_ratio": 1.8126371,
-  "dividend_yield": 0.09,
-  "fifty_two_week_high": 1247.0,
-  "fifty_two_week_low": 933.5,
-  "avg_volume": 7221543,
-  "beta": 0.455,
-  "eps": 89.55,
-  "sector": "Financial Services",
-  "industry": "Banks - Regional"
+  "timestamp": "2025-10-28T10:39:31.189640",
+  "current_price": 1246.0
 }

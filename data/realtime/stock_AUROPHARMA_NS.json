@@ -1,20 +1,5 @@
 {
   "symbol": "AUROPHARMA.NS",
-  "timestamp": "2025-09-30T14:44:12.795554",
-  "current_price": 1080.9,
-  "open": 1088.0,
-  "high": 1097.9,
-  "low": 1075.6,
-  "volume": 297196,
-  "market_cap": 628076576768,
-  "pe_ratio": 18.54349,
-  "pb_ratio": 1.9220409,
-  "dividend_yield": 0.37,
-  "fifty_two_week_high": 1520.05,
-  "fifty_two_week_low": 1010.0,
-  "avg_volume": 1349456,
-  "beta": 0.137,
-  "eps": 58.29,
-  "sector": "Healthcare",
-  "industry": "Drug Manufacturers - Specialty & Generic"
+  "timestamp": "2025-10-28T10:37:38.076528",
+  "current_price": 1093.4
 }
