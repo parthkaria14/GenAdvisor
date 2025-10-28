@@ -1,5 +1,16 @@
 {
   "symbol": "NESTLEIND.NS",
-  "timestamp": "2025-10-28T10:37:07.636525",
-  "current_price": 1271.0
+  "timestamp": "2025-10-28T12:09:45.607038",
+  "current_price": 1266.8,
+  "name": "Nestl\u00e9 India Limited",
+  "sector": "Consumer Defensive",
+  "market_cap": 2442788864000,
+  "pe_ratio": 82.96005,
+  "pb_ratio": 55.08784,
+  "dividend_yield": 1.56,
+  "beta": 0.232,
+  "volume": 428478,
+  "fifty_two_week_high": 1311.6,
+  "fifty_two_week_low": 1055.0,
+  "change_percent": -1.2624651
 }

@@ -1,5 +1,16 @@
 {
   "symbol": "ADANIPORTS.NS",
-  "timestamp": "2025-10-28T10:38:24.698803",
-  "current_price": 1420.1
+  "timestamp": "2025-10-28T12:08:31.456271",
+  "current_price": 1416.8,
+  "name": "Adani Ports and Special Economic Zone Limited",
+  "sector": "Industrials",
+  "market_cap": 3077504499712,
+  "pe_ratio": 27.100231,
+  "pb_ratio": 4.914956,
+  "dividend_yield": 0.49,
+  "beta": 0.422,
+  "volume": 970852,
+  "fifty_two_week_high": 1494.0,
+  "fifty_two_week_low": 995.65,
+  "change_percent": -0.26744983
 }

@@ -1,5 +1,16 @@
 {
   "symbol": "DLF.NS",
-  "timestamp": "2025-10-28T10:32:49.721322",
-  "current_price": 769.0
+  "timestamp": "2025-10-28T12:09:53.101608",
+  "current_price": 770.95,
+  "name": "DLF Limited",
+  "sector": "Real Estate",
+  "market_cap": 1908341473280,
+  "pe_ratio": 42.64104,
+  "pb_ratio": 4.484927,
+  "dividend_yield": 0.77,
+  "beta": 0.393,
+  "volume": 957297,
+  "fifty_two_week_high": 896.6,
+  "fifty_two_week_low": 601.2,
+  "change_percent": -1.0969257
 }

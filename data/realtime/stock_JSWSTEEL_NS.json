@@ -1,5 +1,16 @@
 {
   "symbol": "JSWSTEEL.NS",
-  "timestamp": "2025-10-28T10:36:34.167106",
-  "current_price": 1156.3
+  "timestamp": "2025-10-28T12:08:30.646816",
+  "current_price": 1165.8,
+  "name": "JSW Steel Limited",
+  "sector": "Basic Materials",
+  "market_cap": 2847521636352,
+  "pe_ratio": 47.351746,
+  "pb_ratio": 3.4256299,
+  "dividend_yield": 0.24,
+  "beta": 0.64,
+  "volume": 878369,
+  "fifty_two_week_high": 1178.8,
+  "fifty_two_week_low": 880.0,
+  "change_percent": 1.3204825
 }

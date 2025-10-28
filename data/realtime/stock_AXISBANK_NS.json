@@ -1,5 +1,16 @@
 {
   "symbol": "AXISBANK.NS",
-  "timestamp": "2025-10-28T10:39:31.189640",
-  "current_price": 1246.0
+  "timestamp": "2025-10-28T12:08:45.694320",
+  "current_price": 1241.8,
+  "name": "Axis Bank Limited",
+  "sector": "Financial Services",
+  "market_cap": 3853466730496,
+  "pe_ratio": 14.8896885,
+  "pb_ratio": 1.9304672,
+  "dividend_yield": 0.08,
+  "beta": 0.447,
+  "volume": 3017346,
+  "fifty_two_week_high": 1276.1,
+  "fifty_two_week_low": 933.5,
+  "change_percent": -0.980699
 }

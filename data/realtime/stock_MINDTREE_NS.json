@@ -1,5 +1,16 @@
 {
   "symbol": "MINDTREE.NS",
-  "timestamp": "2025-10-28T10:39:26.920307",
-  "current_price": 0
+  "timestamp": "2025-10-28T12:08:48.786118",
+  "current_price": 0,
+  "name": null,
+  "sector": "Unknown",
+  "market_cap": null,
+  "pe_ratio": null,
+  "pb_ratio": null,
+  "dividend_yield": null,
+  "beta": null,
+  "volume": null,
+  "fifty_two_week_high": null,
+  "fifty_two_week_low": null,
+  "change_percent": null
 }

@@ -1,5 +1,16 @@
 {
   "symbol": "WIPRO.NS",
-  "timestamp": "2025-10-28T10:39:32.137458",
-  "current_price": 242.32
+  "timestamp": "2025-10-28T12:09:31.894569",
+  "current_price": 241.99,
+  "name": "Wipro Limited",
+  "sector": "Technology",
+  "market_cap": 2534211321856,
+  "pe_ratio": 18.831907,
+  "pb_ratio": 2.944168,
+  "dividend_yield": 4.51,
+  "beta": 0.583,
+  "volume": 3534714,
+  "fifty_two_week_high": 324.6,
+  "fifty_two_week_low": 228.0,
+  "change_percent": -0.7871748
 }

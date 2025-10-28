@@ -1,5 +1,16 @@
 {
   "symbol": "SUNTV.NS",
-  "timestamp": "2025-10-28T10:37:47.507713",
-  "current_price": 557.3
+  "timestamp": "2025-10-28T12:08:53.587963",
+  "current_price": 556.5,
+  "name": "Sun TV Network Limited",
+  "sector": "Communication Services",
+  "market_cap": 220491300864,
+  "pe_ratio": 13.100283,
+  "pb_ratio": 1.8827517,
+  "dividend_yield": 2.7,
+  "beta": 0.058,
+  "volume": 56327,
+  "fifty_two_week_high": 782.9,
+  "fifty_two_week_low": 518.05,
+  "change_percent": 0.08093017
 }

@@ -1,5 +1,16 @@
 {
   "symbol": "ADANIENT.NS",
-  "timestamp": "2025-10-28T10:31:27.061054",
-  "current_price": 2493.4
+  "timestamp": "2025-10-28T12:08:23.141741",
+  "current_price": 2496.0,
+  "name": "Adani Enterprises Limited",
+  "sector": "Energy",
+  "market_cap": 2893604978688,
+  "pe_ratio": 45.933014,
+  "pb_ratio": 6.0407605,
+  "dividend_yield": 0.05,
+  "beta": 0.643,
+  "volume": 287514,
+  "fifty_two_week_high": 3070.0,
+  "fifty_two_week_low": 2025.0,
+  "change_percent": 0.1283626
 }

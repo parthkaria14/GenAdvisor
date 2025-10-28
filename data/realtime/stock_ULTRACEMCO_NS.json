@@ -1,5 +1,16 @@
 {
   "symbol": "ULTRACEMCO.NS",
-  "timestamp": "2025-10-28T10:38:27.044462",
-  "current_price": 12007.0
+  "timestamp": "2025-10-28T12:09:47.388567",
+  "current_price": 11954.0,
+  "name": "UltraTech Cement Limited",
+  "sector": "Basic Materials",
+  "market_cap": 3515537162240,
+  "pe_ratio": 48.29704,
+  "pb_ratio": 4.8813972,
+  "dividend_yield": 0.65,
+  "beta": 0.403,
+  "volume": 144465,
+  "fifty_two_week_high": 13097.0,
+  "fifty_two_week_low": 10047.85,
+  "change_percent": -0.5076987
 }

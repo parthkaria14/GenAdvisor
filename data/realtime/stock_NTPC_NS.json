@@ -1,5 +1,16 @@
 {
   "symbol": "NTPC.NS",
-  "timestamp": "2025-10-28T10:37:39.604230",
-  "current_price": 340.35
+  "timestamp": "2025-10-28T12:09:38.702698",
+  "current_price": 338.55,
+  "name": "NTPC Limited",
+  "sector": "Utilities",
+  "market_cap": 3281836834816,
+  "pe_ratio": 18.575743,
+  "pb_ratio": 1.7827609,
+  "dividend_yield": 3.39,
+  "beta": 0.261,
+  "volume": 5339607,
+  "fifty_two_week_high": 415.45,
+  "fifty_two_week_low": 292.8,
+  "change_percent": -0.96533215
 }

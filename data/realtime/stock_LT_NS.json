@@ -1,5 +1,16 @@
 {
   "symbol": "LT.NS",
-  "timestamp": "2025-10-28T10:36:32.744390",
-  "current_price": 3928.3
+  "timestamp": "2025-10-28T12:08:46.087826",
+  "current_price": 3929.4,
+  "name": "Larsen & Toubro Limited",
+  "sector": "Industrials",
+  "market_cap": 5405109387264,
+  "pe_ratio": 34.062065,
+  "pb_ratio": 5.5334077,
+  "dividend_yield": 0.87,
+  "beta": 0.463,
+  "volume": 1202383,
+  "fifty_two_week_high": 3966.2,
+  "fifty_two_week_low": 2965.3,
+  "change_percent": 0.14271142
 }

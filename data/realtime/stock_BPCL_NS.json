@@ -1,5 +1,16 @@
 {
   "symbol": "BPCL.NS",
-  "timestamp": "2025-10-28T10:38:16.681893",
-  "current_price": 341.8
+  "timestamp": "2025-10-28T12:08:43.784382",
+  "current_price": 341.25,
+  "name": "Bharat Petroleum Corporation Limited",
+  "sector": "Energy",
+  "market_cap": 1480515125248,
+  "pe_ratio": 8.409314,
+  "pb_ratio": 1.8191656,
+  "dividend_yield": 2.92,
+  "beta": 0.909,
+  "volume": 2373024,
+  "fifty_two_week_high": 358.65,
+  "fifty_two_week_low": 234.01,
+  "change_percent": -0.5102041
 }

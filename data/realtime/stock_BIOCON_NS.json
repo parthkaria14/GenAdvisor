@@ -1,5 +1,16 @@
 {
   "symbol": "BIOCON.NS",
-  "timestamp": "2025-10-28T10:38:26.661791",
-  "current_price": 361.15
+  "timestamp": "2025-10-28T12:09:29.641405",
+  "current_price": 362.65,
+  "name": "Biocon Limited",
+  "sector": "Healthcare",
+  "market_cap": 484165287936,
+  "pe_ratio": 112.975075,
+  "pb_ratio": 2.007384,
+  "dividend_yield": 0.14,
+  "beta": 0.248,
+  "volume": 484193,
+  "fifty_two_week_high": 406.0,
+  "fifty_two_week_low": 291.0,
+  "change_percent": 0.6107667
 }

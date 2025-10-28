@@ -1,5 +1,16 @@
 {
   "symbol": "ICICIGI.NS",
-  "timestamp": "2025-10-28T10:37:44.100487",
-  "current_price": 1993.0
+  "timestamp": "2025-10-28T12:08:23.790247",
+  "current_price": 2006.1,
+  "name": "ICICI Lombard General Insurance Company Limited",
+  "sector": "Financial Services",
+  "market_cap": 1002437148672,
+  "pe_ratio": 35.810425,
+  "pb_ratio": 6.003843,
+  "dividend_yield": 0.65,
+  "beta": 0.593,
+  "volume": 232241,
+  "fifty_two_week_high": 2068.7,
+  "fifty_two_week_low": 1613.7,
+  "change_percent": 0.99174136
 }

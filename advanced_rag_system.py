@@ -234,28 +234,40 @@ class AdvancedRAGSystem:
                 with open(indicators_path, 'r') as f:
                     self.file_data['technical_indicators'] = json.load(f)
             
-            # Load news data from existing CSV files
-            news_files = [
-                "news_Indian_stock_market.csv",
-                "news_HDFC_Bank.csv", 
-                "news_Infosys.csv",
-                "news_Nifty_50.csv",
-                "news_Reliance_Industries.csv",
-                "news_TCS.csv"
-            ]
             
+            # Load news data dynamically from all 'news_*.csv' files
+           
+            logger.info(f"Scanning for news files in: {self.realtime_dir}") 
+            news_files = [f for f in os.listdir(self.realtime_dir) if f.startswith('news_') and f.endswith('.csv')] # <-- FIXED
+            logger.info(f"Found {len(news_files)} news files.")
+           
+            
+            # This is inside the _load_file_data function
             for news_file in news_files:
-                news_path = os.path.join(self.data_dir, news_file)
+                news_path = os.path.join(self.realtime_dir, news_file)
                 if os.path.exists(news_path):
                     try:
                         news_df = pd.read_csv(news_path)
+                        
+                        # --- START OF FIX ---
+                        # Safely create the 'content' column
+                        news_df['title'] = news_df['title'].fillna('')
+                        
+                        if 'description' in news_df.columns:
+                            news_df['description'] = news_df['description'].fillna('')
+                        else:
+                            news_df['description'] = '' # Create empty column if it doesn't exist
+                            
+                        news_df['content'] = news_df['title'] + ". " + news_df['description']
+                        # --- END OF FIX ---
+
+                        # Append all rows from this CSV to the main data list
                         for _, row in news_df.iterrows():
                             self.file_data['news_data'].append(row.to_dict())
+                    
                     except Exception as e:
-                        logger.warning(f"Error loading {news_file}: {e}")
-            
-            logger.info(f"Loaded file data: {len(self.file_data['stocks'])} stocks, "
-                       f"{len(self.file_data['news_data'])} news articles")
+                        # This will now print the *actual* error if one still happens
+                        logger.error(f"CRITICAL: Failed to load {news_file}. Error: {e}")
                        
         except Exception as e:
             logger.error(f"Error loading file data: {e}")
@@ -339,7 +351,6 @@ class AdvancedRAGSystem:
                 )
                 
                 # Extract and link entities
-                # Extract and link entities
                 # Use the *better* NER-based extractor
                 extracted = self.extract_entities(f"{title} {news_item.get('content', '')}")
                 entities_to_link = extracted.get('companies', []) + extracted.get('sectors', [])
@@ -347,7 +358,24 @@ class AdvancedRAGSystem:
                 for entity_symbol in entities_to_link:
                     if self.knowledge_graph.has_node(entity_symbol):
                         self.knowledge_graph.add_edge(news_id, entity_symbol, relation='mentions')
+            logger.info("Building peer-to-peer (stock-to-stock) connections...")
+            # Find all sector nodes
+            sectors = [n for n, d in self.knowledge_graph.nodes(data=True) if d.get('type') == 'sector']
             
+            for sector in sectors:
+                # Find all stocks in this sector
+                stocks_in_sector = [
+                    n for n in self.knowledge_graph.neighbors(sector)
+                    if self.knowledge_graph.nodes[n].get('type') == 'stock'
+                ]
+                
+                # Create edges between all combinations of stocks in this sector
+                from itertools import combinations
+                for stock1, stock2 in combinations(stocks_in_sector, 2):
+                    if not self.knowledge_graph.has_edge(stock1, stock2):
+                        self.knowledge_graph.add_edge(stock1, stock2, relation='peer_of_sector')
+            
+            logger.info("Peer connections built.")
             logger.info(f"Built knowledge graph with {self.knowledge_graph.number_of_nodes()} nodes and {self.knowledge_graph.number_of_edges()} edges")
             
         except Exception as e:
@@ -630,14 +658,20 @@ class AdvancedRAGSystem:
         """Classify user query to determine processing strategy"""
         query_lower = query.lower()
         
-        if any(term in query_lower for term in ['stock', 'share', 'company', 'analyze']):
-            return QueryType.STOCK_ANALYSIS
-        elif any(term in query_lower for term in ['portfolio', 'allocate', 'diversify']):
+        # --- START OF FIX ---
+        # Check for portfolio/investment queries FIRST (most specific)
+        if any(term in query_lower for term in ['portfolio', 'allocate', 'diversify', 'invest', 'distribution', 'budget']):
             return QueryType.PORTFOLIO_ADVICE
+        
+        # THEN, check for specific stock analysis
+        elif any(term in query_lower for term in ['stock', 'share', 'company', 'analyze']):
+            return QueryType.STOCK_ANALYSIS
+        # --- END OF FIX ---
+            
         elif any(term in query_lower for term in ['market', 'nifty', 'sensex', 'index']):
             return QueryType.MARKET_OVERVIEW
         elif any(term in query_lower for term in ['sector', 'industry', 'banking', 'it', 'pharma']):
-            return QueryType.SECTOR_ANALYSIS
+            return QueryType.SECTOR_ANALISYS
         elif any(term in query_lower for term in ['technical', 'chart', 'pattern', 'indicator']):
             return QueryType.TECHNICAL_ANALYSIS
         elif any(term in query_lower for term in ['fundamental', 'earning', 'valuation', 'pe']):
@@ -647,6 +681,10 @@ class AdvancedRAGSystem:
         elif any(term in query_lower for term in ['risk', 'volatility', 'var', 'beta']):
             return QueryType.RISK_ASSESSMENT
         else:
+            # If no other match, but it has 'invest' or 'budget', it's still portfolio
+            if any(term in query_lower for term in ['invest', 'budget']):
+                 return QueryType.PORTFOLIO_ADVICE
+            # Fallback
             return QueryType.STOCK_ANALYSIS
     
     def extract_entities(self, query: str) -> Dict[str, List[str]]:

@@ -1,5 +1,16 @@
 {
   "symbol": "COLPAL.NS",
-  "timestamp": "2025-10-28T10:38:25.203816",
-  "current_price": 2208.0
+  "timestamp": "2025-10-28T12:08:31.781339",
+  "current_price": 2217.9,
+  "name": "Colgate-Palmolive (India) Limited",
+  "sector": "Consumer Defensive",
+  "market_cap": 603236925440,
+  "pe_ratio": 45.486053,
+  "pb_ratio": 38.127243,
+  "dividend_yield": 2.3,
+  "beta": 0.292,
+  "volume": 417877,
+  "fifty_two_week_high": 3139.45,
+  "fifty_two_week_low": 2151.0,
+  "change_percent": 0.06314399
 }

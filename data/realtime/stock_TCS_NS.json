@@ -1,5 +1,16 @@
 {
   "symbol": "TCS.NS",
-  "timestamp": "2025-10-28T10:37:47.070719",
-  "current_price": 3066.7
+  "timestamp": "2025-10-28T12:09:45.230024",
+  "current_price": 3052.0,
+  "name": "Tata Consultancy Services Limited",
+  "sector": "Technology",
+  "market_cap": 11042402861056,
+  "pe_ratio": 22.332796,
+  "pb_ratio": 10.376753,
+  "dividend_yield": 2.01,
+  "beta": 0.308,
+  "volume": 1142270,
+  "fifty_two_week_high": 4494.9,
+  "fifty_two_week_low": 2866.6,
+  "change_percent": -1.0663438
 }

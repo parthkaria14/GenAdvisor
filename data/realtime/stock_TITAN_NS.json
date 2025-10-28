@@ -1,5 +1,16 @@
 {
   "symbol": "TITAN.NS",
-  "timestamp": "2025-10-28T10:37:44.470488",
-  "current_price": 3726.9
+  "timestamp": "2025-10-28T12:09:48.513335",
+  "current_price": 3692.8,
+  "name": "Titan Company Limited",
+  "sector": "Consumer Cyclical",
+  "market_cap": 3275680645120,
+  "pe_ratio": 88.15469,
+  "pb_ratio": 28.203953,
+  "dividend_yield": 0.29,
+  "beta": 0.253,
+  "volume": 740153,
+  "fifty_two_week_high": 3800.0,
+  "fifty_two_week_low": 2925.0,
+  "change_percent": -1.2567517
 }

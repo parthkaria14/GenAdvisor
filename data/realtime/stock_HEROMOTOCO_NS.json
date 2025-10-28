@@ -1,5 +1,16 @@
 {
   "symbol": "HEROMOTOCO.NS",
-  "timestamp": "2025-10-28T10:37:43.406469",
-  "current_price": 5640.0
+  "timestamp": "2025-10-28T12:08:29.237656",
+  "current_price": 5612.0,
+  "name": "Hero MotoCorp Limited",
+  "sector": "Consumer Cyclical",
+  "market_cap": 1122780839936,
+  "pe_ratio": 22.284874,
+  "pb_ratio": 5.8242955,
+  "dividend_yield": 2.3,
+  "beta": 0.723,
+  "volume": 176584,
+  "fifty_two_week_high": 5717.0,
+  "fifty_two_week_low": 3344.0,
+  "change_percent": -0.6106735
 }

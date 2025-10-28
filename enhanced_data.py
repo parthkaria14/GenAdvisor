@@ -16,7 +16,7 @@ import json
 from bs4 import BeautifulSoup
 import logging
 from logger_config import setup_logger
-
+import threading
 logger = setup_logger()
 
 def convert_numpy_types(obj):
@@ -282,30 +282,42 @@ class IndianMarketDataIngestion:
                     logger.error(f"Error in bulk fetch: {result}")
     
     async def fetch_realtime_price(self, ticker: str) -> Optional[Dict]:
-        """Fetch real-time price for a single ticker"""
-        logger.info(f"Fetching real-time price for {ticker}")
+        """Fetch real-time price AND fundamental data for a single ticker"""
+        logger.info(f"Fetching real-time data for {ticker}")
         
         try:
-            logger.debug(f"Initializing yfinance for {ticker}")
             stock = yf.Ticker(ticker)
-            info = stock.info
+            # This is a blocking call, but it's the simplest way 
+            # to get all the data you need
+            info = stock.info 
             
-            # Get current data
+            # Use 'info' to get all data
             current_price = info.get('currentPrice', info.get('regularMarketPrice', 0))
-            logger.debug(f"Initial price fetch for {ticker}: {current_price}")
             
             if current_price == 0:
-                logger.warning(f"No current price for {ticker}, attempting history")
                 hist = stock.history(period="1d")
                 if not hist.empty:
                     current_price = hist['Close'].iloc[-1]
-                    logger.info(f"Found price from history: {current_price}")
             
             data = {
                 'symbol': ticker,
                 'timestamp': datetime.now().isoformat(),
                 'current_price': current_price,
-                # ... rest of the data
+                
+                # --- START OF FIX ---
+                # Populate all the data the RAG system needs
+                'name': info.get('longName', info.get('shortName')),
+                'sector': info.get('sector', 'Unknown'),
+                'market_cap': info.get('marketCap'),
+                'pe_ratio': info.get('trailingPE'),
+                'pb_ratio': info.get('priceToBook'),
+                'dividend_yield': info.get('dividendYield'),
+                'beta': info.get('beta'),
+                'volume': info.get('volume'),
+                'fifty_two_week_high': info.get('fiftyTwoWeekHigh'),
+                'fifty_two_week_low': info.get('fiftyTwoWeekLow'),
+                'change_percent': info.get('regularMarketChangePercent')
+                # --- END OF FIX ---
             }
             
             # Save to file storage
@@ -317,9 +329,46 @@ class IndianMarketDataIngestion:
             return data
                 
         except Exception as e:
-            logger.error(f"Error fetching {ticker}: {e}")
+            # yfinance often fails if a ticker is invalid or delisted
+            logger.error(f"Error fetching info for {ticker}: {e}")
             return None
-    
+    def fetch_and_save_news(self):
+        """Fetches news for all tickers and saves to individual CSV files."""
+        logger.info("Fetching news for all tickers...")
+        tickers_to_fetch = self.nse_tickers[:50] + self.bse_tickers[:10] 
+        
+        for ticker in tickers_to_fetch:
+            try:
+                stock = yf.Ticker(ticker)
+                news = stock.news
+                
+                # Check if news is a valid list
+                if news and isinstance(news, list) and len(news) > 0:
+                    news_df = pd.DataFrame(news)
+                    
+                    # Standardize column names
+                    news_df = news_df.rename(columns={
+                        'uuid': 'id',
+                        'providerPublishTime': 'publishedAt',
+                        'relatedTickers': 'symbols',  # This is the key rename
+                        'link': 'url'
+                    })
+                    
+                    # --- START OF FIX ---
+                    # Ensure ALL essential columns exist, even if empty
+                    # This guarantees the 'symbols' column exists and prevents the KeyError
+                    required_cols = ['title', 'publisher', 'url', 'publishedAt', 'symbols', 'description']
+                    for col in required_cols:
+                        if col not in news_df.columns:
+                            news_df[col] = 'N/A' # Add 'N/A' for missing columns
+                    # --- END OF FIX ---
+                            
+                    file_path = os.path.join(self.data_dir, f"news_{ticker.replace('.', '_')}.csv")
+                    news_df.to_csv(file_path, index=False)
+                    logger.info(f"Saved news for {ticker}")
+            except Exception as e:
+                logger.warning(f"Failed to fetch news for {ticker}: {e}")
+            time.sleep(1) # Rate limiting
     def fetch_market_breadth(self) -> Dict:
         """Fetch market breadth indicators"""
         try:
@@ -442,8 +491,8 @@ class IndianMarketDataIngestion:
         schedule.every().hour.do(self.update_technical_indicators)
         
         # News and sentiment - every 30 minutes
-        schedule.every(30).minutes.do(self.update_news_sentiment)
-        
+        schedule.every(2).minutes.do(self.update_news_sentiment)
+        schedule.every(2).minutes.do(self.fetch_and_save_news)
         while True:
             schedule.run_pending()
             time.sleep(1)
@@ -525,21 +574,26 @@ if __name__ == "__main__":
     print("Starting Indian Market Data Ingestion with FILE STORAGE...")
     ingestion = IndianMarketDataIngestion(enable_redis=False)
     
-    # Example usage - WITH Redis + files (if available)
-    # print("Starting Indian Market Data Ingestion WITH Redis + file backup...")
-    # ingestion = IndianMarketDataIngestion(enable_redis=True)
-    
     print(f"Data will be saved to: {ingestion.data_dir}")
-    print("Files created:")
-    print(f"  - Individual stock data: data/realtime/stock_*.json")
-    print(f"  - All stocks CSV: {ingestion.stocks_csv}")
-    print(f"  - Market breadth: {ingestion.market_breadth_file}")
-    print(f"  - Sector performance: {ingestion.sector_performance_file}")
-    print(f"  - Technical indicators: {ingestion.technical_indicators_file}")
-    print(f"  - Market summary CSV: {ingestion.market_summary_csv}")
     
     # Export existing data to CSV before starting
     ingestion.export_data_to_csv()
     
-    # Run async event loop for real-time monitoring
-    asyncio.run(ingestion.start_realtime_monitoring())
+    # --- START OF FIX ---
+    
+    # 1. Create a separate thread for the scheduled tasks (news, fundamentals, etc.)
+    # The scheduler runs in its own blocking loop, so it needs a thread.
+    print("Starting scheduler thread for news and technicals...")
+    scheduler_thread = threading.Thread(
+        target=ingestion.schedule_data_updates,
+        daemon=True  # Set as daemon so it exits when the main program exits
+    )
+    scheduler_thread.start()
+    
+    # 2. Run the async event loop for real-time price monitoring
+    # This will run in the main thread.
+    print("Starting real-time price monitoring loop...")
+    try:
+        asyncio.run(ingestion.start_realtime_monitoring())
+    except KeyboardInterrupt:
+        print("\nStopping data ingestion...")

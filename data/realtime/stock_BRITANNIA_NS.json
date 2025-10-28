@@ -1,5 +1,16 @@
 {
   "symbol": "BRITANNIA.NS",
-  "timestamp": "2025-10-28T10:38:22.878594",
-  "current_price": 5863.0
+  "timestamp": "2025-10-28T12:08:55.617640",
+  "current_price": 5826.5,
+  "name": "Britannia Industries Limited",
+  "sector": "Consumer Defensive",
+  "market_cap": 1404048113664,
+  "pe_ratio": 63.99934,
+  "pb_ratio": 32.220158,
+  "dividend_yield": 1.27,
+  "beta": 0.531,
+  "volume": 158419,
+  "fifty_two_week_high": 6336.0,
+  "fifty_two_week_low": 4506.0,
+  "change_percent": -1.4462111
 }

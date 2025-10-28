@@ -1,5 +1,16 @@
 {
   "symbol": "HDFCLIFE.NS",
-  "timestamp": "2025-10-28T10:37:02.568979",
-  "current_price": 741.1
+  "timestamp": "2025-10-28T12:08:54.248865",
+  "current_price": 745.05,
+  "name": "HDFC Life Insurance Company Limited",
+  "sector": "Financial Services",
+  "market_cap": 1605989957632,
+  "pe_ratio": 84.954384,
+  "pb_ratio": 9.462034,
+  "dividend_yield": 0.28,
+  "beta": 0.623,
+  "volume": 1746471,
+  "fifty_two_week_high": 820.75,
+  "fifty_two_week_low": 584.3,
+  "change_percent": 1.0583429
 }

@@ -1,5 +1,16 @@
 {
   "symbol": "HAVELLS.NS",
-  "timestamp": "2025-10-28T10:39:22.750339",
-  "current_price": 1479.4
+  "timestamp": "2025-10-28T12:09:30.562539",
+  "current_price": 1480.5,
+  "name": "Havells India Limited",
+  "sector": "Industrials",
+  "market_cap": 929555283968,
+  "pe_ratio": 63.59536,
+  "pb_ratio": 10.701119,
+  "dividend_yield": 0.67,
+  "beta": 0.363,
+  "volume": 394942,
+  "fifty_two_week_high": 1782.65,
+  "fifty_two_week_low": 1381.3,
+  "change_percent": -0.81066436
 }

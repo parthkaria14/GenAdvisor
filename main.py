@@ -86,7 +86,11 @@ class ScreenerRequest(BaseModel):
     pe_max: Optional[float] = None
     sector: Optional[str] = None
     min_volume: Optional[float] = None
-    
+
+class RAGQueryResponse(BaseModel):
+    answer: str = Field(..., description="The formatted (Markdown) answer from the RAG system")
+    confidence: float = Field(..., description="The confidence score (0.0 to 1.0)")
+    timestamp: str = Field(..., description="The time the query was processed")   
 # WebSocket Manager for real-time updates
 class ConnectionManager:
     def __init__(self):
@@ -240,7 +244,7 @@ async def get_market_overview():
             file_path = os.path.join(data_ingestion.data_dir, file)
             with open(file_path, 'r') as f:
                 stock_data = json.load(f)
-                change = stock_data.get('change_percent', 0)
+                change = stock_data.get('change_percent') or 0
                 if change > 0:
                     top_gainers.append({'symbol': stock_data['symbol'], 'change': change})
                 else:
@@ -363,7 +367,8 @@ async def analyze_risk(request: RiskAnalysisRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 # RAG Query Endpoint
-@app.post("/api/v1/query")
+# Note the new `response_model` for the non-streaming part
+@app.post("/api/v1/query", response_model=RAGQueryResponse)
 async def process_query(request: RAGQueryRequest):
     """Process natural language queries using RAG"""
     query_id = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -377,21 +382,39 @@ async def process_query(request: RAGQueryRequest):
                 result = await rag_system.process_query(request.query, stream=True)
                 async for chunk in result:
                     logger.debug(f"[QueryID: {query_id}] Streaming chunk: {len(chunk)} chars")
+                    # Make sure streaming also returns a clean JSON
                     yield json.dumps({"chunk": chunk}) + "\n"
                 logger.info(f"[QueryID: {query_id}] Stream completed")
             
+            # StreamingResponse is correct for streaming
             return StreamingResponse(stream_generator(), media_type="text/event-stream")
+        
         else:
+            # --- START OF FIX ---
             logger.info(f"[QueryID: {query_id}] Starting RAG processing")
+            
+            # 1. Get the full dictionary from the RAG system
             result = await rag_system.process_query(request.query)
+            
             logger.info(f"[QueryID: {query_id}] Query processed successfully")
-            logger.debug(f"[QueryID: {query_id}] Response length: {len(str(result))} chars")
-            return result
+            logger.debug(f"[QueryID: {query_id}] Response length: {len(str(result.get('response', '')))} chars")
+            
+            # 2. Return ONLY the clean Pydantic model
+            return RAGQueryResponse(
+                answer=result.get('response', 'Sorry, I could not find an answer.'),
+                confidence=result.get('confidence', 0.0),
+                timestamp=result.get('timestamp', datetime.now().isoformat())
+            )
+            # --- END OF FIX ---
             
     except Exception as e:
         logger.error(f"[QueryID: {query_id}] Error processing query: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
+        # Also return a clean error that matches the response model
+        return RAGQueryResponse(
+            answer=f"Sorry, an internal error occurred: {e}",
+            confidence=0.0,
+            timestamp=datetime.now().isoformat()
+        )
 # Screener Endpoint
 @app.post("/api/v1/screener")
 async def screen_stocks(request: ScreenerRequest):

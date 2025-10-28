@@ -1,5 +1,16 @@
 {
   "symbol": "PEL.NS",
-  "timestamp": "2025-10-28T10:39:32.865678",
-  "current_price": 1133.0
+  "timestamp": "2025-10-28T12:08:22.193711",
+  "current_price": 1133.0,
+  "name": "Piramal Enterprises Limited",
+  "sector": "Financial Services",
+  "market_cap": 255279988736,
+  "pe_ratio": 44.588745,
+  "pb_ratio": 0.9428208,
+  "dividend_yield": 0.98,
+  "beta": 0.625,
+  "volume": 2141258,
+  "fifty_two_week_high": 1355.3,
+  "fifty_two_week_low": 848.25,
+  "change_percent": 0.7827832
 }

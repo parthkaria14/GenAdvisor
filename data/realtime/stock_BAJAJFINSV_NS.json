@@ -1,5 +1,16 @@
 {
   "symbol": "BAJAJFINSV.NS",
-  "timestamp": "2025-10-28T10:00:37.767755",
-  "current_price": 2150.9
+  "timestamp": "2025-10-28T12:09:41.830809",
+  "current_price": 2133.2,
+  "name": "Bajaj Finserv Ltd.",
+  "sector": "Financial Services",
+  "market_cap": 3405113458688,
+  "pe_ratio": 36.137558,
+  "pb_ratio": 4.7027907,
+  "dividend_yield": 0.05,
+  "beta": 0.615,
+  "volume": 535121,
+  "fifty_two_week_high": 2195.0,
+  "fifty_two_week_low": 1551.65,
+  "change_percent": -1.7049121
 }

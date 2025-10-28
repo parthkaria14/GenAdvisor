@@ -1,5 +1,16 @@
 {
   "symbol": "HINDUNILVR.NS",
-  "timestamp": "2025-10-28T10:38:23.432594",
-  "current_price": 2503.2
+  "timestamp": "2025-10-28T12:08:31.045889",
+  "current_price": 2486.0,
+  "name": "Hindustan Unilever Limited",
+  "sector": "Consumer Defensive",
+  "market_cap": 5841316478976,
+  "pe_ratio": 53.78624,
+  "pb_ratio": 11.987482,
+  "dividend_yield": 1.71,
+  "beta": 0.333,
+  "volume": 607136,
+  "fifty_two_week_high": 2750.0,
+  "fifty_two_week_low": 2136.0,
+  "change_percent": -1.0272355
 }

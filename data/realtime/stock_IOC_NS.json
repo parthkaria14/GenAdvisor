@@ -1,5 +1,16 @@
 {
   "symbol": "IOC.NS",
-  "timestamp": "2025-10-28T10:39:23.269751",
-  "current_price": 154.75
+  "timestamp": "2025-10-28T12:08:35.965002",
+  "current_price": 155.08,
+  "name": "Indian Oil Corporation Limited",
+  "sector": "Energy",
+  "market_cap": 2189921746944,
+  "pe_ratio": 8.59169,
+  "pb_ratio": 1.1452203,
+  "dividend_yield": 2.0,
+  "beta": 0.77,
+  "volume": 15501702,
+  "fifty_two_week_high": 157.48,
+  "fifty_two_week_low": 110.72,
+  "change_percent": -0.077321425
 }
