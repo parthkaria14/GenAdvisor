@@ -1,16 +1,16 @@
 {
   "symbol": "BHARTIARTL.NS",
-  "timestamp": "2025-10-28T14:32:09.391874",
-  "current_price": 2083.0,
+  "timestamp": "2025-11-01T21:52:20.868662",
+  "current_price": 2054.5,
   "name": "Bharti Airtel Limited",
   "sector": "Communication Services",
-  "market_cap": 12489407332352,
-  "pe_ratio": 35.38305,
-  "pb_ratio": 10.59571,
-  "dividend_yield": 0.77,
+  "market_cap": 12324596350976,
+  "pe_ratio": 34.845657,
+  "pb_ratio": 10.450737,
+  "dividend_yield": 0.78,
   "beta": 0.109,
-  "volume": 7172335,
-  "fifty_two_week_high": 2102.6,
+  "volume": 4659419,
+  "fifty_two_week_high": 2110.4,
   "fifty_two_week_low": 1511.0,
-  "change_percent": 0.13935807
+  "change_percent": -0.5710714
 }

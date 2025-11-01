@@ -1,16 +1,16 @@
 {
   "symbol": "PAGEIND.NS",
-  "timestamp": "2025-10-28T14:42:12.316859",
-  "current_price": 40800.0,
+  "timestamp": "2025-11-01T21:52:40.783605",
+  "current_price": 41200.0,
   "name": "Page Industries Limited",
   "sector": "Consumer Cyclical",
-  "market_cap": 455078051840,
-  "pe_ratio": 59.609905,
-  "pb_ratio": 32.339348,
+  "market_cap": 459539611648,
+  "pe_ratio": 60.240967,
+  "pb_ratio": 32.656403,
   "dividend_yield": 1.46,
   "beta": 0.067,
-  "volume": 18584,
+  "volume": 19169,
   "fifty_two_week_high": 50590.0,
   "fifty_two_week_low": 38850.0,
-  "change_percent": -0.45138466
+  "change_percent": 0.6227867
 }

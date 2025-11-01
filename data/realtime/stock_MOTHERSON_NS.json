@@ -1,16 +1,16 @@
 {
   "symbol": "MOTHERSON.NS",
-  "timestamp": "2025-10-28T14:08:16.700895",
-  "current_price": 106.3,
+  "timestamp": "2025-11-01T21:53:17.963826",
+  "current_price": 105.39,
   "name": "Samvardhana Motherson International Limited",
   "sector": "Consumer Cyclical",
-  "market_cap": 1121937260544,
-  "pe_ratio": 33.533123,
-  "pb_ratio": 3.2165337,
-  "dividend_yield": 1.03,
+  "market_cap": 1112332697600,
+  "pe_ratio": 33.351265,
+  "pb_ratio": 3.1889977,
+  "dividend_yield": 1.04,
   "beta": 1.182,
-  "volume": 5514368,
-  "fifty_two_week_high": 127.6,
+  "volume": 5208930,
+  "fifty_two_week_high": 126.49333,
   "fifty_two_week_low": 71.5,
-  "change_percent": -0.5891679
+  "change_percent": -1.3940848
 }

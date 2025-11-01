@@ -187,6 +187,7 @@ export type ScreenerInput = {
   pe_max?: number
   sector?: string
   min_volume?: number
+  include_predictions?: boolean
 }
 export type ScreenerResult = {
   count: number
@@ -197,6 +198,8 @@ export type ScreenerResult = {
     market_cap?: number
     sector?: string
     volume?: number
+    predicted_price?: number | null
+    predicted_prices?: number[]
   }>
   timestamp?: string
 }
@@ -228,6 +231,19 @@ export async function getStock(symbol: string): Promise<StockDetails> {
 export type Health = { status: string; components?: Record<string, boolean> }
 export async function getHealth(): Promise<Health> {
   return apiFetch<Health>("/health")
+}
+
+// Price Prediction
+export type PredictionResult = {
+  symbol: string
+  current_price: number
+  predicted_prices: number[]
+  forecast_horizon: number
+  predicted_next_price: number
+  timestamp?: string
+}
+export async function getPricePrediction(symbol: string, forecast_horizon: number = 5): Promise<PredictionResult> {
+  return apiFetch<PredictionResult>(`/api/v1/predict/${encodeURIComponent(symbol)}?forecast_horizon=${forecast_horizon}`)
 }
 
 // High-level aggregator for dashboard to keep UI stable

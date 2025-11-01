@@ -1,16 +1,16 @@
 {
   "symbol": "TATAMOTORS.NS",
-  "timestamp": "2025-10-28T14:42:15.727079",
+  "timestamp": "2025-11-01T21:52:06.223041",
   "current_price": 405.85,
   "name": "Tata Motors Passenger Vehicles Limited",
   "sector": "Consumer Cyclical",
   "market_cap": 1494474162176,
   "pe_ratio": 6.662016,
   "pb_ratio": 1.2863994,
-  "dividend_yield": 1.48,
+  "dividend_yield": 0.0148,
   "beta": 1.012,
   "volume": 14120004,
-  "fifty_two_week_high": 882.5,
+  "fifty_two_week_high": 844.45,
   "fifty_two_week_low": 376.3,
-  "change_percent": 0.0
+  "change_percent": null
 }

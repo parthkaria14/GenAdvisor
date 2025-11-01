@@ -1,16 +1,16 @@
 {
   "symbol": "SUNPHARMA.NS",
-  "timestamp": "2025-10-28T14:08:11.701105",
-  "current_price": 1687.1,
+  "timestamp": "2025-11-01T21:52:40.284391",
+  "current_price": 1690.7,
   "name": "Sun Pharmaceutical Industries Limited",
   "sector": "Healthcare",
-  "market_cap": 4047917809664,
-  "pe_ratio": 38.90913,
-  "pb_ratio": 5.605132,
-  "dividend_yield": 0.94,
+  "market_cap": 4056555454464,
+  "pe_ratio": 39.06423,
+  "pb_ratio": 5.6170926,
+  "dividend_yield": 0.95,
   "beta": 0.282,
-  "volume": 1475775,
-  "fifty_two_week_high": 1922.7,
+  "volume": 1560907,
+  "fifty_two_week_high": 1910.0,
   "fifty_two_week_low": 1548.0,
-  "change_percent": -0.38379782
+  "change_percent": -0.745572
 }

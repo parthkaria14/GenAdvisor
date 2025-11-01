@@ -1,16 +1,16 @@
 {
   "symbol": "POWERGRID.NS",
-  "timestamp": "2025-10-28T14:05:51.161181",
-  "current_price": 287.5,
+  "timestamp": "2025-11-01T21:53:23.536174",
+  "current_price": 288.15,
   "name": "Power Grid Corporation of India Limited",
   "sector": "Utilities",
-  "market_cap": 2674382864384,
-  "pe_ratio": 17.957527,
-  "pb_ratio": 2.8820322,
-  "dividend_yield": 4.04,
+  "market_cap": 2679968890880,
+  "pe_ratio": 18.020638,
+  "pb_ratio": 2.8885481,
+  "dividend_yield": 4.08,
   "beta": 0.235,
-  "volume": 7825111,
+  "volume": 10086916,
   "fifty_two_week_high": 345.4,
   "fifty_two_week_low": 247.3,
-  "change_percent": -1.2197175
+  "change_percent": -1.1492302
 }

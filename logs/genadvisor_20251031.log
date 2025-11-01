@@ -1,0 +1,27 @@
+2025-10-31 20:20:13,652 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-31 20:20:13,652 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-31 20:20:13,652 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-10-31 20:20:58,264 - INFO - [GenAdvisor] [QueryID: 20251031_202058] Processing query: how about investing 10000 rs
+2025-10-31 20:20:58,264 - INFO - [GenAdvisor] [QueryID: 20251031_202058] Processing query: how about investing 10000 rs
+2025-10-31 20:20:58,264 - INFO - [GenAdvisor] [QueryID: 20251031_202058] Processing query: how about investing 10000 rs
+2025-10-31 20:20:58,311 - INFO - [GenAdvisor] [QueryID: 20251031_202058] Starting RAG processing
+2025-10-31 20:20:58,311 - INFO - [GenAdvisor] [QueryID: 20251031_202058] Starting RAG processing
+2025-10-31 20:20:58,311 - INFO - [GenAdvisor] [QueryID: 20251031_202058] Starting RAG processing
+2025-10-31 20:21:04,173 - INFO - [GenAdvisor] [QueryID: 20251031_202058] Query processed successfully
+2025-10-31 20:21:04,173 - INFO - [GenAdvisor] [QueryID: 20251031_202058] Query processed successfully
+2025-10-31 20:21:04,173 - INFO - [GenAdvisor] [QueryID: 20251031_202058] Query processed successfully
+2025-10-31 20:21:04,175 - DEBUG - [GenAdvisor] [QueryID: 20251031_202058] Response length: 6671 chars
+2025-10-31 20:21:04,175 - DEBUG - [GenAdvisor] [QueryID: 20251031_202058] Response length: 6671 chars
+2025-10-31 20:21:04,175 - DEBUG - [GenAdvisor] [QueryID: 20251031_202058] Response length: 6671 chars
+2025-10-31 20:26:49,659 - INFO - [GenAdvisor] [QueryID: 20251031_202649] Processing query: what is the current stock price of hdfc bank?
+2025-10-31 20:26:49,659 - INFO - [GenAdvisor] [QueryID: 20251031_202649] Processing query: what is the current stock price of hdfc bank?
+2025-10-31 20:26:49,659 - INFO - [GenAdvisor] [QueryID: 20251031_202649] Processing query: what is the current stock price of hdfc bank?
+2025-10-31 20:26:49,667 - INFO - [GenAdvisor] [QueryID: 20251031_202649] Starting RAG processing
+2025-10-31 20:26:49,667 - INFO - [GenAdvisor] [QueryID: 20251031_202649] Starting RAG processing
+2025-10-31 20:26:49,667 - INFO - [GenAdvisor] [QueryID: 20251031_202649] Starting RAG processing
+2025-10-31 20:26:53,536 - INFO - [GenAdvisor] [QueryID: 20251031_202649] Query processed successfully
+2025-10-31 20:26:53,536 - INFO - [GenAdvisor] [QueryID: 20251031_202649] Query processed successfully
+2025-10-31 20:26:53,536 - INFO - [GenAdvisor] [QueryID: 20251031_202649] Query processed successfully
+2025-10-31 20:26:53,537 - DEBUG - [GenAdvisor] [QueryID: 20251031_202649] Response length: 5407 chars
+2025-10-31 20:26:53,537 - DEBUG - [GenAdvisor] [QueryID: 20251031_202649] Response length: 5407 chars
+2025-10-31 20:26:53,537 - DEBUG - [GenAdvisor] [QueryID: 20251031_202649] Response length: 5407 chars

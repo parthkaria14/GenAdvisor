@@ -1,16 +1,16 @@
 {
   "symbol": "BAJFINANCE.NS",
-  "timestamp": "2025-10-28T14:32:11.086505",
-  "current_price": 1064.3,
+  "timestamp": "2025-11-01T21:52:14.520175",
+  "current_price": 1042.8,
   "name": "Bajaj Finance Limited",
   "sector": "Financial Services",
-  "market_cap": 6614768156672,
-  "pe_ratio": 37.88893,
-  "pb_ratio": 6.8332996,
-  "dividend_yield": 0.41,
+  "market_cap": 6481142874112,
+  "pe_ratio": 37.17647,
+  "pb_ratio": 6.6952596,
+  "dividend_yield": 0.42,
   "beta": 0.5,
-  "volume": 8095426,
+  "volume": 5314915,
   "fifty_two_week_high": 1102.5,
   "fifty_two_week_low": 645.1,
-  "change_percent": -1.8535572
+  "change_percent": -0.90278435
 }

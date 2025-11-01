@@ -14,6 +14,7 @@ type Row = {
   marketCap: "Small" | "Mid" | "Large"
   pe: number
   price: number
+  predictedPrice?: number | null
 }
 
 export default function StockScreenerView() {
@@ -21,11 +22,14 @@ export default function StockScreenerView() {
   const [cap, setCap] = useState<"All" | Row["marketCap"]>("All")
   const [sector, setSector] = useState<"All" | string>("All")
   const [maxPE, setMaxPE] = useState<string>("")
+  const [includePredictions, setIncludePredictions] = useState<boolean>(false)
   const [rows, setRows] = useState<Row[]>(base)
+  const [loading, setLoading] = useState<boolean>(false)
 
   const sectors = useMemo(() => Array.from(new Set(base.map((r) => r.sector))).sort(), [base])
 
   async function onSearch() {
+    setLoading(true)
     try {
       const payload: any = {}
       if (cap !== "All") {
@@ -35,16 +39,23 @@ export default function StockScreenerView() {
       }
       if (sector !== "All") payload.sector = sector
       if (maxPE) payload.pe_max = Number(maxPE)
+      payload.include_predictions = includePredictions
       const res = await postScreener(payload)
-      const mapped: Row[] = res.stocks.map((s) => ({
-        symbol: s.symbol,
-        sector: s.sector || "Unknown",
-        marketCap: (s.market_cap ?? 0) > 1e11 ? "Large" : (s.market_cap ?? 0) > 5e10 ? "Mid" : "Small",
-        pe: s.pe_ratio ?? 0,
-        price: s.price ?? 0,
-      }))
+      console.log("Screener response:", res)
+      const mapped: Row[] = res.stocks.map((s) => {
+        console.log(`Stock ${s.symbol}: predicted_price =`, s.predicted_price)
+        return {
+          symbol: s.symbol,
+          sector: s.sector || "Unknown",
+          marketCap: (s.market_cap ?? 0) > 1e11 ? "Large" : (s.market_cap ?? 0) > 5e10 ? "Mid" : "Small",
+          pe: s.pe_ratio ?? 0,
+          price: s.price ?? 0,
+          predictedPrice: s.predicted_price ?? null,
+        }
+      })
       setRows(mapped)
-    } catch {
+    } catch (error) {
+      console.error("Screener error:", error)
       // fallback to local filter on base
       const filtered = base.filter((r) => {
         if (cap !== "All" && r.marketCap !== cap) return false
@@ -53,6 +64,8 @@ export default function StockScreenerView() {
         return true
       })
       setRows(filtered)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -103,8 +116,8 @@ export default function StockScreenerView() {
             />
           </div>
           <div className="flex items-end gap-2">
-            <Button type="button" onClick={onSearch}>
-              Search
+            <Button type="button" onClick={onSearch} disabled={loading}>
+              {loading ? "Loading..." : "Search"}
             </Button>
             <Button
               type="button"
@@ -113,11 +126,27 @@ export default function StockScreenerView() {
                 setCap("All")
                 setSector("All")
                 setMaxPE("")
+                setIncludePredictions(false)
                 setRows(base)
               }}
+              disabled={loading}
             >
               Reset
             </Button>
+          </div>
+        </CardContent>
+        <CardContent className="pt-0">
+          <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="include-predictions"
+              checked={includePredictions}
+              onChange={(e) => setIncludePredictions(e.target.checked)}
+              className="h-4 w-4 rounded border-gray-300"
+            />
+            <label htmlFor="include-predictions" className="text-sm text-muted-foreground cursor-pointer">
+              Include price predictions (ARIMA-LSTM)
+            </label>
           </div>
         </CardContent>
       </Card>
@@ -134,22 +163,56 @@ export default function StockScreenerView() {
                 <TableHead>Sector</TableHead>
                 <TableHead className="text-right">MCap</TableHead>
                 <TableHead className="text-right">P/E</TableHead>
-                <TableHead className="text-right">Price</TableHead>
+                <TableHead className="text-right">Current Price</TableHead>
+                {includePredictions && <TableHead className="text-right">Predicted Price</TableHead>}
+                {includePredictions && <TableHead className="text-right">Change %</TableHead>}
               </TableRow>
             </TableHeader>
             <TableBody>
-              {rows.map((r) => (
-                <TableRow key={r.symbol}>
-                  <TableCell className="font-medium">{r.symbol}</TableCell>
-                  <TableCell>{r.sector}</TableCell>
-                  <TableCell className="text-right">{r.marketCap}</TableCell>
-                  <TableCell className="text-right">{r.pe.toFixed(1)}</TableCell>
-                  <TableCell className="text-right">{r.price.toFixed(2)}</TableCell>
-                </TableRow>
-              ))}
+              {rows.map((r) => {
+                const priceChange =
+                  r.predictedPrice !== null && r.predictedPrice !== undefined && r.price > 0
+                    ? ((r.predictedPrice - r.price) / r.price) * 100
+                    : null
+                return (
+                  <TableRow key={r.symbol}>
+                    <TableCell className="font-medium">{r.symbol}</TableCell>
+                    <TableCell>{r.sector}</TableCell>
+                    <TableCell className="text-right">{r.marketCap}</TableCell>
+                    <TableCell className="text-right">{r.pe.toFixed(1)}</TableCell>
+                    <TableCell className="text-right">{r.price.toFixed(2)}</TableCell>
+                    {includePredictions && (
+                      <>
+                        <TableCell className="text-right">
+                          {r.predictedPrice !== null && r.predictedPrice !== undefined
+                            ? r.predictedPrice.toFixed(2)
+                            : "N/A"}
+                        </TableCell>
+                        <TableCell className="text-right">
+                          {priceChange !== null ? (
+                            <span
+                              className={
+                                priceChange >= 0 ? "text-green-600 font-medium" : "text-red-600 font-medium"
+                              }
+                            >
+                              {priceChange >= 0 ? "+" : ""}
+                              {priceChange.toFixed(2)}%
+                            </span>
+                          ) : (
+                            <span className="text-muted-foreground">N/A</span>
+                          )}
+                        </TableCell>
+                      </>
+                    )}
+                  </TableRow>
+                )
+              })}
               {rows.length === 0 && (
                 <TableRow>
-                  <TableCell colSpan={5} className="text-center text-sm text-muted-foreground">
+                  <TableCell
+                    colSpan={includePredictions ? 7 : 5}
+                    className="text-center text-sm text-muted-foreground"
+                  >
                     No results. Adjust filters.
                   </TableCell>
                 </TableRow>

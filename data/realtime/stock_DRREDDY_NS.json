@@ -1,16 +1,16 @@
 {
   "symbol": "DRREDDY.NS",
-  "timestamp": "2025-10-28T14:32:09.899613",
-  "current_price": 1282.3,
+  "timestamp": "2025-11-01T21:51:56.095978",
+  "current_price": 1197.6,
   "name": "Dr. Reddy's Laboratories Limited",
   "sector": "Healthcare",
-  "market_cap": 1067783880704,
-  "pe_ratio": 18.253382,
-  "pb_ratio": 2.9778755,
-  "dividend_yield": 0.62,
+  "market_cap": 997145182208,
+  "pe_ratio": 17.03556,
+  "pb_ratio": 2.7811773,
+  "dividend_yield": 0.67,
   "beta": 0.327,
-  "volume": 925574,
+  "volume": 4250056,
   "fifty_two_week_high": 1405.9,
   "fifty_two_week_low": 1020.0,
-  "change_percent": -0.15567838
+  "change_percent": -0.38262984
 }

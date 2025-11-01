@@ -1,16 +1,16 @@
 {
   "symbol": "ICICIPRULI.NS",
-  "timestamp": "2025-10-28T14:42:14.307649",
-  "current_price": 599.15,
+  "timestamp": "2025-11-01T21:52:21.484890",
+  "current_price": 591.15,
   "name": "ICICI Prudential Life Insurance Company Limited",
   "sector": "Financial Services",
-  "market_cap": 866830319616,
-  "pe_ratio": 66.49834,
-  "pb_ratio": 6.7998686,
+  "market_cap": 855617896448,
+  "pe_ratio": 65.7564,
+  "pb_ratio": 6.709075,
   "dividend_yield": 0.14,
   "beta": 0.56,
-  "volume": 492112,
-  "fifty_two_week_high": 773.9,
+  "volume": 931237,
+  "fifty_two_week_high": 744.8,
   "fifty_two_week_low": 525.8,
-  "change_percent": -0.26632968
+  "change_percent": -1.5406395
 }

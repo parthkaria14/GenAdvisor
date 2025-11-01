@@ -1,16 +1,16 @@
 {
   "symbol": "LUPIN.NS",
-  "timestamp": "2025-10-28T14:32:03.740137",
-  "current_price": 1908.9,
+  "timestamp": "2025-11-01T21:52:07.454645",
+  "current_price": 1963.5,
   "name": "Lupin Limited",
   "sector": "Healthcare",
-  "market_cap": 871905099776,
-  "pe_ratio": 23.636702,
-  "pb_ratio": 5.0660424,
-  "dividend_yield": 0.62,
+  "market_cap": 897195114496,
+  "pe_ratio": 24.330856,
+  "pb_ratio": 5.2109456,
+  "dividend_yield": 0.61,
   "beta": 0.302,
-  "volume": 423696,
+  "volume": 1017447,
   "fifty_two_week_high": 2402.9,
   "fifty_two_week_low": 1795.2,
-  "change_percent": -0.728067
+  "change_percent": 0.909649
 }

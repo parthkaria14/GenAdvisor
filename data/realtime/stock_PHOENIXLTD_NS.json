@@ -1,16 +1,16 @@
 {
   "symbol": "PHOENIXLTD.NS",
-  "timestamp": "2025-10-28T14:42:13.239094",
-  "current_price": 1693.8,
+  "timestamp": "2025-11-01T21:53:17.483659",
+  "current_price": 1682.6,
   "name": "The Phoenix Mills Limited",
   "sector": "Real Estate",
-  "market_cap": 605689872384,
-  "pe_ratio": 61.1039,
-  "pb_ratio": 5.7952075,
+  "market_cap": 601684836352,
+  "pe_ratio": 60.612392,
+  "pb_ratio": 5.7576556,
   "dividend_yield": 0.15,
   "beta": 0.35,
-  "volume": 215680,
+  "volume": 722850,
   "fifty_two_week_high": 1902.0,
   "fifty_two_week_low": 1392.1,
-  "change_percent": -1.0110413
+  "change_percent": -1.2268873
 }

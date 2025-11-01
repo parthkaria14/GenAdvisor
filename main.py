@@ -16,6 +16,8 @@ import logging
 from datetime import datetime, timedelta
 from enum import Enum
 import uvicorn
+import math
+import numpy as np
 
 # Import the custom modules
 import sys
@@ -33,6 +35,28 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = setup_logger()
+
+# Utility function to clean NaN/Inf values for JSON serialization
+def clean_for_json(obj):
+    """Recursively clean NaN, Inf, and -Inf values from data structures for JSON serialization"""
+    if isinstance(obj, dict):
+        return {k: clean_for_json(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [clean_for_json(item) for item in obj]
+    elif isinstance(obj, float):
+        if math.isnan(obj) or math.isinf(obj):
+            return None
+        return obj
+    elif isinstance(obj, (np.floating, np.integer)):
+        val = float(obj)
+        if math.isnan(val) or math.isinf(val):
+            return None
+        return val
+    elif isinstance(obj, np.ndarray):
+        cleaned = [clean_for_json(item) for item in obj.tolist()]
+        return cleaned
+    else:
+        return obj
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -86,6 +110,7 @@ class ScreenerRequest(BaseModel):
     pe_max: Optional[float] = None
     sector: Optional[str] = None
     min_volume: Optional[float] = None
+    include_predictions: Optional[bool] = False
 
 class RAGQueryResponse(BaseModel):
     answer: str = Field(..., description="The formatted (Markdown) answer from the RAG system")
@@ -124,28 +149,28 @@ async def startup_event():
     try:
         # Initialize data ingestion (file-based storage)
         data_ingestion = IndianMarketDataIngestion(enable_redis=False)
-        logger.info("✓ Data ingestion system initialized")
+        logger.info("[OK] Data ingestion system initialized")
         
         # Initialize RAG system (file-based storage)
         rag_system = AdvancedRAGSystem(
             vector_db_type="chroma",
             enable_redis=False
         )
-        logger.info("✓ RAG system initialized")
+        logger.info("[OK] RAG system initialized")
         
         # Initialize investment advisor engine
         advisor_engine = LocalInvestmentAdvisorEngine()
-        logger.info("✓ Investment advisor engine initialized")
+        logger.info("[OK] Investment advisor engine initialized")
         
         # Initialize WebSocket manager
         websocket_manager = ConnectionManager()
-        logger.info("✓ WebSocket manager initialized")
+        logger.info("[OK] WebSocket manager initialized")
         
         # Start background tasks
         asyncio.create_task(market_data_updater())
         asyncio.create_task(alert_monitor())
         
-        logger.info("✅ All components initialized successfully!")
+        logger.info("[OK] All components initialized successfully!")
         
     except Exception as e:
         logger.error(f"Failed to initialize components: {e}")
@@ -244,22 +269,34 @@ async def get_market_overview():
             file_path = os.path.join(data_ingestion.data_dir, file)
             with open(file_path, 'r') as f:
                 stock_data = json.load(f)
-                change = stock_data.get('change_percent') or 0
-                if change > 0:
-                    top_gainers.append({'symbol': stock_data['symbol'], 'change': change})
-                else:
-                    top_losers.append({'symbol': stock_data['symbol'], 'change': change})
+                change = stock_data.get('change_percent')
+                # Handle None, NaN, and Inf values
+                if change is None:
+                    continue
+                try:
+                    change_float = float(change)
+                    if math.isnan(change_float) or math.isinf(change_float):
+                        continue
+                    if change_float > 0:
+                        top_gainers.append({'symbol': stock_data['symbol'], 'change': change_float})
+                    else:
+                        top_losers.append({'symbol': stock_data['symbol'], 'change': change_float})
+                except (ValueError, TypeError):
+                    continue
         
         top_gainers.sort(key=lambda x: x['change'], reverse=True)
         top_losers.sort(key=lambda x: x['change'])
         
-        return {
+        response = {
             "market_breadth": market_data.get('market_breadth', {}),
             "sector_performance": market_data.get('sector_performance', {}),
             "top_gainers": top_gainers[:5],
             "top_losers": top_losers[:5],
             "timestamp": datetime.now().isoformat()
         }
+        
+        # Clean response for JSON serialization
+        return clean_for_json(response)
         
     except Exception as e:
         logger.error(f"Error getting market overview: {e}")
@@ -420,10 +457,12 @@ async def process_query(request: RAGQueryRequest):
 async def screen_stocks(request: ScreenerRequest):
     """Screen stocks based on criteria"""
     try:
+        logger.info(f"Screener request: include_predictions={request.include_predictions}")
         results = []
         
         # Load all stock data
         stock_files = [f for f in os.listdir(data_ingestion.data_dir) if f.startswith('stock_')]
+        logger.info(f"Found {len(stock_files)} stock files to process")
         
         for file in stock_files:
             file_path = os.path.join(data_ingestion.data_dir, file)
@@ -444,26 +483,83 @@ async def screen_stocks(request: ScreenerRequest):
                 if request.min_volume and stock_data.get('volume', 0) < request.min_volume:
                     continue
                 
-                results.append({
+                stock_result = {
                     'symbol': stock_data['symbol'],
                     'price': stock_data.get('current_price', 0),
                     'pe_ratio': stock_data.get('pe_ratio'),
                     'market_cap': stock_data.get('market_cap', 0),
                     'sector': stock_data.get('sector', 'Unknown'),
                     'volume': stock_data.get('volume', 0)
-                })
+                }
+                
+                # Initialize predicted_price to None - will be filled later for top stocks only
+                if request.include_predictions:
+                    stock_result['predicted_price'] = None
+                
+                results.append(stock_result)
         
-        # Sort by market cap
-        results.sort(key=lambda x: x['market_cap'], reverse=True)
+        # Sort by market cap (handle None values)
+        results.sort(key=lambda x: x.get('market_cap') or 0, reverse=True)
+        
+        # Limit results
+        limited_results = results[:50]
+        
+        # If predictions are requested, limit to top 20 stocks to avoid timeout
+        if request.include_predictions:
+            logger.info(f"Predictions enabled - processing top {min(20, len(limited_results))} stocks for predictions")
+            # Process predictions for top stocks only
+            prediction_count = 0
+            for i, stock_result in enumerate(limited_results[:20]):
+                if prediction_count >= 10:  # Limit to 10 predictions to avoid timeout
+                    logger.info(f"Reached prediction limit (10 stocks)")
+                    break
+                symbol = stock_result['symbol']
+                if stock_result.get('predicted_price') is None:
+                    # Try to get prediction if it wasn't set yet
+                    try:
+                        # Use a simpler, faster prediction for screener
+                        import yfinance as yf
+                        import pandas as pd
+                        from forecasting.arima_lstm_combo import arima_lstm_combo
+                        
+                        logger.info(f"Getting prediction for {symbol} ({i+1}/10)")
+                        stock = yf.Ticker(symbol)
+                        hist = stock.history(period="6mo")
+                        
+                        if not hist.empty and len(hist) >= 30:
+                            price_series = pd.Series(hist['Close'].values, index=hist.index).dropna()
+                            if len(price_series) >= 30:
+                                n_lags = max(5, min(8, len(price_series) // 8))
+                                predicted_prices, _ = arima_lstm_combo(
+                                    series=price_series,
+                                    arima_order=(1, 1, 1),
+                                    n_lags=n_lags,
+                                    lstm_epochs=10,  # Very fast for screener
+                                    forecast_horizon=5
+                                )
+                                if predicted_prices is not None and len(predicted_prices) > 0:
+                                    cleaned_prices = [clean_for_json(float(p)) for p in predicted_prices]
+                                    next_price = cleaned_prices[0]
+                                    if next_price is not None:
+                                        stock_result['predicted_price'] = next_price
+                                        prediction_count += 1
+                                        logger.info(f"[OK] Predicted {symbol}: {stock_result['price']:.2f} -> {next_price:.2f}")
+                    except Exception as e:
+                        logger.warning(f"Could not predict {symbol}: {e}")
+        
+        # Clean all results for JSON serialization
+        cleaned_results = clean_for_json(limited_results)
+        
+        logger.info(f"Screener returning {len(cleaned_results)} stocks, {sum(1 for s in cleaned_results if s.get('predicted_price') is not None)} with predictions")
         
         return {
-            "count": len(results),
-            "stocks": results[:50],  # Return top 50 matches
+            "count": len(cleaned_results),
+            "stocks": cleaned_results,
             "timestamp": datetime.now().isoformat()
         }
         
     except Exception as e:
-        logger.error(f"Error screening stocks: {e}")
+        logger.error(f"Error screening stocks: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 # Recommendations Endpoint
@@ -597,6 +693,89 @@ async def get_historical_data(symbol: str, period: str = "1mo"):
         
     except Exception as e:
         logger.error(f"Error getting historical data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+# Price Prediction Endpoint
+@app.get("/api/v1/predict/{symbol}")
+async def predict_stock_price(symbol: str, forecast_horizon: int = 5):
+    """Predict stock prices using ARIMA-LSTM combo model"""
+    try:
+        import yfinance as yf
+        import pandas as pd
+        from forecasting.arima_lstm_combo import arima_lstm_combo
+        
+        logger.info(f"Predicting prices for {symbol} with horizon={forecast_horizon}")
+        
+        # Get current price from realtime data
+        current_price = None
+        try:
+            stock_data = data_ingestion.get_stock_data_from_file(symbol)
+            if stock_data:
+                current_price = stock_data.get('current_price', 0)
+        except:
+            pass
+        
+        # Fetch historical data (3 months for better training)
+        stock = yf.Ticker(symbol)
+        hist = stock.history(period="3mo")
+        
+        if hist.empty or len(hist) < 50:  # Need at least 50 data points
+            logger.warning(f"Insufficient historical data for {symbol}, trying 6mo")
+            hist = stock.history(period="6mo")
+            if hist.empty or len(hist) < 50:
+                raise HTTPException(
+                    status_code=400, 
+                    detail=f"Insufficient historical data for {symbol}. Need at least 50 data points."
+                )
+        
+        # Use closing prices as the series
+        price_series = pd.Series(hist['Close'].values, index=hist.index)
+        
+        # Run ARIMA-LSTM combo prediction
+        logger.info(f"Running ARIMA-LSTM combo model on {len(price_series)} data points")
+        try:
+            predicted_prices, models = arima_lstm_combo(
+                series=price_series,
+                arima_order=(1, 1, 1),
+                n_lags=min(10, len(price_series) // 5),  # Adaptive n_lags
+                lstm_epochs=20,  # Reduced for faster response
+                forecast_horizon=forecast_horizon
+            )
+        except Exception as e:
+            logger.error(f"Prediction failed for {symbol}: {e}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Prediction model failed: {str(e)}"
+            )
+        
+        # If we don't have current price, use last historical price
+        if current_price is None or current_price == 0:
+            current_price = float(price_series.iloc[-1])
+        
+        # Convert numpy array to list and clean for JSON
+        predicted_prices_list = clean_for_json([float(p) for p in predicted_prices])
+        
+        # Get next price, defaulting to current if invalid
+        next_price = predicted_prices_list[0] if predicted_prices_list and predicted_prices_list[0] is not None else current_price
+        
+        logger.info(f"Prediction complete for {symbol}. Current: {current_price}, Predicted: {predicted_prices_list}")
+        
+        # Clean entire response
+        response = {
+            "symbol": symbol,
+            "current_price": current_price,
+            "predicted_prices": predicted_prices_list,
+            "forecast_horizon": forecast_horizon,
+            "predicted_next_price": next_price,
+            "timestamp": datetime.now().isoformat()
+        }
+        
+        return clean_for_json(response)
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error predicting prices for {symbol}: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 # News and Sentiment Endpoint

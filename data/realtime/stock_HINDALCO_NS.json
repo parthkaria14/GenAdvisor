@@ -1,16 +1,16 @@
 {
   "symbol": "HINDALCO.NS",
-  "timestamp": "2025-10-28T14:42:14.838687",
-  "current_price": 847.05,
+  "timestamp": "2025-11-01T21:52:02.545567",
+  "current_price": 847.85,
   "name": "Hindalco Industries Limited",
   "sector": "Basic Materials",
-  "market_cap": 1893264785408,
-  "pe_ratio": 11.130749,
-  "pb_ratio": 1.5203649,
+  "market_cap": 1895052869632,
+  "pe_ratio": 11.135408,
+  "pb_ratio": 1.5218008,
   "dividend_yield": 0.59,
   "beta": 0.987,
-  "volume": 6641299,
-  "fifty_two_week_high": 859.9,
+  "volume": 4138075,
+  "fifty_two_week_high": 864.0,
   "fifty_two_week_low": 546.45,
-  "change_percent": 0.73726285
+  "change_percent": -1.5673071
 }

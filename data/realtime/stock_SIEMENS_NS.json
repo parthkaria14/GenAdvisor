@@ -1,16 +1,16 @@
 {
   "symbol": "SIEMENS.NS",
-  "timestamp": "2025-10-28T14:31:04.417290",
-  "current_price": 3092.7,
+  "timestamp": "2025-11-01T21:52:36.739102",
+  "current_price": 3096.3,
   "name": "Siemens Limited",
   "sector": "Industrials",
-  "market_cap": 1101373898752,
-  "pe_ratio": 45.521046,
-  "pb_ratio": 8.925824,
-  "dividend_yield": 0.38,
+  "market_cap": 1102727217152,
+  "pe_ratio": 45.45361,
+  "pb_ratio": 8.936214,
+  "dividend_yield": 0.39,
   "beta": 0.476,
-  "volume": 160224,
+  "volume": 128804,
   "fifty_two_week_high": 4717.0986,
   "fifty_two_week_low": 2450.0,
-  "change_percent": -2.1267154
+  "change_percent": -0.9754381
 }

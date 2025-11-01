@@ -1,16 +1,16 @@
 {
   "symbol": "INDUSINDBK.NS",
-  "timestamp": "2025-10-28T14:42:15.345023",
-  "current_price": 796.65,
+  "timestamp": "2025-11-01T21:52:34.590364",
+  "current_price": 794.8,
   "name": "IndusInd Bank Limited",
   "sector": "Financial Services",
-  "market_cap": 620650889216,
+  "market_cap": 619209555968,
   "pe_ratio": null,
-  "pb_ratio": 0.95359564,
+  "pb_ratio": 0.95138115,
   "dividend_yield": 1.92,
   "beta": 0.556,
-  "volume": 7417370,
+  "volume": 3511302,
   "fifty_two_week_high": 1098.6,
   "fifty_two_week_low": 606.0,
-  "change_percent": 3.454326
+  "change_percent": -0.7678412
 }

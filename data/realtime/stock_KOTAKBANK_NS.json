@@ -1,16 +1,16 @@
 {
   "symbol": "KOTAKBANK.NS",
-  "timestamp": "2025-10-28T14:42:16.857788",
-  "current_price": 2152.9,
+  "timestamp": "2025-11-01T21:53:16.208523",
+  "current_price": 2102.2,
   "name": "Kotak Mahindra Bank Limited",
   "sector": "Financial Services",
-  "market_cap": 4281240649728,
-  "pe_ratio": 23.035522,
-  "pb_ratio": 2.5477653,
+  "market_cap": 4180419018752,
+  "pe_ratio": 22.521963,
+  "pb_ratio": 2.4877665,
   "dividend_yield": 0.12,
   "beta": 0.349,
-  "volume": 3124053,
+  "volume": 3785956,
   "fifty_two_week_high": 2301.9,
   "fifty_two_week_low": 1679.05,
-  "change_percent": 0.20010257
+  "change_percent": -1.6376568
 }

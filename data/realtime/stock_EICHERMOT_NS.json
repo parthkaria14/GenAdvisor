@@ -1,16 +1,16 @@
 {
   "symbol": "EICHERMOT.NS",
-  "timestamp": "2025-10-28T14:42:16.527545",
-  "current_price": 6967.5,
+  "timestamp": "2025-11-01T21:52:27.216788",
+  "current_price": 7007.0,
   "name": "Eicher Motors Limited",
   "sector": "Consumer Cyclical",
-  "market_cap": 1911031857152,
-  "pe_ratio": 39.561096,
-  "pb_ratio": 8.969733,
-  "dividend_yield": 1.01,
+  "market_cap": 1921865875456,
+  "pe_ratio": 39.83966,
+  "pb_ratio": 9.020584,
+  "dividend_yield": 1.0,
   "beta": 0.202,
-  "volume": 291406,
+  "volume": 670773,
   "fifty_two_week_high": 7122.5,
   "fifty_two_week_low": 4536.05,
-  "change_percent": 0.883162
+  "change_percent": 1.7128756
 }

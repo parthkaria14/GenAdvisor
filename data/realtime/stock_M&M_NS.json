@@ -1,16 +1,16 @@
 {
   "symbol": "M&M.NS",
-  "timestamp": "2025-10-28T14:12:45.834277",
-  "current_price": 3570.3,
+  "timestamp": "2025-11-01T21:52:22.506084",
+  "current_price": 3487.2,
   "name": "Mahindra & Mahindra Limited",
   "sector": "Consumer Cyclical",
-  "market_cap": 4284525576192,
-  "pe_ratio": 29.247972,
-  "pb_ratio": 5.1734557,
-  "dividend_yield": 0.7,
+  "market_cap": 4184801542144,
+  "pe_ratio": 28.571896,
+  "pb_ratio": 5.0530415,
+  "dividend_yield": 0.73,
   "beta": 0.511,
-  "volume": 1562773,
+  "volume": 1915565,
   "fifty_two_week_high": 3723.8,
   "fifty_two_week_low": 2425.0,
-  "change_percent": -1.1436338
+  "change_percent": -0.42546317
 }

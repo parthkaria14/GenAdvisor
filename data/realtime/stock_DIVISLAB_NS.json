@@ -1,16 +1,16 @@
 {
   "symbol": "DIVISLAB.NS",
-  "timestamp": "2025-10-28T14:04:52.982855",
-  "current_price": 6394.0,
+  "timestamp": "2025-11-01T21:53:22.282085",
+  "current_price": 6738.0,
   "name": "Divi's Laboratories Limited",
   "sector": "Healthcare",
-  "market_cap": 1697406124032,
-  "pe_ratio": 73.5196,
-  "pb_ratio": 11.339474,
-  "dividend_yield": 0.46,
+  "market_cap": 1788727263232,
+  "pe_ratio": 77.51956,
+  "pb_ratio": 11.949542,
+  "dividend_yield": 0.45,
   "beta": 0.175,
-  "volume": 178634,
+  "volume": 507645,
   "fifty_two_week_high": 7071.5,
   "fifty_two_week_low": 4955.0,
-  "change_percent": -1.4794267
+  "change_percent": 1.2471826
 }

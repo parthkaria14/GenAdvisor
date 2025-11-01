@@ -426,12 +426,12 @@ class AdvancedRAGSystem:
                     
                     # Calculate relevance based on text similarity
                     relevance = 0
-                    if 'name' in node_data:
-                        if any(word in node_data['name'].lower() for word in query_lower.split()):
+                    if 'name' in node_data and node_data['name']:
+                        if any(word in str(node_data['name']).lower() for word in query_lower.split()):
                             relevance += 0.5
                     
-                    if 'sector' in node_data:
-                        if any(word in node_data['sector'].lower() for word in query_lower.split()):
+                    if 'sector' in node_data and node_data['sector']:
+                        if any(word in str(node_data['sector']).lower() for word in query_lower.split()):
                             relevance += 0.3
                     
                     if relevance > 0:
@@ -747,7 +747,7 @@ class AdvancedRAGSystem:
         ]
         query_lower = query.lower()
         for sector in all_sectors:
-            if sector.lower() in query_lower and sector not in extracted['sectors']:
+            if sector and sector.lower() in query_lower and sector not in extracted['sectors']:
                 extracted['sectors'].append(sector)
         
         # 5. Extract metrics
@@ -955,7 +955,9 @@ class AdvancedRAGSystem:
             'negative': -0.5,
             'very_negative': -1.0
         }
-        return sentiment_map.get(sentiment.lower(), 0.0)
+        if not sentiment:
+            return 0.0
+        return sentiment_map.get(str(sentiment).lower(), 0.0)
 
     def _calculate_confidence_score(self, graph_results: List[Dict], vector_results: List[Document]) -> float:
         """
@@ -1205,10 +1207,12 @@ Response:"""
                     start_nodes.append(company)
             
             for sector_name in entities.get('sectors', []):
+                if not sector_name:
+                    continue
                 matching_sectors = [
                     node for node in self.knowledge_graph.nodes()
                     if self.knowledge_graph.nodes[node].get('type') == 'sector'
-                    and sector_name.lower() in node.lower()
+                    and node and sector_name.lower() in str(node).lower()
                 ]
                 start_nodes.extend(matching_sectors)
             

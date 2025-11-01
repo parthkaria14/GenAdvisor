@@ -1,16 +1,16 @@
 {
   "symbol": "GRASIM.NS",
-  "timestamp": "2025-10-28T14:42:16.345541",
-  "current_price": 2918.3,
+  "timestamp": "2025-11-01T21:52:10.320129",
+  "current_price": 2891.7,
   "name": "Grasim Industries Limited",
   "sector": "Basic Materials",
-  "market_cap": 1980221489152,
-  "pe_ratio": 48.4526,
-  "pb_ratio": 2.030691,
-  "dividend_yield": 0.34,
+  "market_cap": 1962171957248,
+  "pe_ratio": 48.07481,
+  "pb_ratio": 2.0121815,
+  "dividend_yield": 0.35,
   "beta": 0.258,
-  "volume": 700751,
-  "fifty_two_week_high": 2959.6,
+  "volume": 576896,
+  "fifty_two_week_high": 2977.8,
   "fifty_two_week_low": 2276.95,
-  "change_percent": -0.19152002
+  "change_percent": -1.989559
 }

@@ -1,16 +1,16 @@
 {
   "symbol": "BANDHANBNK.NS",
-  "timestamp": "2025-10-28T14:32:07.852236",
-  "current_price": 174.35,
+  "timestamp": "2025-11-01T21:53:15.651614",
+  "current_price": 156.56,
   "name": "Bandhan Bank Limited",
   "sector": "Financial Services",
-  "market_cap": 281052446720,
-  "pe_ratio": 13.67451,
-  "pb_ratio": 1.1434811,
-  "dividend_yield": 0.87,
-  "beta": 0.431,
-  "volume": 5238285,
+  "market_cap": 252213673984,
+  "pe_ratio": 20.54593,
+  "pb_ratio": 1.020633,
+  "dividend_yield": 0.96,
+  "beta": null,
+  "volume": 61809149,
   "fifty_two_week_high": 192.48,
   "fifty_two_week_low": 128.16,
-  "change_percent": 1.3425626
+  "change_percent": -8.21902
 }

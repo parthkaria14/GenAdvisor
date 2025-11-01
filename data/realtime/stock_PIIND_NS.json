@@ -1,16 +1,16 @@
 {
   "symbol": "PIIND.NS",
-  "timestamp": "2025-10-28T14:42:12.931045",
-  "current_price": 3560.0,
+  "timestamp": "2025-11-01T21:53:19.952447",
+  "current_price": 3577.4,
   "name": "PI Industries Limited",
   "sector": "Basic Materials",
-  "market_cap": 540063498240,
-  "pe_ratio": 33.54377,
-  "pb_ratio": 5.317155,
-  "dividend_yield": 0.55,
+  "market_cap": 542703124480,
+  "pe_ratio": 33.669647,
+  "pb_ratio": 5.343143,
+  "dividend_yield": 0.56,
   "beta": 0.349,
-  "volume": 72012,
+  "volume": 125094,
   "fifty_two_week_high": 4715.0,
   "fifty_two_week_low": 2951.1,
-  "change_percent": -1.3850416
+  "change_percent": -0.51171213
 }

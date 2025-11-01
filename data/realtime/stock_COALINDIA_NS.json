@@ -1,16 +1,16 @@
 {
   "symbol": "COALINDIA.NS",
-  "timestamp": "2025-10-28T14:06:41.747744",
-  "current_price": 391.2,
+  "timestamp": "2025-11-01T21:52:17.384985",
+  "current_price": 388.65,
   "name": "Coal India Limited",
   "sector": "Energy",
-  "market_cap": 2410859462656,
-  "pe_ratio": 7.2727275,
-  "pb_ratio": 2.4332595,
-  "dividend_yield": 8.07,
-  "beta": 0.021,
-  "volume": 4905045,
-  "fifty_two_week_high": 459.55,
+  "market_cap": 2395144454144,
+  "pe_ratio": 7.674763,
+  "pb_ratio": 2.271784,
+  "dividend_yield": 6.82,
+  "beta": null,
+  "volume": 13098127,
+  "fifty_two_week_high": 458.15,
   "fifty_two_week_low": 349.25,
-  "change_percent": -1.3864381
+  "change_percent": 0.24503009
 }

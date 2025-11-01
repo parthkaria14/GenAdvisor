@@ -1,16 +1,16 @@
 {
   "symbol": "BOSCHLTD.NS",
-  "timestamp": "2025-10-28T14:32:01.867354",
-  "current_price": 38540.0,
+  "timestamp": "2025-11-01T21:53:24.977734",
+  "current_price": 37245.0,
   "name": "Bosch Limited",
   "sector": "Consumer Cyclical",
-  "market_cap": 1136684826624,
-  "pe_ratio": 42.5894,
-  "pb_ratio": 8.228917,
-  "dividend_yield": 1.31,
+  "market_cap": 1098673487872,
+  "pe_ratio": 41.152424,
+  "pb_ratio": 7.9524136,
+  "dividend_yield": 1.37,
   "beta": 0.459,
-  "volume": 13272,
+  "volume": 19072,
   "fifty_two_week_high": 41945.0,
   "fifty_two_week_low": 25921.6,
-  "change_percent": -1.1921549
+  "change_percent": 0.094060734
 }

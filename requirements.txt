@@ -23,3 +23,5 @@ requests
 streamlit
 Utilities
 python-dotenv
+statsmodels
+tensorflow

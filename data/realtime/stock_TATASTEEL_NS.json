@@ -1,16 +1,16 @@
 {
   "symbol": "TATASTEEL.NS",
-  "timestamp": "2025-10-28T14:27:54.809597",
-  "current_price": 181.05,
+  "timestamp": "2025-11-01T21:52:22.970749",
+  "current_price": 182.84,
   "name": "Tata Steel Limited",
   "sector": "Basic Materials",
-  "market_cap": 2258028199936,
-  "pe_ratio": 49.73901,
-  "pb_ratio": 2.4790504,
-  "dividend_yield": 2.04,
+  "market_cap": 2280352645120,
+  "pe_ratio": 50.230766,
+  "pb_ratio": 2.50356,
+  "dividend_yield": 1.97,
   "beta": 1.025,
-  "volume": 46724096,
-  "fifty_two_week_high": 182.0,
+  "volume": 16024174,
+  "fifty_two_week_high": 186.94,
   "fifty_two_week_low": 122.62,
-  "change_percent": 2.484999
+  "change_percent": -0.8190994
 }

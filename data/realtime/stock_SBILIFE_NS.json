@@ -1,16 +1,16 @@
 {
   "symbol": "SBILIFE.NS",
-  "timestamp": "2025-10-28T14:28:00.272140",
-  "current_price": 1932.0,
+  "timestamp": "2025-11-01T21:52:32.336030",
+  "current_price": 1955.7,
   "name": "SBI Life Insurance Company Limited",
   "sector": "Financial Services",
-  "market_cap": 1936961437696,
-  "pe_ratio": 78.69654,
-  "pb_ratio": 10.593499,
+  "market_cap": 1960722169856,
+  "pe_ratio": 79.987724,
+  "pb_ratio": 10.72345,
   "dividend_yield": 0.14,
   "beta": 0.365,
-  "volume": 1675828,
-  "fifty_two_week_high": 1945.6,
+  "volume": 1167480,
+  "fifty_two_week_high": 1978.7,
   "fifty_two_week_low": 1372.55,
-  "change_percent": 1.5184965
+  "change_percent": -0.6451978
 }

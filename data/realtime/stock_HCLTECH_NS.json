@@ -1,16 +1,16 @@
 {
   "symbol": "HCLTECH.NS",
-  "timestamp": "2025-10-28T14:16:51.634542",
-  "current_price": 1515.3,
+  "timestamp": "2025-11-01T21:51:57.928532",
+  "current_price": 1541.5,
   "name": "HCL Technologies Limited",
   "sector": "Technology",
-  "market_cap": 4099660054528,
-  "pe_ratio": 24.217676,
-  "pb_ratio": 511.06244,
-  "dividend_yield": 3.13,
+  "market_cap": 4170544316416,
+  "pe_ratio": 24.63247,
+  "pb_ratio": 519.89886,
+  "dividend_yield": 3.11,
   "beta": 0.221,
-  "volume": 1041044,
+  "volume": 1723339,
   "fifty_two_week_high": 2012.2,
   "fifty_two_week_low": 1302.75,
-  "change_percent": -1.1868243
+  "change_percent": -0.53555614
 }

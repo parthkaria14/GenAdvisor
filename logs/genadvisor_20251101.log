@@ -1,0 +1,789 @@
+2025-11-01 21:08:34,352 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:08:34,352 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:08:34,352 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:08:52,834 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:08:52,834 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:08:52,834 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:13:37,378 - INFO - [GenAdvisor] [QueryID: 20251101_211337] Processing query: what is the stock price of hfdc bank
+2025-11-01 21:13:37,378 - INFO - [GenAdvisor] [QueryID: 20251101_211337] Processing query: what is the stock price of hfdc bank
+2025-11-01 21:13:37,378 - INFO - [GenAdvisor] [QueryID: 20251101_211337] Processing query: what is the stock price of hfdc bank
+2025-11-01 21:13:37,380 - INFO - [GenAdvisor] [QueryID: 20251101_211337] Starting RAG processing
+2025-11-01 21:13:37,380 - INFO - [GenAdvisor] [QueryID: 20251101_211337] Starting RAG processing
+2025-11-01 21:13:37,380 - INFO - [GenAdvisor] [QueryID: 20251101_211337] Starting RAG processing
+2025-11-01 21:13:42,555 - INFO - [GenAdvisor] [QueryID: 20251101_211337] Query processed successfully
+2025-11-01 21:13:42,555 - INFO - [GenAdvisor] [QueryID: 20251101_211337] Query processed successfully
+2025-11-01 21:13:42,555 - INFO - [GenAdvisor] [QueryID: 20251101_211337] Query processed successfully
+2025-11-01 21:13:42,558 - DEBUG - [GenAdvisor] [QueryID: 20251101_211337] Response length: 6008 chars
+2025-11-01 21:13:42,558 - DEBUG - [GenAdvisor] [QueryID: 20251101_211337] Response length: 6008 chars
+2025-11-01 21:13:42,558 - DEBUG - [GenAdvisor] [QueryID: 20251101_211337] Response length: 6008 chars
+2025-11-01 21:23:56,398 - INFO - [GenAdvisor] [QueryID: 20251101_212356] Processing query: now can you tell the stock price of hdfc?
+2025-11-01 21:23:56,398 - INFO - [GenAdvisor] [QueryID: 20251101_212356] Processing query: now can you tell the stock price of hdfc?
+2025-11-01 21:23:56,398 - INFO - [GenAdvisor] [QueryID: 20251101_212356] Processing query: now can you tell the stock price of hdfc?
+2025-11-01 21:23:56,401 - INFO - [GenAdvisor] [QueryID: 20251101_212356] Starting RAG processing
+2025-11-01 21:23:56,401 - INFO - [GenAdvisor] [QueryID: 20251101_212356] Starting RAG processing
+2025-11-01 21:23:56,401 - INFO - [GenAdvisor] [QueryID: 20251101_212356] Starting RAG processing
+2025-11-01 21:24:00,605 - INFO - [GenAdvisor] [QueryID: 20251101_212356] Query processed successfully
+2025-11-01 21:24:00,605 - INFO - [GenAdvisor] [QueryID: 20251101_212356] Query processed successfully
+2025-11-01 21:24:00,605 - INFO - [GenAdvisor] [QueryID: 20251101_212356] Query processed successfully
+2025-11-01 21:24:00,606 - DEBUG - [GenAdvisor] [QueryID: 20251101_212356] Response length: 6306 chars
+2025-11-01 21:24:00,606 - DEBUG - [GenAdvisor] [QueryID: 20251101_212356] Response length: 6306 chars
+2025-11-01 21:24:00,606 - DEBUG - [GenAdvisor] [QueryID: 20251101_212356] Response length: 6306 chars
+2025-11-01 21:25:05,196 - INFO - [GenAdvisor] [QueryID: 20251101_212505] Processing query: there is a node in the graph rag. check and search for relevant stock prices
+2025-11-01 21:25:05,196 - INFO - [GenAdvisor] [QueryID: 20251101_212505] Processing query: there is a node in the graph rag. check and search for relevant stock prices
+2025-11-01 21:25:05,196 - INFO - [GenAdvisor] [QueryID: 20251101_212505] Processing query: there is a node in the graph rag. check and search for relevant stock prices
+2025-11-01 21:25:05,201 - INFO - [GenAdvisor] [QueryID: 20251101_212505] Starting RAG processing
+2025-11-01 21:25:05,201 - INFO - [GenAdvisor] [QueryID: 20251101_212505] Starting RAG processing
+2025-11-01 21:25:05,201 - INFO - [GenAdvisor] [QueryID: 20251101_212505] Starting RAG processing
+2025-11-01 21:25:11,367 - INFO - [GenAdvisor] [QueryID: 20251101_212505] Query processed successfully
+2025-11-01 21:25:11,367 - INFO - [GenAdvisor] [QueryID: 20251101_212505] Query processed successfully
+2025-11-01 21:25:11,367 - INFO - [GenAdvisor] [QueryID: 20251101_212505] Query processed successfully
+2025-11-01 21:25:11,374 - DEBUG - [GenAdvisor] [QueryID: 20251101_212505] Response length: 8541 chars
+2025-11-01 21:25:11,374 - DEBUG - [GenAdvisor] [QueryID: 20251101_212505] Response length: 8541 chars
+2025-11-01 21:25:11,374 - DEBUG - [GenAdvisor] [QueryID: 20251101_212505] Response length: 8541 chars
+2025-11-01 21:36:45,919 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:36:45,919 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:36:45,919 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:37:37,418 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:37:37,418 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:37:37,418 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:38:53,263 - WARNING - [GenAdvisor] Error adding prediction for ADANIENT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,263 - WARNING - [GenAdvisor] Error adding prediction for ADANIENT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,263 - WARNING - [GenAdvisor] Error adding prediction for ADANIENT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,298 - WARNING - [GenAdvisor] Error adding prediction for ADANIGREEN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,298 - WARNING - [GenAdvisor] Error adding prediction for ADANIGREEN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,298 - WARNING - [GenAdvisor] Error adding prediction for ADANIGREEN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,333 - WARNING - [GenAdvisor] Error adding prediction for ADANIPORTS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,333 - WARNING - [GenAdvisor] Error adding prediction for ADANIPORTS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,333 - WARNING - [GenAdvisor] Error adding prediction for ADANIPORTS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,368 - WARNING - [GenAdvisor] Error adding prediction for AMBUJACEM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,368 - WARNING - [GenAdvisor] Error adding prediction for AMBUJACEM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,368 - WARNING - [GenAdvisor] Error adding prediction for AMBUJACEM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,414 - WARNING - [GenAdvisor] Error adding prediction for APOLLOHOSP.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,414 - WARNING - [GenAdvisor] Error adding prediction for APOLLOHOSP.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,414 - WARNING - [GenAdvisor] Error adding prediction for APOLLOHOSP.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,429 - WARNING - [GenAdvisor] Error adding prediction for ASIANPAINT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,429 - WARNING - [GenAdvisor] Error adding prediction for ASIANPAINT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,429 - WARNING - [GenAdvisor] Error adding prediction for ASIANPAINT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,461 - WARNING - [GenAdvisor] Error adding prediction for AUROPHARMA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,461 - WARNING - [GenAdvisor] Error adding prediction for AUROPHARMA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,461 - WARNING - [GenAdvisor] Error adding prediction for AUROPHARMA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,499 - WARNING - [GenAdvisor] Error adding prediction for AXISBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,499 - WARNING - [GenAdvisor] Error adding prediction for AXISBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,499 - WARNING - [GenAdvisor] Error adding prediction for AXISBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,539 - WARNING - [GenAdvisor] Error adding prediction for BAJAJ-AUTO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,539 - WARNING - [GenAdvisor] Error adding prediction for BAJAJ-AUTO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,539 - WARNING - [GenAdvisor] Error adding prediction for BAJAJ-AUTO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,546 - WARNING - [GenAdvisor] Error adding prediction for BAJAJFINSV.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,546 - WARNING - [GenAdvisor] Error adding prediction for BAJAJFINSV.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,546 - WARNING - [GenAdvisor] Error adding prediction for BAJAJFINSV.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,581 - WARNING - [GenAdvisor] Error adding prediction for BAJFINANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,581 - WARNING - [GenAdvisor] Error adding prediction for BAJFINANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,581 - WARNING - [GenAdvisor] Error adding prediction for BAJFINANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,588 - WARNING - [GenAdvisor] Error adding prediction for BANDHANBNK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,588 - WARNING - [GenAdvisor] Error adding prediction for BANDHANBNK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,588 - WARNING - [GenAdvisor] Error adding prediction for BANDHANBNK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,599 - WARNING - [GenAdvisor] Error adding prediction for BANKBARODA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,599 - WARNING - [GenAdvisor] Error adding prediction for BANKBARODA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,599 - WARNING - [GenAdvisor] Error adding prediction for BANKBARODA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,641 - WARNING - [GenAdvisor] Error adding prediction for BERGEPAINT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,641 - WARNING - [GenAdvisor] Error adding prediction for BERGEPAINT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,641 - WARNING - [GenAdvisor] Error adding prediction for BERGEPAINT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,680 - WARNING - [GenAdvisor] Error adding prediction for BHARTIARTL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,680 - WARNING - [GenAdvisor] Error adding prediction for BHARTIARTL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,680 - WARNING - [GenAdvisor] Error adding prediction for BHARTIARTL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,697 - WARNING - [GenAdvisor] Error adding prediction for BIOCON.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,697 - WARNING - [GenAdvisor] Error adding prediction for BIOCON.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,697 - WARNING - [GenAdvisor] Error adding prediction for BIOCON.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,747 - WARNING - [GenAdvisor] Error adding prediction for BOSCHLTD.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,747 - WARNING - [GenAdvisor] Error adding prediction for BOSCHLTD.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,747 - WARNING - [GenAdvisor] Error adding prediction for BOSCHLTD.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,793 - WARNING - [GenAdvisor] Error adding prediction for BPCL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,793 - WARNING - [GenAdvisor] Error adding prediction for BPCL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,793 - WARNING - [GenAdvisor] Error adding prediction for BPCL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,806 - WARNING - [GenAdvisor] Error adding prediction for BRITANNIA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,806 - WARNING - [GenAdvisor] Error adding prediction for BRITANNIA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,806 - WARNING - [GenAdvisor] Error adding prediction for BRITANNIA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,846 - WARNING - [GenAdvisor] Error adding prediction for CIPLA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,846 - WARNING - [GenAdvisor] Error adding prediction for CIPLA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,846 - WARNING - [GenAdvisor] Error adding prediction for CIPLA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,884 - WARNING - [GenAdvisor] Error adding prediction for COALINDIA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,884 - WARNING - [GenAdvisor] Error adding prediction for COALINDIA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,884 - WARNING - [GenAdvisor] Error adding prediction for COALINDIA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,894 - WARNING - [GenAdvisor] Error adding prediction for COLPAL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,894 - WARNING - [GenAdvisor] Error adding prediction for COLPAL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,894 - WARNING - [GenAdvisor] Error adding prediction for COLPAL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,927 - WARNING - [GenAdvisor] Error adding prediction for DIVISLAB.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,927 - WARNING - [GenAdvisor] Error adding prediction for DIVISLAB.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,927 - WARNING - [GenAdvisor] Error adding prediction for DIVISLAB.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,958 - WARNING - [GenAdvisor] Error adding prediction for DLF.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,958 - WARNING - [GenAdvisor] Error adding prediction for DLF.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,958 - WARNING - [GenAdvisor] Error adding prediction for DLF.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,993 - WARNING - [GenAdvisor] Error adding prediction for DRREDDY.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,993 - WARNING - [GenAdvisor] Error adding prediction for DRREDDY.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:53,993 - WARNING - [GenAdvisor] Error adding prediction for DRREDDY.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,009 - WARNING - [GenAdvisor] Error adding prediction for EICHERMOT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,009 - WARNING - [GenAdvisor] Error adding prediction for EICHERMOT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,009 - WARNING - [GenAdvisor] Error adding prediction for EICHERMOT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,020 - WARNING - [GenAdvisor] Error adding prediction for GAIL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,020 - WARNING - [GenAdvisor] Error adding prediction for GAIL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,020 - WARNING - [GenAdvisor] Error adding prediction for GAIL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,055 - WARNING - [GenAdvisor] Error adding prediction for GODREJCP.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,055 - WARNING - [GenAdvisor] Error adding prediction for GODREJCP.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,055 - WARNING - [GenAdvisor] Error adding prediction for GODREJCP.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,093 - WARNING - [GenAdvisor] Error adding prediction for GRASIM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,093 - WARNING - [GenAdvisor] Error adding prediction for GRASIM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,093 - WARNING - [GenAdvisor] Error adding prediction for GRASIM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,130 - WARNING - [GenAdvisor] Error adding prediction for HAVELLS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,130 - WARNING - [GenAdvisor] Error adding prediction for HAVELLS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,130 - WARNING - [GenAdvisor] Error adding prediction for HAVELLS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,163 - WARNING - [GenAdvisor] Error adding prediction for HCLTECH.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,163 - WARNING - [GenAdvisor] Error adding prediction for HCLTECH.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,163 - WARNING - [GenAdvisor] Error adding prediction for HCLTECH.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,190 - WARNING - [GenAdvisor] Error adding prediction for HDFCAMC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,190 - WARNING - [GenAdvisor] Error adding prediction for HDFCAMC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,190 - WARNING - [GenAdvisor] Error adding prediction for HDFCAMC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,227 - WARNING - [GenAdvisor] Error adding prediction for HDFCBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,227 - WARNING - [GenAdvisor] Error adding prediction for HDFCBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,227 - WARNING - [GenAdvisor] Error adding prediction for HDFCBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,262 - WARNING - [GenAdvisor] Error adding prediction for HDFCLIFE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,262 - WARNING - [GenAdvisor] Error adding prediction for HDFCLIFE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,262 - WARNING - [GenAdvisor] Error adding prediction for HDFCLIFE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,295 - WARNING - [GenAdvisor] Error adding prediction for HEROMOTOCO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,295 - WARNING - [GenAdvisor] Error adding prediction for HEROMOTOCO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,295 - WARNING - [GenAdvisor] Error adding prediction for HEROMOTOCO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,322 - WARNING - [GenAdvisor] Error adding prediction for HINDALCO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,322 - WARNING - [GenAdvisor] Error adding prediction for HINDALCO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,322 - WARNING - [GenAdvisor] Error adding prediction for HINDALCO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,341 - WARNING - [GenAdvisor] Error adding prediction for HINDUNILVR.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,341 - WARNING - [GenAdvisor] Error adding prediction for HINDUNILVR.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,341 - WARNING - [GenAdvisor] Error adding prediction for HINDUNILVR.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,383 - WARNING - [GenAdvisor] Error adding prediction for ICICIBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,383 - WARNING - [GenAdvisor] Error adding prediction for ICICIBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,383 - WARNING - [GenAdvisor] Error adding prediction for ICICIBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,390 - WARNING - [GenAdvisor] Error adding prediction for ICICIGI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,390 - WARNING - [GenAdvisor] Error adding prediction for ICICIGI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,390 - WARNING - [GenAdvisor] Error adding prediction for ICICIGI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,428 - WARNING - [GenAdvisor] Error adding prediction for ICICIPRULI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,428 - WARNING - [GenAdvisor] Error adding prediction for ICICIPRULI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,428 - WARNING - [GenAdvisor] Error adding prediction for ICICIPRULI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,435 - WARNING - [GenAdvisor] Error adding prediction for INDUSINDBK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,435 - WARNING - [GenAdvisor] Error adding prediction for INDUSINDBK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,435 - WARNING - [GenAdvisor] Error adding prediction for INDUSINDBK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,444 - WARNING - [GenAdvisor] Error adding prediction for INDUSIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,444 - WARNING - [GenAdvisor] Error adding prediction for INDUSIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,444 - WARNING - [GenAdvisor] Error adding prediction for INDUSIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,480 - WARNING - [GenAdvisor] Error adding prediction for INFY.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,480 - WARNING - [GenAdvisor] Error adding prediction for INFY.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,480 - WARNING - [GenAdvisor] Error adding prediction for INFY.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,513 - WARNING - [GenAdvisor] Error adding prediction for IOC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,513 - WARNING - [GenAdvisor] Error adding prediction for IOC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,513 - WARNING - [GenAdvisor] Error adding prediction for IOC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,523 - WARNING - [GenAdvisor] Error adding prediction for ITC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,523 - WARNING - [GenAdvisor] Error adding prediction for ITC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,523 - WARNING - [GenAdvisor] Error adding prediction for ITC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,534 - WARNING - [GenAdvisor] Error adding prediction for JINDALSTEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,534 - WARNING - [GenAdvisor] Error adding prediction for JINDALSTEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,534 - WARNING - [GenAdvisor] Error adding prediction for JINDALSTEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,542 - WARNING - [GenAdvisor] Error adding prediction for JSWSTEEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,542 - WARNING - [GenAdvisor] Error adding prediction for JSWSTEEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,542 - WARNING - [GenAdvisor] Error adding prediction for JSWSTEEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,555 - WARNING - [GenAdvisor] Error adding prediction for KOTAKBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,555 - WARNING - [GenAdvisor] Error adding prediction for KOTAKBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,555 - WARNING - [GenAdvisor] Error adding prediction for KOTAKBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,594 - WARNING - [GenAdvisor] Error adding prediction for LT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,594 - WARNING - [GenAdvisor] Error adding prediction for LT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,594 - WARNING - [GenAdvisor] Error adding prediction for LT.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,635 - WARNING - [GenAdvisor] Error adding prediction for LUPIN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,635 - WARNING - [GenAdvisor] Error adding prediction for LUPIN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,635 - WARNING - [GenAdvisor] Error adding prediction for LUPIN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,681 - WARNING - [GenAdvisor] Error adding prediction for M&M.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,681 - WARNING - [GenAdvisor] Error adding prediction for M&M.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,681 - WARNING - [GenAdvisor] Error adding prediction for M&M.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,710 - WARNING - [GenAdvisor] Error adding prediction for MARUTI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,710 - WARNING - [GenAdvisor] Error adding prediction for MARUTI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,710 - WARNING - [GenAdvisor] Error adding prediction for MARUTI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,718 - WARNING - [GenAdvisor] Error adding prediction for MINDTREE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,718 - WARNING - [GenAdvisor] Error adding prediction for MINDTREE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,718 - WARNING - [GenAdvisor] Error adding prediction for MINDTREE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,758 - WARNING - [GenAdvisor] Error adding prediction for MOTHERSON.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,758 - WARNING - [GenAdvisor] Error adding prediction for MOTHERSON.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,758 - WARNING - [GenAdvisor] Error adding prediction for MOTHERSON.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,798 - WARNING - [GenAdvisor] Error adding prediction for NESTLEIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,798 - WARNING - [GenAdvisor] Error adding prediction for NESTLEIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,798 - WARNING - [GenAdvisor] Error adding prediction for NESTLEIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,833 - WARNING - [GenAdvisor] Error adding prediction for NTPC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,833 - WARNING - [GenAdvisor] Error adding prediction for NTPC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,833 - WARNING - [GenAdvisor] Error adding prediction for NTPC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,867 - WARNING - [GenAdvisor] Error adding prediction for ONGC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,867 - WARNING - [GenAdvisor] Error adding prediction for ONGC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,867 - WARNING - [GenAdvisor] Error adding prediction for ONGC.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,873 - WARNING - [GenAdvisor] Error adding prediction for PAGEIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,873 - WARNING - [GenAdvisor] Error adding prediction for PAGEIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,873 - WARNING - [GenAdvisor] Error adding prediction for PAGEIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,903 - WARNING - [GenAdvisor] Error adding prediction for PEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,903 - WARNING - [GenAdvisor] Error adding prediction for PEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,903 - WARNING - [GenAdvisor] Error adding prediction for PEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,936 - WARNING - [GenAdvisor] Error adding prediction for PHOENIXLTD.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,936 - WARNING - [GenAdvisor] Error adding prediction for PHOENIXLTD.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,936 - WARNING - [GenAdvisor] Error adding prediction for PHOENIXLTD.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,965 - WARNING - [GenAdvisor] Error adding prediction for PIIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,965 - WARNING - [GenAdvisor] Error adding prediction for PIIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:54,965 - WARNING - [GenAdvisor] Error adding prediction for PIIND.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,013 - WARNING - [GenAdvisor] Error adding prediction for POWERGRID.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,013 - WARNING - [GenAdvisor] Error adding prediction for POWERGRID.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,013 - WARNING - [GenAdvisor] Error adding prediction for POWERGRID.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,048 - WARNING - [GenAdvisor] Error adding prediction for RECLTD.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,048 - WARNING - [GenAdvisor] Error adding prediction for RECLTD.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,048 - WARNING - [GenAdvisor] Error adding prediction for RECLTD.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,055 - WARNING - [GenAdvisor] Error adding prediction for RELIANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,055 - WARNING - [GenAdvisor] Error adding prediction for RELIANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,055 - WARNING - [GenAdvisor] Error adding prediction for RELIANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,062 - WARNING - [GenAdvisor] Error adding prediction for SAIL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,062 - WARNING - [GenAdvisor] Error adding prediction for SAIL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,062 - WARNING - [GenAdvisor] Error adding prediction for SAIL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,072 - WARNING - [GenAdvisor] Error adding prediction for SBILIFE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,072 - WARNING - [GenAdvisor] Error adding prediction for SBILIFE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,072 - WARNING - [GenAdvisor] Error adding prediction for SBILIFE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,118 - WARNING - [GenAdvisor] Error adding prediction for SBIN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,118 - WARNING - [GenAdvisor] Error adding prediction for SBIN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,118 - WARNING - [GenAdvisor] Error adding prediction for SBIN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,155 - WARNING - [GenAdvisor] Error adding prediction for SHREECEM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,155 - WARNING - [GenAdvisor] Error adding prediction for SHREECEM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,155 - WARNING - [GenAdvisor] Error adding prediction for SHREECEM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,165 - WARNING - [GenAdvisor] Error adding prediction for SIEMENS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,165 - WARNING - [GenAdvisor] Error adding prediction for SIEMENS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,165 - WARNING - [GenAdvisor] Error adding prediction for SIEMENS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,178 - WARNING - [GenAdvisor] Error adding prediction for SRF.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,178 - WARNING - [GenAdvisor] Error adding prediction for SRF.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,178 - WARNING - [GenAdvisor] Error adding prediction for SRF.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,186 - WARNING - [GenAdvisor] Error adding prediction for SUNPHARMA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,186 - WARNING - [GenAdvisor] Error adding prediction for SUNPHARMA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,186 - WARNING - [GenAdvisor] Error adding prediction for SUNPHARMA.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,228 - WARNING - [GenAdvisor] Error adding prediction for SUNTV.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,228 - WARNING - [GenAdvisor] Error adding prediction for SUNTV.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,228 - WARNING - [GenAdvisor] Error adding prediction for SUNTV.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,268 - WARNING - [GenAdvisor] Error adding prediction for TATACONSUMER.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,268 - WARNING - [GenAdvisor] Error adding prediction for TATACONSUMER.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,268 - WARNING - [GenAdvisor] Error adding prediction for TATACONSUMER.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,311 - WARNING - [GenAdvisor] Error adding prediction for TATAELXSI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,311 - WARNING - [GenAdvisor] Error adding prediction for TATAELXSI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,311 - WARNING - [GenAdvisor] Error adding prediction for TATAELXSI.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,341 - WARNING - [GenAdvisor] Error adding prediction for TATAMOTORS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,341 - WARNING - [GenAdvisor] Error adding prediction for TATAMOTORS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,341 - WARNING - [GenAdvisor] Error adding prediction for TATAMOTORS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,351 - WARNING - [GenAdvisor] Error adding prediction for TATAPOWER.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,351 - WARNING - [GenAdvisor] Error adding prediction for TATAPOWER.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,351 - WARNING - [GenAdvisor] Error adding prediction for TATAPOWER.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,390 - WARNING - [GenAdvisor] Error adding prediction for TATASTEEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,390 - WARNING - [GenAdvisor] Error adding prediction for TATASTEEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,390 - WARNING - [GenAdvisor] Error adding prediction for TATASTEEL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,426 - WARNING - [GenAdvisor] Error adding prediction for TCS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,426 - WARNING - [GenAdvisor] Error adding prediction for TCS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,426 - WARNING - [GenAdvisor] Error adding prediction for TCS.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,463 - WARNING - [GenAdvisor] Error adding prediction for TECHM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,463 - WARNING - [GenAdvisor] Error adding prediction for TECHM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,463 - WARNING - [GenAdvisor] Error adding prediction for TECHM.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,496 - WARNING - [GenAdvisor] Error adding prediction for TITAN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,496 - WARNING - [GenAdvisor] Error adding prediction for TITAN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,496 - WARNING - [GenAdvisor] Error adding prediction for TITAN.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,525 - WARNING - [GenAdvisor] Error adding prediction for ULTRACEMCO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,525 - WARNING - [GenAdvisor] Error adding prediction for ULTRACEMCO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,525 - WARNING - [GenAdvisor] Error adding prediction for ULTRACEMCO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,537 - WARNING - [GenAdvisor] Error adding prediction for UPL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,537 - WARNING - [GenAdvisor] Error adding prediction for UPL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,537 - WARNING - [GenAdvisor] Error adding prediction for UPL.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,565 - WARNING - [GenAdvisor] Error adding prediction for WIPRO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,565 - WARNING - [GenAdvisor] Error adding prediction for WIPRO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,565 - WARNING - [GenAdvisor] Error adding prediction for WIPRO.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,587 - WARNING - [GenAdvisor] Error adding prediction for ZYDUSLIFE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,587 - WARNING - [GenAdvisor] Error adding prediction for ZYDUSLIFE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,587 - WARNING - [GenAdvisor] Error adding prediction for ZYDUSLIFE.NS: No module named 'tensorflow.keras'
+2025-11-01 21:38:55,596 - ERROR - [GenAdvisor] Error screening stocks: '<' not supported between instances of 'NoneType' and 'int'
+2025-11-01 21:38:55,596 - ERROR - [GenAdvisor] Error screening stocks: '<' not supported between instances of 'NoneType' and 'int'
+2025-11-01 21:38:55,596 - ERROR - [GenAdvisor] Error screening stocks: '<' not supported between instances of 'NoneType' and 'int'
+2025-11-01 21:46:34,688 - INFO - [GenAdvisor] [QueryID: 20251101_214634] Processing query: hdfc investment
+2025-11-01 21:46:34,688 - INFO - [GenAdvisor] [QueryID: 20251101_214634] Processing query: hdfc investment
+2025-11-01 21:46:34,688 - INFO - [GenAdvisor] [QueryID: 20251101_214634] Processing query: hdfc investment
+2025-11-01 21:46:34,691 - INFO - [GenAdvisor] [QueryID: 20251101_214634] Starting RAG processing
+2025-11-01 21:46:34,691 - INFO - [GenAdvisor] [QueryID: 20251101_214634] Starting RAG processing
+2025-11-01 21:46:34,691 - INFO - [GenAdvisor] [QueryID: 20251101_214634] Starting RAG processing
+2025-11-01 21:46:41,259 - INFO - [GenAdvisor] [QueryID: 20251101_214634] Query processed successfully
+2025-11-01 21:46:41,259 - INFO - [GenAdvisor] [QueryID: 20251101_214634] Query processed successfully
+2025-11-01 21:46:41,259 - INFO - [GenAdvisor] [QueryID: 20251101_214634] Query processed successfully
+2025-11-01 21:46:41,262 - DEBUG - [GenAdvisor] [QueryID: 20251101_214634] Response length: 7101 chars
+2025-11-01 21:46:41,262 - DEBUG - [GenAdvisor] [QueryID: 20251101_214634] Response length: 7101 chars
+2025-11-01 21:46:41,262 - DEBUG - [GenAdvisor] [QueryID: 20251101_214634] Response length: 7101 chars
+2025-11-01 21:50:10,832 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:50:10,832 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:50:10,832 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:50:55,115 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:50:55,115 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:50:55,115 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:53:45,573 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:53:45,573 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:53:45,573 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:56:17,590 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:56:17,590 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:56:17,590 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 21:56:17,592 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 21:56:17,592 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 21:56:17,592 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 21:56:36,805 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 21:56:36,805 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 21:56:36,805 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 21:56:36,806 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 21:56:36,806 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 21:56:36,806 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 21:56:36,807 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 21:56:36,807 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 21:56:36,807 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 21:56:36,808 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 21:56:36,808 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 21:56:36,808 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:00:05,367 - INFO - [GenAdvisor] [QueryID: 20251101_220005] Processing query: why should I buy HCL Stock
+2025-11-01 22:00:05,367 - INFO - [GenAdvisor] [QueryID: 20251101_220005] Processing query: why should I buy HCL Stock
+2025-11-01 22:00:05,367 - INFO - [GenAdvisor] [QueryID: 20251101_220005] Processing query: why should I buy HCL Stock
+2025-11-01 22:00:05,376 - INFO - [GenAdvisor] [QueryID: 20251101_220005] Starting RAG processing
+2025-11-01 22:00:05,376 - INFO - [GenAdvisor] [QueryID: 20251101_220005] Starting RAG processing
+2025-11-01 22:00:05,376 - INFO - [GenAdvisor] [QueryID: 20251101_220005] Starting RAG processing
+2025-11-01 22:00:05,634 - ERROR - [GenAdvisor] [QueryID: 20251101_220005] Error processing query: 'NoneType' object has no attribute 'lower'
+2025-11-01 22:00:05,634 - ERROR - [GenAdvisor] [QueryID: 20251101_220005] Error processing query: 'NoneType' object has no attribute 'lower'
+2025-11-01 22:00:05,634 - ERROR - [GenAdvisor] [QueryID: 20251101_220005] Error processing query: 'NoneType' object has no attribute 'lower'
+2025-11-01 22:03:03,290 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:03:03,290 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:03:03,290 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:03:03,291 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:03:03,291 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:03:03,291 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:03:22,936 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:03:22,936 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:03:22,936 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:03:22,937 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:03:22,937 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:03:22,937 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:03:22,937 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:03:22,937 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:03:22,937 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:03:22,938 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:03:22,938 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:03:22,938 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:06:33,618 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:06:33,618 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:06:33,618 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:06:33,621 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:06:33,621 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:06:33,621 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:06:33,674 - ERROR - [GenAdvisor] Error screening stocks: '<' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 502, in screen_stocks
+    results.sort(key=lambda x: x['market_cap'], reverse=True)
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+2025-11-01 22:06:33,674 - ERROR - [GenAdvisor] Error screening stocks: '<' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 502, in screen_stocks
+    results.sort(key=lambda x: x['market_cap'], reverse=True)
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+2025-11-01 22:06:33,674 - ERROR - [GenAdvisor] Error screening stocks: '<' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 502, in screen_stocks
+    results.sort(key=lambda x: x['market_cap'], reverse=True)
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+2025-11-01 22:07:11,770 - INFO - [GenAdvisor] [QueryID: 20251101_220711] Processing query: hcl stock
+2025-11-01 22:07:11,770 - INFO - [GenAdvisor] [QueryID: 20251101_220711] Processing query: hcl stock
+2025-11-01 22:07:11,770 - INFO - [GenAdvisor] [QueryID: 20251101_220711] Processing query: hcl stock
+2025-11-01 22:07:11,775 - INFO - [GenAdvisor] [QueryID: 20251101_220711] Starting RAG processing
+2025-11-01 22:07:11,775 - INFO - [GenAdvisor] [QueryID: 20251101_220711] Starting RAG processing
+2025-11-01 22:07:11,775 - INFO - [GenAdvisor] [QueryID: 20251101_220711] Starting RAG processing
+2025-11-01 22:07:19,149 - INFO - [GenAdvisor] [QueryID: 20251101_220711] Query processed successfully
+2025-11-01 22:07:19,149 - INFO - [GenAdvisor] [QueryID: 20251101_220711] Query processed successfully
+2025-11-01 22:07:19,149 - INFO - [GenAdvisor] [QueryID: 20251101_220711] Query processed successfully
+2025-11-01 22:07:19,151 - DEBUG - [GenAdvisor] [QueryID: 20251101_220711] Response length: 7487 chars
+2025-11-01 22:07:19,151 - DEBUG - [GenAdvisor] [QueryID: 20251101_220711] Response length: 7487 chars
+2025-11-01 22:07:19,151 - DEBUG - [GenAdvisor] [QueryID: 20251101_220711] Response length: 7487 chars
+2025-11-01 22:08:07,303 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:08:07,303 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:08:07,303 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:08:07,306 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:08:07,306 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:08:07,306 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:08:38,009 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:08:38,009 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:08:38,009 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:08:38,012 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:08:38,012 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:08:38,012 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:08:38,014 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:08:38,014 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:08:38,014 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:08:38,016 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:08:38,016 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:08:38,016 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:09:01,172 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:09:01,172 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:09:01,172 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:09:01,174 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:09:01,174 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:09:01,174 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:09:23,374 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:09:23,374 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:09:23,374 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:09:23,375 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:09:23,375 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:09:23,375 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:09:23,376 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:09:23,376 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:09:23,376 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:09:23,376 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:09:23,376 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:09:23,376 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:09:46,779 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:09:46,779 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:09:46,779 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:09:46,785 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:09:46,785 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:09:46,785 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:09:46,839 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-01 22:09:46,839 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-01 22:09:46,839 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-01 22:09:47,409 - WARNING - [GenAdvisor] Could not predict RELIANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,409 - WARNING - [GenAdvisor] Could not predict RELIANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,409 - WARNING - [GenAdvisor] Could not predict RELIANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,416 - WARNING - [GenAdvisor] Could not predict HDFCBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,416 - WARNING - [GenAdvisor] Could not predict HDFCBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,416 - WARNING - [GenAdvisor] Could not predict HDFCBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,424 - WARNING - [GenAdvisor] Could not predict BHARTIARTL.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,424 - WARNING - [GenAdvisor] Could not predict BHARTIARTL.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,424 - WARNING - [GenAdvisor] Could not predict BHARTIARTL.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,430 - WARNING - [GenAdvisor] Could not predict TCS.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,430 - WARNING - [GenAdvisor] Could not predict TCS.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,430 - WARNING - [GenAdvisor] Could not predict TCS.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,438 - WARNING - [GenAdvisor] Could not predict ICICIBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,438 - WARNING - [GenAdvisor] Could not predict ICICIBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,438 - WARNING - [GenAdvisor] Could not predict ICICIBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,444 - WARNING - [GenAdvisor] Could not predict SBIN.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,444 - WARNING - [GenAdvisor] Could not predict SBIN.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,444 - WARNING - [GenAdvisor] Could not predict SBIN.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,453 - WARNING - [GenAdvisor] Could not predict BAJFINANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,453 - WARNING - [GenAdvisor] Could not predict BAJFINANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,453 - WARNING - [GenAdvisor] Could not predict BAJFINANCE.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,460 - WARNING - [GenAdvisor] Could not predict INFY.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,460 - WARNING - [GenAdvisor] Could not predict INFY.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,460 - WARNING - [GenAdvisor] Could not predict INFY.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,471 - WARNING - [GenAdvisor] Could not predict HINDUNILVR.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,471 - WARNING - [GenAdvisor] Could not predict HINDUNILVR.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,471 - WARNING - [GenAdvisor] Could not predict HINDUNILVR.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,476 - WARNING - [GenAdvisor] Could not predict LT.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,476 - WARNING - [GenAdvisor] Could not predict LT.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,476 - WARNING - [GenAdvisor] Could not predict LT.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,484 - WARNING - [GenAdvisor] Could not predict ITC.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,484 - WARNING - [GenAdvisor] Could not predict ITC.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,484 - WARNING - [GenAdvisor] Could not predict ITC.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,491 - WARNING - [GenAdvisor] Could not predict MARUTI.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,491 - WARNING - [GenAdvisor] Could not predict MARUTI.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,491 - WARNING - [GenAdvisor] Could not predict MARUTI.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,496 - WARNING - [GenAdvisor] Could not predict M&M.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,496 - WARNING - [GenAdvisor] Could not predict M&M.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,496 - WARNING - [GenAdvisor] Could not predict M&M.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,504 - WARNING - [GenAdvisor] Could not predict KOTAKBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,504 - WARNING - [GenAdvisor] Could not predict KOTAKBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,504 - WARNING - [GenAdvisor] Could not predict KOTAKBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,510 - WARNING - [GenAdvisor] Could not predict HCLTECH.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,510 - WARNING - [GenAdvisor] Could not predict HCLTECH.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,510 - WARNING - [GenAdvisor] Could not predict HCLTECH.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,517 - WARNING - [GenAdvisor] Could not predict SUNPHARMA.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,517 - WARNING - [GenAdvisor] Could not predict SUNPHARMA.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,517 - WARNING - [GenAdvisor] Could not predict SUNPHARMA.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,524 - WARNING - [GenAdvisor] Could not predict AXISBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,524 - WARNING - [GenAdvisor] Could not predict AXISBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,524 - WARNING - [GenAdvisor] Could not predict AXISBANK.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,529 - WARNING - [GenAdvisor] Could not predict ULTRACEMCO.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,529 - WARNING - [GenAdvisor] Could not predict ULTRACEMCO.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,529 - WARNING - [GenAdvisor] Could not predict ULTRACEMCO.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,537 - WARNING - [GenAdvisor] Could not predict BAJAJFINSV.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,537 - WARNING - [GenAdvisor] Could not predict BAJAJFINSV.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,537 - WARNING - [GenAdvisor] Could not predict BAJAJFINSV.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,546 - WARNING - [GenAdvisor] Could not predict TITAN.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,546 - WARNING - [GenAdvisor] Could not predict TITAN.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,546 - WARNING - [GenAdvisor] Could not predict TITAN.NS: No module named 'tensorflow.keras'
+2025-11-01 22:09:47,549 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:09:47,549 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:09:47,549 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:10:43,196 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:10:43,196 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:10:43,196 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:10:43,197 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:10:43,197 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:10:43,197 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:11:03,815 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:11:03,815 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:11:03,815 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:11:03,816 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:11:03,816 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:11:03,816 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:11:03,817 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:11:03,817 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:11:03,817 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:11:03,818 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:11:03,818 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:11:03,818 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:12:35,505 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:12:35,505 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:12:35,505 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 22:12:35,506 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:12:35,506 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:12:35,506 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 22:12:53,893 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:12:53,893 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:12:53,893 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 22:12:53,894 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:12:53,894 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:12:53,894 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 22:12:53,895 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:12:53,895 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:12:53,895 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 22:12:53,895 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:12:53,895 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:12:53,895 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 22:13:10,112 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:13:10,112 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:13:10,112 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:13:10,115 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:13:10,115 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:13:10,115 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:13:10,175 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-01 22:13:10,175 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-01 22:13:10,175 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-01 22:13:10,707 - WARNING - [GenAdvisor] Could not predict RELIANCE.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,707 - WARNING - [GenAdvisor] Could not predict RELIANCE.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,707 - WARNING - [GenAdvisor] Could not predict RELIANCE.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,717 - WARNING - [GenAdvisor] Could not predict HDFCBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,717 - WARNING - [GenAdvisor] Could not predict HDFCBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,717 - WARNING - [GenAdvisor] Could not predict HDFCBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,728 - WARNING - [GenAdvisor] Could not predict BHARTIARTL.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,728 - WARNING - [GenAdvisor] Could not predict BHARTIARTL.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,728 - WARNING - [GenAdvisor] Could not predict BHARTIARTL.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,742 - WARNING - [GenAdvisor] Could not predict TCS.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,742 - WARNING - [GenAdvisor] Could not predict TCS.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,742 - WARNING - [GenAdvisor] Could not predict TCS.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,758 - WARNING - [GenAdvisor] Could not predict ICICIBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,758 - WARNING - [GenAdvisor] Could not predict ICICIBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,758 - WARNING - [GenAdvisor] Could not predict ICICIBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,776 - WARNING - [GenAdvisor] Could not predict SBIN.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,776 - WARNING - [GenAdvisor] Could not predict SBIN.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,776 - WARNING - [GenAdvisor] Could not predict SBIN.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,795 - WARNING - [GenAdvisor] Could not predict BAJFINANCE.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,795 - WARNING - [GenAdvisor] Could not predict BAJFINANCE.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,795 - WARNING - [GenAdvisor] Could not predict BAJFINANCE.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,809 - WARNING - [GenAdvisor] Could not predict INFY.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,809 - WARNING - [GenAdvisor] Could not predict INFY.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,809 - WARNING - [GenAdvisor] Could not predict INFY.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,821 - WARNING - [GenAdvisor] Could not predict HINDUNILVR.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,821 - WARNING - [GenAdvisor] Could not predict HINDUNILVR.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,821 - WARNING - [GenAdvisor] Could not predict HINDUNILVR.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,826 - WARNING - [GenAdvisor] Could not predict LT.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,826 - WARNING - [GenAdvisor] Could not predict LT.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,826 - WARNING - [GenAdvisor] Could not predict LT.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,834 - WARNING - [GenAdvisor] Could not predict ITC.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,834 - WARNING - [GenAdvisor] Could not predict ITC.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,834 - WARNING - [GenAdvisor] Could not predict ITC.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,840 - WARNING - [GenAdvisor] Could not predict MARUTI.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,840 - WARNING - [GenAdvisor] Could not predict MARUTI.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,840 - WARNING - [GenAdvisor] Could not predict MARUTI.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,845 - WARNING - [GenAdvisor] Could not predict M&M.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,845 - WARNING - [GenAdvisor] Could not predict M&M.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,845 - WARNING - [GenAdvisor] Could not predict M&M.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,854 - WARNING - [GenAdvisor] Could not predict KOTAKBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,854 - WARNING - [GenAdvisor] Could not predict KOTAKBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,854 - WARNING - [GenAdvisor] Could not predict KOTAKBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,859 - WARNING - [GenAdvisor] Could not predict HCLTECH.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,859 - WARNING - [GenAdvisor] Could not predict HCLTECH.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,859 - WARNING - [GenAdvisor] Could not predict HCLTECH.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,868 - WARNING - [GenAdvisor] Could not predict SUNPHARMA.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,868 - WARNING - [GenAdvisor] Could not predict SUNPHARMA.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,868 - WARNING - [GenAdvisor] Could not predict SUNPHARMA.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,874 - WARNING - [GenAdvisor] Could not predict AXISBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,874 - WARNING - [GenAdvisor] Could not predict AXISBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,874 - WARNING - [GenAdvisor] Could not predict AXISBANK.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,880 - WARNING - [GenAdvisor] Could not predict ULTRACEMCO.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,880 - WARNING - [GenAdvisor] Could not predict ULTRACEMCO.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,880 - WARNING - [GenAdvisor] Could not predict ULTRACEMCO.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,888 - WARNING - [GenAdvisor] Could not predict BAJAJFINSV.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,888 - WARNING - [GenAdvisor] Could not predict BAJAJFINSV.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,888 - WARNING - [GenAdvisor] Could not predict BAJAJFINSV.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,891 - WARNING - [GenAdvisor] Could not predict TITAN.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,891 - WARNING - [GenAdvisor] Could not predict TITAN.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,891 - WARNING - [GenAdvisor] Could not predict TITAN.NS: Neither keras nor tensorflow.keras is available. Please install keras or tensorflow.
+2025-11-01 22:13:10,894 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:13:10,894 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:13:10,894 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:16:45,180 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-01 22:16:45,180 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-01 22:16:45,180 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-01 22:16:45,185 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:16:45,185 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:16:45,185 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:16:45,239 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:16:45,239 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:16:45,239 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:17:05,504 - INFO - [GenAdvisor] [QueryID: 20251101_221705] Processing query: hdfc bank stock price
+2025-11-01 22:17:05,504 - INFO - [GenAdvisor] [QueryID: 20251101_221705] Processing query: hdfc bank stock price
+2025-11-01 22:17:05,504 - INFO - [GenAdvisor] [QueryID: 20251101_221705] Processing query: hdfc bank stock price
+2025-11-01 22:17:05,509 - INFO - [GenAdvisor] [QueryID: 20251101_221705] Starting RAG processing
+2025-11-01 22:17:05,509 - INFO - [GenAdvisor] [QueryID: 20251101_221705] Starting RAG processing
+2025-11-01 22:17:05,509 - INFO - [GenAdvisor] [QueryID: 20251101_221705] Starting RAG processing
+2025-11-01 22:17:12,144 - INFO - [GenAdvisor] [QueryID: 20251101_221705] Query processed successfully
+2025-11-01 22:17:12,144 - INFO - [GenAdvisor] [QueryID: 20251101_221705] Query processed successfully
+2025-11-01 22:17:12,144 - INFO - [GenAdvisor] [QueryID: 20251101_221705] Query processed successfully
+2025-11-01 22:17:12,145 - DEBUG - [GenAdvisor] [QueryID: 20251101_221705] Response length: 7510 chars
+2025-11-01 22:17:12,145 - DEBUG - [GenAdvisor] [QueryID: 20251101_221705] Response length: 7510 chars
+2025-11-01 22:17:12,145 - DEBUG - [GenAdvisor] [QueryID: 20251101_221705] Response length: 7510 chars
+2025-11-01 22:17:27,679 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:17:27,679 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:17:27,679 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-01 22:17:27,680 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:17:27,680 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:17:27,680 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-01 22:17:27,721 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-01 22:17:27,721 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-01 22:17:27,721 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-01 22:17:32,650 - WARNING - [GenAdvisor] Could not predict RELIANCE.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,650 - WARNING - [GenAdvisor] Could not predict RELIANCE.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,650 - WARNING - [GenAdvisor] Could not predict RELIANCE.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,657 - WARNING - [GenAdvisor] Could not predict HDFCBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,657 - WARNING - [GenAdvisor] Could not predict HDFCBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,657 - WARNING - [GenAdvisor] Could not predict HDFCBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,671 - WARNING - [GenAdvisor] Could not predict BHARTIARTL.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,671 - WARNING - [GenAdvisor] Could not predict BHARTIARTL.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,671 - WARNING - [GenAdvisor] Could not predict BHARTIARTL.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,686 - WARNING - [GenAdvisor] Could not predict TCS.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,686 - WARNING - [GenAdvisor] Could not predict TCS.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,686 - WARNING - [GenAdvisor] Could not predict TCS.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,705 - WARNING - [GenAdvisor] Could not predict ICICIBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,705 - WARNING - [GenAdvisor] Could not predict ICICIBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,705 - WARNING - [GenAdvisor] Could not predict ICICIBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,750 - WARNING - [GenAdvisor] Could not predict SBIN.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,750 - WARNING - [GenAdvisor] Could not predict SBIN.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,750 - WARNING - [GenAdvisor] Could not predict SBIN.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,770 - WARNING - [GenAdvisor] Could not predict BAJFINANCE.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,770 - WARNING - [GenAdvisor] Could not predict BAJFINANCE.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,770 - WARNING - [GenAdvisor] Could not predict BAJFINANCE.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,798 - WARNING - [GenAdvisor] Could not predict INFY.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,798 - WARNING - [GenAdvisor] Could not predict INFY.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,798 - WARNING - [GenAdvisor] Could not predict INFY.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,811 - WARNING - [GenAdvisor] Could not predict HINDUNILVR.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,811 - WARNING - [GenAdvisor] Could not predict HINDUNILVR.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,811 - WARNING - [GenAdvisor] Could not predict HINDUNILVR.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,822 - WARNING - [GenAdvisor] Could not predict LT.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,822 - WARNING - [GenAdvisor] Could not predict LT.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,822 - WARNING - [GenAdvisor] Could not predict LT.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,837 - WARNING - [GenAdvisor] Could not predict ITC.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,837 - WARNING - [GenAdvisor] Could not predict ITC.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,837 - WARNING - [GenAdvisor] Could not predict ITC.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,848 - WARNING - [GenAdvisor] Could not predict MARUTI.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,848 - WARNING - [GenAdvisor] Could not predict MARUTI.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,848 - WARNING - [GenAdvisor] Could not predict MARUTI.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,857 - WARNING - [GenAdvisor] Could not predict M&M.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,857 - WARNING - [GenAdvisor] Could not predict M&M.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,857 - WARNING - [GenAdvisor] Could not predict M&M.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,865 - WARNING - [GenAdvisor] Could not predict KOTAKBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,865 - WARNING - [GenAdvisor] Could not predict KOTAKBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,865 - WARNING - [GenAdvisor] Could not predict KOTAKBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,874 - WARNING - [GenAdvisor] Could not predict HCLTECH.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,874 - WARNING - [GenAdvisor] Could not predict HCLTECH.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,874 - WARNING - [GenAdvisor] Could not predict HCLTECH.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,885 - WARNING - [GenAdvisor] Could not predict SUNPHARMA.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,885 - WARNING - [GenAdvisor] Could not predict SUNPHARMA.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,885 - WARNING - [GenAdvisor] Could not predict SUNPHARMA.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,894 - WARNING - [GenAdvisor] Could not predict AXISBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,894 - WARNING - [GenAdvisor] Could not predict AXISBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,894 - WARNING - [GenAdvisor] Could not predict AXISBANK.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,902 - WARNING - [GenAdvisor] Could not predict ULTRACEMCO.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,902 - WARNING - [GenAdvisor] Could not predict ULTRACEMCO.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,902 - WARNING - [GenAdvisor] Could not predict ULTRACEMCO.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,916 - WARNING - [GenAdvisor] Could not predict BAJAJFINSV.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,916 - WARNING - [GenAdvisor] Could not predict BAJAJFINSV.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,916 - WARNING - [GenAdvisor] Could not predict BAJAJFINSV.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,925 - WARNING - [GenAdvisor] Could not predict TITAN.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,925 - WARNING - [GenAdvisor] Could not predict TITAN.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,925 - WARNING - [GenAdvisor] Could not predict TITAN.NS: module 'tensorflow' has no attribute 'ones'
+2025-11-01 22:17:32,926 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:17:32,926 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 22:17:32,926 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-01 23:00:56,715 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 23:00:56,715 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 23:00:56,715 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 23:00:56,716 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 23:00:56,716 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 23:00:56,716 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 23:01:16,455 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 23:01:16,455 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 23:01:16,455 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 23:01:16,456 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 23:01:16,456 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 23:01:16,456 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 23:01:16,457 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 23:01:16,457 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 23:01:16,457 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 23:01:16,458 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 23:01:16,458 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 23:01:16,458 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 23:46:19,186 - INFO - [GenAdvisor] [QueryID: 20251101_234619] Processing query: WHY HDFC STOCK
+2025-11-01 23:46:19,186 - INFO - [GenAdvisor] [QueryID: 20251101_234619] Processing query: WHY HDFC STOCK
+2025-11-01 23:46:19,186 - INFO - [GenAdvisor] [QueryID: 20251101_234619] Processing query: WHY HDFC STOCK
+2025-11-01 23:46:19,203 - INFO - [GenAdvisor] [QueryID: 20251101_234619] Starting RAG processing
+2025-11-01 23:46:19,203 - INFO - [GenAdvisor] [QueryID: 20251101_234619] Starting RAG processing
+2025-11-01 23:46:19,203 - INFO - [GenAdvisor] [QueryID: 20251101_234619] Starting RAG processing
+2025-11-01 23:46:19,441 - ERROR - [GenAdvisor] [QueryID: 20251101_234619] Error processing query: 'NoneType' object has no attribute 'lower'
+2025-11-01 23:46:19,441 - ERROR - [GenAdvisor] [QueryID: 20251101_234619] Error processing query: 'NoneType' object has no attribute 'lower'
+2025-11-01 23:46:19,441 - ERROR - [GenAdvisor] [QueryID: 20251101_234619] Error processing query: 'NoneType' object has no attribute 'lower'
+2025-11-01 23:50:41,649 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 23:50:41,649 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 23:50:41,649 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-01 23:50:41,650 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 23:50:41,650 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 23:50:41,650 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-01 23:51:08,208 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 23:51:08,208 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 23:51:08,208 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-01 23:51:08,209 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 23:51:08,209 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 23:51:08,209 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-01 23:51:08,210 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 23:51:08,210 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 23:51:08,210 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-01 23:51:08,210 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 23:51:08,210 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-01 23:51:08,210 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 00:15:28,909 - INFO - [GenAdvisor] [QueryID: 20251102_001528] Processing query: WHY HDFC STOCK
+2025-11-02 00:15:28,909 - INFO - [GenAdvisor] [QueryID: 20251102_001528] Processing query: WHY HDFC STOCK
+2025-11-02 00:15:28,909 - INFO - [GenAdvisor] [QueryID: 20251102_001528] Processing query: WHY HDFC STOCK
+2025-11-02 00:15:28,911 - INFO - [GenAdvisor] [QueryID: 20251102_001528] Starting RAG processing
+2025-11-02 00:15:28,911 - INFO - [GenAdvisor] [QueryID: 20251102_001528] Starting RAG processing
+2025-11-02 00:15:28,911 - INFO - [GenAdvisor] [QueryID: 20251102_001528] Starting RAG processing
+2025-11-02 00:15:29,080 - ERROR - [GenAdvisor] [QueryID: 20251102_001528] Error processing query: 'NoneType' object has no attribute 'lower'
+2025-11-02 00:15:29,080 - ERROR - [GenAdvisor] [QueryID: 20251102_001528] Error processing query: 'NoneType' object has no attribute 'lower'
+2025-11-02 00:15:29,080 - ERROR - [GenAdvisor] [QueryID: 20251102_001528] Error processing query: 'NoneType' object has no attribute 'lower'
+2025-11-02 00:15:44,544 - INFO - [GenAdvisor] [QueryID: 20251102_001544] Processing query: why hdfc stock
+2025-11-02 00:15:44,544 - INFO - [GenAdvisor] [QueryID: 20251102_001544] Processing query: why hdfc stock
+2025-11-02 00:15:44,544 - INFO - [GenAdvisor] [QueryID: 20251102_001544] Processing query: why hdfc stock
+2025-11-02 00:15:44,545 - INFO - [GenAdvisor] [QueryID: 20251102_001544] Starting RAG processing
+2025-11-02 00:15:44,545 - INFO - [GenAdvisor] [QueryID: 20251102_001544] Starting RAG processing
+2025-11-02 00:15:44,545 - INFO - [GenAdvisor] [QueryID: 20251102_001544] Starting RAG processing
+2025-11-02 00:15:50,978 - INFO - [GenAdvisor] [QueryID: 20251102_001544] Query processed successfully
+2025-11-02 00:15:50,978 - INFO - [GenAdvisor] [QueryID: 20251102_001544] Query processed successfully
+2025-11-02 00:15:50,978 - INFO - [GenAdvisor] [QueryID: 20251102_001544] Query processed successfully
+2025-11-02 00:15:50,981 - DEBUG - [GenAdvisor] [QueryID: 20251102_001544] Response length: 8608 chars
+2025-11-02 00:15:50,981 - DEBUG - [GenAdvisor] [QueryID: 20251102_001544] Response length: 8608 chars
+2025-11-02 00:15:50,981 - DEBUG - [GenAdvisor] [QueryID: 20251102_001544] Response length: 8608 chars
+2025-11-02 00:16:15,837 - INFO - [GenAdvisor] [QueryID: 20251102_001615] Processing query: what is the current price
+2025-11-02 00:16:15,837 - INFO - [GenAdvisor] [QueryID: 20251102_001615] Processing query: what is the current price
+2025-11-02 00:16:15,837 - INFO - [GenAdvisor] [QueryID: 20251102_001615] Processing query: what is the current price
+2025-11-02 00:16:15,840 - INFO - [GenAdvisor] [QueryID: 20251102_001615] Starting RAG processing
+2025-11-02 00:16:15,840 - INFO - [GenAdvisor] [QueryID: 20251102_001615] Starting RAG processing
+2025-11-02 00:16:15,840 - INFO - [GenAdvisor] [QueryID: 20251102_001615] Starting RAG processing
+2025-11-02 00:16:19,141 - INFO - [GenAdvisor] [QueryID: 20251102_001615] Query processed successfully
+2025-11-02 00:16:19,141 - INFO - [GenAdvisor] [QueryID: 20251102_001615] Query processed successfully
+2025-11-02 00:16:19,141 - INFO - [GenAdvisor] [QueryID: 20251102_001615] Query processed successfully
+2025-11-02 00:16:19,145 - DEBUG - [GenAdvisor] [QueryID: 20251102_001615] Response length: 5095 chars
+2025-11-02 00:16:19,145 - DEBUG - [GenAdvisor] [QueryID: 20251102_001615] Response length: 5095 chars
+2025-11-02 00:16:19,145 - DEBUG - [GenAdvisor] [QueryID: 20251102_001615] Response length: 5095 chars

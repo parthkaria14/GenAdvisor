@@ -1,16 +1,16 @@
 {
   "symbol": "APOLLOHOSP.NS",
-  "timestamp": "2025-10-28T14:31:20.180854",
-  "current_price": 7849.0,
+  "timestamp": "2025-11-01T21:53:20.547595",
+  "current_price": 7681.0,
   "name": "Apollo Hospitals Enterprise Limited",
   "sector": "Healthcare",
-  "market_cap": 1128565702656,
-  "pe_ratio": 71.97616,
-  "pb_ratio": 13.742377,
-  "dividend_yield": 0.25,
+  "market_cap": 1104409919488,
+  "pe_ratio": 70.42266,
+  "pb_ratio": 13.4482355,
+  "dividend_yield": 0.26,
   "beta": 0.184,
-  "volume": 246174,
+  "volume": 346690,
   "fifty_two_week_high": 8099.5,
   "fifty_two_week_low": 6001.0,
-  "change_percent": 0.044614404
+  "change_percent": -1.3992298
 }

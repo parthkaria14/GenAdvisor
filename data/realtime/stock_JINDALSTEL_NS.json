@@ -1,16 +1,16 @@
 {
   "symbol": "JINDALSTEL.NS",
-  "timestamp": "2025-10-28T14:31:07.443683",
-  "current_price": 1074.9,
+  "timestamp": "2025-11-01T21:52:41.560565",
+  "current_price": 1066.8,
   "name": "Jindal Steel Limited",
   "sector": "Basic Materials",
-  "market_cap": 1093697994752,
-  "pe_ratio": 36.72361,
-  "pb_ratio": 2.3238218,
+  "market_cap": 1085456384000,
+  "pe_ratio": 39.525753,
+  "pb_ratio": 2.1850135,
   "dividend_yield": 0.19,
   "beta": 0.773,
-  "volume": 3394823,
-  "fifty_two_week_high": 1087.6,
+  "volume": 1017971,
+  "fifty_two_week_high": 1097.7,
   "fifty_two_week_low": 723.35,
-  "change_percent": 3.9253576
+  "change_percent": -0.31768852
 }

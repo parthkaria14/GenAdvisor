@@ -1,16 +1,16 @@
 {
   "symbol": "RECLTD.NS",
-  "timestamp": "2025-10-28T14:27:57.214273",
-  "current_price": 368.4,
+  "timestamp": "2025-11-01T21:51:58.502763",
+  "current_price": 374.85,
   "name": "REC Limited",
   "sector": "Financial Services",
-  "market_cap": 970598842368,
-  "pe_ratio": 5.6270046,
-  "pb_ratio": 1.1617786,
-  "dividend_yield": 6.34,
+  "market_cap": 987458961408,
+  "pe_ratio": 5.727273,
+  "pb_ratio": 1.1821193,
+  "dividend_yield": 6.32,
   "beta": 0.387,
-  "volume": 7673121,
+  "volume": 6009932,
   "fifty_two_week_high": 573.3,
   "fifty_two_week_low": 348.6,
-  "change_percent": -1.4188243
+  "change_percent": -0.9119698
 }

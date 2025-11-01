@@ -1,16 +1,16 @@
 {
   "symbol": "INFY.NS",
-  "timestamp": "2025-10-28T14:42:15.545137",
-  "current_price": 1492.3,
+  "timestamp": "2025-11-01T21:52:08.890772",
+  "current_price": 1482.3,
   "name": "Infosys Limited",
   "sector": "Technology",
-  "market_cap": 6186046324736,
-  "pe_ratio": 21.515284,
-  "pb_ratio": 531.63525,
-  "dividend_yield": 2.99,
+  "market_cap": 6144592969728,
+  "pe_ratio": 21.230307,
+  "pb_ratio": 528.0727,
+  "dividend_yield": 3.04,
   "beta": 0.34,
-  "volume": 4924294,
+  "volume": 4818649,
   "fifty_two_week_high": 2006.45,
   "fifty_two_week_low": 1307.0,
-  "change_percent": -0.8108435
+  "change_percent": -0.7698487
 }
