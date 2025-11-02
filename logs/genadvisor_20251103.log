@@ -1,0 +1,438 @@
+2025-11-03 01:49:40,116 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:49:40,116 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:49:40,116 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:49:40,117 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:49:40,117 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:49:40,117 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:49:40,118 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:49:40,118 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:49:40,118 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:50:02,958 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:50:02,958 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:50:02,958 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:50:02,958 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:50:02,958 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:50:02,958 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:50:02,959 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:50:02,959 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:50:02,959 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:50:02,959 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:50:02,959 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:50:02,959 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:50:27,554 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:50:27,554 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:50:27,554 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:50:27,555 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:50:27,555 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:50:27,555 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:50:27,556 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:50:27,556 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:50:27,556 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:50:47,896 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:50:47,896 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:50:47,896 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:50:47,896 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:50:47,896 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:50:47,896 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:50:47,897 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:50:47,897 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:50:47,897 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:50:47,898 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:50:47,898 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:50:47,898 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:51:18,959 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:51:18,959 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:51:18,959 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:51:18,961 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:51:18,961 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:51:18,961 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:51:18,962 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:51:18,962 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:51:18,962 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:51:38,471 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:51:38,471 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:51:38,471 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:51:38,472 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:51:38,472 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:51:38,472 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:51:38,473 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:51:38,473 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:51:38,473 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:51:38,473 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:51:38,473 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:51:38,473 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:52:21,561 - INFO - [GenAdvisor] [QueryID: 20251103_015221] Processing query: : i want to invest 10000 rs in the market. what stocks should i pick
+2025-11-03 01:52:21,561 - INFO - [GenAdvisor] [QueryID: 20251103_015221] Processing query: : i want to invest 10000 rs in the market. what stocks should i pick
+2025-11-03 01:52:21,561 - INFO - [GenAdvisor] [QueryID: 20251103_015221] Processing query: : i want to invest 10000 rs in the market. what stocks should i pick
+2025-11-03 01:52:21,567 - INFO - [GenAdvisor] [QueryID: 20251103_015221] Starting RAG processing
+2025-11-03 01:52:21,567 - INFO - [GenAdvisor] [QueryID: 20251103_015221] Starting RAG processing
+2025-11-03 01:52:21,567 - INFO - [GenAdvisor] [QueryID: 20251103_015221] Starting RAG processing
+2025-11-03 01:52:27,047 - INFO - [GenAdvisor] [QueryID: 20251103_015221] Query processed successfully
+2025-11-03 01:52:27,047 - INFO - [GenAdvisor] [QueryID: 20251103_015221] Query processed successfully
+2025-11-03 01:52:27,047 - INFO - [GenAdvisor] [QueryID: 20251103_015221] Query processed successfully
+2025-11-03 01:52:27,052 - DEBUG - [GenAdvisor] [QueryID: 20251103_015221] Response length: 4514 chars
+2025-11-03 01:52:27,052 - DEBUG - [GenAdvisor] [QueryID: 20251103_015221] Response length: 4514 chars
+2025-11-03 01:52:27,052 - DEBUG - [GenAdvisor] [QueryID: 20251103_015221] Response length: 4514 chars
+2025-11-03 01:54:50,693 - INFO - [GenAdvisor] [QueryID: 20251103_015450] Processing query: How is Reliance Industries performing and what are the technical indicators?
+2025-11-03 01:54:50,693 - INFO - [GenAdvisor] [QueryID: 20251103_015450] Processing query: How is Reliance Industries performing and what are the technical indicators?
+2025-11-03 01:54:50,693 - INFO - [GenAdvisor] [QueryID: 20251103_015450] Processing query: How is Reliance Industries performing and what are the technical indicators?
+2025-11-03 01:54:50,699 - INFO - [GenAdvisor] [QueryID: 20251103_015450] Starting RAG processing
+2025-11-03 01:54:50,699 - INFO - [GenAdvisor] [QueryID: 20251103_015450] Starting RAG processing
+2025-11-03 01:54:50,699 - INFO - [GenAdvisor] [QueryID: 20251103_015450] Starting RAG processing
+2025-11-03 01:54:54,476 - INFO - [GenAdvisor] [QueryID: 20251103_015450] Query processed successfully
+2025-11-03 01:54:54,476 - INFO - [GenAdvisor] [QueryID: 20251103_015450] Query processed successfully
+2025-11-03 01:54:54,476 - INFO - [GenAdvisor] [QueryID: 20251103_015450] Query processed successfully
+2025-11-03 01:54:54,478 - DEBUG - [GenAdvisor] [QueryID: 20251103_015450] Response length: 5294 chars
+2025-11-03 01:54:54,478 - DEBUG - [GenAdvisor] [QueryID: 20251103_015450] Response length: 5294 chars
+2025-11-03 01:54:54,478 - DEBUG - [GenAdvisor] [QueryID: 20251103_015450] Response length: 5294 chars
+2025-11-03 01:57:16,939 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:57:16,939 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:57:16,939 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 01:57:16,940 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:57:16,940 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:57:16,940 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 01:57:16,941 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:57:16,941 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:57:16,941 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 01:57:36,745 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:57:36,745 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:57:36,745 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 01:57:36,746 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:57:36,746 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:57:36,746 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 01:57:36,747 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:57:36,747 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:57:36,747 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 01:57:36,747 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:57:36,747 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:57:36,747 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:57:36,750 - INFO - [GenAdvisor] [QueryID: 20251103_015736] Processing query: how can I invest in apple shares
+2025-11-03 01:57:36,750 - INFO - [GenAdvisor] [QueryID: 20251103_015736] Processing query: how can I invest in apple shares
+2025-11-03 01:57:36,750 - INFO - [GenAdvisor] [QueryID: 20251103_015736] Processing query: how can I invest in apple shares
+2025-11-03 01:57:36,751 - INFO - [GenAdvisor] [QueryID: 20251103_015736] Starting RAG processing
+2025-11-03 01:57:36,751 - INFO - [GenAdvisor] [QueryID: 20251103_015736] Starting RAG processing
+2025-11-03 01:57:36,751 - INFO - [GenAdvisor] [QueryID: 20251103_015736] Starting RAG processing
+2025-11-03 01:57:45,232 - INFO - [GenAdvisor] [QueryID: 20251103_015736] Query processed successfully
+2025-11-03 01:57:45,232 - INFO - [GenAdvisor] [QueryID: 20251103_015736] Query processed successfully
+2025-11-03 01:57:45,232 - INFO - [GenAdvisor] [QueryID: 20251103_015736] Query processed successfully
+2025-11-03 01:57:45,233 - DEBUG - [GenAdvisor] [QueryID: 20251103_015736] Response length: 9856 chars
+2025-11-03 01:57:45,233 - DEBUG - [GenAdvisor] [QueryID: 20251103_015736] Response length: 9856 chars
+2025-11-03 01:57:45,233 - DEBUG - [GenAdvisor] [QueryID: 20251103_015736] Response length: 9856 chars
+2025-11-03 01:58:35,752 - INFO - [GenAdvisor] [QueryID: 20251103_015835] Processing query: what is the share price of maruti suzuki
+2025-11-03 01:58:35,752 - INFO - [GenAdvisor] [QueryID: 20251103_015835] Processing query: what is the share price of maruti suzuki
+2025-11-03 01:58:35,752 - INFO - [GenAdvisor] [QueryID: 20251103_015835] Processing query: what is the share price of maruti suzuki
+2025-11-03 01:58:35,757 - INFO - [GenAdvisor] [QueryID: 20251103_015835] Starting RAG processing
+2025-11-03 01:58:35,757 - INFO - [GenAdvisor] [QueryID: 20251103_015835] Starting RAG processing
+2025-11-03 01:58:35,757 - INFO - [GenAdvisor] [QueryID: 20251103_015835] Starting RAG processing
+2025-11-03 01:58:38,260 - INFO - [GenAdvisor] [QueryID: 20251103_015835] Query processed successfully
+2025-11-03 01:58:38,260 - INFO - [GenAdvisor] [QueryID: 20251103_015835] Query processed successfully
+2025-11-03 01:58:38,260 - INFO - [GenAdvisor] [QueryID: 20251103_015835] Query processed successfully
+2025-11-03 01:58:38,264 - DEBUG - [GenAdvisor] [QueryID: 20251103_015835] Response length: 3152 chars
+2025-11-03 01:58:38,264 - DEBUG - [GenAdvisor] [QueryID: 20251103_015835] Response length: 3152 chars
+2025-11-03 01:58:38,264 - DEBUG - [GenAdvisor] [QueryID: 20251103_015835] Response length: 3152 chars
+2025-11-03 01:59:23,262 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:23,262 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:23,262 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:23,267 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:23,267 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:23,267 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:23,348 - INFO - [GenAdvisor] Screener returning 0 stocks, 0 with predictions
+2025-11-03 01:59:23,348 - INFO - [GenAdvisor] Screener returning 0 stocks, 0 with predictions
+2025-11-03 01:59:23,348 - INFO - [GenAdvisor] Screener returning 0 stocks, 0 with predictions
+2025-11-03 01:59:27,451 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:27,451 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:27,451 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:27,453 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:27,453 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:27,453 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:27,510 - INFO - [GenAdvisor] Screener returning 0 stocks, 0 with predictions
+2025-11-03 01:59:27,510 - INFO - [GenAdvisor] Screener returning 0 stocks, 0 with predictions
+2025-11-03 01:59:27,510 - INFO - [GenAdvisor] Screener returning 0 stocks, 0 with predictions
+2025-11-03 01:59:29,385 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:29,385 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:29,385 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:29,389 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:29,389 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:29,389 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:29,432 - INFO - [GenAdvisor] Screener returning 0 stocks, 0 with predictions
+2025-11-03 01:59:29,432 - INFO - [GenAdvisor] Screener returning 0 stocks, 0 with predictions
+2025-11-03 01:59:29,432 - INFO - [GenAdvisor] Screener returning 0 stocks, 0 with predictions
+2025-11-03 01:59:32,918 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:32,918 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:32,918 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-03 01:59:32,928 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:32,928 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:32,928 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-03 01:59:32,998 - INFO - [GenAdvisor] Screener returning 5 stocks, 0 with predictions
+2025-11-03 01:59:32,998 - INFO - [GenAdvisor] Screener returning 5 stocks, 0 with predictions
+2025-11-03 01:59:32,998 - INFO - [GenAdvisor] Screener returning 5 stocks, 0 with predictions
+2025-11-03 01:59:35,934 - INFO - [GenAdvisor] Predicting prices for ADANIPORTS.NS with horizon=5
+2025-11-03 01:59:35,934 - INFO - [GenAdvisor] Predicting prices for ADANIPORTS.NS with horizon=5
+2025-11-03 01:59:35,934 - INFO - [GenAdvisor] Predicting prices for ADANIPORTS.NS with horizon=5
+2025-11-03 01:59:37,624 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 01:59:37,624 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 01:59:37,624 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 01:59:54,623 - INFO - [GenAdvisor] Prediction complete for ADANIPORTS.NS. Current: 1451.5, Predicted: [1451.6109616254457, 1451.6250295931645, 1451.6688383456087, 1451.6548202849651, 1451.7047617732153]
+2025-11-03 01:59:54,623 - INFO - [GenAdvisor] Prediction complete for ADANIPORTS.NS. Current: 1451.5, Predicted: [1451.6109616254457, 1451.6250295931645, 1451.6688383456087, 1451.6548202849651, 1451.7047617732153]
+2025-11-03 01:59:54,623 - INFO - [GenAdvisor] Prediction complete for ADANIPORTS.NS. Current: 1451.5, Predicted: [1451.6109616254457, 1451.6250295931645, 1451.6688383456087, 1451.6548202849651, 1451.7047617732153]
+2025-11-03 01:59:54,694 - INFO - [GenAdvisor] Predicting prices for ADANIPORTS.NS with horizon=5
+2025-11-03 01:59:54,694 - INFO - [GenAdvisor] Predicting prices for ADANIPORTS.NS with horizon=5
+2025-11-03 01:59:54,694 - INFO - [GenAdvisor] Predicting prices for ADANIPORTS.NS with horizon=5
+2025-11-03 01:59:54,888 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 01:59:54,888 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 01:59:54,888 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:04,301 - INFO - [GenAdvisor] Prediction complete for ADANIPORTS.NS. Current: 1451.5, Predicted: [1449.6786434744486, 1449.7300101811238, 1449.7885857458925, 1449.7776227809215, 1449.824813395606]
+2025-11-03 02:00:04,301 - INFO - [GenAdvisor] Prediction complete for ADANIPORTS.NS. Current: 1451.5, Predicted: [1449.6786434744486, 1449.7300101811238, 1449.7885857458925, 1449.7776227809215, 1449.824813395606]
+2025-11-03 02:00:04,301 - INFO - [GenAdvisor] Prediction complete for ADANIPORTS.NS. Current: 1451.5, Predicted: [1449.6786434744486, 1449.7300101811238, 1449.7885857458925, 1449.7776227809215, 1449.824813395606]
+2025-11-03 02:00:04,311 - INFO - [GenAdvisor] Predicting prices for ADANIPORTS.NS with horizon=5
+2025-11-03 02:00:04,311 - INFO - [GenAdvisor] Predicting prices for ADANIPORTS.NS with horizon=5
+2025-11-03 02:00:04,311 - INFO - [GenAdvisor] Predicting prices for ADANIPORTS.NS with horizon=5
+2025-11-03 02:00:04,415 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:04,415 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:04,415 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:12,001 - INFO - [GenAdvisor] Prediction complete for ADANIPORTS.NS. Current: 1451.5, Predicted: [1450.58023987161, 1450.5424573416062, 1450.5477794047213, 1450.5115756906296, 1450.5392370520697]
+2025-11-03 02:00:12,001 - INFO - [GenAdvisor] Prediction complete for ADANIPORTS.NS. Current: 1451.5, Predicted: [1450.58023987161, 1450.5424573416062, 1450.5477794047213, 1450.5115756906296, 1450.5392370520697]
+2025-11-03 02:00:12,001 - INFO - [GenAdvisor] Prediction complete for ADANIPORTS.NS. Current: 1451.5, Predicted: [1450.58023987161, 1450.5424573416062, 1450.5477794047213, 1450.5115756906296, 1450.5392370520697]
+2025-11-03 02:00:38,069 - INFO - [GenAdvisor] Predicting prices for SRF.NS with horizon=5
+2025-11-03 02:00:38,069 - INFO - [GenAdvisor] Predicting prices for SRF.NS with horizon=5
+2025-11-03 02:00:38,069 - INFO - [GenAdvisor] Predicting prices for SRF.NS with horizon=5
+2025-11-03 02:00:38,506 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:38,506 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:38,506 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:44,036 - INFO - [GenAdvisor] Prediction complete for SRF.NS. Current: 2930.5, Predicted: [2904.436614791269, 2901.5920190813104, 2900.4980207411795, 2900.21958947498, 2900.2700552501956]
+2025-11-03 02:00:44,036 - INFO - [GenAdvisor] Prediction complete for SRF.NS. Current: 2930.5, Predicted: [2904.436614791269, 2901.5920190813104, 2900.4980207411795, 2900.21958947498, 2900.2700552501956]
+2025-11-03 02:00:44,036 - INFO - [GenAdvisor] Prediction complete for SRF.NS. Current: 2930.5, Predicted: [2904.436614791269, 2901.5920190813104, 2900.4980207411795, 2900.21958947498, 2900.2700552501956]
+2025-11-03 02:00:44,100 - INFO - [GenAdvisor] Predicting prices for SRF.NS with horizon=5
+2025-11-03 02:00:44,100 - INFO - [GenAdvisor] Predicting prices for SRF.NS with horizon=5
+2025-11-03 02:00:44,100 - INFO - [GenAdvisor] Predicting prices for SRF.NS with horizon=5
+2025-11-03 02:00:44,172 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:44,172 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:44,172 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:49,243 - INFO - [GenAdvisor] Prediction complete for SRF.NS. Current: 2930.5, Predicted: [2899.813091079111, 2897.169346809582, 2896.265102955535, 2896.1351091893353, 2896.2754358806887]
+2025-11-03 02:00:49,243 - INFO - [GenAdvisor] Prediction complete for SRF.NS. Current: 2930.5, Predicted: [2899.813091079111, 2897.169346809582, 2896.265102955535, 2896.1351091893353, 2896.2754358806887]
+2025-11-03 02:00:49,243 - INFO - [GenAdvisor] Prediction complete for SRF.NS. Current: 2930.5, Predicted: [2899.813091079111, 2897.169346809582, 2896.265102955535, 2896.1351091893353, 2896.2754358806887]
+2025-11-03 02:00:49,248 - INFO - [GenAdvisor] Predicting prices for SRF.NS with horizon=5
+2025-11-03 02:00:49,248 - INFO - [GenAdvisor] Predicting prices for SRF.NS with horizon=5
+2025-11-03 02:00:49,248 - INFO - [GenAdvisor] Predicting prices for SRF.NS with horizon=5
+2025-11-03 02:00:49,449 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:49,449 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:49,449 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-03 02:00:54,029 - INFO - [GenAdvisor] Prediction complete for SRF.NS. Current: 2930.5, Predicted: [2892.3102415002536, 2889.9635477067986, 2889.541241261199, 2889.3904955418743, 2889.2611059704104]
+2025-11-03 02:00:54,029 - INFO - [GenAdvisor] Prediction complete for SRF.NS. Current: 2930.5, Predicted: [2892.3102415002536, 2889.9635477067986, 2889.541241261199, 2889.3904955418743, 2889.2611059704104]
+2025-11-03 02:00:54,029 - INFO - [GenAdvisor] Prediction complete for SRF.NS. Current: 2930.5, Predicted: [2892.3102415002536, 2889.9635477067986, 2889.541241261199, 2889.3904955418743, 2889.2611059704104]
+2025-11-03 02:01:22,205 - INFO - [GenAdvisor] [QueryID: 20251103_020122] Processing query: who is virat kohli
+2025-11-03 02:01:22,205 - INFO - [GenAdvisor] [QueryID: 20251103_020122] Processing query: who is virat kohli
+2025-11-03 02:01:22,205 - INFO - [GenAdvisor] [QueryID: 20251103_020122] Processing query: who is virat kohli
+2025-11-03 02:01:22,211 - INFO - [GenAdvisor] [QueryID: 20251103_020122] Starting RAG processing
+2025-11-03 02:01:22,211 - INFO - [GenAdvisor] [QueryID: 20251103_020122] Starting RAG processing
+2025-11-03 02:01:22,211 - INFO - [GenAdvisor] [QueryID: 20251103_020122] Starting RAG processing
+2025-11-03 02:01:23,243 - INFO - [GenAdvisor] [QueryID: 20251103_020122] Query processed successfully
+2025-11-03 02:01:23,243 - INFO - [GenAdvisor] [QueryID: 20251103_020122] Query processed successfully
+2025-11-03 02:01:23,243 - INFO - [GenAdvisor] [QueryID: 20251103_020122] Query processed successfully
+2025-11-03 02:01:23,245 - DEBUG - [GenAdvisor] [QueryID: 20251103_020122] Response length: 48 chars
+2025-11-03 02:01:23,245 - DEBUG - [GenAdvisor] [QueryID: 20251103_020122] Response length: 48 chars
+2025-11-03 02:01:23,245 - DEBUG - [GenAdvisor] [QueryID: 20251103_020122] Response length: 48 chars
+2025-11-03 02:01:34,796 - INFO - [GenAdvisor] [QueryID: 20251103_020134] Processing query: who is dj sanghvi
+2025-11-03 02:01:34,796 - INFO - [GenAdvisor] [QueryID: 20251103_020134] Processing query: who is dj sanghvi
+2025-11-03 02:01:34,796 - INFO - [GenAdvisor] [QueryID: 20251103_020134] Processing query: who is dj sanghvi
+2025-11-03 02:01:34,817 - INFO - [GenAdvisor] [QueryID: 20251103_020134] Starting RAG processing
+2025-11-03 02:01:34,817 - INFO - [GenAdvisor] [QueryID: 20251103_020134] Starting RAG processing
+2025-11-03 02:01:34,817 - INFO - [GenAdvisor] [QueryID: 20251103_020134] Starting RAG processing
+2025-11-03 02:01:35,927 - INFO - [GenAdvisor] [QueryID: 20251103_020134] Query processed successfully
+2025-11-03 02:01:35,927 - INFO - [GenAdvisor] [QueryID: 20251103_020134] Query processed successfully
+2025-11-03 02:01:35,927 - INFO - [GenAdvisor] [QueryID: 20251103_020134] Query processed successfully
+2025-11-03 02:01:35,929 - DEBUG - [GenAdvisor] [QueryID: 20251103_020134] Response length: 48 chars
+2025-11-03 02:01:35,929 - DEBUG - [GenAdvisor] [QueryID: 20251103_020134] Response length: 48 chars
+2025-11-03 02:01:35,929 - DEBUG - [GenAdvisor] [QueryID: 20251103_020134] Response length: 48 chars
+2025-11-03 02:01:47,035 - INFO - [GenAdvisor] [QueryID: 20251103_020147] Processing query: how to invest in virat kohli
+2025-11-03 02:01:47,035 - INFO - [GenAdvisor] [QueryID: 20251103_020147] Processing query: how to invest in virat kohli
+2025-11-03 02:01:47,035 - INFO - [GenAdvisor] [QueryID: 20251103_020147] Processing query: how to invest in virat kohli
+2025-11-03 02:01:47,036 - INFO - [GenAdvisor] [QueryID: 20251103_020147] Starting RAG processing
+2025-11-03 02:01:47,036 - INFO - [GenAdvisor] [QueryID: 20251103_020147] Starting RAG processing
+2025-11-03 02:01:47,036 - INFO - [GenAdvisor] [QueryID: 20251103_020147] Starting RAG processing
+2025-11-03 02:01:54,055 - INFO - [GenAdvisor] [QueryID: 20251103_020147] Query processed successfully
+2025-11-03 02:01:54,055 - INFO - [GenAdvisor] [QueryID: 20251103_020147] Query processed successfully
+2025-11-03 02:01:54,055 - INFO - [GenAdvisor] [QueryID: 20251103_020147] Query processed successfully
+2025-11-03 02:01:54,058 - DEBUG - [GenAdvisor] [QueryID: 20251103_020147] Response length: 8822 chars
+2025-11-03 02:01:54,058 - DEBUG - [GenAdvisor] [QueryID: 20251103_020147] Response length: 8822 chars
+2025-11-03 02:01:54,058 - DEBUG - [GenAdvisor] [QueryID: 20251103_020147] Response length: 8822 chars
+2025-11-03 02:03:27,949 - INFO - [GenAdvisor] [QueryID: 20251103_020327] Processing query: why should i buy virat
+2025-11-03 02:03:27,949 - INFO - [GenAdvisor] [QueryID: 20251103_020327] Processing query: why should i buy virat
+2025-11-03 02:03:27,949 - INFO - [GenAdvisor] [QueryID: 20251103_020327] Processing query: why should i buy virat
+2025-11-03 02:03:27,954 - INFO - [GenAdvisor] [QueryID: 20251103_020327] Starting RAG processing
+2025-11-03 02:03:27,954 - INFO - [GenAdvisor] [QueryID: 20251103_020327] Starting RAG processing
+2025-11-03 02:03:27,954 - INFO - [GenAdvisor] [QueryID: 20251103_020327] Starting RAG processing
+2025-11-03 02:03:30,414 - INFO - [GenAdvisor] [QueryID: 20251103_020327] Query processed successfully
+2025-11-03 02:03:30,414 - INFO - [GenAdvisor] [QueryID: 20251103_020327] Query processed successfully
+2025-11-03 02:03:30,414 - INFO - [GenAdvisor] [QueryID: 20251103_020327] Query processed successfully
+2025-11-03 02:03:30,417 - DEBUG - [GenAdvisor] [QueryID: 20251103_020327] Response length: 3350 chars
+2025-11-03 02:03:30,417 - DEBUG - [GenAdvisor] [QueryID: 20251103_020327] Response length: 3350 chars
+2025-11-03 02:03:30,417 - DEBUG - [GenAdvisor] [QueryID: 20251103_020327] Response length: 3350 chars
+2025-11-03 02:03:59,398 - INFO - [GenAdvisor] [QueryID: 20251103_020359] Processing query: what is the best stock to buy
+2025-11-03 02:03:59,398 - INFO - [GenAdvisor] [QueryID: 20251103_020359] Processing query: what is the best stock to buy
+2025-11-03 02:03:59,398 - INFO - [GenAdvisor] [QueryID: 20251103_020359] Processing query: what is the best stock to buy
+2025-11-03 02:03:59,400 - INFO - [GenAdvisor] [QueryID: 20251103_020359] Starting RAG processing
+2025-11-03 02:03:59,400 - INFO - [GenAdvisor] [QueryID: 20251103_020359] Starting RAG processing
+2025-11-03 02:03:59,400 - INFO - [GenAdvisor] [QueryID: 20251103_020359] Starting RAG processing
+2025-11-03 02:04:01,948 - INFO - [GenAdvisor] [QueryID: 20251103_020359] Query processed successfully
+2025-11-03 02:04:01,948 - INFO - [GenAdvisor] [QueryID: 20251103_020359] Query processed successfully
+2025-11-03 02:04:01,948 - INFO - [GenAdvisor] [QueryID: 20251103_020359] Query processed successfully
+2025-11-03 02:04:01,950 - DEBUG - [GenAdvisor] [QueryID: 20251103_020359] Response length: 3802 chars
+2025-11-03 02:04:01,950 - DEBUG - [GenAdvisor] [QueryID: 20251103_020359] Response length: 3802 chars
+2025-11-03 02:04:01,950 - DEBUG - [GenAdvisor] [QueryID: 20251103_020359] Response length: 3802 chars
+2025-11-03 02:07:09,279 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:07:09,279 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:07:09,279 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:07:09,280 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:07:09,280 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:07:09,280 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:07:09,281 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:07:09,281 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:07:09,281 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:07:34,383 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:07:34,383 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:07:34,383 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:07:34,384 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:07:34,384 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:07:34,384 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:07:34,385 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:07:34,385 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:07:34,385 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:07:34,386 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:07:34,386 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:07:34,386 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:09:12,457 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:09:12,457 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:09:12,457 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:09:12,459 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:09:12,459 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:09:12,459 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:09:12,460 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:09:12,460 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:09:12,460 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:10:26,311 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:10:26,311 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:10:26,311 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:10:26,311 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:10:26,311 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:10:26,311 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:10:26,314 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:10:26,314 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:10:26,314 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:10:26,314 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:10:26,314 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:10:26,314 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:14:07,121 - INFO - [GenAdvisor] [QueryID: 20251103_021407] Processing query: i want to invest in banking sector. which shares should i buy
+2025-11-03 02:14:07,121 - INFO - [GenAdvisor] [QueryID: 20251103_021407] Processing query: i want to invest in banking sector. which shares should i buy
+2025-11-03 02:14:07,121 - INFO - [GenAdvisor] [QueryID: 20251103_021407] Processing query: i want to invest in banking sector. which shares should i buy
+2025-11-03 02:14:07,125 - INFO - [GenAdvisor] [QueryID: 20251103_021407] Starting RAG processing
+2025-11-03 02:14:07,125 - INFO - [GenAdvisor] [QueryID: 20251103_021407] Starting RAG processing
+2025-11-03 02:14:07,125 - INFO - [GenAdvisor] [QueryID: 20251103_021407] Starting RAG processing
+2025-11-03 02:14:07,466 - ERROR - [GenAdvisor] [QueryID: 20251103_021407] Error processing query: unsupported format string passed to NoneType.__format__
+2025-11-03 02:14:07,466 - ERROR - [GenAdvisor] [QueryID: 20251103_021407] Error processing query: unsupported format string passed to NoneType.__format__
+2025-11-03 02:14:07,466 - ERROR - [GenAdvisor] [QueryID: 20251103_021407] Error processing query: unsupported format string passed to NoneType.__format__
+2025-11-03 02:16:10,138 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:16:10,138 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:16:10,138 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:16:10,139 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:16:10,139 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:16:10,139 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:16:10,140 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:16:10,140 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:16:10,140 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:16:28,631 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:16:28,631 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:16:28,631 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:16:28,632 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:16:28,632 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:16:28,632 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:16:28,632 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:16:28,632 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:16:28,632 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:16:28,632 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:16:28,632 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:16:28,632 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:16:48,749 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:16:48,749 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:16:48,749 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:16:48,750 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:16:48,750 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:16:48,750 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:16:48,751 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:16:48,751 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:16:48,751 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:17:06,416 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:17:06,416 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:17:06,416 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:17:06,416 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:17:06,416 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:17:06,416 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:17:06,417 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:17:06,417 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:17:06,417 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:17:06,417 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:17:06,417 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:17:06,417 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:17:26,923 - INFO - [GenAdvisor] [QueryID: 20251103_021726] Processing query: i want to invest in banking sector. which shares should i buy'
+2025-11-03 02:17:26,923 - INFO - [GenAdvisor] [QueryID: 20251103_021726] Processing query: i want to invest in banking sector. which shares should i buy'
+2025-11-03 02:17:26,923 - INFO - [GenAdvisor] [QueryID: 20251103_021726] Processing query: i want to invest in banking sector. which shares should i buy'
+2025-11-03 02:17:26,924 - INFO - [GenAdvisor] [QueryID: 20251103_021726] Starting RAG processing
+2025-11-03 02:17:26,924 - INFO - [GenAdvisor] [QueryID: 20251103_021726] Starting RAG processing
+2025-11-03 02:17:26,924 - INFO - [GenAdvisor] [QueryID: 20251103_021726] Starting RAG processing
+2025-11-03 02:17:28,200 - ERROR - [GenAdvisor] [QueryID: 20251103_021726] Error processing query: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01jn1dcbrnfxarzxmnyb0kfvq3` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8990, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-03 02:17:28,200 - ERROR - [GenAdvisor] [QueryID: 20251103_021726] Error processing query: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01jn1dcbrnfxarzxmnyb0kfvq3` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8990, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-03 02:17:28,200 - ERROR - [GenAdvisor] [QueryID: 20251103_021726] Error processing query: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01jn1dcbrnfxarzxmnyb0kfvq3` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8990, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-03 02:19:39,713 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:19:39,713 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:19:39,713 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:19:39,714 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:19:39,714 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:19:39,714 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:19:39,715 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:19:39,715 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:19:39,715 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:19:58,318 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:19:58,318 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:19:58,318 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:19:58,319 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:19:58,319 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:19:58,319 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:19:58,319 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:19:58,319 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:19:58,319 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:19:58,320 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:19:58,320 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:19:58,320 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:20:22,313 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:20:22,313 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:20:22,313 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-03 02:20:22,315 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:20:22,315 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:20:22,315 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-03 02:20:22,315 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:20:22,315 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:20:22,315 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-03 02:20:41,151 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:20:41,151 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:20:41,151 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-03 02:20:41,152 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:20:41,152 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:20:41,152 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-03 02:20:41,152 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:20:41,152 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:20:41,152 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-03 02:20:41,152 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:20:41,152 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:20:41,152 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 02:20:45,666 - INFO - [GenAdvisor] [QueryID: 20251103_022045] Processing query: i want to invest in banking sector. which shares should i buy'
+2025-11-03 02:20:45,666 - INFO - [GenAdvisor] [QueryID: 20251103_022045] Processing query: i want to invest in banking sector. which shares should i buy'
+2025-11-03 02:20:45,666 - INFO - [GenAdvisor] [QueryID: 20251103_022045] Processing query: i want to invest in banking sector. which shares should i buy'
+2025-11-03 02:20:45,672 - INFO - [GenAdvisor] [QueryID: 20251103_022045] Starting RAG processing
+2025-11-03 02:20:45,672 - INFO - [GenAdvisor] [QueryID: 20251103_022045] Starting RAG processing
+2025-11-03 02:20:45,672 - INFO - [GenAdvisor] [QueryID: 20251103_022045] Starting RAG processing
+2025-11-03 02:20:52,414 - INFO - [GenAdvisor] [QueryID: 20251103_022045] Query processed successfully
+2025-11-03 02:20:52,414 - INFO - [GenAdvisor] [QueryID: 20251103_022045] Query processed successfully
+2025-11-03 02:20:52,414 - INFO - [GenAdvisor] [QueryID: 20251103_022045] Query processed successfully
+2025-11-03 02:20:52,417 - DEBUG - [GenAdvisor] [QueryID: 20251103_022045] Response length: 6184 chars
+2025-11-03 02:20:52,417 - DEBUG - [GenAdvisor] [QueryID: 20251103_022045] Response length: 6184 chars
+2025-11-03 02:20:52,417 - DEBUG - [GenAdvisor] [QueryID: 20251103_022045] Response length: 6184 chars

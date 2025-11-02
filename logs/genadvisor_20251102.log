@@ -1543,3 +1543,36 @@ TypeError: '>' not supported between instances of 'NoneType' and 'float'
 2025-11-02 22:33:27,719 - DEBUG - [GenAdvisor] [QueryID: 20251102_223326] Response length: 249 chars
 2025-11-02 22:33:27,719 - DEBUG - [GenAdvisor] [QueryID: 20251102_223326] Response length: 249 chars
 2025-11-02 22:33:27,719 - DEBUG - [GenAdvisor] [QueryID: 20251102_223326] Response length: 249 chars
+2025-11-02 22:34:07,610 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 22:34:07,610 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 22:34:07,610 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 22:34:07,611 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 22:34:07,611 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 22:34:07,611 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 22:34:07,612 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 22:34:07,612 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 22:34:07,612 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 22:34:24,652 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 22:34:24,652 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 22:34:24,652 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 22:34:24,652 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-02 22:34:24,652 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-02 22:34:24,652 - INFO - [GenAdvisor] [OK] Knowledge graph linked to advisor engine
+2025-11-02 22:34:24,653 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 22:34:24,653 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 22:34:24,653 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 22:34:24,653 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 22:34:24,653 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 22:34:24,653 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-03 01:41:30,453 - INFO - [GenAdvisor] [QueryID: 20251103_014130] Processing query: i want to invest 10000 rs in the market. what stocks should i pick
+2025-11-03 01:41:30,453 - INFO - [GenAdvisor] [QueryID: 20251103_014130] Processing query: i want to invest 10000 rs in the market. what stocks should i pick
+2025-11-03 01:41:30,453 - INFO - [GenAdvisor] [QueryID: 20251103_014130] Processing query: i want to invest 10000 rs in the market. what stocks should i pick
+2025-11-03 01:41:30,454 - INFO - [GenAdvisor] [QueryID: 20251103_014130] Starting RAG processing
+2025-11-03 01:41:30,454 - INFO - [GenAdvisor] [QueryID: 20251103_014130] Starting RAG processing
+2025-11-03 01:41:30,454 - INFO - [GenAdvisor] [QueryID: 20251103_014130] Starting RAG processing
+2025-11-03 01:41:32,113 - INFO - [GenAdvisor] [QueryID: 20251103_014130] Query processed successfully
+2025-11-03 01:41:32,113 - INFO - [GenAdvisor] [QueryID: 20251103_014130] Query processed successfully
+2025-11-03 01:41:32,113 - INFO - [GenAdvisor] [QueryID: 20251103_014130] Query processed successfully
+2025-11-03 01:41:32,114 - DEBUG - [GenAdvisor] [QueryID: 20251103_014130] Response length: 602 chars
+2025-11-03 01:41:32,114 - DEBUG - [GenAdvisor] [QueryID: 20251103_014130] Response length: 602 chars
+2025-11-03 01:41:32,114 - DEBUG - [GenAdvisor] [QueryID: 20251103_014130] Response length: 602 chars

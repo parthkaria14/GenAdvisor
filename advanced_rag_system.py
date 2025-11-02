@@ -12,6 +12,7 @@ from datetime import datetime, timedelta
 import asyncio
 import json
 import logging
+import re
 from dataclasses import dataclass
 from enum import Enum
 
@@ -111,7 +112,7 @@ class AdvancedRAGSystem:
         self.llm = ChatGroq(
             model=llm_model,  # mixtral-8x7b-32768 or llama2-70b-4096
             temperature=0.1,
-            max_tokens=2000,
+            max_tokens=4096,
             api_key=os.getenv("GROQ_API_KEY")  # Make sure to set this environment variable
     )
         self.advisor_engine = advisor_engine
@@ -1099,19 +1100,39 @@ class AdvancedRAGSystem:
         
         # Format quantitative analysis from advisor engine (PRIMARY SOURCE)
         quantitative_context = ""
-        if context.quantitative_analysis and context.quantitative_analysis.get('success'):
+        if context.quantitative_analysis:
             qa = context.quantitative_analysis
-            quantitative_context = f"""
+            
+            # Check if it's portfolio recommendation or stock analysis
+            if 'stocks' in qa or 'recommendations' in qa:  # Portfolio recommendation
+                quantitative_context = f"""
+PORTFOLIO OPTIMIZATION (FROM KNOWLEDGE GRAPH):
+Budget: ₹{(qa.get('budget', 0) or 0):,.2f}
+Strategy: {(qa.get('strategy', 'N/A') or 'N/A').upper()}
+Expected Return: {(qa.get('expected_return', 0) or 0)*100:.1f}%
+Risk Level: {(qa.get('risk_level', 0) or 0)*100:.1f}%
+Sharpe Ratio: {(qa.get('sharpe_ratio', 0) or 0):.2f}
+
+RECOMMENDED STOCK ALLOCATION:
+{chr(10).join(f"  • {symbol}: {weight*100:.1f}% (₹{(qa.get('budget', 0) or 0)*weight:,.2f})" for symbol, weight in list(qa.get('stocks', {}).items())[:15]) if qa.get('stocks') else "  No stocks allocated (insufficient data or optimization failed)"}
+
+SPECIFIC RECOMMENDATIONS:
+{chr(10).join(f"  • {rec.get('action', 'N/A')} {rec.get('symbol', 'N/A')}: {rec.get('shares', 0) or 0} shares (₹{(rec.get('amount', 0) or 0):,.2f}) - {rec.get('reason', 'N/A')}" for rec in qa.get('recommendations', [])[:10]) if qa.get('recommendations') else "  No specific recommendations generated"}
+
+Rebalancing Needed: {'Yes' if qa.get('rebalancing_needed') else 'No'}
+"""
+            elif qa.get('success'):  # Stock analysis
+                quantitative_context = f"""
 QUANTITATIVE ANALYSIS (FROM KNOWLEDGE GRAPH):
 Stock Symbol: {qa.get('symbol', 'N/A')}
-Current Price: ₹{qa.get('current_price', 0):.2f}
-Target Price: ₹{qa.get('target_price', 0):.2f}
-Expected Return: {qa.get('expected_return', 0):.1f}%
-Action Recommendation: {qa.get('action', 'N/A').upper()}
-Confidence: {qa.get('confidence', 0)*100:.1f}%
+Current Price: ₹{(qa.get('current_price', 0) or 0):.2f}
+Target Price: ₹{(qa.get('target_price', 0) or 0):.2f}
+Expected Return: {(qa.get('expected_return', 0) or 0):.1f}%
+Action Recommendation: {(qa.get('action', 'N/A') or 'N/A').upper()}
+Confidence: {(qa.get('confidence', 0) or 0)*100:.1f}%
 
-Fundamental Score: {qa.get('fundamental_score', 0)*100:.1f}%
-Sentiment Score: {qa.get('sentiment_score', 0)*100:.1f}%
+Fundamental Score: {(qa.get('fundamental_score', 0) or 0)*100:.1f}%
+Sentiment Score: {(qa.get('sentiment_score', 0) or 0)*100:.1f}%
 
 Reasons:
 {chr(10).join('- ' + reason for reason in qa.get('reasons', []))}
@@ -1123,53 +1144,131 @@ Technical Indicators:
 {json.dumps(qa.get('technical_indicators', {}), indent=2)}
 """
         
-        # Format retrieved documents
+        # Format retrieved documents (truncate for portfolio queries to save tokens)
+        max_doc_length = 300 if context.query_type == QueryType.PORTFOLIO_ADVICE else 500
+        max_docs = 3 if context.query_type == QueryType.PORTFOLIO_ADVICE else 5
         doc_context = "\n\n".join([
-            f"Source {i+1}: {doc.page_content[:500]}"
-            for i, doc in enumerate(context.relevant_docs)
+            f"Source {i+1}: {doc.page_content[:max_doc_length]}"
+            for i, doc in enumerate(context.relevant_docs[:max_docs])
         ]) if context.relevant_docs else "No additional documents found"
         
         # Format market data
         market_context = json.dumps(context.market_data, indent=2) if context.market_data else "No market data available"
         
         # Format Graph RAG results with ALL stock data
+        # For portfolio queries, prioritize recommended stocks and include ALL their data
         graph_context = ""
         if context.graph_results:
+            # For portfolio queries, create a map of recommended stocks for quick lookup
+            recommended_stocks_set = set()
+            if context.query_type == QueryType.PORTFOLIO_ADVICE and context.quantitative_analysis:
+                recommended_stocks_set = set(context.quantitative_analysis.get('stocks', {}).keys())
+            
             graph_context = "\n\nGRAPH KNOWLEDGE BASE RESULTS (ALL AVAILABLE DATA):\n"
-            for i, result in enumerate(context.graph_results[:10]):  # Top 10 results
-                node_data = result['data']
-                graph_context += f"\nNode {i+1}: {result['node']} (Type: {result['type']})\n"
-                
-                # Include ALL stock data from graph
-                if node_data.get('type') == 'stock':
-                    graph_context += f"  Company Name: {node_data.get('name', 'N/A')}\n"
-                    graph_context += f"  Current Price: ₹{node_data.get('price', 0):.2f}\n"
-                    graph_context += f"  Change: {node_data.get('change_percent', 0):.2f}%\n"
-                    graph_context += f"  Volume: {node_data.get('volume', 0)}\n"
-                    graph_context += f"  Market Cap: {node_data.get('market_cap', 0)}\n"
-                    graph_context += f"  Sector: {node_data.get('sector', 'N/A')}\n"
-                    graph_context += f"  PE Ratio: {node_data.get('pe_ratio', 'N/A')}\n"
-                    graph_context += f"  PB Ratio: {node_data.get('pb_ratio', 'N/A')}\n"
-                    graph_context += f"  Beta: {node_data.get('beta', 1.0)}\n"
-                    graph_context += f"  RSI: {node_data.get('rsi', 'N/A')}\n"
-                    graph_context += f"  MACD: {node_data.get('macd', 'N/A')}\n"
-                    graph_context += f"  52W High: ₹{node_data.get('fifty_two_week_high', 'N/A')}\n"
-                    graph_context += f"  52W Low: ₹{node_data.get('fifty_two_week_low', 'N/A')}\n"
-                elif node_data.get('type') == 'market_indicator':
-                    graph_context += f"  Advances: {node_data.get('advances', 0)}\n"
-                    graph_context += f"  Declines: {node_data.get('declines', 0)}\n"
-                    graph_context += f"  Market Sentiment: {node_data.get('sentiment', 'neutral')}\n"
-                else:
-                    # Generic node data
-                    for key, value in node_data.items():
-                        if key != 'type':
-                            graph_context += f"  {key}: {value}\n"
-                graph_context += f"  Relevance Score: {result.get('relevance_score', 0):.2f}\n"
+            
+            # First, show all recommended stocks with essential details only (to save tokens)
+            if recommended_stocks_set and self.knowledge_graph:
+                graph_context += "\n=== RECOMMENDED STOCKS (FROM PORTFOLIO ALLOCATION) ===\n"
+                for symbol in list(recommended_stocks_set)[:20]:  # Limit to top 20 recommended stocks
+                    if self.knowledge_graph.has_node(symbol):
+                        node_data = self.knowledge_graph.nodes[symbol]
+                        # Compact format: symbol, price, sector, key metrics only
+                        stock_price = node_data.get('price') or node_data.get('current_price')
+                        price_str = f"₹{stock_price:.2f}" if stock_price and stock_price > 0 else "N/A"
+                        sector = node_data.get('sector', 'N/A')
+                        pe = node_data.get('pe_ratio', 'N/A')
+                        
+                        graph_context += f"{symbol}: Price={price_str}, Sector={sector}, PE={pe}"
+                        
+                        # Add dividend yield if available
+                        div_yield = node_data.get('dividend_yield')
+                        if div_yield is not None:
+                            graph_context += f", DivYield={div_yield*100:.2f}%"
+                        
+                        # Add one news headline if available (to save tokens)
+                        for neighbor in self.knowledge_graph.neighbors(symbol):
+                            neighbor_data = self.knowledge_graph.nodes[neighbor]
+                            if neighbor_data.get('type') == 'news':
+                                news_title = neighbor_data.get('title', '')
+                                if news_title:
+                                    # Truncate long titles
+                                    if len(news_title) > 60:
+                                        news_title = news_title[:57] + "..."
+                                    graph_context += f", News: {news_title} ({neighbor_data.get('sentiment', 'neutral')})"
+                                break  # Only one news item per stock
+                        
+                        graph_context += "\n"
+            
+            # Then show other graph results (limited for portfolio queries to save tokens)
+            if context.query_type != QueryType.PORTFOLIO_ADVICE:
+                graph_context += "\n=== OTHER MARKET DATA ===\n"
+                for i, result in enumerate(context.graph_results[:10]):  # Limit to 10 results
+                    # Skip if already shown in recommended stocks section
+                    if result['node'] in recommended_stocks_set:
+                        continue
+                        
+                    node_data = result['data']
+                    
+                    # Compact format for non-portfolio queries
+                    if node_data.get('type') == 'stock':
+                        stock_price = node_data.get('price') or node_data.get('current_price')
+                        price_str = f"₹{stock_price:.2f}" if stock_price and stock_price > 0 else "N/A"
+                        graph_context += f"{result['node']}: Price={price_str}, Sector={node_data.get('sector', 'N/A')}, PE={node_data.get('pe_ratio', 'N/A')}\n"
+                    elif node_data.get('type') == 'market_indicator':
+                        graph_context += f"Market: Advances={node_data.get('advances', 0)}, Declines={node_data.get('declines', 0)}, Sentiment={node_data.get('sentiment', 'neutral')}\n"
+                    elif node_data.get('type') == 'news':
+                        title = node_data.get('title', 'N/A')
+                        if len(title) > 80:
+                            title = title[:77] + "..."
+                        graph_context += f"News: {title} ({node_data.get('sentiment', 'neutral')})\n"
         
         # Format technical indicators
         tech_context = json.dumps(context.technical_indicators, indent=2) if context.technical_indicators else "No technical data available"
         
-        prompt = f"""You are an expert Indian market investment advisor. Answer the query using ONLY the data provided below. DO NOT make up or invent data.
+        # Adjust prompt instructions based on query type
+        if context.query_type == QueryType.PORTFOLIO_ADVICE:
+            instructions = """
+CRITICAL INSTRUCTIONS FOR PORTFOLIO ADVICE:
+1. Use the PORTFOLIO OPTIMIZATION data above as the PRIMARY source - this is calculated from the knowledge graph
+2. For each stock in the RECOMMENDED STOCK ALLOCATION section, look up its data in the GRAPH KNOWLEDGE BASE RESULTS section
+3. CALCULATE SHARES: For each stock, use the formula: Shares = (Allocated Amount) / (Current Price)
+   - Example: If ₹6,666.67 is allocated and current price is ₹1,232.80, then shares = 6666.67 / 1232.80 = 5 shares (rounded)
+   - Always round shares to whole numbers
+   - If price is available in the graph, you MUST calculate and show shares
+4. If a stock's price is NOT in the graph but you have knowledge of typical price ranges, you can:
+   - Mention the price is not in the knowledge graph
+   - Use your knowledge to provide an estimated price range
+   - Calculate shares based on estimated price (clearly mark as estimate)
+5. Create a DETAILED TABLE showing:
+   - Stock ticker and company name
+   - Sector
+   - Allocation % and ₹ Amount
+   - Current Price (from graph or estimate)
+   - Calculated Shares
+6. For stocks with news data in the graph, briefly mention relevant news/sentiment
+7. Apply your investment expertise to:
+   - Explain why these stocks are recommended for this budget
+   - Discuss diversification benefits across sectors
+   - Mention risk considerations
+   - Suggest portfolio rebalancing strategy
+8. Format all amounts in ₹ (INR) with proper formatting (use commas: ₹10,000)
+9. Be specific and factual - use actual prices when available, estimates when not
+10. If data is missing from graph but you have knowledge, use it but clearly state it's from your knowledge base, not the graph
+"""
+        else:
+            instructions = """
+CRITICAL INSTRUCTIONS:
+1. Use the data provided above as the PRIMARY source - this comes from the knowledge graph
+2. If the data shows a specific price (e.g., ₹X.XX), use that EXACT price in your response
+3. For stock-specific queries, use the quantitative analysis data which includes current price, target price, and recommendations
+4. Apply your expertise to interpret the data and provide meaningful insights
+5. If data is not available for a specific field, say "Not available in the knowledge base" rather than making something up
+6. Format currency as ₹ (INR) with proper formatting
+7. Be specific and factual - use actual numbers from the data
+8. Combine knowledge graph data with investment principles to provide comprehensive advice
+"""
+        
+        prompt = f"""You are an expert Indian market investment advisor with deep knowledge of stock markets, portfolio management, and risk assessment. Answer the query using the data provided from the knowledge graph, and apply your expertise to provide meaningful, actionable advice.
 
 Query: {query}
 Query Type: {context.query_type.value}
@@ -1190,16 +1289,9 @@ ADDITIONAL CONTEXT:
 
 Market Sentiment Score: {context.sentiment_score:.2f}
 
-CRITICAL INSTRUCTIONS:
-1. Use ONLY the data provided above - DO NOT invent or assume any prices, numbers, or facts
-2. If the data shows a specific price (e.g., ₹X.XX), use that EXACT price in your response
-3. If data is not available for a specific field, say "Not available in the knowledge base" rather than making something up
-4. Include specific numbers and data points from the quantitative analysis and graph data
-5. Format currency as ₹ (INR) with proper formatting
-6. Be concise and factual - use the actual data provided
-7. If you cannot answer the query with the provided data, clearly state what data is missing
+{instructions}
 
-Response (use ONLY the data provided above):"""
+Response:"""
         
         return prompt
     
@@ -1230,10 +1322,72 @@ Response (use ONLY the data provided above):"""
         # Get market context and technical indicators
         logger.debug(f"[RAG-{query_id}] Extracting market context and indicators from graph")
         quantitative_analysis = None
+        portfolio_recommendation = None
         technical_indicators_from_engine = {}
         
+        # Check if this is a portfolio query and extract budget/strategy
+        if query_type == QueryType.PORTFOLIO_ADVICE and self.advisor_engine:
+            try:
+                # Extract budget from query (e.g., "10000 rs", "1 lakh", "10,000")
+                budget = None
+                budget_patterns = [
+                    (r'(\d+(?:,\d{3})*(?:\.\d+)?)\s*(?:rs|rupees?|₹)', lambda m: float(m.group(1).replace(',', ''))),
+                    (r'(\d+(?:,\d{3})*(?:\.\d+)?)\s*(?:lakh|lac)', lambda m: float(m.group(1).replace(',', '')) * 100000),
+                    (r'(\d+(?:,\d{3})*(?:\.\d+)?)\s*(?:crore)', lambda m: float(m.group(1).replace(',', '')) * 10000000),
+                    (r'₹\s*(\d+(?:,\d{3})*(?:\.\d+)?)', lambda m: float(m.group(1).replace(',', ''))),
+                ]
+                
+                query_lower = query.lower()
+                for pattern, converter in budget_patterns:
+                    match = re.search(pattern, query_lower)
+                    if match:
+                        budget = converter(match)
+                        break
+                
+                # Default budget if not found
+                if not budget:
+                    budget = 100000  # Default 1 lakh
+                    logger.info(f"[RAG-{query_id}] No budget found, using default: ₹{budget}")
+                else:
+                    logger.info(f"[RAG-{query_id}] Extracted budget: ₹{budget}")
+                
+                # Determine strategy from query
+                from investment_advisor_engine import InvestmentStrategy
+                strategy = InvestmentStrategy.MODERATE  # Default
+                if 'conservative' in query_lower or 'safe' in query_lower:
+                    strategy = InvestmentStrategy.CONSERVATIVE
+                elif 'aggressive' in query_lower or 'risk' in query_lower:
+                    strategy = InvestmentStrategy.AGGRESSIVE
+                elif 'growth' in query_lower:
+                    strategy = InvestmentStrategy.GROWTH
+                elif 'value' in query_lower:
+                    strategy = InvestmentStrategy.VALUE
+                
+                logger.info(f"[RAG-{query_id}] Running portfolio optimization for ₹{budget} with {strategy.value} strategy...")
+                
+                # Run portfolio optimization (queries knowledge graph for stocks)
+                portfolio_result = await self.advisor_engine.optimize_portfolio(
+                    budget=budget,
+                    strategy=strategy
+                )
+                
+                portfolio_recommendation = {
+                    'budget': budget,
+                    'strategy': portfolio_result.strategy.value,
+                    'stocks': portfolio_result.stocks,
+                    'expected_return': portfolio_result.expected_return,
+                    'risk_level': portfolio_result.risk_level,
+                    'sharpe_ratio': portfolio_result.sharpe_ratio,
+                    'recommendations': portfolio_result.recommendations,
+                    'rebalancing_needed': portfolio_result.rebalancing_needed
+                }
+                logger.info(f"[RAG-{query_id}] Portfolio optimization complete. Expected return: {portfolio_result.expected_return*100:.1f}%")
+                
+            except Exception as e:
+                logger.error(f"[RAG-{query_id}] Portfolio optimization failed: {e}", exc_info=True)
+        
         # Check if this is a stock query and try to find the company even if entity extraction failed
-        if query_type == QueryType.STOCK_ANALYSIS and self.advisor_engine:
+        elif query_type == QueryType.STOCK_ANALYSIS and self.advisor_engine:
             stock_symbol = None
             
             # Try to get company from extracted entities first
@@ -1310,7 +1464,7 @@ Response (use ONLY the data provided above):"""
             technical_indicators=technical_indicators_from_engine, # <-- Use engine's data
             sentiment_score=sentiment_score,
             confidence_score=confidence_score,
-            quantitative_analysis=quantitative_analysis, # <-- Pass the full analysis
+            quantitative_analysis=portfolio_recommendation if portfolio_recommendation else quantitative_analysis, # <-- Pass portfolio or stock analysis
             graph_results=graph_results
         )
         
@@ -1334,6 +1488,60 @@ Response (use ONLY the data provided above):"""
         seen_nodes = set()
 
         try:
+            # For portfolio queries, get ALL available stocks from knowledge graph
+            if query_type == QueryType.PORTFOLIO_ADVICE:
+                logger.debug("Portfolio query detected - fetching all available stocks from knowledge graph")
+                # Get all stock nodes from knowledge graph
+                all_stocks = []
+                if self.knowledge_graph:
+                    for node in self.knowledge_graph.nodes():
+                        node_data = self.knowledge_graph.nodes[node]
+                        if node_data.get('type') == 'stock':
+                            all_stocks.append(node)
+                            results.append({
+                                'node': node,
+                                'data': node_data,
+                                'type': 'stock_info',
+                                'relevance_score': 0.8  # High relevance for portfolio queries
+                            })
+                            seen_nodes.add(node)
+                
+                logger.info(f"Found {len(all_stocks)} stocks in knowledge graph for portfolio recommendation")
+                
+                # Also get all sectors for diversification advice
+                if self.knowledge_graph:
+                    for node in self.knowledge_graph.nodes():
+                        node_data = self.knowledge_graph.nodes[node]
+                        if node_data.get('type') == 'sector' and node not in seen_nodes:
+                            results.append({
+                                'node': node,
+                                'data': node_data,
+                                'type': 'sector_info',
+                                'relevance_score': 0.7
+                            })
+                            seen_nodes.add(node)
+                
+                # Add market context
+                if self.knowledge_graph.has_node('market_breadth') and 'market_breadth' not in seen_nodes:
+                    results.append({
+                        'node': 'market_breadth',
+                        'data': self.knowledge_graph.nodes['market_breadth'],
+                        'type': 'market_context',
+                        'relevance_score': 0.9  # High relevance for portfolio
+                    })
+                    seen_nodes.add('market_breadth')
+                
+                # For portfolio queries, also get news for recommended stocks
+                # (News will be fetched during prompt formatting, but we can also include it here)
+                
+                # Sort by relevance and return
+                results.sort(key=lambda x: x['relevance_score'], reverse=True)
+                
+                # For portfolio queries, limit results to reduce prompt size
+                # News will be fetched per stock during prompt formatting (already handled above)
+                return results[:20]  # Limit to 20 stocks for portfolio queries (to reduce token usage)
+            
+            # For other query types, use entity-based approach
             # Get starting nodes based on entities
             start_nodes = []
             for company in entities.get('companies', []):
