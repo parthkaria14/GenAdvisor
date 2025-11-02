@@ -859,3 +859,159 @@ TypeError: '>' not supported between instances of 'NoneType' and 'float'
 2025-11-02 20:55:25,475 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
 2025-11-02 20:55:25,475 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
 2025-11-02 20:55:25,475 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 21:10:50,671 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 21:10:50,671 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 21:10:50,671 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 21:10:50,674 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 21:10:50,674 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 21:10:50,674 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 21:10:50,749 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 21:10:50,749 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 21:10:50,749 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 21:10:52,972 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 21:10:52,972 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 21:10:52,972 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 21:10:52,975 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 21:10:52,975 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 21:10:52,975 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 21:10:53,050 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 21:10:53,050 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 21:10:53,050 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 21:10:53,056 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 21:10:53,056 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 21:10:53,056 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 21:11:02,516 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1488.62
+2025-11-02 21:11:02,516 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1488.62
+2025-11-02 21:11:02,516 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1488.62
+2025-11-02 21:11:02,521 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 21:11:02,521 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 21:11:02,521 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 21:11:12,900 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 989.34
+2025-11-02 21:11:12,900 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 989.34
+2025-11-02 21:11:12,900 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 989.34
+2025-11-02 21:11:12,903 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 21:11:12,903 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 21:11:12,903 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 21:11:23,652 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2059.33
+2025-11-02 21:11:23,652 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2059.33
+2025-11-02 21:11:23,652 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2059.33
+2025-11-02 21:11:23,660 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 21:11:23,660 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 21:11:23,660 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 21:11:33,784 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3063.30
+2025-11-02 21:11:33,784 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3063.30
+2025-11-02 21:11:33,784 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3063.30
+2025-11-02 21:11:33,789 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 21:11:33,789 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 21:11:33,789 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 21:11:39,130 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1346.99
+2025-11-02 21:11:39,130 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1346.99
+2025-11-02 21:11:39,130 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1346.99
+2025-11-02 21:11:39,132 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 21:11:39,132 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 21:11:39,132 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 21:11:47,964 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.03
+2025-11-02 21:11:47,964 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.03
+2025-11-02 21:11:47,964 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.03
+2025-11-02 21:11:47,967 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 21:11:47,967 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 21:11:47,967 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 21:11:58,227 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1043.56
+2025-11-02 21:11:58,227 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1043.56
+2025-11-02 21:11:58,227 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1043.56
+2025-11-02 21:11:58,230 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 21:11:58,230 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 21:11:58,230 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 21:12:05,087 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1482.83
+2025-11-02 21:12:05,087 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1482.83
+2025-11-02 21:12:05,087 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1482.83
+2025-11-02 21:12:05,089 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 21:12:05,089 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 21:12:05,089 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 21:12:09,688 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2459.75
+2025-11-02 21:12:09,688 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2459.75
+2025-11-02 21:12:09,688 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2459.75
+2025-11-02 21:12:09,689 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 21:12:09,689 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 21:12:09,689 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 21:12:12,656 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4049.48
+2025-11-02 21:12:12,656 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4049.48
+2025-11-02 21:12:12,656 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4049.48
+2025-11-02 21:12:12,657 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 21:12:12,657 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 21:12:12,657 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 21:12:12,658 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 21:12:12,658 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 21:12:12,658 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 21:12:15,872 - INFO - [GenAdvisor] Predicting prices for HDFCBANK.NS with horizon=5
+2025-11-02 21:12:15,872 - INFO - [GenAdvisor] Predicting prices for HDFCBANK.NS with horizon=5
+2025-11-02 21:12:15,872 - INFO - [GenAdvisor] Predicting prices for HDFCBANK.NS with horizon=5
+2025-11-02 21:12:16,124 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:12:16,124 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:12:16,124 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:12:20,776 - INFO - [GenAdvisor] Prediction complete for HDFCBANK.NS. Current: 987.3, Predicted: [988.1619611136902, 987.0555506567621, 986.4451307798311, 986.0496098878357, 985.848823206545]
+2025-11-02 21:12:20,776 - INFO - [GenAdvisor] Prediction complete for HDFCBANK.NS. Current: 987.3, Predicted: [988.1619611136902, 987.0555506567621, 986.4451307798311, 986.0496098878357, 985.848823206545]
+2025-11-02 21:12:20,776 - INFO - [GenAdvisor] Prediction complete for HDFCBANK.NS. Current: 987.3, Predicted: [988.1619611136902, 987.0555506567621, 986.4451307798311, 986.0496098878357, 985.848823206545]
+2025-11-02 21:12:20,781 - INFO - [GenAdvisor] Predicting prices for HDFCBANK.NS with horizon=5
+2025-11-02 21:12:20,781 - INFO - [GenAdvisor] Predicting prices for HDFCBANK.NS with horizon=5
+2025-11-02 21:12:20,781 - INFO - [GenAdvisor] Predicting prices for HDFCBANK.NS with horizon=5
+2025-11-02 21:12:20,932 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:12:20,932 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:12:20,932 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:12:27,850 - INFO - [GenAdvisor] Prediction complete for HDFCBANK.NS. Current: 987.3, Predicted: [988.2141921870697, 987.4955881456995, 987.0636825109407, 986.7821212890121, 986.612394588114]
+2025-11-02 21:12:27,850 - INFO - [GenAdvisor] Prediction complete for HDFCBANK.NS. Current: 987.3, Predicted: [988.2141921870697, 987.4955881456995, 987.0636825109407, 986.7821212890121, 986.612394588114]
+2025-11-02 21:12:27,850 - INFO - [GenAdvisor] Prediction complete for HDFCBANK.NS. Current: 987.3, Predicted: [988.2141921870697, 987.4955881456995, 987.0636825109407, 986.7821212890121, 986.612394588114]
+2025-11-02 21:23:44,960 - INFO - [GenAdvisor] Predicting prices for RELIANCE.NS with horizon=5
+2025-11-02 21:23:44,960 - INFO - [GenAdvisor] Predicting prices for RELIANCE.NS with horizon=5
+2025-11-02 21:23:44,960 - INFO - [GenAdvisor] Predicting prices for RELIANCE.NS with horizon=5
+2025-11-02 21:23:45,543 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:23:45,543 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:23:45,543 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:23:51,139 - INFO - [GenAdvisor] Prediction complete for RELIANCE.NS. Current: 1486.4, Predicted: [1490.810901207006, 1493.53784900623, 1490.6439723810843, 1493.5409966670416, 1491.060751362678]
+2025-11-02 21:23:51,139 - INFO - [GenAdvisor] Prediction complete for RELIANCE.NS. Current: 1486.4, Predicted: [1490.810901207006, 1493.53784900623, 1490.6439723810843, 1493.5409966670416, 1491.060751362678]
+2025-11-02 21:23:51,139 - INFO - [GenAdvisor] Prediction complete for RELIANCE.NS. Current: 1486.4, Predicted: [1490.810901207006, 1493.53784900623, 1490.6439723810843, 1493.5409966670416, 1491.060751362678]
+2025-11-02 21:23:51,146 - INFO - [GenAdvisor] Predicting prices for RELIANCE.NS with horizon=5
+2025-11-02 21:23:51,146 - INFO - [GenAdvisor] Predicting prices for RELIANCE.NS with horizon=5
+2025-11-02 21:23:51,146 - INFO - [GenAdvisor] Predicting prices for RELIANCE.NS with horizon=5
+2025-11-02 21:23:51,322 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:23:51,322 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:23:51,322 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:23:57,113 - INFO - [GenAdvisor] Prediction complete for RELIANCE.NS. Current: 1486.4, Predicted: [1493.9017105522514, 1496.5321999164169, 1493.5856695017508, 1496.479899521961, 1494.020145340797]
+2025-11-02 21:23:57,113 - INFO - [GenAdvisor] Prediction complete for RELIANCE.NS. Current: 1486.4, Predicted: [1493.9017105522514, 1496.5321999164169, 1493.5856695017508, 1496.479899521961, 1494.020145340797]
+2025-11-02 21:23:57,113 - INFO - [GenAdvisor] Prediction complete for RELIANCE.NS. Current: 1486.4, Predicted: [1493.9017105522514, 1496.5321999164169, 1493.5856695017508, 1496.479899521961, 1494.020145340797]
+2025-11-02 21:27:19,375 - INFO - [GenAdvisor] Predicting prices for TCS.NS with horizon=5
+2025-11-02 21:27:19,375 - INFO - [GenAdvisor] Predicting prices for TCS.NS with horizon=5
+2025-11-02 21:27:19,375 - INFO - [GenAdvisor] Predicting prices for TCS.NS with horizon=5
+2025-11-02 21:27:21,085 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:27:21,085 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:27:21,085 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:27:32,564 - INFO - [GenAdvisor] Prediction complete for TCS.NS. Current: 3058.0, Predicted: [3072.887755099296, 3072.1023146734206, 3073.071881204989, 3072.8177224147407, 3073.246850050859]
+2025-11-02 21:27:32,564 - INFO - [GenAdvisor] Prediction complete for TCS.NS. Current: 3058.0, Predicted: [3072.887755099296, 3072.1023146734206, 3073.071881204989, 3072.8177224147407, 3073.246850050859]
+2025-11-02 21:27:32,564 - INFO - [GenAdvisor] Prediction complete for TCS.NS. Current: 3058.0, Predicted: [3072.887755099296, 3072.1023146734206, 3073.071881204989, 3072.8177224147407, 3073.246850050859]
+2025-11-02 21:27:32,582 - INFO - [GenAdvisor] Predicting prices for TCS.NS with horizon=5
+2025-11-02 21:27:32,582 - INFO - [GenAdvisor] Predicting prices for TCS.NS with horizon=5
+2025-11-02 21:27:32,582 - INFO - [GenAdvisor] Predicting prices for TCS.NS with horizon=5
+2025-11-02 21:27:32,829 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:27:32,829 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:27:32,829 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:27:41,067 - INFO - [GenAdvisor] Prediction complete for TCS.NS. Current: 3058.0, Predicted: [3062.496840659141, 3061.3076300249068, 3062.017252594378, 3061.4454868781654, 3061.722088135652]
+2025-11-02 21:27:41,067 - INFO - [GenAdvisor] Prediction complete for TCS.NS. Current: 3058.0, Predicted: [3062.496840659141, 3061.3076300249068, 3062.017252594378, 3061.4454868781654, 3061.722088135652]
+2025-11-02 21:27:41,067 - INFO - [GenAdvisor] Prediction complete for TCS.NS. Current: 3058.0, Predicted: [3062.496840659141, 3061.3076300249068, 3062.017252594378, 3061.4454868781654, 3061.722088135652]
+2025-11-02 21:40:26,147 - INFO - [GenAdvisor] Predicting prices for ICICIBANK.NS with horizon=5
+2025-11-02 21:40:26,147 - INFO - [GenAdvisor] Predicting prices for ICICIBANK.NS with horizon=5
+2025-11-02 21:40:26,147 - INFO - [GenAdvisor] Predicting prices for ICICIBANK.NS with horizon=5
+2025-11-02 21:40:26,782 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:40:26,782 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:40:26,782 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:40:39,572 - INFO - [GenAdvisor] Prediction complete for ICICIBANK.NS. Current: 1345.3, Predicted: [1339.5396696547791, 1338.9660592150087, 1339.1579092823442, 1339.0679568845394, 1339.1080458411882]
+2025-11-02 21:40:39,572 - INFO - [GenAdvisor] Prediction complete for ICICIBANK.NS. Current: 1345.3, Predicted: [1339.5396696547791, 1338.9660592150087, 1339.1579092823442, 1339.0679568845394, 1339.1080458411882]
+2025-11-02 21:40:39,572 - INFO - [GenAdvisor] Prediction complete for ICICIBANK.NS. Current: 1345.3, Predicted: [1339.5396696547791, 1338.9660592150087, 1339.1579092823442, 1339.0679568845394, 1339.1080458411882]
+2025-11-02 21:40:39,584 - INFO - [GenAdvisor] Predicting prices for ICICIBANK.NS with horizon=5
+2025-11-02 21:40:39,584 - INFO - [GenAdvisor] Predicting prices for ICICIBANK.NS with horizon=5
+2025-11-02 21:40:39,584 - INFO - [GenAdvisor] Predicting prices for ICICIBANK.NS with horizon=5
+2025-11-02 21:40:39,989 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:40:39,989 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:40:39,989 - INFO - [GenAdvisor] Running ARIMA-LSTM combo model on 63 data points
+2025-11-02 21:40:53,169 - INFO - [GenAdvisor] Prediction complete for ICICIBANK.NS. Current: 1345.3, Predicted: [1338.3009397010132, 1337.9633297991152, 1338.1722210728105, 1338.158387144244, 1338.219903732271]
+2025-11-02 21:40:53,169 - INFO - [GenAdvisor] Prediction complete for ICICIBANK.NS. Current: 1345.3, Predicted: [1338.3009397010132, 1337.9633297991152, 1338.1722210728105, 1338.158387144244, 1338.219903732271]
+2025-11-02 21:40:53,169 - INFO - [GenAdvisor] Prediction complete for ICICIBANK.NS. Current: 1345.3, Predicted: [1338.3009397010132, 1337.9633297991152, 1338.1722210728105, 1338.158387144244, 1338.219903732271]

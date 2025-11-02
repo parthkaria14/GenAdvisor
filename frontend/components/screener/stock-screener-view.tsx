@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { getScreenerMock, postScreener } from "@/lib/api"
+import { getScreenerMock, postScreener, getPricePrediction } from "@/lib/api"
 import { PredictionDialog } from "./prediction-dialog"
 
 type Row = {
@@ -15,7 +15,6 @@ type Row = {
   marketCap: "Small" | "Mid" | "Large"
   pe: number
   price: number
-  predictedPrice?: number | null
 }
 
 export default function StockScreenerView() {
@@ -23,10 +22,9 @@ export default function StockScreenerView() {
   const [cap, setCap] = useState<"All" | Row["marketCap"]>("All")
   const [sector, setSector] = useState<"All" | string>("All")
   const [maxPE, setMaxPE] = useState<string>("")
-  const [includePredictions, setIncludePredictions] = useState<boolean>(false)
   const [rows, setRows] = useState<Row[]>(base)
   const [loading, setLoading] = useState<boolean>(false)
-  const [selectedPrediction, setSelectedPrediction] = useState<{ symbol: string; price: number; predicted: number } | null>(null)
+  const [selectedPrediction, setSelectedPrediction] = useState<{ symbol: string; price: number; predicted: number | null } | null>(null)
   const [market, setMarket] = useState<"NSE" | "BSE">("NSE")
 
   const sectors = useMemo(() => Array.from(new Set(base.map((r) => r.sector))).sort(), [base])
@@ -42,18 +40,16 @@ export default function StockScreenerView() {
       }
       if (sector !== "All") payload.sector = sector
       if (maxPE) payload.pe_max = Number(maxPE)
-      payload.include_predictions = includePredictions
+      payload.include_predictions = false // Never include predictions in screener
       const res = await postScreener(payload)
       console.log("Screener response:", res)
       const mapped: Row[] = res.stocks.map((s) => {
-        console.log(`Stock ${s.symbol}: predicted_price =`, s.predicted_price)
         return {
           symbol: s.symbol,
           sector: s.sector || "Unknown",
           marketCap: (s.market_cap ?? 0) > 1e11 ? "Large" : (s.market_cap ?? 0) > 5e10 ? "Mid" : "Small",
           pe: s.pe_ratio ?? 0,
           price: s.price ?? 0,
-          predictedPrice: s.predicted_price ?? null,
         }
       })
       setRows(mapped)
@@ -69,6 +65,31 @@ export default function StockScreenerView() {
       setRows(filtered)
     } finally {
       setLoading(false)
+    }
+  }
+
+  async function handlePredictPrice(symbol: string, price: number) {
+    try {
+      // Normalize symbol format for API
+      const normalizedSymbol = symbol.includes('.') ? symbol : `${symbol}.NS`
+      
+      // Get prediction
+      const prediction = await getPricePrediction(normalizedSymbol, 5)
+      
+      // Open dialog with prediction
+      setSelectedPrediction({
+        symbol: symbol,
+        price: price,
+        predicted: prediction.predicted_next_price
+      })
+    } catch (error) {
+      console.error("Error getting prediction:", error)
+      // Still open dialog with null prediction so user sees error
+      setSelectedPrediction({
+        symbol: symbol,
+        price: price,
+        predicted: null
+      })
     }
   }
 
@@ -141,27 +162,12 @@ export default function StockScreenerView() {
                 setCap("All")
                 setSector("All")
                 setMaxPE("")
-                setIncludePredictions(false)
                 setRows(base)
               }}
               disabled={loading}
             >
               Reset
             </Button>
-          </div>
-        </CardContent>
-        <CardContent className="pt-0">
-          <div className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              id="include-predictions"
-              checked={includePredictions}
-              onChange={(e) => setIncludePredictions(e.target.checked)}
-              className="h-4 w-4 rounded border-gray-300"
-            />
-            <label htmlFor="include-predictions" className="text-sm text-muted-foreground cursor-pointer">
-              Include price predictions (ARIMA-LSTM)
-            </label>
           </div>
         </CardContent>
       </Card>
@@ -179,16 +185,11 @@ export default function StockScreenerView() {
                 <TableHead className="text-right">MCap</TableHead>
                 <TableHead className="text-right">P/E</TableHead>
                 <TableHead className="text-right">Current Price</TableHead>
-                {includePredictions && <TableHead className="text-right">Predicted Price</TableHead>}
-                {includePredictions && <TableHead className="text-right">Change %</TableHead>}
+                <TableHead className="text-center">Action</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {rows.map((r) => {
-                const priceChange =
-                  r.predictedPrice !== null && r.predictedPrice !== undefined && r.price > 0
-                    ? ((r.predictedPrice - r.price) / r.price) * 100
-                    : null
                 return (
                   <TableRow key={r.symbol}>
                     <TableCell className="font-medium">{r.symbol}</TableCell>
@@ -196,43 +197,22 @@ export default function StockScreenerView() {
                     <TableCell className="text-right">{r.marketCap}</TableCell>
                     <TableCell className="text-right">{r.pe.toFixed(1)}</TableCell>
                     <TableCell className="text-right">{r.price.toFixed(2)}</TableCell>
-                    {includePredictions && (
-                      <>
-                        <TableCell className="text-right">
-                          {r.predictedPrice !== null && r.predictedPrice !== undefined ? (
-                            <button
-                              onClick={() => setSelectedPrediction({ symbol: r.symbol, price: r.price, predicted: r.predictedPrice! })}
-                              className="text-primary hover:underline font-medium"
-                            >
-                              ₹{r.predictedPrice.toFixed(2)}
-                            </button>
-                          ) : (
-                            "N/A"
-                          )}
-                        </TableCell>
-                        <TableCell className="text-right">
-                          {priceChange !== null ? (
-                            <span
-                              className={
-                                priceChange >= 0 ? "text-green-600 font-medium" : "text-red-600 font-medium"
-                              }
-                            >
-                              {priceChange >= 0 ? "+" : ""}
-                              {priceChange.toFixed(2)}%
-                            </span>
-                          ) : (
-                            <span className="text-muted-foreground">N/A</span>
-                          )}
-                        </TableCell>
-                      </>
-                    )}
+                    <TableCell className="text-center">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => handlePredictPrice(r.symbol, r.price)}
+                      >
+                        Predict Price
+                      </Button>
+                    </TableCell>
                   </TableRow>
                 )
               })}
               {rows.length === 0 && (
                 <TableRow>
                   <TableCell
-                    colSpan={includePredictions ? 7 : 5}
+                    colSpan={6}
                     className="text-center text-sm text-muted-foreground"
                   >
                     No results. Adjust filters.
