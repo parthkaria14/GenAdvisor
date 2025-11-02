@@ -68,13 +68,16 @@ class StockRecommendation:
 
 class LocalInvestmentAdvisorEngine:
     """
-    Investment advisory engine that works with local file storage
+    Investment advisory engine that works with knowledge graph from RAG system
+    All data (prices, stocks, indicators, news) comes from the knowledge graph
     """
     
-    def __init__(self, data_dir: str = "data/realtime"):
+    def __init__(self, data_dir: str = "data/realtime", knowledge_graph=None, rag_system=None):
         self.data_dir = data_dir
+        self.knowledge_graph = knowledge_graph  # Reference to RAG system's knowledge graph
+        self.rag_system = rag_system  # Reference to RAG system for additional data access
         
-        # Ensure data directory exists
+        # Ensure data directory exists (fallback for file-based operations)
         os.makedirs(self.data_dir, exist_ok=True)
         
         # Load pre-trained models if available
@@ -165,15 +168,50 @@ class LocalInvestmentAdvisorEngine:
         return None
     
     def _get_stock_data(self, symbol: str) -> Dict:
-        """Get stock data from local files"""
-        # Try specific stock file first
+        """Get stock data from knowledge graph (primary source)"""
+        # Primary: Query knowledge graph
+        if self.knowledge_graph and self.knowledge_graph.has_node(symbol):
+            node_data = self.knowledge_graph.nodes[symbol]
+            if node_data.get('type') == 'stock':
+                # Extract stock data from graph node attributes
+                stock_data = {
+                    'symbol': symbol,
+                    'name': node_data.get('name', symbol),
+                    'sector': node_data.get('sector', 'Unknown'),
+                    'current_price': node_data.get('price', 0),
+                    'change_percent': node_data.get('change_percent', 0),
+                    'volume': node_data.get('volume', 0),
+                    'market_cap': node_data.get('market_cap', 0),
+                    'pe_ratio': node_data.get('pe_ratio'),
+                    'pb_ratio': node_data.get('pb_ratio'),
+                    'dividend_yield': node_data.get('dividend_yield'),
+                    'beta': node_data.get('beta', 1.0),
+                    'fifty_two_week_high': node_data.get('fifty_two_week_high'),
+                    'fifty_two_week_low': node_data.get('fifty_two_week_low'),
+                    'open': node_data.get('open'),
+                    'high': node_data.get('high'),
+                    'low': node_data.get('low'),
+                    'close': node_data.get('close')
+                }
+                # Also get technical indicators from graph
+                stock_data['rsi'] = node_data.get('rsi')
+                stock_data['macd'] = node_data.get('macd')
+                stock_data['sma_20'] = node_data.get('sma_20')
+                stock_data['sma_50'] = node_data.get('sma_50')
+                return stock_data
+        
+        # Fallback: Try RAG system's file_data if available
+        if self.rag_system and hasattr(self.rag_system, 'file_data'):
+            stock_data = self.rag_system.file_data.get('stocks', {}).get(symbol)
+            if stock_data:
+                return stock_data
+        
+        # Last resort: Read from files (legacy support)
         stock_file = os.path.join(self.data_dir, f"stock_{symbol.replace('.', '_')}.json")
         data = self._load_from_file(stock_file)
-        
         if data:
             return data
         
-        # Try CSV file
         csv_file = os.path.join(self.data_dir, "stocks.csv")
         if os.path.exists(csv_file):
             try:
@@ -187,24 +225,107 @@ class LocalInvestmentAdvisorEngine:
         return {}
     
     def _get_technical_indicators(self, symbol: str) -> Dict:
-        """Get technical indicators from local files"""
+        """Get technical indicators from knowledge graph (primary source)"""
+        # Primary: Query knowledge graph
+        if self.knowledge_graph and self.knowledge_graph.has_node(symbol):
+            node_data = self.knowledge_graph.nodes[symbol]
+            if node_data.get('type') == 'stock':
+                indicators = {
+                    'rsi': node_data.get('rsi'),
+                    'macd': node_data.get('macd'),
+                    'sma_20': node_data.get('sma_20'),
+                    'sma_50': node_data.get('sma_50'),
+                    'bollinger_upper': node_data.get('bollinger_upper'),
+                    'bollinger_lower': node_data.get('bollinger_lower')
+                }
+                # Filter out None values
+                return {k: v for k, v in indicators.items() if v is not None}
+        
+        # Fallback: Try RAG system's file_data
+        if self.rag_system and hasattr(self.rag_system, 'file_data'):
+            indicators = self.rag_system.file_data.get('technical_indicators', {}).get(symbol, {})
+            if indicators:
+                return indicators
+        
+        # Last resort: Read from files (legacy support)
         indicators_file = os.path.join(self.data_dir, "technical_indicators.json")
         all_indicators = self._load_from_file(indicators_file)
-        
         if all_indicators:
             return all_indicators.get(symbol, {})
         
         return {}
     
     def _get_market_breadth(self) -> Dict:
-        """Get market breadth data from local files"""
+        """Get market breadth data from knowledge graph (primary source)"""
+        # Primary: Query knowledge graph
+        if self.knowledge_graph and self.knowledge_graph.has_node('market_breadth'):
+            node_data = self.knowledge_graph.nodes['market_breadth']
+            if node_data.get('type') == 'market_indicator':
+                return {
+                    'advances': node_data.get('advances', 0),
+                    'declines': node_data.get('declines', 0),
+                    'market_sentiment': node_data.get('sentiment', 'neutral'),
+                    'timestamp': node_data.get('timestamp', ''),
+                    'advance_decline_ratio': (
+                        node_data.get('advances', 0) / max(node_data.get('declines', 1), 1)
+                    )
+                }
+        
+        # Fallback: Try RAG system's file_data
+        if self.rag_system and hasattr(self.rag_system, 'file_data'):
+            breadth_data = self.rag_system.file_data.get('market_breadth', {})
+            if breadth_data:
+                return breadth_data
+        
+        # Last resort: Read from files (legacy support)
         breadth_file = os.path.join(self.data_dir, "market_breadth.json")
         return self._load_from_file(breadth_file) or {}
     
     def _get_sector_performance(self) -> Dict:
-        """Get sector performance from local files"""
-        sectors_file = os.path.join(self.data_dir, "sector_performance.json")
-        return self._load_from_file(sectors_file) or {}
+        """Get sector performance from knowledge graph (primary source)"""
+        sector_data = {}
+        
+        # Primary: Query knowledge graph for all sector nodes
+        if self.knowledge_graph:
+            # Get all sector nodes and their related stocks
+            for node in self.knowledge_graph.nodes():
+                node_data = self.knowledge_graph.nodes[node]
+                if node_data.get('type') == 'sector':
+                    # Get stocks in this sector
+                    sector_stocks = [
+                        neighbor for neighbor in self.knowledge_graph.neighbors(node)
+                        if self.knowledge_graph.nodes[neighbor].get('type') == 'stock'
+                    ]
+                    
+                    # Calculate sector aggregate metrics
+                    total_change = 0
+                    total_volume = 0
+                    stock_count = 0
+                    
+                    for stock_symbol in sector_stocks:
+                        stock_data = self.knowledge_graph.nodes[stock_symbol]
+                        total_change += stock_data.get('change_percent', 0)
+                        total_volume += stock_data.get('volume', 0)
+                        stock_count += 1
+                    
+                    if stock_count > 0:
+                        sector_data[node] = {
+                            'average_change': total_change / stock_count,
+                            'total_volume': total_volume,
+                            'stock_count': stock_count,
+                            'stocks': sector_stocks[:10]  # Top 10 stocks
+                        }
+        
+        # Fallback: Try RAG system's file_data
+        if not sector_data and self.rag_system and hasattr(self.rag_system, 'file_data'):
+            sector_data = self.rag_system.file_data.get('sector_performance', {})
+        
+        # Last resort: Read from files (legacy support)
+        if not sector_data:
+            sectors_file = os.path.join(self.data_dir, "sector_performance.json")
+            sector_data = self._load_from_file(sectors_file) or {}
+        
+        return sector_data
     
     async def analyze_stock(self, symbol: str) -> Dict:
         """Comprehensive analysis of a single stock"""
@@ -362,22 +483,48 @@ class LocalInvestmentAdvisorEngine:
         return min(max(score, 0), 1)  # Clamp between 0 and 1
     
     def _get_sentiment_score(self, symbol: str) -> float:
-        """Get sentiment score from available news data"""
-        # Check if we have news data
-        news_files = {
-            "RELIANCE.NS": "news_Reliance_Industries.csv",
-            "TCS.NS": "news_TCS.csv",
-            "INFY.NS": "news_Infosys.csv",
-            "HDFCBANK.NS": "news_HDFC_Bank.csv"
-        }
+        """Get sentiment score from knowledge graph news nodes (primary source)"""
+        sentiment_scores = []
         
-        if symbol in news_files:
-            news_path = os.path.join("data", news_files[symbol])
-            if os.path.exists(news_path):
-                # Simple sentiment based on news existence
-                return 0.1  # Slightly positive if news exists
+        # Primary: Query knowledge graph for news nodes connected to this stock
+        if self.knowledge_graph and self.knowledge_graph.has_node(symbol):
+            # Find news nodes connected to this stock
+            for neighbor in self.knowledge_graph.neighbors(symbol):
+                neighbor_data = self.knowledge_graph.nodes[neighbor]
+                if neighbor_data.get('type') == 'news':
+                    sentiment = neighbor_data.get('sentiment', 'neutral')
+                    # Convert sentiment string to numeric score
+                    sentiment_map = {
+                        'very_positive': 1.0,
+                        'positive': 0.5,
+                        'neutral': 0.0,
+                        'negative': -0.5,
+                        'very_negative': -1.0
+                    }
+                    score = sentiment_map.get(sentiment.lower(), 0.0)
+                    sentiment_scores.append(score)
         
-        return 0  # Neutral if no news data
+        # Fallback: Try RAG system's file_data
+        if not sentiment_scores and self.rag_system and hasattr(self.rag_system, 'file_data'):
+            # Search news data for mentions of this symbol
+            news_data = self.rag_system.file_data.get('news_data', [])
+            for news_item in news_data:
+                # Simple check if symbol is mentioned
+                content = f"{news_item.get('title', '')} {news_item.get('content', '')}"
+                if symbol.replace('.NS', '').replace('.BO', '') in content:
+                    sentiment = news_item.get('sentiment', 'neutral')
+                    sentiment_map = {
+                        'positive': 0.3,
+                        'neutral': 0.0,
+                        'negative': -0.3
+                    }
+                    sentiment_scores.append(sentiment_map.get(sentiment.lower(), 0.0))
+        
+        # Calculate average sentiment
+        if sentiment_scores:
+            return sum(sentiment_scores) / len(sentiment_scores)
+        
+        return 0.0  # Neutral if no news data
     
     def _predict_price(self, symbol: str, stock_data: Dict, technical_indicators: Dict) -> float:
         """Predict future stock price"""
@@ -629,25 +776,34 @@ class LocalInvestmentAdvisorEngine:
         )
     
     async def _get_stock_universe(self, strategy: InvestmentStrategy) -> List[str]:
-        """Get relevant stocks based on strategy from local data"""
-        
-        # Load all available stocks from CSV
-        csv_file = os.path.join(self.data_dir, "stocks.csv")
+        """Get relevant stocks based on strategy from knowledge graph (primary source)"""
         available_stocks = []
         
-        if os.path.exists(csv_file):
-            try:
-                df = pd.read_csv(csv_file)
-                available_stocks = df['symbol'].tolist()
-            except Exception as e:
-                logger.warning(f"Error reading stocks CSV: {e}")
-        
-        # If no CSV, check individual files
-        if not available_stocks:
-            stock_files = [f for f in os.listdir(self.data_dir) if f.startswith('stock_')]
-            for file in stock_files[:20]:  # Limit to 20 stocks
-                symbol = file.replace('stock_', '').replace('.json', '').replace('_', '.')
-                available_stocks.append(symbol)
+        # Primary: Query knowledge graph for all stock nodes
+        if self.knowledge_graph:
+            for node in self.knowledge_graph.nodes():
+                node_data = self.knowledge_graph.nodes[node]
+                if node_data.get('type') == 'stock':
+                    available_stocks.append(node)
+        elif self.rag_system and hasattr(self.rag_system, 'file_data'):
+            # Fallback: Get from RAG system's file_data
+            available_stocks = list(self.rag_system.file_data.get('stocks', {}).keys())
+        else:
+            # Last resort: Load from CSV
+            csv_file = os.path.join(self.data_dir, "stocks.csv")
+            if os.path.exists(csv_file):
+                try:
+                    df = pd.read_csv(csv_file)
+                    available_stocks = df['symbol'].tolist()
+                except Exception as e:
+                    logger.warning(f"Error reading stocks CSV: {e}")
+            
+            # If no CSV, check individual files
+            if not available_stocks:
+                stock_files = [f for f in os.listdir(self.data_dir) if f.startswith('stock_')]
+                for file in stock_files[:20]:
+                    symbol = file.replace('stock_', '').replace('.json', '').replace('_', '.')
+                    available_stocks.append(symbol)
         
         # Base universe - prioritize large caps
         base_universe = [
@@ -656,10 +812,10 @@ class LocalInvestmentAdvisorEngine:
             "AXISBANK.NS", "BAJFINANCE.NS", "HCLTECH.NS", "MARUTI.NS", "SUNPHARMA.NS"
         ]
         
-        # Filter to only available stocks
+        # Filter to only available stocks from knowledge graph
         universe = [s for s in base_universe if s in available_stocks]
         
-        # Add strategy-specific stocks if available
+        # Add strategy-specific stocks if available in knowledge graph
         if strategy == InvestmentStrategy.GROWTH:
             growth_stocks = ["ADANIENT.NS", "ADANIGREEN.NS"]
             universe.extend([s for s in growth_stocks if s in available_stocks and s not in universe])
@@ -670,7 +826,7 @@ class LocalInvestmentAdvisorEngine:
             income_stocks = ["HINDUNILVR.NS", "NESTLEIND.NS", "BRITANNIA.NS"]
             universe.extend([s for s in income_stocks if s in available_stocks and s not in universe])
         
-        return universe[:15]  # Limit to 15 stocks for optimization
+        return universe[:15] if universe else available_stocks[:15]  # Limit to 15 stocks for optimization
     
     async def _get_returns_and_risk(
         self,
@@ -1077,46 +1233,95 @@ class LocalInvestmentAdvisorEngine:
         return recommendations
     
     def get_market_summary(self) -> Dict:
-        """Get comprehensive market summary from local data"""
+        """Get comprehensive market summary from knowledge graph (primary source)"""
         try:
             market_breadth = self._get_market_breadth()
             sector_performance = self._get_sector_performance()
             
-            # Find top gainers and losers
+            # Find top gainers and losers from knowledge graph
             top_gainers = []
             top_losers = []
             most_active = []
             
-            # Check available stock files
-            stock_files = [f for f in os.listdir(self.data_dir) if f.startswith('stock_')]
-            
-            for file in stock_files[:100]:  # Check up to 100 stocks
-                file_path = os.path.join(self.data_dir, file)
-                stock_data = self._load_from_file(file_path)
-                
-                if stock_data:
-                    symbol = stock_data.get('symbol', '')
-                    price = stock_data.get('current_price', 0)
-                    volume = stock_data.get('volume', 0)
-                    
-                    # Calculate change percent (simplified)
-                    open_price = stock_data.get('open', price)
-                    if open_price > 0:
-                        change_pct = ((price - open_price) / open_price) * 100
+            # Primary: Query knowledge graph for all stock nodes
+            if self.knowledge_graph:
+                for node in self.knowledge_graph.nodes():
+                    node_data = self.knowledge_graph.nodes[node]
+                    if node_data.get('type') == 'stock':
+                        symbol = node
+                        price = node_data.get('price', 0)
+                        change_pct = node_data.get('change_percent', 0)
+                        volume = node_data.get('volume', 0)
                         
-                        stock_info = {
-                            'symbol': symbol,
-                            'price': price,
-                            'change_percent': change_pct,
-                            'volume': volume
-                        }
+                        if price > 0:  # Only include stocks with valid price
+                            stock_info = {
+                                'symbol': symbol,
+                                'price': price,
+                                'change_percent': change_pct,
+                                'volume': volume,
+                                'name': node_data.get('name', symbol),
+                                'sector': node_data.get('sector', 'Unknown')
+                            }
+                            
+                            if change_pct > 0:
+                                top_gainers.append(stock_info)
+                            else:
+                                top_losers.append(stock_info)
+                            
+                            most_active.append(stock_info)
+            else:
+                # Fallback: Use RAG system's file_data
+                if self.rag_system and hasattr(self.rag_system, 'file_data'):
+                    stocks = self.rag_system.file_data.get('stocks', {})
+                    for symbol, stock_data in stocks.items():
+                        price = stock_data.get('current_price', 0)
+                        change_pct = stock_data.get('change_percent', 0)
+                        volume = stock_data.get('volume', 0)
                         
-                        if change_pct > 0:
-                            top_gainers.append(stock_info)
-                        else:
-                            top_losers.append(stock_info)
+                        if price > 0:
+                            stock_info = {
+                                'symbol': symbol,
+                                'price': price,
+                                'change_percent': change_pct,
+                                'volume': volume,
+                                'name': stock_data.get('name', symbol),
+                                'sector': stock_data.get('sector', 'Unknown')
+                            }
+                            
+                            if change_pct > 0:
+                                top_gainers.append(stock_info)
+                            else:
+                                top_losers.append(stock_info)
+                            
+                            most_active.append(stock_info)
+                else:
+                    # Last resort: Read from files
+                    stock_files = [f for f in os.listdir(self.data_dir) if f.startswith('stock_')]
+                    for file in stock_files[:100]:
+                        file_path = os.path.join(self.data_dir, file)
+                        stock_data = self._load_from_file(file_path)
                         
-                        most_active.append(stock_info)
+                        if stock_data:
+                            symbol = stock_data.get('symbol', '')
+                            price = stock_data.get('current_price', 0)
+                            volume = stock_data.get('volume', 0)
+                            open_price = stock_data.get('open', price)
+                            
+                            if open_price > 0:
+                                change_pct = ((price - open_price) / open_price) * 100
+                                stock_info = {
+                                    'symbol': symbol,
+                                    'price': price,
+                                    'change_percent': change_pct,
+                                    'volume': volume
+                                }
+                                
+                                if change_pct > 0:
+                                    top_gainers.append(stock_info)
+                                else:
+                                    top_losers.append(stock_info)
+                                
+                                most_active.append(stock_info)
             
             # Sort and limit results
             top_gainers.sort(key=lambda x: x['change_percent'], reverse=True)

@@ -111,14 +111,11 @@ class AdvancedRAGSystem:
         self.llm = ChatGroq(
             model=llm_model,  # mixtral-8x7b-32768 or llama2-70b-4096
             temperature=0.1,
-            max_tokens=4096,
+            max_tokens=2000,
             api_key=os.getenv("GROQ_API_KEY")  # Make sure to set this environment variable
     )
         self.advisor_engine = advisor_engine
-        if self.advisor_engine:
-            logger.info("Advisor Engine successfully linked to RAG system.")
-        else:
-            logger.warning("Advisor Engine not provided to RAG system. Quantitative analysis will be disabled.")
+        
         # Initialize specialized models
         self.sentiment_model = self._initialize_sentiment_model()
         self.ner_model = self._initialize_ner_model()
@@ -170,12 +167,22 @@ class AdvancedRAGSystem:
         # Load file-based data
         self._load_file_data()
         
-        # Initialize Graph RAG
+        # Initialize Graph RAG (must be done before linking advisor engine)
         self.knowledge_graph = nx.Graph()
         self._build_knowledge_graph()
+        
+        # Link advisor engine to knowledge graph AFTER graph is built
+        if self.advisor_engine:
+            # Pass knowledge graph and RAG system reference to advisor engine
+            self.advisor_engine.knowledge_graph = self.knowledge_graph
+            self.advisor_engine.rag_system = self
+            logger.info("Advisor Engine successfully linked to RAG system with knowledge graph access.")
+        else:
+            logger.warning("Advisor Engine not provided to RAG system. Quantitative analysis will be disabled.")
     def refresh_knowledge_graph(self):
         """
         Reloads all file-based data and rebuilds the knowledge graph.
+        Also updates advisor engine's knowledge graph reference.
         """
         logger.info("Refreshing knowledge graph...")
         try:
@@ -186,6 +193,13 @@ class AdvancedRAGSystem:
             # Step 2: Rebuild the graph with the new data
             self._build_knowledge_graph()
             logger.info("Knowledge graph rebuilt successfully.")
+            
+            # Step 3: Update advisor engine's knowledge graph reference if linked
+            if self.advisor_engine:
+                self.advisor_engine.knowledge_graph = self.knowledge_graph
+                self.advisor_engine.rag_system = self
+                logger.info("Advisor engine's knowledge graph reference updated.")
+            
             return True
         except Exception as e:
             logger.error(f"Failed to refresh knowledge graph: {e}")
@@ -289,7 +303,7 @@ class AdvancedRAGSystem:
             self.knowledge_graph.add_node("NIFTY50", type="index", level="broad_market")
             self.knowledge_graph.add_node("SENSEX", type="index", level="broad_market")
             
-            # Add stock nodes with rich metadata
+            # Add stock nodes with rich metadata (all attributes needed by advisor engine)
             for ticker, stock_data in self.file_data['stocks'].items():
                 self.knowledge_graph.add_node(
                     ticker,
@@ -301,7 +315,15 @@ class AdvancedRAGSystem:
                     volume=stock_data.get('volume', 0),
                     market_cap=stock_data.get('market_cap', 0),
                     pe_ratio=stock_data.get('pe_ratio'),
-                    beta=stock_data.get('beta', 1.0)
+                    pb_ratio=stock_data.get('pb_ratio'),
+                    dividend_yield=stock_data.get('dividend_yield'),
+                    beta=stock_data.get('beta', 1.0),
+                    fifty_two_week_high=stock_data.get('fifty_two_week_high'),
+                    fifty_two_week_low=stock_data.get('fifty_two_week_low'),
+                    open=stock_data.get('open'),
+                    high=stock_data.get('high'),
+                    low=stock_data.get('low'),
+                    close=stock_data.get('close')
                 )
                 
                 # Connect stocks to sectors
@@ -391,7 +413,8 @@ class AdvancedRAGSystem:
     def _graph_retrieve(self, query: str, max_nodes: int = 10) -> List[Dict]:
         """Retrieve relevant information using graph traversal"""
         try:
-            query_entities = self._extract_entities_from_text(query)
+            query_entities_dict = self.extract_entities(query)
+            query_entities = query_entities_dict.get('companies', []) + query_entities_dict.get('sectors', [])
             relevant_nodes = []
             
             # Find nodes directly related to query entities
@@ -695,7 +718,7 @@ class AdvancedRAGSystem:
             return QueryType.STOCK_ANALYSIS
     
     def extract_entities(self, query: str) -> Dict[str, List[str]]:
-        """Extract entities from query (companies, sectors, etc.)"""
+        """Extract entities from query (companies, sectors, etc.) - Enhanced with graph search"""
         
         extracted = {
             'companies': [],
@@ -704,58 +727,106 @@ class AdvancedRAGSystem:
             'time_periods': []
         }
         
-        # --- START OF IMPROVED LOGIC ---
+        query_lower = query.lower()
+        query_upper = query.upper()
         
-        # 1. Extract NER Entities
-        try:
-            entities = self.ner_model(query)
-            org_names = [e['word'] for e in entities if e['entity_group'] == 'ORG']
-        except Exception as e:
-            logger.warning(f"NER model failed: {e}")
-            org_names = []
+        # 1. First, try direct ticker matching from query words
+        if self.knowledge_graph:
+            for node in self.knowledge_graph.nodes():
+                node_data = self.knowledge_graph.nodes[node]
+                if node_data.get('type') == 'stock':
+                    # Check if query contains the ticker (with or without .NS)
+                    ticker_clean = node.replace('.NS', '').replace('.BO', '').upper()
+                    if ticker_clean in query_upper or node in query_upper:
+                        if node not in extracted['companies']:
+                            extracted['companies'].append(node)
+                    
+                    # Check if query contains company name
+                    stock_name_raw = node_data.get('name') or ''
+                    stock_name = str(stock_name_raw).lower() if stock_name_raw else ''
+                    if stock_name:
+                        # Extract key words from company name and check if they're in query
+                        name_words = set(stock_name.split())
+                        query_words = set(query_lower.split())
+                        # Match if 2+ significant words match (excluding common words)
+                        common_words = {'the', 'bank', 'limited', 'ltd', 'corporation', 'corp', 'industries', 'group'}
+                        significant_words = name_words - common_words
+                        query_significant = query_words - common_words
+                        if len(significant_words & query_significant) >= 2:
+                            if node not in extracted['companies']:
+                                extracted['companies'].append(node)
+                        
+                        # Also check for partial matches (e.g., "hdfc bank" matches "HDFC Bank Limited")
+                        for word in query_significant:
+                            if len(word) > 3 and word in stock_name:
+                                if node not in extracted['companies']:
+                                    extracted['companies'].append(node)
+                                    break
+        
+        # 2. Extract NER Entities as fallback
+        if not extracted['companies']:
+            try:
+                entities = self.ner_model(query)
+                org_names = [e['word'] for e in entities if e['entity_group'] == 'ORG']
+                
+                # Search knowledge graph for matches
+                if self.knowledge_graph:
+                    for name in org_names:
+                        name_lower = str(name).lower() if name else ''
+                        for node in self.knowledge_graph.nodes():
+                            node_data = self.knowledge_graph.nodes[node]
+                            if node_data.get('type') == 'stock':
+                                stock_name_raw = node_data.get('name') or ''
+                                stock_name = str(stock_name_raw).lower() if stock_name_raw else ''
+                                ticker_clean = node.replace('.NS', '').replace('.BO', '').lower()
+                                
+                                # Match on ticker or company name
+                                if (name_lower == ticker_clean or 
+                                    name_lower in stock_name or 
+                                    stock_name in name_lower or
+                                    (len(name_lower) > 3 and name_lower in ticker_clean)):
+                                    
+                                    if node not in extracted['companies']:
+                                        extracted['companies'].append(node)
+            except Exception as e:
+                logger.warning(f"NER model failed: {e}")
 
-        # 2. Find matching company nodes in graph
-        # We search both tickers and company names
-        all_stock_nodes = self.file_data['stocks'].keys()
-        
-        for name in org_names:
-            name_lower = name.lower()
+        # 3. Also search file_data as fallback
+        if not extracted['companies']:
+            all_stock_nodes = list(self.file_data.get('stocks', {}).keys())
             for ticker in all_stock_nodes:
                 stock_data = self.file_data['stocks'][ticker]
-                stock_name = stock_data.get('name', '').lower()
+                stock_name_raw = stock_data.get('name') or ''
+                stock_name = str(stock_name_raw).lower() if stock_name_raw else ''
                 ticker_clean = ticker.replace('.NS', '').replace('.BO', '').lower()
                 
-                # Match on ticker or partial name
-                if (name_lower == ticker_clean or 
-                    name_lower in stock_name or 
-                    (len(name_lower) > 3 and name_lower in ticker_clean)):
-                    
-                    if ticker not in extracted['companies']:
-                        extracted['companies'].append(ticker)
+                # Match query words against stock name
+                if stock_name:
+                    query_words = set(query_lower.split())
+                    name_words = set(stock_name.split())
+                    if len(query_words & name_words) >= 2:
+                        if ticker not in extracted['companies']:
+                            extracted['companies'].append(ticker)
 
-        # 3. Handle queries that just use the ticker
-        for word in query.upper().split():
-            if word in all_stock_nodes and word not in extracted['companies']:
-                 extracted['companies'].append(word)
-        
-        # --- END OF IMPROVED LOGIC ---
-
-        # 4. Extract sectors (your existing logic is good)
-        all_sectors = [
-            node for node, data in self.knowledge_graph.nodes(data=True) 
-            if data.get('type') == 'sector'
-        ]
-        query_lower = query.lower()
-        for sector in all_sectors:
-            if sector and sector.lower() in query_lower and sector not in extracted['sectors']:
-                extracted['sectors'].append(sector)
+        # 4. Extract sectors from knowledge graph
+        if self.knowledge_graph:
+            all_sectors = [
+                node for node, data in self.knowledge_graph.nodes(data=True) 
+                if data.get('type') == 'sector'
+            ]
+            for sector in all_sectors:
+                if sector:
+                    sector_lower = str(sector).lower()
+                    if sector_lower in query_lower and sector not in extracted['sectors']:
+                        extracted['sectors'].append(sector)
         
         # 5. Extract metrics
-        metrics = ['pe', 'pb', 'roe', 'debt', 'margin', 'growth', 'dividend', 'rsi', 'macd']
+        metrics = ['pe', 'pb', 'roe', 'debt', 'margin', 'growth', 'dividend', 'rsi', 'macd', 'price']
         for metric in metrics:
             if metric in query_lower:
                 extracted['metrics'].append(metric)
         
+        logger.debug(f"Extracted entities: {extracted}")
         return extracted
     
     async def retrieve_context(
@@ -1024,66 +1095,111 @@ class AdvancedRAGSystem:
             return response.content
     
     def _create_prompt(self, query: str, context: RAGContext) -> str:
-        """Create detailed prompt with all context"""
+        """Create detailed prompt with all context - emphasizes using actual data"""
+        
+        # Format quantitative analysis from advisor engine (PRIMARY SOURCE)
+        quantitative_context = ""
+        if context.quantitative_analysis and context.quantitative_analysis.get('success'):
+            qa = context.quantitative_analysis
+            quantitative_context = f"""
+QUANTITATIVE ANALYSIS (FROM KNOWLEDGE GRAPH):
+Stock Symbol: {qa.get('symbol', 'N/A')}
+Current Price: ₹{qa.get('current_price', 0):.2f}
+Target Price: ₹{qa.get('target_price', 0):.2f}
+Expected Return: {qa.get('expected_return', 0):.1f}%
+Action Recommendation: {qa.get('action', 'N/A').upper()}
+Confidence: {qa.get('confidence', 0)*100:.1f}%
+
+Fundamental Score: {qa.get('fundamental_score', 0)*100:.1f}%
+Sentiment Score: {qa.get('sentiment_score', 0)*100:.1f}%
+
+Reasons:
+{chr(10).join('- ' + reason for reason in qa.get('reasons', []))}
+
+Risk Factors:
+{chr(10).join('- ' + risk for risk in qa.get('risk_factors', []))}
+
+Technical Indicators:
+{json.dumps(qa.get('technical_indicators', {}), indent=2)}
+"""
         
         # Format retrieved documents
         doc_context = "\n\n".join([
             f"Source {i+1}: {doc.page_content[:500]}"
             for i, doc in enumerate(context.relevant_docs)
-        ])
+        ]) if context.relevant_docs else "No additional documents found"
         
         # Format market data
         market_context = json.dumps(context.market_data, indent=2) if context.market_data else "No market data available"
         
-        # Format Graph RAG results
+        # Format Graph RAG results with ALL stock data
         graph_context = ""
         if context.graph_results:
-            graph_context = "\n\nGraph Knowledge Base Results:\n"
-            for i, result in enumerate(context.graph_results[:5]):  # Top 5 results
+            graph_context = "\n\nGRAPH KNOWLEDGE BASE RESULTS (ALL AVAILABLE DATA):\n"
+            for i, result in enumerate(context.graph_results[:10]):  # Top 10 results
                 node_data = result['data']
-                graph_context += f"Node {i+1}: {result['node']} ({result['type']})\n"
-                graph_context += f"  Type: {node_data.get('type', 'unknown')}\n"
-                if 'name' in node_data:
-                    graph_context += f"  Name: {node_data['name']}\n"
-                if 'sector' in node_data:
-                    graph_context += f"  Sector: {node_data['sector']}\n"
-                if 'price' in node_data:
-                    graph_context += f"  Price: {node_data['price']}\n"
-                if 'change_percent' in node_data:
-                    graph_context += f"  Change: {node_data['change_percent']}%\n"
-                graph_context += f"  Relevance: {result['relevance_score']:.2f}\n\n"
+                graph_context += f"\nNode {i+1}: {result['node']} (Type: {result['type']})\n"
+                
+                # Include ALL stock data from graph
+                if node_data.get('type') == 'stock':
+                    graph_context += f"  Company Name: {node_data.get('name', 'N/A')}\n"
+                    graph_context += f"  Current Price: ₹{node_data.get('price', 0):.2f}\n"
+                    graph_context += f"  Change: {node_data.get('change_percent', 0):.2f}%\n"
+                    graph_context += f"  Volume: {node_data.get('volume', 0)}\n"
+                    graph_context += f"  Market Cap: {node_data.get('market_cap', 0)}\n"
+                    graph_context += f"  Sector: {node_data.get('sector', 'N/A')}\n"
+                    graph_context += f"  PE Ratio: {node_data.get('pe_ratio', 'N/A')}\n"
+                    graph_context += f"  PB Ratio: {node_data.get('pb_ratio', 'N/A')}\n"
+                    graph_context += f"  Beta: {node_data.get('beta', 1.0)}\n"
+                    graph_context += f"  RSI: {node_data.get('rsi', 'N/A')}\n"
+                    graph_context += f"  MACD: {node_data.get('macd', 'N/A')}\n"
+                    graph_context += f"  52W High: ₹{node_data.get('fifty_two_week_high', 'N/A')}\n"
+                    graph_context += f"  52W Low: ₹{node_data.get('fifty_two_week_low', 'N/A')}\n"
+                elif node_data.get('type') == 'market_indicator':
+                    graph_context += f"  Advances: {node_data.get('advances', 0)}\n"
+                    graph_context += f"  Declines: {node_data.get('declines', 0)}\n"
+                    graph_context += f"  Market Sentiment: {node_data.get('sentiment', 'neutral')}\n"
+                else:
+                    # Generic node data
+                    for key, value in node_data.items():
+                        if key != 'type':
+                            graph_context += f"  {key}: {value}\n"
+                graph_context += f"  Relevance Score: {result.get('relevance_score', 0):.2f}\n"
         
         # Format technical indicators
         tech_context = json.dumps(context.technical_indicators, indent=2) if context.technical_indicators else "No technical data available"
         
-        prompt = f"""You are an expert Indian market investment advisor. Answer the following query using the provided context.
+        prompt = f"""You are an expert Indian market investment advisor. Answer the query using ONLY the data provided below. DO NOT make up or invent data.
 
 Query: {query}
 Query Type: {context.query_type.value}
 
-Retrieved Knowledge:
-{doc_context}
+{quantitative_context}
 
-Graph Knowledge Base:
+GRAPH KNOWLEDGE BASE DATA:
 {graph_context}
 
-Current Market Data:
+CURRENT MARKET DATA:
 {market_context}
 
-Technical Indicators:
+TECHNICAL INDICATORS:
 {tech_context}
 
-Market Sentiment: {context.sentiment_score}
+ADDITIONAL CONTEXT:
+{doc_context}
 
-Instructions:
-1. Provide a comprehensive answer based on the context
-2. Include specific data points and numbers
-3. Give actionable recommendations
-4. Mention any risks or considerations
-5. Be specific to the Indian market context
-6. Use INR for currency references
+Market Sentiment Score: {context.sentiment_score:.2f}
 
-Response:"""
+CRITICAL INSTRUCTIONS:
+1. Use ONLY the data provided above - DO NOT invent or assume any prices, numbers, or facts
+2. If the data shows a specific price (e.g., ₹X.XX), use that EXACT price in your response
+3. If data is not available for a specific field, say "Not available in the knowledge base" rather than making something up
+4. Include specific numbers and data points from the quantitative analysis and graph data
+5. Format currency as ₹ (INR) with proper formatting
+6. Be concise and factual - use the actual data provided
+7. If you cannot answer the query with the provided data, clearly state what data is missing
+
+Response (use ONLY the data provided above):"""
         
         return prompt
     
@@ -1116,27 +1232,45 @@ Response:"""
         quantitative_analysis = None
         technical_indicators_from_engine = {}
         
-        # Check if this is a stock query, we have a company, and the engine is linked
-        if (query_type == QueryType.STOCK_ANALYSIS and 
-            entities.get('companies') and 
-            self.advisor_engine):
+        # Check if this is a stock query and try to find the company even if entity extraction failed
+        if query_type == QueryType.STOCK_ANALYSIS and self.advisor_engine:
+            stock_symbol = None
             
-            stock_symbol = entities['companies'][0] # Analyze the first stock found
-            logger.info(f"[RAG-{query_id}] Running advisor engine for {stock_symbol}...")
-            try:
-                # Run the full analysis from the engine
-                # This is where your ARIMA-LSTM model is executed!
-                analysis_result = await self.advisor_engine.analyze_stock(stock_symbol)
-                
-                if analysis_result.get('success'):
-                    quantitative_analysis = analysis_result
-                    # Also extract the technical indicators for the context
-                    tech = analysis_result.get('technical_indicators', {})
-                    if tech:
-                        technical_indicators_from_engine = tech
-                    logger.info(f"[RAG-{query_id}] Engine Success. Target Price: {analysis_result.get('target_price')}")
-            except Exception as e:
-                logger.error(f"[RAG-{query_id}] Advisor engine analysis failed: {e}")
+            # Try to get company from extracted entities first
+            if entities.get('companies'):
+                stock_symbol = entities['companies'][0]
+            else:
+                # Fallback: Try to find stock in graph by searching query terms
+                query_lower = query.lower()
+                if self.knowledge_graph:
+                    for node in self.knowledge_graph.nodes():
+                        node_data = self.knowledge_graph.nodes[node]
+                        if node_data.get('type') == 'stock':
+                            stock_name_raw = node_data.get('name') or ''
+                            stock_name = str(stock_name_raw).lower() if stock_name_raw else ''
+                            # Check if query mentions the stock name
+                            if stock_name and any(word in stock_name for word in query_lower.split() if len(word) > 3):
+                                stock_symbol = node
+                                logger.info(f"[RAG-{query_id}] Found stock via fuzzy match: {stock_symbol}")
+                                break
+            
+            if stock_symbol:
+                logger.info(f"[RAG-{query_id}] Running advisor engine for {stock_symbol}...")
+                try:
+                    # Run the full analysis from the engine (queries knowledge graph)
+                    analysis_result = await self.advisor_engine.analyze_stock(stock_symbol)
+                    
+                    if analysis_result.get('success'):
+                        quantitative_analysis = analysis_result
+                        # Also extract the technical indicators for the context
+                        tech = analysis_result.get('technical_indicators', {})
+                        if tech:
+                            technical_indicators_from_engine = tech
+                        logger.info(f"[RAG-{query_id}] Engine Success. Current Price: {analysis_result.get('current_price')}, Target Price: {analysis_result.get('target_price')}")
+                    else:
+                        logger.warning(f"[RAG-{query_id}] Advisor engine returned error: {analysis_result.get('error')}")
+                except Exception as e:
+                    logger.error(f"[RAG-{query_id}] Advisor engine analysis failed: {e}", exc_info=True)
         # --- END OF FIX ---
         market_context = {}
         technical_indicators = {} # <-- Initialize as empty dict
@@ -1209,10 +1343,11 @@ Response:"""
             for sector_name in entities.get('sectors', []):
                 if not sector_name:
                     continue
+                sector_name_lower = str(sector_name).lower() if sector_name else ''
                 matching_sectors = [
                     node for node in self.knowledge_graph.nodes()
                     if self.knowledge_graph.nodes[node].get('type') == 'sector'
-                    and node and sector_name.lower() in str(node).lower()
+                    and node and sector_name_lower in str(node).lower()
                 ]
                 start_nodes.extend(matching_sectors)
             

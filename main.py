@@ -151,16 +151,22 @@ async def startup_event():
         data_ingestion = IndianMarketDataIngestion(enable_redis=False)
         logger.info("[OK] Data ingestion system initialized")
         
-        # Initialize RAG system (file-based storage)
+        # Initialize investment advisor engine first (without knowledge graph)
+        advisor_engine = LocalInvestmentAdvisorEngine()
+        logger.info("[OK] Investment advisor engine initialized")
+        
+        # Initialize RAG system (file-based storage) with advisor engine reference
         rag_system = AdvancedRAGSystem(
             vector_db_type="chroma",
-            enable_redis=False
+            enable_redis=False,
+            advisor_engine=advisor_engine  # Pass advisor engine to RAG system
         )
         logger.info("[OK] RAG system initialized")
         
-        # Initialize investment advisor engine
-        advisor_engine = LocalInvestmentAdvisorEngine()
-        logger.info("[OK] Investment advisor engine initialized")
+        # Ensure advisor engine has knowledge graph reference (after RAG system builds it)
+        advisor_engine.knowledge_graph = rag_system.knowledge_graph
+        advisor_engine.rag_system = rag_system
+        logger.info("[OK] Knowledge graph linked to advisor engine")
         
         # Initialize WebSocket manager
         websocket_manager = ConnectionManager()
