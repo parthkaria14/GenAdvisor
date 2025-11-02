@@ -79,3 +79,783 @@
 2025-11-02 00:18:51,036 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
 2025-11-02 00:18:51,036 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
 2025-11-02 00:18:51,036 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:18:55,145 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1483.63
+2025-11-02 00:18:55,145 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1483.63
+2025-11-02 00:18:55,145 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1483.63
+2025-11-02 00:18:55,146 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:18:55,146 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:18:55,146 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:18:58,538 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2456.71
+2025-11-02 00:18:58,538 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2456.71
+2025-11-02 00:18:58,538 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2456.71
+2025-11-02 00:18:58,539 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:18:58,539 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:18:58,539 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:19:02,512 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4050.94
+2025-11-02 00:19:02,512 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4050.94
+2025-11-02 00:19:02,512 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4050.94
+2025-11-02 00:19:02,513 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:19:02,513 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:19:02,513 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:19:02,514 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:19:02,514 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:19:02,514 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:19:46,435 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:19:46,435 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:19:46,435 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:19:46,440 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:19:46,440 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:19:46,440 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:19:46,507 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 00:19:46,507 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 00:19:46,507 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 00:20:21,206 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:20:21,206 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:20:21,206 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:20:21,208 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:20:21,208 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:20:21,208 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:20:21,257 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:20:21,257 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:20:21,257 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:20:21,260 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:20:21,260 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:20:21,260 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:20:28,037 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.68
+2025-11-02 00:20:28,037 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.68
+2025-11-02 00:20:28,037 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.68
+2025-11-02 00:20:28,039 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:20:28,039 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:20:28,039 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:20:31,067 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 989.98
+2025-11-02 00:20:31,067 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 989.98
+2025-11-02 00:20:31,067 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 989.98
+2025-11-02 00:20:31,069 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:20:31,069 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:20:31,069 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:20:39,414 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2056.27
+2025-11-02 00:20:39,414 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2056.27
+2025-11-02 00:20:39,414 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2056.27
+2025-11-02 00:20:39,416 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:20:39,416 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:20:39,416 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:20:43,364 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3062.36
+2025-11-02 00:20:43,364 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3062.36
+2025-11-02 00:20:43,364 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3062.36
+2025-11-02 00:20:43,364 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:20:43,364 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:20:43,364 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:20:51,086 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1349.68
+2025-11-02 00:20:51,086 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1349.68
+2025-11-02 00:20:51,086 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1349.68
+2025-11-02 00:20:51,088 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:20:51,088 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:20:51,088 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:21:03,005 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.00
+2025-11-02 00:21:03,005 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.00
+2025-11-02 00:21:03,005 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.00
+2025-11-02 00:21:03,014 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:21:03,014 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:21:03,014 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:21:14,825 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1041.34
+2025-11-02 00:21:14,825 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1041.34
+2025-11-02 00:21:14,825 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1041.34
+2025-11-02 00:21:14,826 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:21:14,826 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:21:14,826 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:21:21,961 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1484.03
+2025-11-02 00:21:21,961 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1484.03
+2025-11-02 00:21:21,961 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1484.03
+2025-11-02 00:21:21,963 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:21:21,963 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:21:21,963 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:21:29,328 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2455.33
+2025-11-02 00:21:29,328 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2455.33
+2025-11-02 00:21:29,328 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2455.33
+2025-11-02 00:21:29,329 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:21:29,329 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:21:29,329 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:21:33,634 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4046.66
+2025-11-02 00:21:33,634 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4046.66
+2025-11-02 00:21:33,634 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4046.66
+2025-11-02 00:21:33,635 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:21:33,635 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:21:33,635 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:21:33,636 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:21:33,636 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:21:33,636 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:22:55,347 - INFO - [GenAdvisor] [QueryID: 20251102_002255] Processing query: why will lt stock rise
+2025-11-02 00:22:55,347 - INFO - [GenAdvisor] [QueryID: 20251102_002255] Processing query: why will lt stock rise
+2025-11-02 00:22:55,347 - INFO - [GenAdvisor] [QueryID: 20251102_002255] Processing query: why will lt stock rise
+2025-11-02 00:22:55,352 - INFO - [GenAdvisor] [QueryID: 20251102_002255] Starting RAG processing
+2025-11-02 00:22:55,352 - INFO - [GenAdvisor] [QueryID: 20251102_002255] Starting RAG processing
+2025-11-02 00:22:55,352 - INFO - [GenAdvisor] [QueryID: 20251102_002255] Starting RAG processing
+2025-11-02 00:23:01,146 - INFO - [GenAdvisor] [QueryID: 20251102_002255] Query processed successfully
+2025-11-02 00:23:01,146 - INFO - [GenAdvisor] [QueryID: 20251102_002255] Query processed successfully
+2025-11-02 00:23:01,146 - INFO - [GenAdvisor] [QueryID: 20251102_002255] Query processed successfully
+2025-11-02 00:23:01,150 - DEBUG - [GenAdvisor] [QueryID: 20251102_002255] Response length: 7114 chars
+2025-11-02 00:23:01,150 - DEBUG - [GenAdvisor] [QueryID: 20251102_002255] Response length: 7114 chars
+2025-11-02 00:23:01,150 - DEBUG - [GenAdvisor] [QueryID: 20251102_002255] Response length: 7114 chars
+2025-11-02 00:24:42,277 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:24:42,277 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:24:42,277 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:24:42,280 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:24:42,280 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:24:42,280 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:24:42,302 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:24:42,302 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:24:42,302 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:24:42,306 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:24:42,306 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:24:42,306 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:24:53,067 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1487.56
+2025-11-02 00:24:53,067 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1487.56
+2025-11-02 00:24:53,067 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1487.56
+2025-11-02 00:24:53,068 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:24:53,068 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:24:53,068 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:24:57,179 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 990.59
+2025-11-02 00:24:57,179 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 990.59
+2025-11-02 00:24:57,179 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 990.59
+2025-11-02 00:24:57,179 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:24:57,179 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:24:57,179 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:24:59,773 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2053.05
+2025-11-02 00:24:59,773 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2053.05
+2025-11-02 00:24:59,773 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2053.05
+2025-11-02 00:24:59,774 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:24:59,774 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:24:59,774 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:25:02,804 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3072.32
+2025-11-02 00:25:02,804 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3072.32
+2025-11-02 00:25:02,804 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3072.32
+2025-11-02 00:25:02,805 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:25:02,805 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:25:02,805 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:25:05,888 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1346.48
+2025-11-02 00:25:05,888 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1346.48
+2025-11-02 00:25:05,888 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1346.48
+2025-11-02 00:25:05,888 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:25:05,888 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:25:05,888 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:25:09,736 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 939.86
+2025-11-02 00:25:09,736 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 939.86
+2025-11-02 00:25:09,736 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 939.86
+2025-11-02 00:25:09,737 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:25:09,737 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:25:09,737 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:25:12,759 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1042.31
+2025-11-02 00:25:12,759 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1042.31
+2025-11-02 00:25:12,759 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1042.31
+2025-11-02 00:25:12,760 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:25:12,760 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:25:12,760 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:25:16,425 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1485.21
+2025-11-02 00:25:16,425 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1485.21
+2025-11-02 00:25:16,425 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1485.21
+2025-11-02 00:25:16,427 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:25:16,427 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:25:16,427 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:25:21,209 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2460.33
+2025-11-02 00:25:21,209 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2460.33
+2025-11-02 00:25:21,209 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2460.33
+2025-11-02 00:25:21,210 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:25:21,210 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:25:21,210 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:25:24,923 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4044.29
+2025-11-02 00:25:24,923 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4044.29
+2025-11-02 00:25:24,923 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4044.29
+2025-11-02 00:25:24,923 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:25:24,923 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:25:24,923 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:25:24,925 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:25:24,925 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:25:24,925 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:34:43,963 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:34:43,963 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:34:43,963 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:34:43,970 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:34:43,970 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:34:43,970 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:34:44,045 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:34:44,045 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:34:44,045 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:34:44,048 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:34:44,048 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:34:44,048 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:34:50,720 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.16
+2025-11-02 00:34:50,720 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.16
+2025-11-02 00:34:50,720 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.16
+2025-11-02 00:34:50,721 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:34:50,721 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:34:50,721 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:34:57,025 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 990.81
+2025-11-02 00:34:57,025 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 990.81
+2025-11-02 00:34:57,025 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 990.81
+2025-11-02 00:34:57,029 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:34:57,029 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:34:57,029 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:35:07,310 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2060.59
+2025-11-02 00:35:07,310 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2060.59
+2025-11-02 00:35:07,310 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2060.59
+2025-11-02 00:35:07,311 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:35:07,311 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:35:07,311 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:35:18,103 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3062.91
+2025-11-02 00:35:18,103 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3062.91
+2025-11-02 00:35:18,103 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3062.91
+2025-11-02 00:35:18,107 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:35:18,107 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:35:18,107 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:35:23,431 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1348.04
+2025-11-02 00:35:23,431 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1348.04
+2025-11-02 00:35:23,431 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1348.04
+2025-11-02 00:35:23,433 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:35:23,433 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:35:23,433 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:35:27,927 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.75
+2025-11-02 00:35:27,927 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.75
+2025-11-02 00:35:27,927 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.75
+2025-11-02 00:35:27,927 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:35:27,927 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:35:27,927 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:35:31,902 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1043.02
+2025-11-02 00:35:31,902 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1043.02
+2025-11-02 00:35:31,902 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1043.02
+2025-11-02 00:35:31,903 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:35:31,903 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:35:31,903 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:35:35,837 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1482.06
+2025-11-02 00:35:35,837 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1482.06
+2025-11-02 00:35:35,837 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1482.06
+2025-11-02 00:35:35,840 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:35:35,840 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:35:35,840 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 00:35:39,751 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2454.32
+2025-11-02 00:35:39,751 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2454.32
+2025-11-02 00:35:39,751 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2454.32
+2025-11-02 00:35:39,753 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:35:39,753 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:35:39,753 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 00:35:43,889 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4047.02
+2025-11-02 00:35:43,889 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4047.02
+2025-11-02 00:35:43,889 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4047.02
+2025-11-02 00:35:43,891 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:35:43,891 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:35:43,891 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:35:43,894 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:35:43,894 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:35:43,894 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:36:41,453 - INFO - [GenAdvisor] [QueryID: 20251102_003641] Processing query: hii
+2025-11-02 00:36:41,453 - INFO - [GenAdvisor] [QueryID: 20251102_003641] Processing query: hii
+2025-11-02 00:36:41,453 - INFO - [GenAdvisor] [QueryID: 20251102_003641] Processing query: hii
+2025-11-02 00:36:41,457 - INFO - [GenAdvisor] [QueryID: 20251102_003641] Starting RAG processing
+2025-11-02 00:36:41,457 - INFO - [GenAdvisor] [QueryID: 20251102_003641] Starting RAG processing
+2025-11-02 00:36:41,457 - INFO - [GenAdvisor] [QueryID: 20251102_003641] Starting RAG processing
+2025-11-02 00:36:46,883 - INFO - [GenAdvisor] [QueryID: 20251102_003641] Query processed successfully
+2025-11-02 00:36:46,883 - INFO - [GenAdvisor] [QueryID: 20251102_003641] Query processed successfully
+2025-11-02 00:36:46,883 - INFO - [GenAdvisor] [QueryID: 20251102_003641] Query processed successfully
+2025-11-02 00:36:46,888 - DEBUG - [GenAdvisor] [QueryID: 20251102_003641] Response length: 6991 chars
+2025-11-02 00:36:46,888 - DEBUG - [GenAdvisor] [QueryID: 20251102_003641] Response length: 6991 chars
+2025-11-02 00:36:46,888 - DEBUG - [GenAdvisor] [QueryID: 20251102_003641] Response length: 6991 chars
+2025-11-02 00:37:11,436 - INFO - [GenAdvisor] [QueryID: 20251102_003711] Processing query: HI
+2025-11-02 00:37:11,436 - INFO - [GenAdvisor] [QueryID: 20251102_003711] Processing query: HI
+2025-11-02 00:37:11,436 - INFO - [GenAdvisor] [QueryID: 20251102_003711] Processing query: HI
+2025-11-02 00:37:11,499 - INFO - [GenAdvisor] [QueryID: 20251102_003711] Starting RAG processing
+2025-11-02 00:37:11,499 - INFO - [GenAdvisor] [QueryID: 20251102_003711] Starting RAG processing
+2025-11-02 00:37:11,499 - INFO - [GenAdvisor] [QueryID: 20251102_003711] Starting RAG processing
+2025-11-02 00:37:17,484 - INFO - [GenAdvisor] [QueryID: 20251102_003711] Query processed successfully
+2025-11-02 00:37:17,484 - INFO - [GenAdvisor] [QueryID: 20251102_003711] Query processed successfully
+2025-11-02 00:37:17,484 - INFO - [GenAdvisor] [QueryID: 20251102_003711] Query processed successfully
+2025-11-02 00:37:17,485 - DEBUG - [GenAdvisor] [QueryID: 20251102_003711] Response length: 6809 chars
+2025-11-02 00:37:17,485 - DEBUG - [GenAdvisor] [QueryID: 20251102_003711] Response length: 6809 chars
+2025-11-02 00:37:17,485 - DEBUG - [GenAdvisor] [QueryID: 20251102_003711] Response length: 6809 chars
+2025-11-02 00:37:28,686 - INFO - [GenAdvisor] [QueryID: 20251102_003728] Processing query: WHY HUL
+2025-11-02 00:37:28,686 - INFO - [GenAdvisor] [QueryID: 20251102_003728] Processing query: WHY HUL
+2025-11-02 00:37:28,686 - INFO - [GenAdvisor] [QueryID: 20251102_003728] Processing query: WHY HUL
+2025-11-02 00:37:28,693 - INFO - [GenAdvisor] [QueryID: 20251102_003728] Starting RAG processing
+2025-11-02 00:37:28,693 - INFO - [GenAdvisor] [QueryID: 20251102_003728] Starting RAG processing
+2025-11-02 00:37:28,693 - INFO - [GenAdvisor] [QueryID: 20251102_003728] Starting RAG processing
+2025-11-02 00:37:33,950 - INFO - [GenAdvisor] [QueryID: 20251102_003728] Query processed successfully
+2025-11-02 00:37:33,950 - INFO - [GenAdvisor] [QueryID: 20251102_003728] Query processed successfully
+2025-11-02 00:37:33,950 - INFO - [GenAdvisor] [QueryID: 20251102_003728] Query processed successfully
+2025-11-02 00:37:33,952 - DEBUG - [GenAdvisor] [QueryID: 20251102_003728] Response length: 7390 chars
+2025-11-02 00:37:33,952 - DEBUG - [GenAdvisor] [QueryID: 20251102_003728] Response length: 7390 chars
+2025-11-02 00:37:33,952 - DEBUG - [GenAdvisor] [QueryID: 20251102_003728] Response length: 7390 chars
+2025-11-02 00:37:53,755 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:37:53,755 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:37:53,755 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:37:53,760 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:37:53,760 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:37:53,760 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:37:53,789 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:37:53,789 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:37:53,789 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:00,794 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:38:00,794 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:38:00,794 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:38:00,797 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:00,797 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:00,797 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:00,824 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:00,824 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:00,824 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:16,803 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:38:16,803 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:38:16,803 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:38:16,808 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:16,808 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:16,808 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:16,849 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:16,849 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:16,849 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:20,938 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:38:20,938 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:38:20,938 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:38:20,941 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:20,941 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:20,941 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:20,980 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:20,980 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:20,980 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:56,400 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:38:56,400 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:38:56,400 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:38:56,410 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:56,410 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:56,410 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:38:56,520 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:56,520 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:38:56,520 - ERROR - [GenAdvisor] Error screening stocks: '>' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "D:\Projects\GenAdvisor\GenAdvisor\main.py", line 479, in screen_stocks
+    if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+TypeError: '>' not supported between instances of 'NoneType' and 'float'
+2025-11-02 00:40:34,799 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 00:40:34,799 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 00:40:34,799 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 00:40:34,801 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 00:40:34,801 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 00:40:34,801 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 00:41:01,643 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 00:41:01,643 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 00:41:01,643 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 00:41:01,644 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 00:41:01,644 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 00:41:01,644 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 00:41:01,644 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 00:41:01,644 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 00:41:01,644 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 00:41:01,645 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 00:41:01,645 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 00:41:01,645 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 00:41:01,651 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:41:01,651 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:41:01,651 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:41:01,652 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:41:01,652 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:41:01,652 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:41:01,664 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:41:01,664 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:41:01,664 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:41:01,891 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:41:01,891 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:41:01,891 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:41:08,743 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.79
+2025-11-02 00:41:08,743 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.79
+2025-11-02 00:41:08,743 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.79
+2025-11-02 00:41:08,746 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:41:08,746 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:41:08,746 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:41:11,372 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 991.37
+2025-11-02 00:41:11,372 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 991.37
+2025-11-02 00:41:11,372 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 991.37
+2025-11-02 00:41:11,373 - INFO - [GenAdvisor] Getting prediction for TCS.NS (3/10)
+2025-11-02 00:41:11,373 - INFO - [GenAdvisor] Getting prediction for TCS.NS (3/10)
+2025-11-02 00:41:11,373 - INFO - [GenAdvisor] Getting prediction for TCS.NS (3/10)
+2025-11-02 00:41:14,784 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3059.53
+2025-11-02 00:41:14,784 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3059.53
+2025-11-02 00:41:14,784 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3059.53
+2025-11-02 00:41:14,785 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (4/10)
+2025-11-02 00:41:14,785 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (4/10)
+2025-11-02 00:41:14,785 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (4/10)
+2025-11-02 00:41:23,468 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1347.09
+2025-11-02 00:41:23,468 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1347.09
+2025-11-02 00:41:23,468 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1347.09
+2025-11-02 00:41:23,469 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (5/10)
+2025-11-02 00:41:23,469 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (5/10)
+2025-11-02 00:41:23,469 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (5/10)
+2025-11-02 00:41:27,106 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.41
+2025-11-02 00:41:27,106 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.41
+2025-11-02 00:41:27,106 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.41
+2025-11-02 00:41:27,106 - INFO - [GenAdvisor] Getting prediction for INFY.NS (6/10)
+2025-11-02 00:41:27,106 - INFO - [GenAdvisor] Getting prediction for INFY.NS (6/10)
+2025-11-02 00:41:27,106 - INFO - [GenAdvisor] Getting prediction for INFY.NS (6/10)
+2025-11-02 00:41:29,908 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1484.61
+2025-11-02 00:41:29,908 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1484.61
+2025-11-02 00:41:29,908 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1484.61
+2025-11-02 00:41:29,909 - INFO - [GenAdvisor] Getting prediction for ITC.NS (7/10)
+2025-11-02 00:41:29,909 - INFO - [GenAdvisor] Getting prediction for ITC.NS (7/10)
+2025-11-02 00:41:29,909 - INFO - [GenAdvisor] Getting prediction for ITC.NS (7/10)
+2025-11-02 00:41:33,267 - INFO - [GenAdvisor] [OK] Predicted ITC.NS: 420.35 -> 419.71
+2025-11-02 00:41:33,267 - INFO - [GenAdvisor] [OK] Predicted ITC.NS: 420.35 -> 419.71
+2025-11-02 00:41:33,267 - INFO - [GenAdvisor] [OK] Predicted ITC.NS: 420.35 -> 419.71
+2025-11-02 00:41:33,268 - INFO - [GenAdvisor] Getting prediction for M&M.NS (8/10)
+2025-11-02 00:41:33,268 - INFO - [GenAdvisor] Getting prediction for M&M.NS (8/10)
+2025-11-02 00:41:33,268 - INFO - [GenAdvisor] Getting prediction for M&M.NS (8/10)
+2025-11-02 00:41:36,717 - INFO - [GenAdvisor] [OK] Predicted M&M.NS: 3487.20 -> 3482.65
+2025-11-02 00:41:36,717 - INFO - [GenAdvisor] [OK] Predicted M&M.NS: 3487.20 -> 3482.65
+2025-11-02 00:41:36,717 - INFO - [GenAdvisor] [OK] Predicted M&M.NS: 3487.20 -> 3482.65
+2025-11-02 00:41:36,718 - INFO - [GenAdvisor] Getting prediction for KOTAKBANK.NS (9/10)
+2025-11-02 00:41:36,718 - INFO - [GenAdvisor] Getting prediction for KOTAKBANK.NS (9/10)
+2025-11-02 00:41:36,718 - INFO - [GenAdvisor] Getting prediction for KOTAKBANK.NS (9/10)
+2025-11-02 00:41:41,495 - INFO - [GenAdvisor] [OK] Predicted KOTAKBANK.NS: 2102.20 -> 2099.29
+2025-11-02 00:41:41,495 - INFO - [GenAdvisor] [OK] Predicted KOTAKBANK.NS: 2102.20 -> 2099.29
+2025-11-02 00:41:41,495 - INFO - [GenAdvisor] [OK] Predicted KOTAKBANK.NS: 2102.20 -> 2099.29
+2025-11-02 00:41:41,496 - INFO - [GenAdvisor] Getting prediction for HCLTECH.NS (10/10)
+2025-11-02 00:41:41,496 - INFO - [GenAdvisor] Getting prediction for HCLTECH.NS (10/10)
+2025-11-02 00:41:41,496 - INFO - [GenAdvisor] Getting prediction for HCLTECH.NS (10/10)
+2025-11-02 00:41:45,220 - INFO - [GenAdvisor] [OK] Predicted HCLTECH.NS: 1541.50 -> 1546.90
+2025-11-02 00:41:45,220 - INFO - [GenAdvisor] [OK] Predicted HCLTECH.NS: 1541.50 -> 1546.90
+2025-11-02 00:41:45,220 - INFO - [GenAdvisor] [OK] Predicted HCLTECH.NS: 1541.50 -> 1546.90
+2025-11-02 00:41:45,221 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:41:45,221 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:41:45,221 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:41:45,222 - INFO - [GenAdvisor] Screener returning 38 stocks, 10 with predictions
+2025-11-02 00:41:45,222 - INFO - [GenAdvisor] Screener returning 38 stocks, 10 with predictions
+2025-11-02 00:41:45,222 - INFO - [GenAdvisor] Screener returning 38 stocks, 10 with predictions
+2025-11-02 00:43:23,941 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 00:43:23,941 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 00:43:23,941 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 00:43:23,943 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 00:43:23,943 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 00:43:23,943 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 00:43:47,328 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 00:43:47,328 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 00:43:47,328 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 00:43:47,329 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 00:43:47,329 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 00:43:47,329 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 00:43:47,330 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 00:43:47,330 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 00:43:47,330 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 00:43:47,332 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 00:43:47,332 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 00:43:47,332 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 00:43:47,340 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:43:47,340 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:43:47,340 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:43:47,342 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:43:47,342 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:43:47,342 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:43:47,353 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 00:43:47,353 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 00:43:47,353 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 00:43:58,599 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:43:58,599 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:43:58,599 - INFO - [GenAdvisor] Screener request: include_predictions=False
+2025-11-02 00:43:58,604 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:43:58,604 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:43:58,604 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:43:58,664 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 00:43:58,664 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 00:43:58,664 - INFO - [GenAdvisor] Screener returning 50 stocks, 0 with predictions
+2025-11-02 00:44:01,197 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:44:01,197 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:44:01,197 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 00:44:01,199 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:44:01,199 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:44:01,199 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 00:44:01,252 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:44:01,252 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:44:01,252 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 00:44:01,664 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:44:01,664 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:44:01,664 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 00:44:06,969 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1492.05
+2025-11-02 00:44:06,969 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1492.05
+2025-11-02 00:44:06,969 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1492.05
+2025-11-02 00:44:06,969 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:44:06,969 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:44:06,969 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 00:44:17,086 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 991.20
+2025-11-02 00:44:17,086 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 991.20
+2025-11-02 00:44:17,086 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 991.20
+2025-11-02 00:44:17,092 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:44:17,092 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:44:17,092 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 00:44:27,304 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2060.30
+2025-11-02 00:44:27,304 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2060.30
+2025-11-02 00:44:27,304 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2060.30
+2025-11-02 00:44:27,308 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:44:27,308 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:44:27,308 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 00:44:36,445 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3061.67
+2025-11-02 00:44:36,445 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3061.67
+2025-11-02 00:44:36,445 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3061.67
+2025-11-02 00:44:36,448 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:44:36,448 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:44:36,448 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 00:44:48,863 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1345.38
+2025-11-02 00:44:48,863 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1345.38
+2025-11-02 00:44:48,863 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1345.38
+2025-11-02 00:44:48,870 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:44:48,870 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:44:48,870 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 00:45:00,113 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.41
+2025-11-02 00:45:00,113 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.41
+2025-11-02 00:45:00,113 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 940.41
+2025-11-02 00:45:00,119 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:45:00,119 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:45:00,119 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 00:45:10,330 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1041.44
+2025-11-02 00:45:10,330 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1041.44
+2025-11-02 00:45:10,330 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1041.44
+2025-11-02 00:45:10,333 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:45:10,333 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:45:10,333 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 00:45:19,573 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1485.33
+2025-11-02 00:45:19,573 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1485.33
+2025-11-02 00:45:19,573 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1485.33
+2025-11-02 00:45:19,575 - INFO - [GenAdvisor] Getting prediction for LT.NS (9/10)
+2025-11-02 00:45:19,575 - INFO - [GenAdvisor] Getting prediction for LT.NS (9/10)
+2025-11-02 00:45:19,575 - INFO - [GenAdvisor] Getting prediction for LT.NS (9/10)
+2025-11-02 00:45:30,095 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4046.24
+2025-11-02 00:45:30,095 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4046.24
+2025-11-02 00:45:30,095 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4046.24
+2025-11-02 00:45:30,098 - INFO - [GenAdvisor] Getting prediction for ITC.NS (10/10)
+2025-11-02 00:45:30,098 - INFO - [GenAdvisor] Getting prediction for ITC.NS (10/10)
+2025-11-02 00:45:30,098 - INFO - [GenAdvisor] Getting prediction for ITC.NS (10/10)
+2025-11-02 00:45:40,938 - INFO - [GenAdvisor] [OK] Predicted ITC.NS: 420.35 -> 420.11
+2025-11-02 00:45:40,938 - INFO - [GenAdvisor] [OK] Predicted ITC.NS: 420.35 -> 420.11
+2025-11-02 00:45:40,938 - INFO - [GenAdvisor] [OK] Predicted ITC.NS: 420.35 -> 420.11
+2025-11-02 00:45:40,946 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:45:40,946 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:45:40,946 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 00:45:40,950 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:45:40,950 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 00:45:40,950 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 20:32:42,154 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 20:32:42,154 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 20:32:42,154 - INFO - [GenAdvisor] Initializing Gen-Advisor components...
+2025-11-02 20:32:42,154 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 20:32:42,154 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 20:32:42,154 - INFO - [GenAdvisor] [OK] Data ingestion system initialized
+2025-11-02 20:33:05,516 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 20:33:05,516 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 20:33:05,516 - INFO - [GenAdvisor] [OK] RAG system initialized
+2025-11-02 20:33:05,517 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 20:33:05,517 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 20:33:05,517 - INFO - [GenAdvisor] [OK] Investment advisor engine initialized
+2025-11-02 20:33:05,517 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 20:33:05,517 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 20:33:05,517 - INFO - [GenAdvisor] [OK] WebSocket manager initialized
+2025-11-02 20:33:05,517 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 20:33:05,517 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 20:33:05,517 - INFO - [GenAdvisor] [OK] All components initialized successfully!
+2025-11-02 20:53:32,092 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 20:53:32,092 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 20:53:32,092 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 20:53:32,093 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 20:53:32,093 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 20:53:32,093 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 20:53:32,809 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 20:53:32,809 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 20:53:32,809 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 20:53:33,749 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 20:53:33,749 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 20:53:33,749 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 20:53:49,046 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1497.94
+2025-11-02 20:53:49,046 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1497.94
+2025-11-02 20:53:49,046 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1497.94
+2025-11-02 20:53:49,046 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 20:53:49,046 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 20:53:49,046 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 20:53:51,308 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 990.13
+2025-11-02 20:53:51,308 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 990.13
+2025-11-02 20:53:51,308 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 990.13
+2025-11-02 20:53:51,310 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 20:53:51,310 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 20:53:51,310 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 20:53:53,802 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2062.41
+2025-11-02 20:53:53,802 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2062.41
+2025-11-02 20:53:53,802 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2062.41
+2025-11-02 20:53:53,803 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 20:53:53,803 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 20:53:53,803 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 20:53:56,464 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3062.72
+2025-11-02 20:53:56,464 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3062.72
+2025-11-02 20:53:56,464 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3062.72
+2025-11-02 20:53:56,465 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 20:53:56,465 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 20:53:56,465 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 20:53:59,353 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1348.13
+2025-11-02 20:53:59,353 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1348.13
+2025-11-02 20:53:59,353 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1348.13
+2025-11-02 20:53:59,354 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 20:53:59,354 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 20:53:59,354 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 20:54:02,000 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 939.90
+2025-11-02 20:54:02,000 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 939.90
+2025-11-02 20:54:02,000 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 939.90
+2025-11-02 20:54:02,000 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 20:54:02,000 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 20:54:02,000 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 20:54:04,408 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1040.85
+2025-11-02 20:54:04,408 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1040.85
+2025-11-02 20:54:04,408 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1040.85
+2025-11-02 20:54:04,409 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 20:54:04,409 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 20:54:04,409 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 20:54:06,529 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1482.61
+2025-11-02 20:54:06,529 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1482.61
+2025-11-02 20:54:06,529 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1482.61
+2025-11-02 20:54:06,530 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 20:54:06,530 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 20:54:06,530 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 20:54:08,857 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2456.66
+2025-11-02 20:54:08,857 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2456.66
+2025-11-02 20:54:08,857 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2456.66
+2025-11-02 20:54:08,857 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 20:54:08,857 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 20:54:08,857 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 20:54:11,665 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4046.05
+2025-11-02 20:54:11,665 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4046.05
+2025-11-02 20:54:11,665 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4046.05
+2025-11-02 20:54:11,666 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 20:54:11,666 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 20:54:11,666 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 20:54:11,672 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 20:54:11,672 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 20:54:11,672 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 20:54:25,835 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 20:54:25,835 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 20:54:25,835 - INFO - [GenAdvisor] Screener request: include_predictions=True
+2025-11-02 20:54:25,839 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 20:54:25,839 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 20:54:25,839 - INFO - [GenAdvisor] Found 84 stock files to process
+2025-11-02 20:54:25,895 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 20:54:25,895 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 20:54:25,895 - INFO - [GenAdvisor] Predictions enabled - processing top 20 stocks for predictions
+2025-11-02 20:54:25,902 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 20:54:25,902 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 20:54:25,902 - INFO - [GenAdvisor] Getting prediction for RELIANCE.NS (1/10)
+2025-11-02 20:54:32,721 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.81
+2025-11-02 20:54:32,721 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.81
+2025-11-02 20:54:32,721 - INFO - [GenAdvisor] [OK] Predicted RELIANCE.NS: 1486.40 -> 1491.81
+2025-11-02 20:54:32,727 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 20:54:32,727 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 20:54:32,727 - INFO - [GenAdvisor] Getting prediction for HDFCBANK.NS (2/10)
+2025-11-02 20:54:38,680 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 988.67
+2025-11-02 20:54:38,680 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 988.67
+2025-11-02 20:54:38,680 - INFO - [GenAdvisor] [OK] Predicted HDFCBANK.NS: 987.30 -> 988.67
+2025-11-02 20:54:38,681 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 20:54:38,681 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 20:54:38,681 - INFO - [GenAdvisor] Getting prediction for BHARTIARTL.NS (3/10)
+2025-11-02 20:54:43,483 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2060.35
+2025-11-02 20:54:43,483 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2060.35
+2025-11-02 20:54:43,483 - INFO - [GenAdvisor] [OK] Predicted BHARTIARTL.NS: 2054.50 -> 2060.35
+2025-11-02 20:54:43,488 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 20:54:43,488 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 20:54:43,488 - INFO - [GenAdvisor] Getting prediction for TCS.NS (4/10)
+2025-11-02 20:54:47,986 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3046.50
+2025-11-02 20:54:47,986 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3046.50
+2025-11-02 20:54:47,986 - INFO - [GenAdvisor] [OK] Predicted TCS.NS: 3058.00 -> 3046.50
+2025-11-02 20:54:47,991 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 20:54:47,991 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 20:54:47,991 - INFO - [GenAdvisor] Getting prediction for ICICIBANK.NS (5/10)
+2025-11-02 20:54:53,530 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1346.39
+2025-11-02 20:54:53,530 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1346.39
+2025-11-02 20:54:53,530 - INFO - [GenAdvisor] [OK] Predicted ICICIBANK.NS: 1345.30 -> 1346.39
+2025-11-02 20:54:53,532 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 20:54:53,532 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 20:54:53,532 - INFO - [GenAdvisor] Getting prediction for SBIN.NS (6/10)
+2025-11-02 20:54:58,882 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 938.39
+2025-11-02 20:54:58,882 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 938.39
+2025-11-02 20:54:58,882 - INFO - [GenAdvisor] [OK] Predicted SBIN.NS: 937.00 -> 938.39
+2025-11-02 20:54:58,887 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 20:54:58,887 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 20:54:58,887 - INFO - [GenAdvisor] Getting prediction for BAJFINANCE.NS (7/10)
+2025-11-02 20:55:06,103 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1042.54
+2025-11-02 20:55:06,103 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1042.54
+2025-11-02 20:55:06,103 - INFO - [GenAdvisor] [OK] Predicted BAJFINANCE.NS: 1042.80 -> 1042.54
+2025-11-02 20:55:06,105 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 20:55:06,105 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 20:55:06,105 - INFO - [GenAdvisor] Getting prediction for INFY.NS (8/10)
+2025-11-02 20:55:12,842 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1485.18
+2025-11-02 20:55:12,842 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1485.18
+2025-11-02 20:55:12,842 - INFO - [GenAdvisor] [OK] Predicted INFY.NS: 1482.30 -> 1485.18
+2025-11-02 20:55:12,844 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 20:55:12,844 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 20:55:12,844 - INFO - [GenAdvisor] Getting prediction for HINDUNILVR.NS (9/10)
+2025-11-02 20:55:19,156 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2459.55
+2025-11-02 20:55:19,156 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2459.55
+2025-11-02 20:55:19,156 - INFO - [GenAdvisor] [OK] Predicted HINDUNILVR.NS: 2465.50 -> 2459.55
+2025-11-02 20:55:19,160 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 20:55:19,160 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 20:55:19,160 - INFO - [GenAdvisor] Getting prediction for LT.NS (10/10)
+2025-11-02 20:55:25,466 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4049.69
+2025-11-02 20:55:25,466 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4049.69
+2025-11-02 20:55:25,466 - INFO - [GenAdvisor] [OK] Predicted LT.NS: 4030.90 -> 4049.69
+2025-11-02 20:55:25,469 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 20:55:25,469 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 20:55:25,469 - INFO - [GenAdvisor] Reached prediction limit (10 stocks)
+2025-11-02 20:55:25,475 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 20:55:25,475 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions
+2025-11-02 20:55:25,475 - INFO - [GenAdvisor] Screener returning 50 stocks, 10 with predictions

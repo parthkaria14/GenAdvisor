@@ -246,6 +246,24 @@ export async function getPricePrediction(symbol: string, forecast_horizon: numbe
   return apiFetch<PredictionResult>(`/api/v1/predict/${encodeURIComponent(symbol)}?forecast_horizon=${forecast_horizon}`)
 }
 
+// Historical Data
+export type HistoricalDataResult = {
+  symbol: string
+  period: string
+  data: Array<{
+    date: string
+    open: number
+    high: number
+    low: number
+    close: number
+    volume: number
+  }>
+  count: number
+}
+export async function getHistoricalData(symbol: string, period: string = "3mo"): Promise<HistoricalDataResult> {
+  return apiFetch<HistoricalDataResult>(`/api/v1/historical/${encodeURIComponent(symbol)}?period=${period}`)
+}
+
 // High-level aggregator for dashboard to keep UI stable
 export async function getDashboardData() {
   const overview = await getMarketOverview()

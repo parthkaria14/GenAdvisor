@@ -469,18 +469,23 @@ async def screen_stocks(request: ScreenerRequest):
             with open(file_path, 'r') as f:
                 stock_data = json.load(f)
                 
-                # Apply filters
-                if request.market_cap_min and stock_data.get('market_cap', 0) < request.market_cap_min:
+                # Apply filters (handle None values safely)
+                market_cap = stock_data.get('market_cap') or 0
+                pe_ratio = stock_data.get('pe_ratio')
+                sector = stock_data.get('sector') or ''
+                volume = stock_data.get('volume') or 0
+                
+                if request.market_cap_min and (market_cap or 0) < request.market_cap_min:
                     continue
-                if request.market_cap_max and stock_data.get('market_cap', 0) > request.market_cap_max:
+                if request.market_cap_max and (market_cap or 0) > request.market_cap_max:
                     continue
-                if request.pe_min and stock_data.get('pe_ratio', 0) < request.pe_min:
+                if request.pe_min and pe_ratio is not None and pe_ratio < request.pe_min:
                     continue
-                if request.pe_max and stock_data.get('pe_ratio', 0) > request.pe_max:
+                if request.pe_max and pe_ratio is not None and pe_ratio > request.pe_max:
                     continue
-                if request.sector and stock_data.get('sector', '').lower() != request.sector.lower():
+                if request.sector and sector.lower() != request.sector.lower():
                     continue
-                if request.min_volume and stock_data.get('volume', 0) < request.min_volume:
+                if request.min_volume and (volume or 0) < request.min_volume:
                     continue
                 
                 stock_result = {

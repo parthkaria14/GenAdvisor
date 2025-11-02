@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { getScreenerMock, postScreener } from "@/lib/api"
+import { PredictionDialog } from "./prediction-dialog"
 
 type Row = {
   symbol: string
@@ -25,6 +26,8 @@ export default function StockScreenerView() {
   const [includePredictions, setIncludePredictions] = useState<boolean>(false)
   const [rows, setRows] = useState<Row[]>(base)
   const [loading, setLoading] = useState<boolean>(false)
+  const [selectedPrediction, setSelectedPrediction] = useState<{ symbol: string; price: number; predicted: number } | null>(null)
+  const [market, setMarket] = useState<"NSE" | "BSE">("NSE")
 
   const sectors = useMemo(() => Array.from(new Set(base.map((r) => r.sector))).sort(), [base])
 
@@ -75,7 +78,19 @@ export default function StockScreenerView() {
         <CardHeader className="pb-2">
           <CardTitle className="text-sm">Filters</CardTitle>
         </CardHeader>
-        <CardContent className="grid gap-3 md:grid-cols-4">
+        <CardContent className="grid gap-3 md:grid-cols-5">
+          <div className="grid gap-1.5">
+            <label className="text-xs text-muted-foreground">Market</label>
+            <Select value={market} onValueChange={(v) => setMarket(v as "NSE" | "BSE")}>
+              <SelectTrigger>
+                <SelectValue placeholder="NSE" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="NSE">NSE</SelectItem>
+                <SelectItem value="BSE">BSE</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
           <div className="grid gap-1.5">
             <label className="text-xs text-muted-foreground">Market Cap</label>
             <Select value={cap} onValueChange={(v) => setCap(v as any)}>
@@ -184,9 +199,16 @@ export default function StockScreenerView() {
                     {includePredictions && (
                       <>
                         <TableCell className="text-right">
-                          {r.predictedPrice !== null && r.predictedPrice !== undefined
-                            ? r.predictedPrice.toFixed(2)
-                            : "N/A"}
+                          {r.predictedPrice !== null && r.predictedPrice !== undefined ? (
+                            <button
+                              onClick={() => setSelectedPrediction({ symbol: r.symbol, price: r.price, predicted: r.predictedPrice! })}
+                              className="text-primary hover:underline font-medium"
+                            >
+                              ₹{r.predictedPrice.toFixed(2)}
+                            </button>
+                          ) : (
+                            "N/A"
+                          )}
                         </TableCell>
                         <TableCell className="text-right">
                           {priceChange !== null ? (
@@ -221,6 +243,16 @@ export default function StockScreenerView() {
           </Table>
         </CardContent>
       </Card>
+
+      {selectedPrediction && (
+        <PredictionDialog
+          symbol={selectedPrediction.symbol}
+          currentPrice={selectedPrediction.price}
+          predictedPrice={selectedPrediction.predicted}
+          open={!!selectedPrediction}
+          onOpenChange={(open) => !open && setSelectedPrediction(null)}
+        />
+      )}
     </div>
   )
 }
